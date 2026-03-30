@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:minWidth="350dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_35dp"
+        android:paddingRight="@dimen/dimen_35dp">
+
+        <TextView
+            android:id="@+id/give_feedback_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/rate_this_astrologer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_24">
+
+        </TextView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp">
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating_star"
+            style="@style/myRatingBarLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1.0"/>
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/imgViewBad"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_bad_grey"
+                app:layout_constraintTop_toBottomOf="@+id/rating_star"
+                app:layout_constraintStart_toStartOf="@+id/rating_star"
+                app:layout_constraintEnd_toStartOf="@+id/imgViewPoor"/>
+            <TextView
+                android:id="@+id/bad_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/imgViewBad"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewBad"
+                app:layout_constraintEnd_toEndOf="@+id/imgViewBad"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"
+                android:text="@string/bad" />
+            <ImageView
+                android:id="@+id/imgViewPoor"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_poor_grey"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/rating_star"
+                app:layout_constraintStart_toEndOf="@+id/imgViewBad"
+                app:layout_constraintEnd_toStartOf="@+id/imgViewAverage"/>
+            <TextView
+                android:id="@+id/poor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/poor"
+                app:layout_constraintStart_toStartOf="@id/imgViewPoor"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewPoor"
+                app:layout_constraintEnd_toEndOf="@+id/imgViewPoor"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+            <ImageView
+                android:id="@+id/imgViewAverage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_average_grey"
+                app:layout_constraintTop_toBottomOf="@+id/rating_star"
+                app:layout_constraintStart_toEndOf="@+id/imgViewPoor"
+                app:layout_constraintEnd_toStartOf="@+id/imgViewGood"/>
+            <TextView
+                android:id="@+id/average_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/average"
+                app:layout_constraintStart_toStartOf="@id/imgViewAverage"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewAverage"
+                app:layout_constraintEnd_toEndOf="@+id/imgViewAverage"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+            <ImageView
+                android:id="@+id/imgViewGood"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_good_grey"
+                app:layout_constraintTop_toBottomOf="@+id/rating_star"
+                app:layout_constraintStart_toEndOf="@+id/imgViewAverage"
+                app:layout_constraintEnd_toStartOf="@+id/imgViewExcellent"/>
+            <TextView
+                android:id="@+id/good_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good"
+                app:layout_constraintStart_toStartOf="@id/imgViewGood"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewGood"
+                app:layout_constraintEnd_toEndOf="@+id/imgViewGood"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+            <ImageView
+                android:id="@+id/imgViewExcellent"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_excellent_grey"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/rating_star"
+                app:layout_constraintStart_toEndOf="@+id/imgViewGood"
+                app:layout_constraintEnd_toEndOf="@+id/rating_star" />
+            <TextView
+                android:id="@+id/excellent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/excellent"
+                app:layout_constraintStart_toStartOf="@id/imgViewExcellent"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewExcellent"
+                app:layout_constraintEnd_toEndOf="@+id/imgViewExcellent"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/feedback_rel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_gray">
+
+            <EditText
+                android:id="@+id/feedback_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="left|top"
+                android:hint="@string/feedback_msg_string"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textColorHint="@color/hint_text_color"
+                android:visibility="visible">
+
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/success_layout"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_gray"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/feedback_msg_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="left|top"
+                android:justificationMode="inter_word"
+                android:paddingLeft="12dp"
+                android:paddingTop="10dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="10dp"
+                android:text="@string/feedback_success_msg"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llFeedbackButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/rate_close_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_white_border_orange"
+                android:gravity="center"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingLeft="30dp"
+                android:paddingTop="6dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="6dp"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:text="@string/close"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"/>
+
+            <TextView
+                android:id="@+id/submit_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rect_rounded_orange_image"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:gravity="center"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingLeft="30dp"
+                android:paddingTop="6dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="6dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_18"/>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rate_close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/button_green"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/close"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_18">
+
+                </TextView>
+
+
+            </LinearLayout>-->
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/submit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/button_green"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"></TextView>
+
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_green"
+            android:paddingLeft="30dp"
+            android:paddingTop="6dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="6dp"
+            android:text="@string/ok_txt"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+</ScrollView>

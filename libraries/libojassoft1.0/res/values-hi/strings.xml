@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">Internal Error</string>
+    <string name="i_accept">मैं स्वीकार करता हूँ</string>
+    <string name="disclaimer_title">अस्वीकरण</string>
+    <string name="disclaimer_text">इस एप्लीकेशन में संरक्षित सामग्री और सूचना पूरी तरह से मनोरंजन के उद्देश्य के लिए है। इस एप्लीकेशन के माध्यम से मिलने वाले भविष्यकथन या संदेश को किसी सलाह के तौर पर नहीं लें। क्योंकि एस्ट्रोसेज ऐसी किसी भी सलाह या भविष्यकथन को लेकर कोई आश्वासन नहीं देता है और ना ही इसके लिए जिम्मेदार है। </string>
+    <string name="cancel">रद्द करें</string>
+    <string name="lib_ask_our_astrologer">ज्योतिषी से पूछें</string>
+    <string name="lib_astro_shop">एस्ट्रो बाज़ार</string>
+    <string name="lib_app_version_text">संस्करण</string>
+    <string name="lib_cancel">रद्द करें</string>
+    <string name="lib_pleasewait">कृपया प्रतीक्षा करें</string>
+    <string name="lib_msg_ok">धन्यवाद</string>
+    <string name="lib_available_languages">उपलब्ध भाषाएँ </string>
+    <string name="lib_english"> अंग्रेजी</string>
+    <string name="lib_hindi"> हिन्दी</string>
+    <string name="LibNotificationConffigHeading">नोटिफिकेशन अवधि</string>
+    <string name="LibOnce">दिन में एक बार</string>
+    <string name="LibTwice">दिन में दो बार</string>
+    <string name="LibAsManyTime">जब भी आये तभी</string>
+    <string name="LibNever">कभी भी नहीं</string>
+    <string name="Lib_Save">सुरक्षित करें</string>
+    <string name="Lib_Name">नाम</string>
+    <string name="Lib_EmailId">ईमेल आईडी</string>
+    <string name="Lib_Phone">फ़ोन</string>
+    <string name="Lib_Message">संदेश</string>
+    <string name="Lib_Feedback_form">सुझाव</string>
+    <string name="Lib_Send">भेजें </string>
+    <string name="please_enter_name">कृपया, अपना नाम दर्ज करें...</string>
+    <string name="name_limit">नाम 50 अक्षरों से कम होना चाहिए...</string>
+    <string name="email_one">कृपया, ई-मेल आईडी दर्ज करें...</string>
+    <string name="email_two">ई-मेल 70 अक्षरों से कम होना चाहिए...</string>
+    <string name="email_three">कृपया, वैध ई-मेल आईडी दर्ज करें...</string>
+    <string name="feedback_message_one">कृपया, प्रतिक्रिया संदेश लिखें...</string>
+    <string name="feedback_message_two">संदेश 500 अक्षरों से कम होना चाहिए...</string>
+    <string name="phone_validation">कृपया, नंबर 10 अंकों का दर्ज करें...</string>
+    <string name="phone_should_be_numeric">कृपया, फोन नंबर अंकों में दर्ज करें...</string>
+    <string name="feedback_sent">संदेश सफलतापूर्वक भेजा गया...</string>
+    <string name="please_try_again"> कृपया, पुनः प्रयास करें...</string>
+    <string name="internet_is_not_working">इंटरनेट काम नहीं कर रहा है...</string>
+</resources>

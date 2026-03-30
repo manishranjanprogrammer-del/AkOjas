@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_curved_orange_border"
+    android:paddingBottom="@dimen/dimen_12dp"
+    android:layout_gravity="bottom"
+    android:paddingHorizontal="@dimen/dimen_12dp">
+
+    <TextView
+        android:id="@+id/tvBFQRHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recharge_now_text"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/tv_size_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBFQRClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_close_live"
+        android:clickable="true"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/selectableItemBackground"
+        app:tint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/txtMinBalanceNeeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/minBalNeeded"
+        android:textColor="@color/colorPrimary_day_night"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvBFQRHeading" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBFQRAmounts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMinBalanceNeeded"
+        app:spanCount="4"
+        tools:itemCount="12"
+        tools:listitem="@layout/pop_up_recharge_services" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container_layout"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            app:layout_constraintBottom_toTopOf="@id/question_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_profile_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/ic_black_layer"
+                android:rotation="180"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/shadow2"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_black_layer"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_profile_img"
+                />
+
+            <TextView
+                android:id="@+id/tv_astrologer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/tv_size_28"
+                app:layout_constraintBottom_toTopOf="@id/tv_astrologer_exp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_astrologer_exp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"
+                app:layout_constraintBottom_toBottomOf="@id/shadow2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/dimen_45dp"
+                android:layout_height="@dimen/dimen_45dp"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/astrosage_app_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imageViewKundli"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:scaleType="fitStart"
+                android:layout_centerVertical="true"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_logo"
+                android:textColor="@color/Orangecolor"
+                app:layout_constraintLeft_toRightOf="@+id/iv_logo"
+                android:src="@drawable/splash_icon_astrosage_ai_logo" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/question_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_22" />
+
+            <TextView
+                android:id="@+id/tv_birth_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:textSize="@dimen/dimen_18sp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:textSize="@dimen/tv_size_20" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

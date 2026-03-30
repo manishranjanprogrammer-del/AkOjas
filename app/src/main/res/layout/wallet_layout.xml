@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/wallet_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/white"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/paid_free_price_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:visibility="gone"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textColor="@color/black"
+                        android:text="@string/paid"/>
+                    <TextView
+                        android:id="@+id/paid_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textColor="@color/colorPrimary_day_night"
+                        android:text="₹0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textColor="@color/black"
+                        android:text="  |  "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textColor="@color/black"
+                        android:text="@string/free"/>
+                    <TextView
+                        android:id="@+id/free_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textColor="@color/colorPrimary_day_night"
+                        android:text="₹0"/>
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginVertical="@dimen/dimen_5dp">
+
+                    <TextView
+                        android:id="@+id/balance_heading_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/available_bal"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        app:layout_constraintEnd_toStartOf="@+id/llAmountView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llAmountView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        app:layout_constraintBottom_toBottomOf="@+id/balance_heading_tv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/rs_sign_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:includeFontPadding="false"
+                            android:text="₹"
+                            android:textColor="@color/black"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:id="@+id/balance_val_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/unlimitedAiChatsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginBottom="@dimen/dimen_15dp"
+                    android:background="@drawable/yollow_gradient_banner"
+                    android:elevation="4dp"
+                    android:visibility="gone"
+                    android:minHeight="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/icon_sparkles"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_ai"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/no_change_white" />
+
+                    <TextView
+                        android:id="@+id/text_unlimited_ai_chats"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/unlimited_ai_chats"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/linLayoutPrice"
+                        app:layout_constraintStart_toEndOf="@id/icon_sparkles"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linLayoutPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_unlimited_ai_chats"
+                        app:layout_constraintEnd_toStartOf="@+id/arrow_right_ai_chat"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/text_unlimited_ai_chats_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/no_change_black"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/rs_sign_tv2"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/striprateinrs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/grey_light"
+                                android:textSize="@dimen/tv_size_14"
+                                android:visibility="gone"
+                                android:layout_marginStart="@dimen/dimen_4dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/text_unlimited_ai_chats_price"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_only_for_today"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/only_for_today"
+                            android:textAlignment="center"
+                            android:visibility="gone"
+                            android:textColor="@color/no_change_white"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:maxWidth="150dp"
+                            android:background="@drawable/light_gray_rect_less_rounded"
+                            android:backgroundTint="@color/red1"
+                            android:padding="@dimen/dimen_3dp"
+                            android:layout_marginBottom="@dimen/dimen_5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/text_unlimited_ai_chats_price"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+
+
+
+                    <ImageView
+                        android:id="@+id/arrow_right_ai_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_keyboard_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/no_change_black" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:id="@+id/llCustomRecharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_chat_box_home_light_color"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/enter_amount_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/dimen_10dp">
+
+                        <TextView
+                            android:id="@+id/enterOrChooseTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_weight="1"
+                            android:text="@string/enter_your_amount"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_17sp" />
+
+                        <ImageView
+                            android:id="@+id/ivArrowCustomAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dimen_10dp"
+                            android:src="@drawable/ic_arrow_down_24px"
+                            app:tint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/custom_amount_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/bg_chat_box_home"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/editTextAmunt"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="@dimen/dimen_12dp"
+                            android:paddingEnd="@dimen/dimen_5dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/hint_text_color"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/proceed_recharge_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:background="@drawable/bg_button_yellow_less_round"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingHorizontal="25dp"
+                            android:stateListAnimator="@null"
+                            android:text="@string/proceed"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/tv_size_16" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:text="@string/choose_from_the_available_balance"
+                    android:textColor="@color/text_day_gray_night_white"
+                    android:textSize="@dimen/dimen_15sp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:layout_marginBottom="100dp"
+                    android:divider="@null"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                    app:spanCount="4"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/wallet_recyclerview_list_item" />
+
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="16dp">
+
+                     <LinearLayout
+                         android:id="@+id/recharge1_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginRight="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/recharge1_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="8dp"
+                             android:text="₹ 1"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:id="@+id/recharge1_offer_tv"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginBottom="9dp"
+                             android:background="@color/red1"
+                             android:gravity="center"
+                             android:padding="4dp"
+                             android:text="Get ₹ 150"
+                             android:textColor="@color/white"
+                             android:textSize="14sp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/recharge2_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="4dp"
+                         android:layout_marginRight="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge2_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:gravity="center"
+                             android:text="₹ 100"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/recharge3_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge3_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:text="₹ 200"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+                     </LinearLayout>
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="16dp">
+
+                     <LinearLayout
+                         android:id="@+id/recharge4_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginRight="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge4_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:text="₹ 500"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/recharge5_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="4dp"
+                         android:layout_marginRight="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge5_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:gravity="center"
+                             android:text="₹ 1000"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/recharge6_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge6_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:text="₹ 2000"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+                     </LinearLayout>
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="16dp">
+
+                     <LinearLayout
+                         android:id="@+id/recharge7_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginRight="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge7_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:text="₹ 5000"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/recharge8_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="4dp"
+                         android:layout_marginRight="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge8_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:gravity="center"
+                             android:text="₹ 10000"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/recharge9_ll"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="4dp"
+                         android:layout_weight="1"
+                         android:background="@drawable/bg_border_purple"
+                         android:gravity="center">
+
+                         <TextView
+                             android:id="@+id/recharge9_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="22dp"
+                             android:layout_marginBottom="22dp"
+                             android:text="₹ 20000"
+                             android:textColor="@color/colorPurple"
+                             android:textSize="18sp"
+                             android:textStyle="bold" />
+                     </LinearLayout>
+                 </LinearLayout>-->
+
+                <Button
+                    android:id="@+id/proceed_btn"
+                    style="@style/buttonBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="80dp"
+                    android:text="@string/proceed_to_pay"
+                    android:textAllCaps="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/homeBottomNav"
+            layout="@layout/custom_bottom_nav_with_gif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabWallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_live_unmute_video"
+        android:visibility="gone"
+        app:backgroundTint="@color/menus"
+        app:borderWidth="@dimen/dimen_0dp" />
+
+</RelativeLayout>

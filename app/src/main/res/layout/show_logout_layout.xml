@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="5dp"
+    android:gravity="center"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/welcometext"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textSize="@dimen/tv_size_17"
+                android:textColor="@color/black"
+                android:padding="6dp"/>
+
+
+            <TextView
+                android:id="@+id/user_phone_no_text"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="91XXXXXXXXXXXX"
+                android:textSize="@dimen/tv_size_18"
+                android:textColor="@color/colorPurple"
+                android:paddingTop="0dp"
+                android:paddingLeft="6dp"
+                android:paddingBottom="0dp"
+                android:paddingRight="45dp"/>
+
+            <TextView
+                android:id="@+id/share_txt"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                android:textSize="@dimen/tv_size_17"
+                android:drawablePadding="8dp"
+                android:singleLine="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/ic_share1"
+                android:textColor="@color/black"
+                android:padding="6dp"/>
+
+
+            <TextView
+                android:id="@+id/aboutus_txt"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us"
+                android:textSize="@dimen/tv_size_17"
+                android:textColor="@color/black"
+                android:drawablePadding="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/ic_action_about"
+                android:paddingLeft="6dp"
+                android:paddingBottom="6dp"/>
+
+
+            <TextView
+                android:id="@+id/logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="@dimen/tv_size_18"
+                android:paddingTop="0dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="12dp"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_purple"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

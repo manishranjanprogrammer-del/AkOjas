@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgNumrology"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/inputLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_mlarge"
+                    android:layout_marginTop="@dimen/margin_mlarge"
+                    android:layout_marginRight="@dimen/margin_mlarge"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha=".9"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/ic_person_black" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_boy_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp">
+
+                            <EditText
+                                android:id="@+id/etUserNamePerson1"
+                                style="@style/Theme.App.Base"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/ColorPrimary"
+                                android:capitalize="sentences"
+                                android:hint="@string/boy_name"
+                                android:inputType="textCapWords" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewGirlName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha=".9"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/ic_person_black" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_girl_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp">
+
+                            <EditText
+                                android:id="@+id/etUserNamePerson2"
+                                style="@style/Theme.App.Base"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/ColorPrimary"
+                                android:capitalize="sentences"
+                                android:hint="@string/girl_name"
+                                android:inputType="textCapWords" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonSubmit"
+                        style="@style/buttonstyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:backgroundTint="@color/ColorPrimaryDark"
+                        android:contentDescription="@string/get_horoscope"
+                        android:text="@string/btn_submit"
+                        android:textAllCaps="true"
+                        android:theme="@style/buttonstyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spinnerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_mlarge"
+                    android:layout_marginTop="@dimen/margin_mlarge"
+                    android:layout_marginRight="@dimen/margin_mlarge"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha=".9"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/ic_person_black" />
+
+                        <Spinner
+                            android:id="@+id/boy_swar_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/custom_btn_height"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/rect_rounded_image"
+                            android:theme="@style/ActionBarThemeOverlay" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha=".9"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/ic_person_black" />
+
+                        <Spinner
+                            android:id="@+id/girl_swar_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/custom_btn_height"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/rect_rounded_image"
+                            android:theme="@style/ActionBarThemeOverlay" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonSubmitSwar"
+                        style="@style/buttonstyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:backgroundTint="@color/ColorPrimaryDark"
+                        android:contentDescription="@string/get_horoscope"
+                        android:text="@string/btn_submit"
+                        android:textAllCaps="true"
+                        android:theme="@style/buttonstyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

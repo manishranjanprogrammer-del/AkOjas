@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="10dp" />
+    <solid android:color="@color/bg_card_view_color"></solid>
+    <stroke
+        android:width="0.5dip"
+        android:color="@color/astro_border" />
+</shape>

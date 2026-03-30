@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/black" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/ivSwapScreen"
+                android:layout_width="@dimen/dimen_35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_grid_icon"
+                android:layout_gravity="center"
+                android:padding="@dimen/dimen_3dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/grid_view_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/filterAstroRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dimen_4dp"
+                android:nestedScrollingEnabled="false"
+                android:descendantFocusability="blocksDescendants"
+                tools:itemCount="1"
+                tools:listitem="@layout/astrologer_filter_row" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeToRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linLayoutUpdateFilter"
+                android:descendantFocusability="blocksDescendants">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:descendantFocusability="blocksDescendants"
+                    android:paddingBottom="0dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    tools:itemCount="15"
+                    android:nestedScrollingEnabled="false"
+                    android:background="@color/backgroundColorView"
+                    tools:listitem="@layout/ai_astrologer_grid_layout" />
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNoAstroFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:text="@string/no_astrologer_found"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_20" />
+
+        <TextView
+            android:id="@+id/tvNoAstroFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/dimen_10dp"
+            android:text="clear all"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/tv_size_18" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReloadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_20dp"
+        android:background="@color/cardview_color"
+        android:layout_marginHorizontal="@dimen/dimen_24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/alert_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="@string/something_went_wrong"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/please_try_again_txt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:clickable="true"
+            android:text="@string/nw_conn_lost"
+            android:focusable="true"
+            android:textAlignment="center"
+            android:textColor="@color/orange" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gif_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_half_transparent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/logo_gif"
+            android:layout_width="@dimen/progressbar_44"
+            android:layout_height="@dimen/progressbar_44"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/drawable_static_questions"
+    android:layout_marginTop="@dimen/dimen_7dp"
+    android:id="@+id/itemView"
+    android:layout_marginEnd="@dimen/dimen_7dp"
+    android:foreground="@drawable/ripple_effect"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="@dimen/dimen_5dp">
+
+
+        <ImageView
+            android:id="@+id/question_image"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvQuestionName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvQuestionName"
+            app:tint="@color/colorPrimary_day_night" />
+
+        <TextView
+            android:id="@+id/tvQuestionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:letterSpacing="0.01"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray_text_day_night"
+            android:textSize="@dimen/dimen_17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/question_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="When will i get married?" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

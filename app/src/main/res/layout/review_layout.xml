@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_10dp"
+    android:orientation="horizontal">
+
+    <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+        android:id="@+id/profile_img"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llviewTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/user_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_17"/>
+        <TextView
+            android:id="@+id/date_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:paddingRight="@dimen/dimen_5dp"
+            android:textColor="@color/hint_text_color"
+            android:textSize="@dimen/tv_size_13"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_review_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:justificationMode="inter_word"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/hint_text_color"
+        android:textSize="@dimen/tv_size_13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/clEndView" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEndView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/llviewTop"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating_star"
+            style="@style/myRatingBarSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:numStars="5"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:rating="0"
+            app:layout_constraintEnd_toStartOf="@+id/actionBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ratingName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:text="Client rating"
+            android:textColor="@color/darker_gray"
+            android:textSize="@dimen/tv_size_13"
+            app:layout_constraintEnd_toStartOf="@+id/knowMoreRating"
+            app:layout_constraintTop_toBottomOf="@+id/rating_star"/>
+        <ImageView
+            android:id="@+id/knowMoreRating"
+            android:layout_width="20dip"
+            android:layout_height="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/text_report_review"
+            android:src="@drawable/ic_suggestion"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingName"
+            app:layout_constraintTop_toBottomOf="@+id/rating_star"
+            app:tint="@color/black" />
+        <ImageView
+            android:id="@+id/actionBtn"
+            android:layout_width="14dip"
+            android:layout_height="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/text_report_review"
+            android:paddingStart="@dimen/dimen_5dp"
+            android:paddingEnd="@dimen/dimen_5dp"
+            android:src="@drawable/three_dots_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

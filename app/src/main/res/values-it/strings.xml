@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AstroSage IA</string>
+    <string name="astrosage_name">AstroSage IA</string>
+    <string name="once_in_a_day">Una volta al giorno</string>
+    <string name="twice_in_a_day">Due volte al giorno</string>
+    <string name="as_many_time_as_it_comes">Ogni volta che accade</string>
+    <string name="title_never">Mai</string>
+</resources>

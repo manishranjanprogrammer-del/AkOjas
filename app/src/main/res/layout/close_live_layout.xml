@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="110.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="1.0dip">
+
+        <Button
+            android:background="@drawable/bg_border_red_live"
+            android:id="@+id/leave_live_btn"
+            android:textColor="@color/no_change_white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Leave"/>
+
+        <Button
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:background="@drawable/bg_border_green_live"
+            android:textColor="@color/no_change_white"
+            android:id="@+id/countinue_live_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Continue"/>
+
+    </LinearLayout>
+
+</LinearLayout>

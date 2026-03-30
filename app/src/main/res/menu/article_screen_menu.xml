@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_refresh_menu"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_action_navigation_refresh"
+        android:title="Refresh" />
+
+   <!-- action_share_menu icon also set inside onCreateOptionsMenu-->
+    <item
+        android:id="@+id/action_share_menu"
+        android:orderInCategory="102"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_share1"
+        android:title="Share" />
+
+</menu>
+    
+
+

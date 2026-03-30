@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_mlarge"
+        android:background="@drawable/bg_layout_clickable"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="-3dip">
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_day_gray_night_white"
+                    android:textSize="@dimen/font_xlarge" />
+
+                <TextView
+                    android:id="@+id/notes_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="1dip"
+                    android:text=""
+                    android:textColor="@color/text_day_gray_night_white"
+                    android:textSize="@dimen/font_medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iconEdit"
+            android:layout_width="28dip"
+            android:layout_height="28dip"
+            android:layout_gravity="right|top"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_note_edit"
+            android:visibility="visible"
+            app:tint="@color/text_day_gray_night_white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineViewLL"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dip"
+        android:background="@color/colorLine"
+        android:orientation="vertical"
+        android:visibility="visible" />
+
+</LinearLayout>

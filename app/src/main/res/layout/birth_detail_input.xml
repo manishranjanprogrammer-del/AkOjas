@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/main_container"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableTint="@color/black"
+                android:alpha=".9"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_person_black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textColorHint="@color/text_day_gray_night_white">
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    style="@style/Theme.App.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/rect_input_box_color"
+                    android:capitalize="sentences"
+                    android:hint="@string/please_enter_name_v"
+                    android:textColorHint="@color/hint_text_color"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"/>
+                <!-- android:inputType="textNoSuggestions"-->
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:alpha=".9"
+                android:drawableTint="@color/black"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_today_black" />
+
+            <Button
+                android:id="@+id/buttonCalendar"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="7dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/rect_light_yellow_box"
+                android:text="Birth Date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <Button
+                android:id="@+id/buttonTime"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_weight="1"
+                android:background="@drawable/rect_light_yellow_box"
+                android:text="Birth Time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:alpha=".9"
+                android:clickable="true"
+                android:drawableTint="@color/black"
+                android:drawableLeft="@drawable/ic_location_on_black" />
+
+            <LinearLayout
+                android:id="@+id/layPlaceHolder"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/rect_light_yellow_box"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewPlaceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="Jhansi Jhansi Jhansi Jhansi Jhansi"
+                    android:textSize="@dimen/input_screen_text_size"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/textViewPlaceDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="(11E34:34N34-5.5)"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textDSTCotainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:drawableLeft="@drawable/ic_today_black"
+                android:drawableTint="@color/black"
+                android:textColor="@color/black"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textDST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:gravity="left"
+                android:text="Standard Time"
+                android:textColor="@color/colorPrimary_day_night"
+                android:textSize="@dimen/input_screen_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:alpha=".9"
+                android:drawableTint="@color/black"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_gender" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:text="@string/male"
+                    android:textSize="@dimen/input_screen_text_size" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/female"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/input_screen_text_size" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_today_black"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp">
+
+                <CheckBox
+                    android:id="@+id/checkBoxSaveKundli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:text="@string/save_kundli"
+                    android:textSize="@dimen/input_screen_text_size"
+                    android:buttonTint="@color/colorPrimary_day_night"
+                    android:textColor="@color/black"
+                    android:theme="@style/MyCheckBox" />
+
+                <TextView
+                    android:id="@+id/buttonCalculationOptions"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_light_yellow_box"
+                    android:drawableRight="@drawable/ic_birthdetailsetting_plus"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:drawableTint="@color/black"
+                    android:text="@string/expended_menu_matching_title_settings"
+                    android:textAllCaps="false"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/input_screen_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/btnShowInputBirthDet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/rect_light_yellow_box"
+            android:drawableRight="@drawable/ic_birthdetailsetting_plus"
+            android:drawablePadding="2dp"
+            android:drawableTint="@color/black"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:paddingStart="20dp"
+            android:visibility="visible"
+            android:paddingVertical="3dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/type_or_paste_birth_details"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/input_screen_text_size"
+            />
+        <LinearLayout
+            android:id="@+id/llEnterBirthDetails"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_7dp"
+            android:visibility="gone"
+            android:background="@color/very_very_light_gray"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etBirthDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="80dp"
+                android:textSize="15sp"
+                android:inputType="text|textMultiLine"
+                android:hint="@string/type_or_paste_birth_details_here"
+                android:paddingVertical="@dimen/dimen_5dp"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_text_color"
+                android:gravity="top|start"/>
+            <RelativeLayout
+                android:id="@+id/getFillDetails"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="end|bottom"
+                android:background="@drawable/circle_orange"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_send"
+                    android:padding="2dp"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layOtherCalcOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textViewHeadingOtherCalc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:text="@string/other_calc_options"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/input_screen_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:typeface="serif" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/light_slate_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewKPHorary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.37"
+                        android:text="@string/kp_horary_no"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/input_screen_text_size" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_kphorary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.63">
+
+                        <EditText
+                            android:id="@+id/etKPHorary"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:ems="10"
+                            android:hint="(1-249)"
+                            android:inputType="number"
+                            android:digits="0123456789"
+                            android:maxLength="3"
+                            android:textColorHint="@color/hint_text_color"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/input_screen_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewAyan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.37"
+                        android:text="@string/ayanamsa"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/input_screen_text_size" />
+
+                    <Spinner
+                        android:id="@+id/ics_spinner_ayan"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/custom_btn_height"
+
+                        android:layout_weight="0.63"
+                        android:theme="@style/ActionBarThemeOverlay" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewDst"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.37"
+                        android:text="@string/dst"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/input_screen_text_size" />
+
+                    <Spinner
+                        android:id="@+id/ics_spinner_dst"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="0dp"
+
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_weight="0.63"
+                        android:theme="@style/ActionBarThemeOverlay"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonCalculateKundli"
+            style="@style/buttonstyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:contentDescription="@string/get_horoscope"
+            android:text="@string/get_horoscope"
+            android:theme="@style/buttonstyle"
+            android:textColor="@color/white"/>
+
+<View
+    android:id="@+id/viewDummy"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    android:layout_height="300dp"/>
+
+    </LinearLayout>
+</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

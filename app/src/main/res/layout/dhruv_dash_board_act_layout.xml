@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="7dp">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cordinatorLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColorView">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/appbarAppModule"
+                layout="@layout/act_app_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/txtViewRemainingCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/premium_horoscopes_left_to_download"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="@dimen/tv_size_16"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary_day_night"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:divider="@null"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <fragment
+        android:id="@+id/myDrawerFrag"
+        class="com.ojassoft.astrosage.ui.fragments.HomeNavigationDrawerFragment"
+        android:layout_width="309dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/lay_home_navigation_drawer_fragment" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

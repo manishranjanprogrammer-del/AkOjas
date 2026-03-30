@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.claudiodegio.msv'
+    compileSdk 35
+    /*buildToolsVersion '30.0.3'*/
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 35
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+
+    // Immagini circolari
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+}

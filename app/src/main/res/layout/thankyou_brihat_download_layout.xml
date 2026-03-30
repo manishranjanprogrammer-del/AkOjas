@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorView">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="42dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/heading_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/brihat_kundli"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/back_arrow"
+            app:layout_constraintStart_toEndOf="@+id/back_arrow"
+            app:layout_constraintTop_toTopOf="@id/back_arrow" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+
+        android:id="@+id/header_image_layout"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_border"
+        android:elevation="2dp"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="160dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/brihat_horoscope_english" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/kundli_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="160dp"
+        android:background="@color/light_gray_day_night">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:text="@string/brihat_kundli"
+            android:textColor="@color/colorPrimary_day_night"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/thankyoutv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_text"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="@dimen/dimen_10dp"
+            android:text="@string/thank_youfor_showing_interest"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/email_deliverd_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thankyoutv"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="@dimen/dimen_16dp"
+            android:text="@string/email_will_be_sent_msg_for_brihat"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kundli_layout"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_btn_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="@dimen/dimen_8dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:src="@drawable/ic_home"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/title_home"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_20" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_app_btn_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="@dimen/dimen_8dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:src="@drawable/shareapp"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/share_app"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_20" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

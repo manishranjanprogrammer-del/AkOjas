@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/bg_card_view_color"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:alpha="0.4"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/black" />
+
+                </LinearLayout>
+
+                <!--<android.support.v7.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/appCompatAutoCompleteTextView"
+                    android:layout_widRelativeLayoutth="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint=" Search Place..."
+                    android:background="@android:color/transparent"
+                    android:padding="16dp"
+                    android:layout_weight=".8"
+                    style="@style/subheading_style"/>-->
+                <EditText
+                    android:id="@+id/edtTextSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7.2"
+                    android:background="@android:color/transparent"
+                    style="@style/Theme.App.Base"
+                    android:hint="@string/text_search_place"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_18"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+
+                <!--<ProgressBar
+                    android:id="@+id/progressBar1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    >
+
+                    <ImageView
+                        android:id="@+id/loadmore_gif"
+                        android:layout_width="@dimen/progressbar_44"
+                        android:layout_height="@dimen/progressbar_44"
+                        android:src="@drawable/logo"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lstCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+                android:cacheColorHint="#00000000"
+                android:drawSelectorOnTop="true"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/check_save_city_in_pref_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/make_it_default_city"
+        android:theme="@style/MyCheckBox"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        />
+
+
+</RelativeLayout>

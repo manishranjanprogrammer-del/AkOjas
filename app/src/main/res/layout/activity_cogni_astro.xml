@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bighorscope_text"
+                    style="@style/content_style_big_horscope"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dip"
+                        android:layout_height="24dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_time" />
+
+                    <TextView
+                        android:id="@+id/instantdelivery"
+                        style="@style/delivery_instant_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                        android:text="@string/instant_delivery"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_discount_plan_pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/golden_border"
+                    android:drawableLeft="@mipmap/gold_icon"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:padding="4dip"
+                    android:text="Gold"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/basic_plan_user_layout_pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/golden_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/msg_for_basic_plan_text_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/gold_icon"
+                        android:gravity="left"
+                        android:paddingLeft="2dp"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/unlock_plan_text_pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:drawableLeft="@mipmap/lock_icon"
+                        android:drawableRight="@mipmap/left_arrow_icon"
+                        android:gravity="right"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="   "
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/ColorPrimary" />
+
+            <RelativeLayout
+                android:id="@+id/allpdftext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/pdfonlyImage"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:background="@drawable/icon_cogni_astro"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/pdfonlytext"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_toRightOf="@+id/pdfonlyImage"
+                    android:textColor="@color/black"
+                    android:text="@string/module_cogni_astro"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/price"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+
+                    android:layout_toRightOf="@+id/pdfonlyImage"
+                    android:text="@string/price_of_pdf"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priceoriginal"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/price"
+                    android:text="Price " />
+
+                <TextView
+                    android:id="@+id/pricedisount"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/priceoriginal"
+                    android:text="Price "
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buy_now_pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/pricedisount"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:contentDescription="@string/buy_now_maha_kundal"
+                    android:paddingLeft="@dimen/margin_large"
+                    android:paddingRight="@dimen/margin_large"
+                    android:text="@string/buy_now_maha_kundal"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary_day_night"/>
+
+                <TextView
+                    android:id="@+id/english_sample_pdf"
+                    style="@style/content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tablerowtextviewheight"
+                    android:layout_alignBaseline="@+id/buy_now_pdf"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_toLeftOf="@+id/buy_now_pdf"
+                    android:gravity="center_vertical"
+                    android:text="@string/view_sample"
+                    android:textSize="@dimen/font_medium"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ColorPrimary" />
+
+            <RelativeLayout
+                android:id="@+id/allpdftext_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/pdfonlyImage_12"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:background="@drawable/icon_cogni_astro"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/pdfonlytext_12"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_toRightOf="@+id/pdfonlyImage_12"
+                    android:text="@string/module_cogni_astro"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/price_12"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext_12"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_marginTop="4dp"
+android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/pdfonlyImage_12"
+                    android:text="@string/price_of_pdf"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priceoriginal_12"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext_12"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/price_12"
+                    android:text="Price " />
+
+                <TextView
+                    android:id="@+id/pricedisount_12"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext_12"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/priceoriginal_12"
+                    android:text="Price "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buy_now_pdf_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/pricedisount_12"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:contentDescription="@string/buy_now_maha_kundal"
+                    android:paddingLeft="@dimen/margin_large"
+                    android:paddingRight="@dimen/margin_large"
+                    android:text="@string/buy_now_maha_kundal"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary_day_night" />
+
+                <TextView
+                    android:id="@+id/english_sample_pdf_12"
+                    style="@style/content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tablerowtextviewheight"
+                    android:layout_alignBaseline="@+id/buy_now_pdf_12"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_toLeftOf="@+id/buy_now_pdf_12"
+                    android:gravity="center_vertical"
+                    android:text="@string/view_sample"
+                    android:textSize="@dimen/font_medium"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ColorPrimary" />
+
+            <RelativeLayout
+                android:id="@+id/allpdftext_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/pdfonlyImage_p"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:background="@drawable/icon_cogni_astro"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/pdfonlytext_p"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_toRightOf="@+id/pdfonlyImage_p"
+                    android:text="@string/module_cogni_astro"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/price_p"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext_p"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/pdfonlyImage_p"
+                    android:text="@string/price_of_pdf"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priceoriginal_p"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext_p"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/price_p"
+                    android:text="Price " />
+
+                <TextView
+                    android:id="@+id/pricedisount_p"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdfonlytext_p"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/priceoriginal_p"
+                    android:text="Price "
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buy_now_pdf_p"
+                    style="@style/cogni_buttonstyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/pricedisount_p"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:contentDescription="@string/buy_now_maha_kundal"
+                    android:paddingLeft="@dimen/margin_large"
+                    android:paddingRight="@dimen/margin_large"
+                    android:text="@string/buy_now_maha_kundal"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary_day_night" />
+
+                <TextView
+                    android:id="@+id/english_sample_pdf_p"
+                    style="@style/content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tablerowtextviewheight"
+                    android:layout_alignBaseline="@+id/buy_now_pdf_p"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_toLeftOf="@+id/buy_now_pdf_p"
+                    android:gravity="center_vertical"
+                    android:text="@string/view_sample"
+                    android:textSize="@dimen/font_medium"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ColorPrimary" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

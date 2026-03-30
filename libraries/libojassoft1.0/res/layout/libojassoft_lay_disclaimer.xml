@@ -1,0 +1,66 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/disclaimer_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textDisclaimerTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/disclaimer_title_drowable"
+            android:gravity="center"
+            android:text="@string/disclaimer_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.libojassoft.android.custom.controls.JustifiedTextView
+            android:id="@+id/textDisclaimerText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="8dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/butAgree"
+                style="@style/disclaimer_button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:onClick="onClickDisclaimerCondition"
+                android:tag="0"
+                android:text="@string/i_accept" />
+
+            <Button
+                android:id="@+id/butNotAgree"
+                style="@style/disclaimer_button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="onClickDisclaimerCondition"
+                android:tag="1"
+                android:text="@string/cancel" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+</ScrollView>

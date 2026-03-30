@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_back_ground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relSendMessage"
+        android:background="@drawable/chat_bg_dark" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_chat"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/kundli_ai_tool_bar"
+        android:visibility="visible"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_back_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:paddingHorizontal="@dimen/dimen_8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_back_arrow" />
+
+            <ImageView
+                android:id="@+id/astrologer_profile_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_toEndOf="@id/img_back_nav"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_circular_kundli_ai_logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/astrologer_profile_pic"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title_text_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/text_kundli_ai"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/chat_status_size" />
+
+
+                    <TextView
+                        android:id="@+id/typingTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/ai_astro_assistant"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_13"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnUpdatePlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/button_purple"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/dimen_10dp"
+                    android:paddingVertical="@dimen/dimen_3dp">
+
+                    <ImageView
+                        android:id="@+id/ivUpgrade"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/upgrade_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:text="@string/txt_upgrade"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivUpgrade"
+                        app:layout_constraintStart_toEndOf="@+id/ivUpgrade"
+                        app:layout_constraintTop_toTopOf="@+id/ivUpgrade" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/imgViewLocation"
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:src="@mipmap/ic_location"
+                    android:padding="@dimen/dimen_3dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:tint="@color/black" />
+                <ImageView
+                    android:id="@+id/iv_share_chat"
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:src="@mipmap/ic_share_black"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_copy_chat"
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_toLeftOf="@+id/iv_delete_msg"
+                    android:src="@mipmap/ic_copy_paste"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="@color/black" />
+                <ImageView
+                    android:id="@+id/iv_delete_msg"
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_toLeftOf="@+id/iv_share_chat"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="gone"
+                    app:tint="@color/black" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/recycleNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/ivWaitMsg"
+        android:layout_below="@+id/toolbar_chat"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnShareLogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Share Logs"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_purple"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="-30dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_new_logo_kkundli_ai"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/tc_logo"
+                android:layout_marginTop="45dp"/>
+
+            <TextView
+                android:id="@+id/tv_tag_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.04"
+                android:textSize="@dimen/dimen_18sp"
+                android:text="@string/kundali_that_talks"/>
+
+            <TextView
+                android:id="@+id/warning_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:background="@drawable/bg_ai_user_msg"
+                android:backgroundTint="@color/bg_static_greet_box"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dimen_8dp"
+                android:text="@string/intro_message_lagna"
+                android:textColor="@color/static_greet_text"
+                android:textSize="@dimen/tv_size_13"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/astrologer_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_50dp"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivFRPAFC"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:adjustViewBounds="true"
+                        android:padding="1dp"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/astro_astrologer"
+                        android:src="@drawable/astrosage_app_icon"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_astro_chat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivFRPAFC">
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_date_and_buttons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@drawable/bg_ai_chat_date"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/textViewDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="5dp"
+                                android:textColor="@color/hint_text_color"
+                                android:textSize="12sp"
+                                tools:ignore="RtlCompat" />
+
+                            <View
+                                android:id="@+id/tv_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/gray_light" />
+
+                            <LinearLayout
+                                android:id="@+id/llChatButtons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10dp"
+                                android:orientation="vertical"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStaticQuestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="0dp"
+                android:nestedScrollingEnabled="true"
+                android:layout_marginTop="25dp"
+                android:visibility="gone"
+                android:paddingEnd="@dimen/dimen_10dp" />
+            <TextView
+                android:id="@+id/tv_load_old_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/old_message"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:paddingHorizontal="@dimen/dimen_12dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="2dp"
+                android:textSize="@dimen/tv_size_17"
+                android:textColor="@color/gray_text_day_night"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:background="@drawable/drawable_static_questions"
+                android:backgroundTint="@color/old_message_title_color"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listViewMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:padding="0dp"
+                android:stackFromBottom="true"
+                android:transcriptMode="alwaysScroll"
+                android:layout_alignWithParentIfMissing="true"
+                tools:listitem="@layout/kundli_ai_chat_message_item_new"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <ImageView
+        android:id="@+id/ivWaitMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@id/relSendMessage"
+        android:layout_marginStart="@dimen/margin_xMedium"
+        android:background="@drawable/drawable_round_corner_chat"
+        android:padding="7dp"
+        android:contentDescription="@string/msg_please_wait"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llConnectAgain"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnChatAgain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="0.5dp"
+            android:background="@color/colorOrangeDark"
+            android:text="@string/chat_again"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnCallAgain" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCallAgain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:background="@color/colorOrangeDark"
+            android:text="@string/call_again"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btnChatAgain"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/questionSuggestionFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relSendMessage"
+        android:layout_alignWithParentIfMissing="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/ivHideSuggestions"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:background="@drawable/circle_gray_live"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:src="@drawable/ic_down_arrow_white"
+                app:tint="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/questionSuggestionListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_light"
+                tools:listitem="@layout/item_suggesion_question_list" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/relSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/dimen_12dp"
+            android:background="@drawable/bg_kundli_msg_box"
+            android:hint="@string/say_something"
+            android:textColorHint="@color/hint_text_color"
+            android:imeOptions="actionSend"
+            android:maxHeight="100dp"
+            android:maxLength="255"
+            android:minHeight="40dp"
+            android:inputType="textMultiLine|textCapSentences"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_15" />
+
+        <RelativeLayout
+            android:id="@+id/buttonSend"
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/circle_yellow"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_stop"
+                app:tint="@color/white"
+                android:contentDescription="@string/tap_to_pause"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ivSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:foreground="?android:selectableItemBackground"
+                android:src="@drawable/icon_send"
+                app:tint="@color/white"
+                android:contentDescription="@string/send"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buttonSpeechToText"
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:background="@drawable/circle_yellow"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/micButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:foreground="?android:selectableItemBackground"
+                android:src="@drawable/baseline_mic_24"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

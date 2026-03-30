@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">ಆಂತರಿಕ ದೋಷ</string>
+    <string name="disclaimer_title">ಹಕ್ಕುತ್ಯಾಗ</string>
+    <string name="disclaimer_text">ಈ ಅಪ್ಲಿಕೇಶನ್ನಲ್ಲಿ ಒಳಗೊಂಡಿರುವ ಮಾಹಿತಿ ಮತ್ತು ಡೇಟಾವು ನಿಮ್ಮ ಮನರಂಜನಾ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರವೇ ಸೀಮಿತವಾಗಿದೆ. ನೀವು ಸ್ವೀಕರಿಸುವ ಯಾವುದೇ ಭವಿಷ್ಯ ಅಥವಾ ಇತರ ಸಂದೇಶವು ಸಾಮಾನ್ಯವಾಗಿ ಸಲಹೆಗಾರರಿಗೆ, ವೈದ್ಯರು, ಮನೋರೋಗ ಚಿಕಿತ್ಸಕ ಅಥವಾ ಹಣಕಾಸು ಸಲಹೆಗಾರನಂತಹ ಪರವಾನಗಿ ಪಡೆದ ವೃತ್ತಿಪರರಿಂದ ಪಡೆಯುವ ಸಲಹೆ, ಕಾರ್ಯಕ್ರಮಗಳು ಅಥವಾ ಚಿಕಿತ್ಸೆಯ ಬದಲಾಗಿಲ್ಲ. ಅಂತೆಯೇ,  astrosage.com  ಯಾವುದೇ ಗ್ಯಾರಂಟಿಗಳು, ಸೂಚಿಸುವ ವಾರಂಟಿಗಳು ಅಥವಾ ಯಾವುದೇ ರೀತಿಯ ಭರವಸೆಗಳನ್ನು ನೀಡುವುದಿಲ್ಲ, ಮತ್ತು ಮೇಲೆ ತಿಳಿಸಿದ ಮಾಹಿತಿ ಮತ್ತು ಡೇಟಾವನ್ನು ಸ್ವೀಕರಿಸುವವರಿಂದ ಯಾವುದೇ ವ್ಯಾಖ್ಯಾನ ಅಥವಾ ಬಳಕೆಗೆ ಜವಾಬ್ದಾರನಾಗಿರುವುದಿಲ್ಲ.</string>
+    <string name="i_accept">ನಾನು ಒಪ್ಪುತ್ತೇನೆ</string>
+    <string name="cancel">ರದ್ದುಗೊಳಿಸಲು</string>
+    <string name="lib_astro_shop">ಆಸ್ಟ್ರೋ ಮಳಿಗೆ</string>
+    <string name="lib_ask_our_astrologer">ನಮ್ಮ ಜ್ಯೋತಿಷಿಯನ್ನು ಕೇಳಿ</string>
+    <string name="lib_app_version_text">ಆವೃತ್ತಿ</string>
+    <string name="lib_cancel">ರದ್ದುಗೊಳಿಸಲು</string>
+    <string name="lib_pleasewait">ದಯಮಾಡಿ ನಿರೀಕ್ಷಿಸಿ...</string>
+    <string name="lib_msg_ok">ಸರಿ</string>
+    <string name="lib_available_languages">ಲಭ್ಯವಿರುವ ಭಾಷೆಗಳು </string>
+    <string name="lib_english"> English</string>
+    <string name="lib_hindi"> Hindi</string>
+    <string name="LibNotificationConffigHeading">ಅಧಿಸೂಚನೆಯ ಆವರ್ತನ</string>
+    <string name="LibOnce">ಒಂದು ದಿನದಲ್ಲಿ ಒಮ್ಮೆ</string>
+    <string name="LibTwice">ಎರಡು ದಿನಗಳಲ್ಲಿ</string>
+    <string name="LibAsManyTime">ಎಷ್ಟು ಬಾರಿ ಬರುತ್ತದೆಯೊ ಅಷ್ಟು ಬಾರಿ</string>
+    <string name="LibNever">ಎಂದಿಗೂ</string>
+    <string name="Lib_Save">ಉಳಿಸು</string>
+    <string name="Lib_Name">ಹೆಸರು</string>
+    <string name="Lib_EmailId">ಇಮೇಲ್ ಐಡಿ</string>
+    <string name="Lib_Phone">ಫೋನ್</string>
+    <string name="Lib_Message">ಸಂದೇಶ</string>
+    <string name="Lib_Feedback_form">ಪ್ರತಿಕ್ರಿಯೆ</string>
+    <string name="Lib_Send">ಕಳುಹಿಸು /ರವಾನಿಸು</string>
+    <string name="please_enter_name">ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ...</string>
+    <string name="name_limit">50 ಅಕ್ಷರಗಳಲ್ಲಿ ಹೆಸರು ಇರಬೇಕು....</string>
+    <string name="email_one">ದಯವಿಟ್ಟು ಇಮೇಲ್ ಐಡಿನ್ನು ನಮೂದಿಸಿ...</string>
+    <string name="email_two">ಇಮೇಲ್ 70 ಅಕ್ಷರಗಳಲ್ಲಿ ಇರಬೇಕು...</string>
+    <string name="email_three">ದಯವಿಟ್ಟು ಮಾನ್ಯ ಇಮೇಲ್ ಐಡಿನ್ನು ನಮೂದಿಸಿ...</string>
+    <string name="feedback_message_one">ದಯವಿಟ್ಟು ಪ್ರತಿಕ್ರಿಯೆಯ ಸಂದೇಶವನ್ನು ಬರೆಯಿರಿ...</string>
+    <string name="feedback_message_two">ಸಂದೇಶವು 500 ಅಕ್ಷರಗಳಲ್ಲಿ ಇರಬೇಕು...</string>
+    <string name="phone_validation">ದಯವಿಟ್ಟು 10 ಅಂಕಿಯ ಸಂಖ್ಯೆಯನ್ನು ...</string>
+    <string name="phone_should_be_numeric">ದೂರವಾಣಿ/ಫೋನ್ ನಂಬರ್/ಸಂಖ್ಯೆಯು ಸಂಖ್ಯಾ ಆಗಿರಬೇಕು...</string>
+    <string name="feedback_sent">ಪ್ರತಿಕ್ರಿಯೆ ಯಶಸ್ವಿಯಾಗಿ ಕಳುಹಿಸಲಾಗಿದೆ...</string>
+    <string name="please_try_again">ದಯವಿಟ್ಟು ನಂತರ ಪ್ರಯತ್ನಿಸಿ...</string>
+    <string name="internet_is_not_working">ಇಂಟರ್ನೆಟ್ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿಲ್ಲಾ...</string>
+</resources>

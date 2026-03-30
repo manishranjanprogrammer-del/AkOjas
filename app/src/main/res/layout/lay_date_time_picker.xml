@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/custom_btn_height"
+            android:layout_marginRight="15dp"
+            android:layout_weight="3"
+            android:background="@drawable/rect_rounded_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPreviousDate"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:alpha=".9"
+                android:background="@drawable/ic_keyboard_arrow_left_black"
+                android:backgroundTint="@color/text_color_black"/>
+
+            <TextView
+                android:id="@+id/tvDatePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="DD-MM-YYYY"
+                android:textColorHint="@color/hint_text_color"
+                android:textColor="@color/text_color_black"
+                android:singleLine="false"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <Button
+                android:id="@+id/btnNextDate"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:alpha=".9"
+                android:backgroundTint="@color/text_color_black"
+                android:background="@drawable/ic_keyboard_arrow_right_black"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnCurrentDate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/custom_btn_height"
+            android:layout_weight="1"
+            android:background="@drawable/rect_rounded_background"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="Today"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/input_screen_text_size"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/place_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/layPlaceHolder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_btn_height"
+            android:background="@drawable/rect_rounded_image"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="New Delhi"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <TextView
+                android:id="@+id/textViewPlaceDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="( 28N36, 77E12 +5.5 )"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_card_view_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:id="@+id/top"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/silver_plan_title_dialog"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"
+            android:padding="16dp"
+            android:background="@color/subs_sky_blue"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_below="@+id/top"
+        android:id="@+id/radioGroupLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+
+        <RadioButton
+            android:id="@+id/radiomonthly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:paddingLeft="16dp"
+            android:text="@string/monthly_silver"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_text_size"
+            android:theme="@style/MyCheckBoxSilverPlan" />
+
+        <RadioButton
+            android:id="@+id/radioyearly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:paddingLeft="16dp"
+            android:text="@string/year_silver"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_text_size"
+            android:theme="@style/MyCheckBoxSilverPlan" />
+
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/customer_care"
+        style="@style/content_style"
+        android:layout_below="@+id/radioGroupLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorLink="@color/subs_gold_plan"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/customer_care_popup"/>
+    <LinearLayout
+        android:layout_below="@+id/customer_care"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/butChooseLanguageCancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/subs_sky_blue" />
+
+
+        <Button
+            android:id="@+id/butChooseLanguageOk"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/subs_sky_blue" />
+
+
+    </LinearLayout>
+</RelativeLayout>

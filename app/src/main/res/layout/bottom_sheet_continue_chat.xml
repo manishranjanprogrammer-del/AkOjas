@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimen_15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_card_view_color">
+
+
+    <ImageView
+        android:id="@+id/imgViewCancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_cancel_black"
+        app:tint="@color/black"
+        android:padding="@dimen/dimen_5dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.ojassoft.astrosage.varta.utils.RoundImage
+        android:id="@+id/imgViewAstrologer"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@null"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginStart="35dp"
+        android:src="@drawable/ai_astro_default"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtviewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:layout_marginTop="-7dp"
+        android:text="4.5"
+        android:textSize="@dimen/tv_size_11"
+        android:textColor="@color/no_change_black"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:drawableStart="@drawable/full_star_extra_small"
+        android:drawablePadding="@dimen/dimen_3dp"
+        android:background="@drawable/drawable_rating_bg"
+        app:layout_constraintStart_toStartOf="@+id/imgViewAstrologer"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewAstrologer"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewAstrologer"/>
+
+    <TextView
+        android:id="@+id/txtViewAstrologerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:textSize="@dimen/tv_size_11"
+        android:ellipsize="end"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/imgViewAstrologer"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewAstrologer"
+        app:layout_constraintTop_toBottomOf="@+id/txtviewRating"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/imgViewAstrologer"
+        app:layout_constraintTop_toTopOf="@+id/imgViewAstrologer"
+        app:layout_constraintBottom_toBottomOf="@+id/imgViewAstrologer"
+        app:layout_constraintEnd_toStartOf="@+id/imgViewCancel">
+        <TextView
+            android:id="@+id/txtViewOffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/consult_premium_astrologers"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtViewOneTimeOffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/txtMinBalNeeded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnContinueChat"
+        style="@style/buttonBackground"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:text="@string/continue_chat"
+        android:textSize="@dimen/dimen_18sp"
+        android:textAllCaps="false"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        android:background="@drawable/drawable_bg_orange"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAstrologerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:elevation="@dimen/dimen_10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAstrologerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/btnChatRL"
+            android:layout_width="0dip"
+            android:layout_height="42dp"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_bg_yellow"
+            android:backgroundTint="@color/color_steel_blue"
+            android:paddingHorizontal="@dimen/dimen_10dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="2dp">
+
+            <ImageView
+                android:id="@+id/chat_now_img"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dimen_5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chat_icon_btn"
+                app:tint="@color/no_change_white">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/btnChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/chat_now_img"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/chat_again"
+                android:textColor="@color/no_change_white"
+                android:textSize="@dimen/tv_size_17" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/chatWithAstroTV"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/btnChat"-->
+            <!--                android:layout_toRightOf="@id/chat_now_img"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:gravity="center_horizontal"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:text="@string/with_astrologer"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="@dimen/tv_size_12" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnCallRL"
+            android:layout_width="0dip"
+            android:layout_height="42dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_bg_yellow"
+            android:backgroundTint="@color/color_jade"
+            android:focusable="true"
+            android:paddingLeft="6dp"
+            android:clickable="true"
+            android:paddingTop="1dp"
+            android:paddingBottom="2dp">
+
+            <ImageView
+                android:id="@+id/call_now_img"
+                android:layout_width="@dimen/margin_25dp"
+                android:layout_height="@dimen/margin_25dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dimen_5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/call_icon_btn"
+                app:tint="@color/no_change_white">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/btnTalk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_toEndOf="@+id/call_now_img"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/call_now"
+                android:textColor="@color/no_change_white"
+                android:textSize="@dimen/tv_size_17" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/callWithAstroTV"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/btnTalk"-->
+            <!--                android:layout_toRightOf="@id/call_now_img"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:gravity="center_horizontal"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:text="@string/with_astrologer"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="@dimen/tv_size_12" />-->
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

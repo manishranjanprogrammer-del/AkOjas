@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColorView"
+    android:orientation="vertical"
+    android:padding="0.5dp">
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@color/white"
+         android:orientation="vertical">-->
+
+    <!--<RelativeLayout
+        android:id="@+id/rlConatiner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/SelectableItemBackground">
+
+
+
+
+    </RelativeLayout>-->
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">-->
+
+    <RelativeLayout
+        android:id="@+id/frame_layout"
+        style="@style/SelectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewRashiIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cancer" />
+
+        <ImageView
+            android:id="@+id/imageViewNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:contentDescription="@null"
+            android:src="@drawable/drawable_ic_new"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewRashiName"
+            style="@style/subheading_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewRashiIcon"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingLeft="1dp"
+            android:textColor="@color/black_87DN"
+            android:paddingRight="1dp"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+
+    <!--  </LinearLayout>-->
+    <!-- </LinearLayout>-->
+
+</RelativeLayout>

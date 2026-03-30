@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+             android:paddingBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtexperince"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/astrologer_experience"
+                android:textColor="@color/black"
+                android:textSize="@dimen/yohonews_heading"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtexperincecontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12ys"
+                android:textColor="@color/black"
+                android:textSize="@dimen/yohonews_child_heading" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+
+                android:id="@+id/txtexpertise"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/astrologer_expertise"
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/yohonews_heading"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+
+                android:id="@+id/txtexpertiseinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12ys"
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/yohonews_child_heading" />
+
+
+            <TextView
+                android:layout_marginTop="8dp"
+
+                android:id="@+id/txtaboutastrologer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_astrologer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/yohonews_heading"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+
+                android:id="@+id/txtaboutastrologerdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12ys"
+                android:textColor="@color/black"
+                android:textSize="@dimen/yohonews_child_heading" />
+        </LinearLayout>
+
+       </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

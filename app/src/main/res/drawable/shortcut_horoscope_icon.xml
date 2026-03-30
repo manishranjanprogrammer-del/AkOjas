@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/lightest_black"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_today_horoscope" android:left="@dimen/dimen_5dp" android:end="@dimen/dimen_5dp" android:top="@dimen/dimen_5dp" android:bottom="@dimen/dimen_5dp">
+    </item>
+</layer-list>

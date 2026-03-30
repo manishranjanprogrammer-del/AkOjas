@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/colorPrimary_day_night" />
+            <stroke android:width="1dp" android:color="@color/colorPrimary_day_night" />
+            <corners android:radius="24dip" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:angle="270" android:endColor="@color/bg_card_view_color" android:startColor="@color/bg_card_view_color" />
+            <stroke android:width="2dp" android:color="@color/colorPrimary_day_night" />
+            <corners android:radius="24dip" />
+        </shape>
+    </item>
+</selector>

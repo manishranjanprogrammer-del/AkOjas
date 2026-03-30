@@ -1,0 +1,65 @@
+<sqltimezone>
+    <statement>
+        CREATE TABLE IF NOT EXISTS tblTimeZone (
+        id INTEGER PRIMARY KEY ,
+        timezoneName VARCHAR(50),
+        zonevalue VARCHAR(5)
+        )
+    </statement>
+    <statement>INSERT INTO tblTimezone VALUES(0,'-12.00 International',-12)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(1,'-11.30 ',-11.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(2,'-11.00 Midway Islands, Samoan Islands',-11)
+    </statement>
+    <statement>INSERT INTO tblTimezone VALUES(3,'-10.30',-10.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(4,'-10.00 Hawaii',-10)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(5,'-9.30 Marquesas Islands',-9.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(6,'-9.00 Alaska',-9)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(7,'-8.30 Pacific Time (USA/Canada)',-8.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(8,'-8.00 Pacific Time (USA/Canada)',-8)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(9,'-7.30 ',-7.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(10,'-7.00 Mountain Time (USA/Canada)',-7)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(11,'-6.30',-6.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(12,'-6.00 Central time (USA/Canada)',-6)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(13,'-5.45',-5.75)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(14,'-5.30',-5.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(15,'-5.00 Eastern time (USA/Canada)',-5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(16,'-4.30 Caracas',-4.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(17,'-4.00 Atlantic Time (Canada)',-4)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(18,'-3.30 Newfoundland',-3.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(19,'-3.00 Brasilia',-3)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(20,'-2.30',-2.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(21,'-2.00 Mid-Atlantic',-2)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(22,'-1.00 Azores',-1)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(23,'0.00 Edinburgh,Lissabon,London',0)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(24,'+1.00 Amsterdam, Berlin, Bern',1)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(25,'+2.00 Athen,Istanbul,Minsk',2)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(26,'+2.30',2.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(27,'+3.00 Moscow,St.Petersburg,Volgograd',3)
+    </statement>
+    <statement>INSERT INTO tblTimezone VALUES(28,'+3.30 Teheran',3.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(29,'+4.00 AbuDhabi,Muscat',4)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(30,'+4.30 Kabul',4.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(31,'+5.00 Islamabad, Karachi, Pakistan',5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(32,'+5.30 IST',5.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(33,'+5.45 Kathmandu',5.75)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(34,'+6.00 Astana,Dhaka',6)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(35,'+6.30 Rangoon',6.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(36,'+7.00 Bangkok,Hanoi,Djakarta',7)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(37,'+7.30',7.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(38,'+8.00 Beijing,Chongjin,SAR Hongkong',8)
+    </statement>
+    <statement>INSERT INTO tblTimezone VALUES(39,'+8.30',8.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(40,'+9.00 Osaka,Sapporo,Tokyo',9)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(41,'+9.30 Adelaide',9.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(42,'+10.00 Canberra,Melbourne,Sydney',10)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(43,'+11.00 Magadan,SolomonIslands,New
+        Caledonien',11)
+    </statement>
+    <statement>INSERT INTO tblTimezone VALUES(44,'+11.30 NorfolkIsland',11.5)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(45,'+12.00 Fiji,Kamtjatka,MarshallIslands',12)
+    </statement>
+    <statement>INSERT INTO tblTimezone VALUES(46,'+12.45 ChathamIslands',12.75)</statement>
+    <statement>INSERT INTO tblTimezone VALUES(47,'+13.00 Nuku alofa',13)</statement>
+
+
+</sqltimezone>

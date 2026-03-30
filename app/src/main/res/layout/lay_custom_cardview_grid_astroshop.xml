@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/backgroundColorView"
+        android:layout_margin="4dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/SelectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/image_view"
+                        android:layout_width="@dimen/astroshop_image_width_height"
+                        android:layout_height="@dimen/astroshop_image_width_height"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/img_outstock"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="@null"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+                    android:paddingTop="12dp">
+
+                    <TextView
+                        android:id="@+id/text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:text="Title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_sub_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="sub Title"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/txt_sale_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:gravity="center"
+                        android:alpha=".8"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text__title_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/red1"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_discount_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="2"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@mipmap/gold_icon"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/basic_plan_user_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:background="@drawable/golden_border"
+                        android:weightSum="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/msg_for_basic_plan_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:paddingStart="2dp"
+                            android:textStyle="bold"
+                            android:drawableStart="@mipmap/gold_icon"
+                            android:text="@string/basic_user_text_dhruv"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/unlock_plan_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text=" "
+                            android:drawableTint="@color/black"
+                            android:drawableStart="@mipmap/lock_icon"
+                            android:drawableEnd="@mipmap/left_arrow_icon"
+                            android:textColor="@color/no_change_black"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_disscount"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="left"
+                android:layout_margin="8dp"
+                android:background="@drawable/discount_circle"
+                android:gravity="center"
+                android:contentDescription="@null"
+                android:padding="2dp"
+                android:text="20%"
+                android:textSize="10sp"
+                android:textColor="@color/no_change_white" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

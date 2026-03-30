@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlDRDParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_large"
+    android:background="@drawable/bg_white_rounded"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_large">
+
+    <ImageView
+        android:id="@+id/ivDRDClose"
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:clickable="true"
+        android:contentDescription="@string/close"
+        android:focusable="true"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_close_live"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/tvDRDTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/nps_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_size_18" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ratingRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:orientation="horizontal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <Button
+        android:id="@+id/tvDRDSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_normal"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/bg_button_yellow_less_round"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_size_20" />
+
+</LinearLayout>

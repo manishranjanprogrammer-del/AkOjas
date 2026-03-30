@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_orange"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="156dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_dhruv_topup" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_layout_topup"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_xlarge">
+
+                <TextView
+                    android:id="@+id/titleTopupTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="@string/topup_rechage"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_text_size" />
+
+                <TextView
+                    android:id="@+id/descTopupTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleTopupTV"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/topup_rechage"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_medium" />
+
+                <TextView
+                    android:id="@+id/amountTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/descTopupTV"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:background="@drawable/bg_layout_gray"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/button_height"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingRight="@dimen/activity_vertical_margin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_text_size">
+
+                </TextView>
+
+                <Button
+                    android:id="@+id/btnBuyNow"
+                    style="@style/buttonstyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:background="@drawable/bg_button_orange"
+                    android:gravity="center"
+                    android:text="@string/silver_plan_subscription_buy_now"
+                    android:textSize="@dimen/title_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_filter">
+
+    <TextView
+        android:text="@string/unlock_your_ai_horoscope"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:text="@string/to_give_you_accurate_ai_prediction_we_need_a_few_more_details"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"/>
+
+    <!-- Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+
+        >
+
+        <!-- Relationship -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/relationship_status"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+            <RelativeLayout
+                android:id="@+id/relLayoutRelationshipStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/grey_light"
+                >
+
+                <Spinner
+                    android:id="@+id/spinnerRelationshipStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:background="@color/bg_card_view_color"
+                    android:maxLines="1"
+                    android:minHeight="@dimen/margin_xXlarge"
+                    android:layout_marginVertical="@dimen/dimen_3dp"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/black"
+                    android:theme="@style/ActionBarThemeOverlay" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_15dp"
+                    android:layout_height="@dimen/dimen_15dp"
+                    android:src="@drawable/read_more_arrow"
+                    android:rotation="90"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <!-- Occupation -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/occupation"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+            <RelativeLayout
+                android:id="@+id/relLayoutOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/grey_light"
+                >
+
+                <Spinner
+                    android:id="@+id/spinnerOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:background="@color/bg_card_view_color"
+                    android:maxLines="1"
+                    android:minHeight="@dimen/margin_xXlarge"
+                    android:layout_marginVertical="@dimen/dimen_3dp"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/black"
+                    android:theme="@style/ActionBarThemeOverlay" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_15dp"
+                    android:layout_height="@dimen/dimen_15dp"
+                    android:src="@drawable/read_more_arrow"
+                    android:rotation="90"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- About you -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/about_you"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/etAbout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/grey_light"
+        android:hint="e.g., working in marketing and feeling a bit burnt out. I have a toddler at home, and we are currently stressed about buying our first house and for my next promotion too."
+        android:gravity="top"
+        android:ellipsize="end"
+        android:paddingVertical="@dimen/dimen_5dp"
+        android:paddingHorizontal="@dimen/dimen_10dp"
+        android:textColorHint="@color/grey_light"
+        android:visibility="gone"
+        android:textSize="13sp"/>
+
+    <!-- Reveal Button -->
+    <TextView
+        android:id="@+id/tvReveal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:text="@string/reveal_my_horoscope"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:background="@drawable/bg_background"
+        android:backgroundTint="@color/colorPrimary_day_night"/>
+
+</LinearLayout>

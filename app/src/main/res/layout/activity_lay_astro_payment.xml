@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="7dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appbarAppModule"
+            layout="@layout/tool_bar_app_module"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/backgroundColor"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:id="@+id/llHeaderImagesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/tablogin"
+                            android:layout_width="66dp"
+                            android:layout_height="66dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@null"
+                            android:gravity="center"
+                            android:src="@drawable/ic_moneyback_96" />
+
+
+                        <TextView
+                            android:id="@+id/txtMoneyBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/txt_money_back_guarantee"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/tabShipping"
+                            android:layout_width="66dp"
+                            android:layout_height="66dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@null"
+                            android:gravity="center"
+                            android:src="@drawable/ic_secure_96" />
+
+
+                        <TextView
+                            android:id="@+id/txtSecurePayment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/txt_trusted_and_secure_payments"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/tabpayment"
+                            android:layout_width="66dp"
+                            android:layout_height="66dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@null"
+                            android:gravity="center"
+                            android:src="@drawable/ic_verified_96" />
+
+
+                        <TextView
+                            android:id="@+id/txtVerifiedAstrologers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/txt_verified_expert_astrologers"
+                            android:textSize="13sp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/freequestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                    android:background="@drawable/backbordertextview"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/haveafreequestion"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_question_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@color/backgroundColor"
+                    android:layout_marginRight="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="8dp"
+                        android:background="@color/backgroundColorView"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp">
+
+
+                        <TextView
+                            android:id="@+id/text_discount_plan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableLeft="@mipmap/gold_icon"
+                            android:drawablePadding="5dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:background="@color/backgroundColorView"
+                            android:paddingBottom="8dp"
+                            android:text="Gold Plan 10% extra discount"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/basic_plan_user_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/golden_border"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/msg_for_basic_plan_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:drawableLeft="@mipmap/gold_icon"
+                                    android:gravity="left|center_vertical"
+                                    android:maxLines="2"
+                                    android:textColor="@color/no_change_black"
+                                    android:paddingLeft="4dp"
+                                    android:text="@string/basic_user_text_dhruv"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/msg_for_basic_plan_price"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2"
+                                    android:gravity="left|center_vertical"
+                                    android:maxLines="4"
+                                    android:paddingRight="2dp"
+                                    android:text=""
+                                    android:textColor="@color/gold_plan"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/unlock_plan_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawableRight="@mipmap/left_arrow_icon"
+                                android:drawableLeft="@mipmap/lock_icon"
+                                android:gravity="right"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="4dp"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/textrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:clickable="true"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <com.ojassoft.astrosage.ui.customcontrols.FlowTextView
+                            android:id="@+id/textquestiondes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp">
+
+                            <com.ojassoft.astrosage.beans.CircularNetworkImageView
+                                android:id="@+id/imgAstrologer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:paddingRight="5dp" />
+                        </com.ojassoft.astrosage.ui.customcontrols.FlowTextView>
+
+                        <!--<TextView
+                            android:id="@+id/textquestiondes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:layout_marginTop="8dp"
+                            />-->
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/backgroundColorView"
+                        android:padding="8dp">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/text_day_gray_night_white">
+
+                            <EditText
+                                android:id="@+id/etUseremail"
+                                style="@style/Theme.App.Base"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autofillHints="emailAddress"
+                                android:hint="@string/services_email"
+                                android:textColor="@color/black"
+                                android:textColorHint="#838383"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="70"
+                                android:textSize="14sp" />
+                            <!-- android:inputType="textNoSuggestions"-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_mobno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/text_day_gray_night_white">
+
+                            <EditText
+                                android:id="@+id/etUsermobno"
+                                style="@style/Theme.App.Base"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/ColorPrimary"
+                                android:capitalize="sentences"
+                                android:digits="1234567890"
+                                android:hint="@string/phonenumber"
+                                android:textColorHint="#838383"
+                                android:textColor="@color/black"
+                                android:inputType="number"
+                                android:maxLength="15"
+                                android:textSize="14sp" />
+                            <!-- android:inputType="textNoSuggestions"-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_question"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/text_day_gray_night_white">
+
+                            <EditText
+                                android:id="@+id/etUserquestion"
+                                style="@style/Theme.App.Base"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/ColorPrimary"
+                                android:capitalize="sentences"
+                                android:gravity="top|left"
+                                android:hint="@string/astrologer_query"
+                                android:inputType="textMultiLine"
+                                android:maxLength="200"
+                                android:textColorHint="#838383"
+                                android:textColor="@color/black"
+                                android:minLines="1"
+                                android:singleLine="false"
+                                android:textSize="14sp" />
+                            <!-- android:inputType="textNoSuggestions"-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/textquestiontextlimit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="@string/astro_shop_user_question_250"
+                            android:textSize="12sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvLanguage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="5dp"
+                                android:text="@string/delivery_report_language_selection"
+                                android:textColor="@color/hint_text_color"
+                                android:textSize="12dp" />
+
+                            <Spinner
+                                android:id="@+id/ics_spinner_lang"
+                                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="-8dp"
+                                android:paddingLeft="@dimen/cardview_keyline_1_minus_8dp"
+                                android:theme="@style/ActionBarThemeOverlay" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                     android:id="@+id/card_question"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginRight="8dp"
+                     android:layout_marginLeft="8dp">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:padding="8dp">
+
+                         <android.support.design.widget.TextInputLayout
+                             android:id="@+id/input_layout_question"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content">
+
+                             <EditText
+                                 android:id="@+id/etUserquestion"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:backgroundTint="@color/ColorPrimary"
+                                 android:capitalize="sentences"
+                                 android:gravity="top|left"
+                                 android:hint="@string/astrologer_query"
+                                 android:inputType="textMultiLine"
+                                 android:maxLength="200"
+                                 android:minLines="1"
+                                 android:singleLine="false"
+                                 style="@style/Theme.App.Base"
+                                 android:textSize="14sp"/>
+                             &lt;!&ndash; android:inputType="textNoSuggestions"&ndash;&gt;
+                         </android.support.design.widget.TextInputLayout>
+
+                         <TextView
+                             android:id="@+id/textquestiontextlimit"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:clickable="true"
+                             android:paddingLeft="10dp"
+                             android:text="@string/astro_shop_user_question_250"
+                             android:textSize="12sp"/>
+
+
+                     </LinearLayout>
+                 </android.support.v7.widget.CardView>-->
+
+                <Button
+                    android:id="@+id/buy_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_next_ask_question"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/abc_text_size_medium_material"
+                    android:backgroundTint="@color/colorPrimary_day_night" />
+
+                <LinearLayout
+                    android:id="@+id/llCustomerTestimonials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="#ECECEC"
+                            android:paddingTop="2dp" />
+
+                        <TextView
+                            android:id="@+id/tvCustomerTestimonials"
+                            style="@style/subheading_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/search_icon_padding"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:minWidth="@dimen/min_height"
+                            android:minHeight="@dimen/min_height"
+                            android:textColor="@color/black"
+                            android:text="@string/txt_customers_testimonials" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="#ECECEC"
+                            android:paddingTop="2dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/myDrawerFrag"
+        android:name="com.ojassoft.astrosage.ui.fragments.HomeNavigationDrawerFragment"
+        android:layout_width="309dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/lay_home_navigation_drawer_fragment" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

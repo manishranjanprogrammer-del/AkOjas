@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/cancel_with_red" />
+
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/oops"
+        android:textColor="@color/orange_color"
+        android:textSize="@dimen/tv_size_24" />
+
+    <TextView
+        android:id="@+id/recharge_unsucessful"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/rechage_unsucessful"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_size_24" />
+
+    <TextView
+        android:id="@+id/recharge_unsucessful_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/bg_gray"
+        android:padding="16dp"
+        android:text="@string/rechage_unsucessful_content"
+        android:textColor="@color/text_day_gray_night_white"
+        android:textSize="@dimen/tv_size_16" />
+
+
+    <Button
+        android:id="@+id/apply_code_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/orange_rect_with_round_corner"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:stateListAnimator="@null"
+        android:text="@string/astroshop_try_again"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tv_size_20" />
+
+</LinearLayout>

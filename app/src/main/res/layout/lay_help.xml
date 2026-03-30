@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llHelp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_help_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/viweForStatusBar1"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/ColorPrimary"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/llHelp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/first_intro_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/hand" />
+
+                        <TextView
+                            android:id="@+id/tvMainMunuHelp"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="@string/main_menu_help"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutSpinnerHelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hand" />
+
+                        <TextView
+                            android:id="@+id/tvSpinnerHelp"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/spinner_help"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mid_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutRotateHelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hand_midle" />
+
+                        <TextView
+                            android:id="@+id/textViewRotateHelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutMove"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hand_move" />
+
+                        <TextView
+                            android:id="@+id/textMove"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textDoubleTouch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/double_touch_help"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivIntroFirstBtn"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/mid_layout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_32dp"
+                    android:layout_marginEnd="@dimen/dimen_32dp"
+                    android:background="@drawable/circle_orange"
+                    android:padding="5dp"
+                    android:src="@drawable/chevron_right_rounded"
+                    app:tint="@color/white" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center_horizontal|right"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/hand" />
+
+                        <TextView
+                            android:id="@+id/tvRightMenuHelp"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="@string/right_menu_help"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/kundli_btn_intro_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:id="@+id/llIntroReportLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_intro_chat_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:maxWidth="280dp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/ask_anything_to_kundli"
+                        android:textColor="@color/no_change_white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/ivChatIntroNext"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_orange"
+                        android:padding="4dp"
+                        android:src="@drawable/chevron_right_rounded"
+                        app:tint="@color/white" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/arrow_toward_kundli_iv"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/down_arrow_white" />
+
+                <RelativeLayout
+                    android:id="@+id/ask_question_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/kundli_chat_button_height"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginEnd="@dimen/dimen_20dp"
+                    android:layout_marginBottom="72dp"
+
+                    android:background="@drawable/circle_border_chat_input_box"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_ask_que"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@+id/buttonSend"
+                        android:text="@string/ask_anything_to_kundli"
+                        android:textColor="@color/hint_text_color" />
+
+                    <RelativeLayout
+                        android:id="@+id/buttonSend"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_yellow"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_send"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/kundli_house_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:id="@+id/kundli_house"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"/>
+                <ImageView
+                    android:id="@+id/arrow_up"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/kundli_house"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="38dp"
+                    android:src="@drawable/up_arrow_white"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/arrow_up"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/kundliHouseHelpText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:maxWidth="280dp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/click_and_ask_about_any_house"
+                        android:textColor="@color/no_change_white" />
+
+                    <ImageView
+                        android:id="@+id/kundliHouseNextBtn"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_orange"
+                        android:padding="4dp"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:src="@drawable/chevron_right_rounded"
+                        app:tint="@color/white" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvIntroSkip"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginEnd="30dp"-->
+<!--                android:layout_marginBottom="@dimen/dimen_10dp"-->
+<!--                android:background="@drawable/bg_border_orange1"-->
+<!--                android:paddingLeft="12dp"-->
+<!--                android:paddingTop="4dp"-->
+<!--                android:paddingRight="12dp"-->
+<!--                android:paddingBottom="4dp"-->
+<!--                android:text="@string/skip"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="22sp" />-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_bg_tab">
+
+    <ImageView
+        android:id="@+id/imageViewKundli"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_app_logo_orange"
+        app:tint="@color/colorPrimary_day_night"
+        android:layout_marginHorizontal="140dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageViewKundli"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/splash_icon_kundli"
+        app:tint="@color/colorPrimary_day_night"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/splash_trans"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:padding="@dimen/dimen_7dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:layout_width="@dimen/margin_25dp"
+                android:layout_height="@dimen/margin_25dp"
+                android:src="@drawable/ic_flag"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tv_size_20"
+                android:text="@string/for_innovators_by_innovators"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/dimen_7dp"
+                android:id="@+id/txtViewInnovators"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

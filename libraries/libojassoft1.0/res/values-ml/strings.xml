@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">അന്താരാഷ്ട്ര  പിശക് </string>
+    <string name="disclaimer_title">ബാധ്യതാ  നിരാകരണം </string>
+    <string name="disclaimer_text">The information and data contained in this app is to be treated purely for your entertainment purposes only. Any prediction or other message that you receive is not a substitute for advice, programs, or treatment that you would normally receive from a licensed professional such as a lawyer, doctor, psychiatrist, or financial advisor. Accordingly, astrosage.com provides no guarantees, implied warranties, or assurances of any kind, and will not be responsible for any interpretation made or use by the recipient of the information and data mentioned above. </string>
+    <string name="i_accept">ഞാൻ  ഇതു  സ്വീകരിച്ചിരിക്കുന്നു </string>
+    <string name="cancel">നിർത്തലാക്കുക </string>
+    <string name="lib_astro_shop">ആസ്ട്രോ ഷോപ് </string>
+    <string name="lib_ask_our_astrologer">ജ്യോത്സ്യനോട് ചോദിക്കൂ </string>
+    <string name="lib_app_version_text">പതിപ്പ് </string>
+    <string name="lib_cancel">നിർത്തലാക്കുക </string>
+    <string name="lib_pleasewait">ദയവായി കാത്തിരിക്കുക </string>
+    <string name="lib_msg_ok">ശരി </string>
+    <string name="lib_available_languages">ലഭ്യമായ ഭാഷകൾ  </string>
+    <string name="lib_english"> English</string>
+    <string name="lib_hindi"> Hindi</string>
+    <string name="LibNotificationConffigHeading">അറിയിപ്പ് ആവർത്തനം </string>
+    <string name="LibOnce">ദിവസത്തിലൊരിക്കൽ </string>
+    <string name="LibTwice">ദിവസത്തിൽ രണ്ടു തവണ </string>
+    <string name="LibAsManyTime">എത്ര ത്തോളം തവണ വരുന്നുവോ അത്ര </string>
+    <string name="LibNever">ഒരിക്കലുമില്ല </string>
+    <string name="Lib_Save">സംരക്ഷിക്കുക </string>
+    <string name="Lib_Name">പേര് </string>
+    <string name="Lib_EmailId">ഇമെയിൽ ഐഡി </string>
+    <string name="Lib_Phone">ഫോൺ നമ്പർ </string>
+    <string name="Lib_Message">സന്ദേശം </string>
+    <string name="Lib_Feedback_form">പ്രതികരണം </string>
+    <string name="Lib_Send">അയക്കു </string>
+    <string name="please_enter_name">ദയവായി നിങ്ങളുടെ പേര് എന്റർ ചെയുക </string>
+    <string name="name_limit">പേരിൽ  പരമാവധി 50  പ്രതീകങ്ങളെ പാടുള്ളു  </string>
+    <string name="email_one">ദയവായി നിങ്ങളുടെ ഇമെയിൽ ഐഡി എൻറ്റർ ചെയ്യുക </string>
+    <string name="email_two">ഇമെയിൽ 50 പ്രതികങ്ങളി ലധികമാകരുത്  </string>
+    <string name="email_three">സാധുവായ ഇമെയിൽ ഐഡി എന്റർ ചെയ്യുക </string>
+    <string name="feedback_message_one">ദയവായി പ്രതികരണ സന്ദേശം എഴുതു .</string>
+    <string name="feedback_message_two">സന്ദേശം 500 കാരക്ടരിൽ ഒതുങ്ങുന്നതായിരിക്കണം ...</string>
+    <string name="phone_validation">10 അക്ക സംഖ്യ എൻറ്റർ ചെയ്യുക .</string>
+    <string name="phone_should_be_numeric">ഫോൺ നമ്പർ അക്കത്തിലായിരിക്കണം ...</string>
+    <string name="feedback_sent">പ്രതികരണം  വിജയകരമായി അയച്ചിരിക്കുന്നു ...</string>
+    <string name="please_try_again">ദയവായി വീണ്ടും ശ്രമിക്കുക ...</string>
+    <string name="internet_is_not_working">ഇന്റർനെറ്റ് പ്രവൃത്തിക്കുന്നില്ല ...</string>
+</resources>

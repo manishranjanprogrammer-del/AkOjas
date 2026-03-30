@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       
+ 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnAstroShop"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/lib_magenta_button"
+                android:drawableRight="@drawable/lib_cart_small"              
+                android:onClick="openAstroShop"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:tag="0"
+                android:text="@string/lib_astro_shop" />
+
+            <Button
+                android:id="@+id/btnAskOurAstrologer"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lib_magenta_button"
+                android:drawableRight="@drawable/lib_dollar_small"              
+                android:onClick="openAstroShop"
+                android:tag="1"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="@string/lib_ask_our_astrologer" />
+        </LinearLayout>
+
+    </LinearLayout>
+    
+
+    <TextView
+        android:id="@+id/tvAppVersion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="5dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textStyle="bold|italic" />
+    <ImageView
+        android:id="@+id/imgCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_gravity="top|right"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:src="@drawable/lib_ic_cancel"
+        android:onClick="goToClose"
+        />
+       
+
+</merge>

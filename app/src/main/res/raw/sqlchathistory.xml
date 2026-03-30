@@ -1,0 +1,28 @@
+<sqlchathistory>
+    <statement>
+        CREATE TABLE IF NOT EXISTS tblKundaliAiChatHistory (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        conversation_id VARCHAR(100),
+        astrologer_id VARCHAR(3),
+        local_chart_id VARCHAR(15),
+        online_chart_id VARCHAR(15),
+        title_text VARCHAR(255),
+        description_text VARCHAR(255),
+        module_name VARCHAR(255),
+        user_id VARCHAR(255),
+        time_stamp TEXT
+        )
+    </statement>
+    <statement>
+        CREATE TABLE IF NOT EXISTS tblKundaliChatMessage(
+        id INT,
+        conversation_id VARCHAR(100),
+        answer_id VARCHAR(10),
+        question_text TEXT,
+        answer_text TEXT,
+        is_liked TINYINT(1),
+        is_disliked TINYINT(1),
+        time_stamp TEXT
+        )
+    </statement>
+</sqlchathistory>

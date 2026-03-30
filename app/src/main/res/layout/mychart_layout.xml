@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/ColorPrimary"
+         android:gravity="center_vertical">
+
+         <ImageView
+             android:id="@+id/ivLeft"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:src="@drawable/astrosage_logo" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="5dp"
+             android:text="Select Kundli"
+             android:textColor="@color/white"
+             android:textSize="16dp" />
+
+     </LinearLayout>-->
+    <!-- added and cmnts by Neeraj 11/4/16-->
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        />
+
+
+    <!--  <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="5dp"
+          android:paddingTop="5dp">
+
+          <TextView
+              android:id="@+id/name_title_textview"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/detail"
+              android:visibility="invisible"
+              android:textStyle="bold" />-->
+
+
+    <!-- </LinearLayout>
+-->
+    <!--
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/dob_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="D.O.B"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dob_value_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12-01-1202" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/time_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Time"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time_value_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12:13:04" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/palace_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Palace"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/palace_value_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jhunjhunu" />
+    </LinearLayout>
+    -->
+
+
+    <!--<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_from_below"
+            android:textStyle="bold" />
+    </LinearLayout>
+-->
+    <FrameLayout
+        android:id="@+id/search_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--
+     cmntd by Neeraj 04/04/16
+     <android.support.v7.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:id="@+id/personKundaliDetail"
+
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="16dp">
+          &lt;!&ndash;<LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:paddingTop="16dp">
+          &ndash;&gt;
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp"
+
+              >
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/your_personal_kundli"
+                  android:textSize="@dimen/heading_text_size" />
+              <TextView
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/name_value_textview"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="gcfhgf" />
+          </LinearLayout>
+      </android.support.v7.widget.CardView>
+  -->
+</LinearLayout><!--
+</LinearLayout>-->

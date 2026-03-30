@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.libojassoft.android"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+   
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application>
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <service android:name="com.libojassoft.android.custom.services.AstroSageMagazineNotificationService" />
+        <service android:name="com.libojassoft.android.custom.services.AstroSageMagazineNotificationServiceForHindi" />
+
+        <activity
+            android:name="com.libojassoft.android.ui.ActShowOjasSoftProducts"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.libojassoft.android.ui.ActDisclaimer" />
+        <activity
+            android:name="com.libojassoft.android.ui.ActInternetOnOffInformation"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <!--<receiver android:name="com.libojassoft.android.customreceiver.RInternetConnectionReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>-->
+
+        <activity
+            android:name="com.libojassoft.android.ui.ActOtherAppAdvt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.libojassoft.android.ui.LibActAboutUs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.libojassoft.android.ui.LibActAstroShop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.libojassoft.android.ui.LibActConfigArticleNotification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.libojassoft.android.ui.LibActCallUs"
+            android:screenOrientation="portrait"
+            android:theme="@style/lib_myfloatingwindow" />
+
+        <receiver
+            android:exported="true"
+            android:name="com.libojassoft.android.customreceiver.LibBroadcastAstrosageArticle" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.libojassoft.android.ui.LibActChooseLanguage" />
+        <activity android:name=".ui.LibActFeedbackToAstroSage" />
+         
+    </application>
+
+</manifest>

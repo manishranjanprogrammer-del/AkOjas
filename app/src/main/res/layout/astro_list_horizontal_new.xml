@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="88dp"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColorView"
+    android:id="@+id/llAstroListDashboard"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+        android:id="@+id/ri_profile_img"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile_view" />
+
+    <TextView
+        android:id="@+id/txtAstroName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingHorizontal="4dp"
+        android:textColor="@color/txtColorBlWh"
+        android:textSize="@dimen/tv_size_14" />
+    <RelativeLayout
+        android:id="@+id/rlBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/astroTitleTV">
+
+        <TextView
+            android:id="@+id/new_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textColor="@color/txtColorBlWh"
+            android:text="@string/new_user"
+            android:textSize="@dimen/tv_size_10" />
+
+        <TextView
+            android:id="@+id/ruppee_sign"
+            style="@style/content_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_1dp"
+            android:layout_toEndOf="@+id/new_user"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/dimen_1dp"
+            android:text="@string/rs_sign"
+            android:textColor="@color/txtColorBlWh"
+            android:textSize="@dimen/tv_size_10" />
+
+        <TextView
+            android:id="@+id/priceTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@+id/ruppee_sign"
+            android:ellipsize="end"
+            android:textColor="@color/txtColorBlWh"
+            android:maxLines="1"
+            android:text="0"
+            android:textSize="@dimen/tv_size_10" />
+
+        <TextView
+            android:id="@+id/priceTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_3dp"
+            android:layout_toEndOf="@+id/priceTv1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/txtColorBlWh"
+            android:text="0/min"
+            android:textSize="@dimen/tv_size_10" />
+    </RelativeLayout>
+
+
+</LinearLayout>

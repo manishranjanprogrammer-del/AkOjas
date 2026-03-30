@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_card_view_color"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+       >
+
+        <TextView
+            android:id="@+id/textViewHeading1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/Would_you_like_to_delete_kundli_heading"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/Would_you_like_to_delete_kundli"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingRight="8dp">
+
+        <Button
+            android:id="@+id/butChooseAyanCancels"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night" />
+
+        <Button
+            android:id="@+id/butChooseAyanOks"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night" />
+
+
+    </LinearLayout>
+</LinearLayout>

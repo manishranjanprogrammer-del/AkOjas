@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_xXlarge">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/chalisaLL"
+                android:layout_width="132dip"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="66dip"
+                    android:layout_height="66dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_chalisa" />
+
+                <TextView
+                    android:id="@+id/chalisaTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/search_icon_padding"
+                    android:gravity="center_horizontal"
+                    android:text="@string/text_chalisa"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/title_text_size" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="36dip"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/mantraLL"
+                android:layout_width="132dip"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="66dip"
+                    android:layout_height="66dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_mantra" />
+
+                <TextView
+                    android:id="@+id/mantraTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/search_icon_padding"
+                    android:gravity="center_horizontal"
+                    android:text="@string/lbl_mantra"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/title_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

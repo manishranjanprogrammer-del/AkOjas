@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/disclaimer_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+                android:id="@+id/advLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical" />
+    <RadioGroup
+        android:id="@+id/radioGroupUserChoice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/lay_bg"
+        android:dividerPadding="2dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:showDividers="middle" >
+
+        <RadioButton
+            android:id="@+id/radioOnce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="clip_horizontal"           
+            android:text="@string/LibOnce"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/radioTwice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LibTwice"  
+            android:checked="true"          
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/radioAsManyTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LibAsManyTime"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/radioNever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LibNever"
+            android:textColor="@color/black" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioGroupUserChoice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:gravity="center"
+        android:text="@string/LibNotificationConffigHeading"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:id="@+id/laySaveCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/buttonSave"
+             style="@style/disclaimer_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="saveUserChoiceInSDCard"
+            android:text="@string/Lib_Save" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+             style="@style/disclaimer_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goBack"
+            android:text="@string/lib_cancel" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layNextBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <Button
+            android:id="@+id/buttonNext"
+            style="@style/disclaimer_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"            
+            android:onClick="saveUserChoiceInSDCard"
+            android:text="@string/Lib_Save" />
+
+    </LinearLayout>
+
+</RelativeLayout>

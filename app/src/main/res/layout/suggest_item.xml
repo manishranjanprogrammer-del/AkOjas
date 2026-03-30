@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/suggetion_container"
+    style="@style/SelectableItemBackground"
+    android:background="@color/white"
+    android:layout_height="?attr/actionBarSize">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/suggestion_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:visibility="visible"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="8dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_suggestion" />
+
+    <TextView
+        android:id="@+id/suggestion_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/suggestion_icon"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/hint_text_color"/>
+
+
+</RelativeLayout>

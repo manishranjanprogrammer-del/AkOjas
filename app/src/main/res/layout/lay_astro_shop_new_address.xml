@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/bg_card_view_color"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_remove_black"
+                    android:drawableTint="@color/black"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+
+                    android:text="@string/your_shp_address"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp" />
+
+
+                <!--<LinearLayout
+                    android:id="@+id/llsavedAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">-->
+
+                <TextView
+                    android:id="@+id/tvSavedAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="false"
+                    android:text=" Swatantra Singh \n ward no. 26 suratgarh \n delhi, india \n pin:-335804"
+                    android:textSize="16sp" />
+                <!--</LinearLayout>-->
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/bg_card_view_color"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_remove_black"
+                    android:drawableEnd="@drawable/ic_remove_black"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="@string/astroshop_add_new_address"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp" />
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">-->
+
+                <LinearLayout
+                    android:id="@+id/llnewAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_Name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/text_day_gray_night_white">
+
+                        <EditText
+                            android:id="@+id/edt_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:hint="@string/full_name"
+                            android:textColor="@color/black"
+                            android:imeOptions="flagForceAscii"
+                            android:inputType="text"
+                            android:maxLength="100"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_pincode_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/text_day_gray_night_white">
+
+                        <EditText
+                            android:id="@+id/edt_pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:hint="@string/astroshop_pincode"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_mobile_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/text_day_gray_night_white">
+
+                        <EditText
+                            android:id="@+id/edt_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:digits="1234567890"
+                            android:hint="@string/phonenumber"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_address_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/text_day_gray_night_white">
+
+                        <EditText
+                            android:id="@+id/edt_address"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890/()-,: "
+                            android:gravity="bottom"
+                            android:hint="@string/shipping_address"
+                            android:textColor="@color/black"
+                            android:inputType="textPostalAddress"
+                            android:maxLength="250"
+                            android:maxLines="4"
+                            android:imeOptions="flagForceAscii"
+                            android:singleLine="false"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_city_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/text_day_gray_night_white">
+
+                        <EditText
+                            android:id="@+id/edt_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:hint="@string/city"
+                            android:imeOptions="flagForceAscii"
+                            android:textColor="@color/black"
+                            android:inputType="text"
+                            android:maxLength="100"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_State_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/text_day_gray_night_white">
+
+                        <EditText
+                            android:id="@+id/edt_State"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:hint="@string/state"
+                            android:textColor="@color/black"
+                            android:imeOptions="flagForceAscii"
+                            android:inputType="text"
+                            android:maxLength="100"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_rounded_image"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_marginHorizontal="@dimen/dimen_7dp"
+                        android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/spinCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:text="@string/select_state"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_drop_down_black"
+                            card_view:tint="@color/black"
+                            android:layout_marginEnd="@dimen/dimen_5dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/edt_ShippingCost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:enabled="false"
+                        android:text="@string/shp_cost"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/edt_landmark"
+                        style="@style/Theme.App.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorPrimary_day_night"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890/()-,: "
+                        android:hint="@string/land_mark"
+                        android:textColorHint="@color/text_day_gray_night_white"
+                        android:imeOptions="flagForceAscii"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:maxLength="200"
+                        android:textSize="16sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/chkdefault"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/make_it_default"
+                        android:textSize="16sp"
+                        android:theme="@style/MyCheckBox"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--</LinearLayout>-->
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvTrustMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="15dp"
+            android:alpha="0.6"
+            android:gravity="left"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_Discount_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@mipmap/gold_icon"
+            android:drawablePadding="5dp"
+            android:gravity="left|center_vertical"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btn_pay_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="7dp"
+            android:gravity="center"
+            android:text="@string/proceed_to_pay"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:backgroundTint="@color/colorPrimary_day_night" />
+
+
+    </LinearLayout>
+</ScrollView>
+

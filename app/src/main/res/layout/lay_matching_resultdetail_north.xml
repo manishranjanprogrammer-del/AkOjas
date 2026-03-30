@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="vertical"
+    android:paddingBottom="0dp"
+    android:clipToPadding="false">
+
+  <!--  <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scrollbars="vertical">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<View android:layout_height="10dip" />-->
+
+                <TextView
+                    android:id="@+id/tvMatchingDetailHeading"
+                    style="@style/title_style_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/matchingScreenLeftPadding"
+                    android:paddingTop="16dp"
+                    android:text="@string/mm_matching_result_detail"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="@dimen/matchingScreenTitleText"
+                    android:textStyle="bold" />
+
+                <!--<View
+                    android:layout_height="2dip"
+                    android:background="@color/ColorPrimary" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvHeadind1"
+                        style="@style/subheading_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/mm_guna"
+                        android:textSize="@dimen/matchingScreenContentText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHeadind2"
+                        style="@style/subheading_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/mm_maximum"
+                        android:textSize="@dimen/matchingScreenContentText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHeadind3"
+                        style="@style/subheading_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/mm_obtained"
+                        android:textSize="@dimen/matchingScreenContentText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHeadind4"
+                        style="@style/subheading_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:text="@string/mm_Area_of_Life"
+                        android:textSize="@dimen/matchingScreenContentText"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--<View
+                    android:layout_height="2dip"
+                    android:background="@color/ColorPrimary" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvVarnaHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_varna" />
+
+                    <TextView
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/tvVarna"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvVarnaHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_work" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvVasyaHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_vasya" />
+
+                    <TextView
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="2" />
+
+                    <TextView
+                        android:id="@+id/tvVasya"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvVasyaHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_dominance" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvTaraHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_tara" />
+
+                    <TextView
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="3" />
+
+                    <TextView
+                        android:id="@+id/tvTara"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvTaraHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_destiny" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvYoniHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_yoni" />
+
+                    <TextView
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="4" />
+
+                    <TextView
+                        android:id="@+id/tvYoni"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvYoniHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_mentality" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvMaitriHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_maitri" />
+
+                    <TextView
+
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="5" />
+
+                    <TextView
+                        android:id="@+id/tvMaitri"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvMaitriHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_compatibility" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvGanaHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_gana" />
+
+                    <TextView
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="6" />
+
+                    <TextView
+                        android:id="@+id/tvGana"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvGanaHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_guna_level" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvBhakootHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_bhakoot" />
+
+                    <TextView
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="7" />
+
+                    <TextView
+                        android:id="@+id/tvBhakoot"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvBhakootHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_love" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tvNadiHd"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="@string/mm_nadi" />
+
+                    <TextView
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="8" />
+
+                    <TextView
+                        android:id="@+id/tvNadi"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:text="0.0" />
+
+                    <TextView
+                        android:id="@+id/tvNadiHd2"
+                        style="@style/laymatchingresulttextviewstyle"
+                        android:layout_gravity="left"
+
+                        android:text="@string/mm_health" />
+                </LinearLayout>
+
+                <!--<View
+                    android:layout_height="2dip"
+                    android:background="@color/ColorPrimary" />-->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dip" />
+
+
+            </LinearLayout>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="4dip"
+                android:background="@color/ColorPrimary" />-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTotalGunamilan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25.5"
+                        android:textSize="60sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/36"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="4dip"
+                android:background="@color/ColorPrimary" />-->
+        </LinearLayout>
+   <!-- </ScrollView>-->
+
+</ScrollView>

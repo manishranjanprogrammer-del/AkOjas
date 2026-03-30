@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appbarAppModule"
+            layout="@layout/tool_bar_app_module"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            />
+
+       <!-- <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/image_view"
+                        android:layout_width="@dimen/astroshop_image_width_height"
+                        android:layout_height="@dimen/astroshop_image_width_height"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/remove_sign_image_view"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:alpha="0.5"
+                            android:background="@drawable/ic_remove_circle_outline_white" />
+
+                        <TextView
+                            android:id="@+id/text_show_counting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/add_sign_image_view"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:alpha="0.6"
+                            android:background="@drawable/ic_add_circle_outline_white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/text_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="Title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:paddingTop="5dp"
+                        android:text="sub Title"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/text__title_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingTop="15dp"
+                        android:text="Rupees."
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_pay_able_ammont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:text="@string/total_amount"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:padding="2dp"
+                android:text="45"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_continue_shopping"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/astroshop_continue_shopping"
+                android:textColor="@color/white"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:backgroundTint="@color/colorPrimary_day_night"
+
+
+                />
+            <Button
+                android:id="@+id/btn_check_out"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/astroshop_checkout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:backgroundTint="@color/colorPrimary_day_night"
+
+
+                />
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>

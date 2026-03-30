@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@drawable/bg_border_three_side_dark_grey">
+
+
+    <TextView
+        android:id="@+id/tvCountryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/min_height"
+        android:minHeight="@dimen/min_height"
+        android:text="Planet"
+       android:gravity="center_vertical"
+        android:textSize="@dimen/subheading_text_size"
+        android:textColor="@color/black"
+        />
+
+
+</LinearLayout>

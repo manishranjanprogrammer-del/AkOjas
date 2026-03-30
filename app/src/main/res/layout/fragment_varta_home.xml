@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".varta.ui.fragments.VartaHomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:paddingBottom="0dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:descendantFocusability="blocksDescendants">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp">
+
+            <LinearLayout
+                android:id="@+id/llVartaHomeKundli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/llVartaHomeMatching"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivVartaHomeKundliLogo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_circle_gray_border"
+                    android:padding="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_kundali" />
+
+                <TextView
+                    android:id="@+id/tvVartaHomeKundliTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="Kundli"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    android:maxWidth="80dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVartaHomeMatching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_8dp"
+                app:layout_constraintLeft_toRightOf="@id/llVartaHomeKundli"
+                app:layout_constraintRight_toLeftOf="@id/llVartaHomeHoroscope"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_circle_gray_border"
+                    android:padding="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_matching" />
+
+                <TextView
+                    android:id="@+id/tvVartaHomeMatchingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="@string/matching"
+                    android:textColor="@color/black"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:maxWidth="80dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/tv_size_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVartaHomeHoroscope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_8dp"
+                app:layout_constraintLeft_toRightOf="@id/llVartaHomeMatching"
+                app:layout_constraintRight_toLeftOf="@id/llVartaHomeFreeChat"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_circle_gray_border"
+                    android:padding="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_horoscope" />
+
+                <TextView
+                    android:id="@+id/tvVartaHomeHoroscopeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="@string/horoscope"
+                    android:textColor="@color/black"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    android:maxWidth="80dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/tv_size_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVartaHomeFreeChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_8dp"
+                app:layout_constraintLeft_toRightOf="@id/llVartaHomeHoroscope"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_circle_gray_border"
+                    android:padding="@dimen/dimen_18dp"
+                    android:src="@drawable/chat_logo"
+                    android:tint="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tvVartaHomeFreeChatTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="Free Chat"
+                    android:textColor="@color/black"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    android:maxWidth="80dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/tv_size_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_gif_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/rvVartaHomeBanner"
+                app:layout_constraintTop_toBottomOf="@id/llVartaHomeKundli"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logo_gif"
+                    android:layout_width="@dimen/progressbar_44"
+                    android:layout_height="@dimen/progressbar_44"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVartaHomeBanners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                app:layout_constraintBottom_toTopOf="@id/tvVartaHomeLiveHeading"
+                app:layout_constraintTop_toBottomOf="@id/ll_gif_progress">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardVartaHomeBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="24dip"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/dimen_20dp"
+                    app:layout_constraintBottom_toTopOf="@id/tvVartaHomeLiveHeading"
+                    app:layout_constraintTop_toBottomOf="@id/ll_gif_progress">
+
+                    <ImageView
+                        android:id="@+id/ivVartaHomeBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:foreground="@drawable/bg_border_orange1"
+                        android:padding="1dip"
+                        android:src="@drawable/banner"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVartaHomeBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_5dp"
+                    tools:itemCount="4"
+                    android:background="@drawable/bg_rounded_box_orange_border"
+                    android:padding="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/tvVartaHomeLiveHeading"
+                    app:layout_constraintTop_toBottomOf="@id/ll_gif_progress"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvVartaHomeLiveHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/astrosage_live_tv"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:ellipsize="end"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llVartaHomeBanners" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeLiveSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:maxLines="1"
+                android:maxWidth="100dp"
+                android:ellipsize="end"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llVartaHomeBanners" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeLive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeLiveHeading"
+                tools:listitem="@layout/layout_live_astrologer_grid_small" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeCallHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:paddingLeft="5dp"
+                android:text="@string/call_with_astrologer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:ellipsize="end"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@id/rvVartaHomeCall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLive" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeCallSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:maxLines="1"
+                android:maxWidth="100dp"
+                android:ellipsize="end"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@id/rvVartaHomeCall"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLive" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_astrologer_grid_view"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeCallHeading" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeChatHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:paddingLeft="5dp"
+                android:text="@string/chat_with_astrologer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:ellipsize="end"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeCall" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeChatSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:maxLines="1"
+                android:maxWidth="100dp"
+                android:ellipsize="end"
+                android:visibility="invisible"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeCall" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeChatHeading"
+                tools:listitem="@layout/layout_astrologer_grid_view" />
+
+
+            <TextView
+                android:id="@+id/tvVartaHomeLastConsultHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:paddingLeft="5dp"
+                android:visibility="gone"
+                android:text="@string/last_consultation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeChat" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeLastConsultSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:text="@string/see_more"
+                android:visibility="gone"
+                android:textSize="@dimen/tv_size_15"
+                android:maxLines="1"
+                android:maxWidth="100dp"
+                android:ellipsize="end"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeChat" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeLastConsult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeLastConsultHeading"
+                tools:listitem="@layout/layout_last_consultation" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeRegionalHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:paddingLeft="5dp"
+                android:text="@string/regional_language"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:ellipsize="end"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLastConsult" />
+
+            <TextView
+                android:id="@+id/tvVartaHomeRegionalSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:maxLines="1"
+                android:maxWidth="100dp"
+                android:ellipsize="end"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLastConsult" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeRegional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeRegionalHeading"
+                tools:listitem="@layout/layout_astrologer_grid_view" />
+            <!--<TextView
+                android:id="@+id/tvVartaHomeLoveHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Love Astrologers"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textSize="@dimen/tv_size_18"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLastConsult"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvVartaHomeLoveSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLastConsult"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeLove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                tools:listitem="@layout/layout_astrologer_grid_view"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeLoveHeading"/>
+
+            <TextView
+                android:id="@+id/tvVartaHomeMarriageHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marriage Astrologers"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textSize="@dimen/tv_size_18"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLove"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvVartaHomeMarriageSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLove"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeMarriage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                tools:listitem="@layout/layout_astrologer_grid_view"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeMarriageHeading"/>
+-->
+            <!--<TextView
+                android:id="@+id/tvVartaHomeKPHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kp_astrologers"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textSize="@dimen/tv_size_18"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLastConsult"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvVartaHomeKPSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:visibility="invisible"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeLastConsult"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeKP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                tools:listitem="@layout/layout_astrologer_grid_view"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeKPHeading"/>
+
+            <TextView
+                android:id="@+id/tvVartaHomeTarotHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tarot_astrologers"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textSize="@dimen/tv_size_18"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeKP"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvVartaHomeTarotSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/see_more"
+                android:textSize="@dimen/tv_size_15"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeKP"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeTarot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                tools:listitem="@layout/layout_astrologer_grid_view"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeTarotHeading"/>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeExpertiseLists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="15"
+                tools:listitem="@layout/expertise_lists_layout"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeRegional"/>
+
+            <TextView
+                android:id="@+id/tvVartaHomeNewsHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/astrosage_varta_in_news"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_20"
+                android:gravity="center"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVartaHomeExpertiseLists" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVartaHomeNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvVartaHomeNewsHeading"
+                tools:listitem="@layout/news_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

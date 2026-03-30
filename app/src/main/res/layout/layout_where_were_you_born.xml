@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_20dp">
+
+    <TextView
+        android:id="@+id/txtViewWhereWereYouBorn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/where_were_you_born"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_26sp" />
+
+    <RelativeLayout
+        android:id="@+id/linLayoutSerchPlace"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_52dp"
+        android:layout_below="@+id/txtViewWhereWereYouBorn"
+        android:layout_marginTop="@dimen/margin_25dp"
+        android:background="@drawable/drawable_otp_box_bg"
+        android:backgroundTint="@color/bg_card_view_light_color">
+
+        <EditText
+            android:id="@+id/edtTextSearchPlace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgViewSearch"
+            android:background="@drawable/drawable_otp_box_bg"
+            android:backgroundTint="@color/bg_card_view_light_color"
+            android:foreground="?selectableItemBackground"
+            android:hint="@string/search_place_here"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingEnd="@dimen/dimen_5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grayMiddle"
+            android:textSize="@dimen/tv_size_20" />
+
+        <ImageView
+            android:id="@+id/imgViewSearch"
+            android:layout_width="@dimen/dimen_35dp"
+            android:layout_height="@dimen/dimen_35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/dimen_7dp"
+            android:src="@mipmap/ic_search_born"
+            app:tint="@color/grey_light" />
+    </RelativeLayout>
+
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linStartChatAndCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linLayoutSerchPlace"
+        android:layout_marginTop="@dimen/dimen_45dp">
+
+        <TextView
+            android:id="@+id/btnStatChatWithAstrologer"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/margin_52dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:background="@drawable/drawable_otp_box_bg"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:gravity="center"
+            android:text="@string/start_chat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnStatCallWithAstrologer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/btnStatCallWithAstrologer"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/margin_52dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:background="@drawable/drawable_otp_box_bg"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:gravity="center"
+            android:text="@string/start_call"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnStatChatWithAstrologer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <TextView
+        android:id="@+id/tvNextPlace"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_52dp"
+        android:layout_marginTop="@dimen/dimen_45dp"
+        android:text="@string/next"
+        android:textSize="@dimen/tv_size_20"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/drawable_otp_box_bg"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        android:layout_below="@+id/linLayoutSerchPlace"
+
+    />
+    <TextView
+        android:id="@+id/txtViewCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNextPlace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:alpha=".7"
+        android:visibility="gone"
+        android:textSize="@dimen/tv_size_15" />
+
+    <LinearLayout
+        android:id="@+id/linLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"/>
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"/>
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"/>
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"
+            android:src="@mipmap/ic_location"
+            app:tint="@color/white" />
+
+        <!--<ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/grey_light"
+            app:tint="@color/black"
+            android:src="@drawable/plan_work_sheet_icon"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:onClick="onOccupationIconClicked"/>-->
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

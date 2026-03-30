@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColor"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dip"
+        android:background="@drawable/bg_layout_clickable"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_mlarge"
+        android:paddingRight="@dimen/margin_mlarge">
+
+        <!--  <LinearLayout
+              android:layout_width="0dip"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="left|center"
+              android:orientation="vertical">-->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_day_gray_night_white"
+                android:textSize="@dimen/font_xlarge" />
+
+            <TextView
+                android:id="@+id/notes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_day_gray_night_white"
+                android:textSize="@dimen/font_medium" />
+        </LinearLayout>
+        <!-- </LinearLayout>-->
+
+        <ImageView
+            android:id="@+id/iconEdit"
+            android:layout_width="28dip"
+            android:layout_height="28dip"
+            android:layout_gravity="right|center"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_note_edit"
+            android:visibility="gone"
+            app:tint="@color/text_day_gray_night_white" />
+
+        <ImageView
+            android:id="@+id/iconAdd"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_gravity="right|center"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_note_add"
+            android:visibility="gone"
+            app:tint="@color/text_day_gray_night_white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineViewLL"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dip"
+        android:background="@color/colorLine"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

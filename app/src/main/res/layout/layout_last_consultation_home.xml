@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="85dp"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+        android:id="@+id/ri_profile_img"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile_view" />
+
+    <TextView
+        android:id="@+id/astrologer_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/ivTintColorDN"
+        android:textSize="@dimen/tv_size_14" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:textColor="@color/grayMiddleDN"
+        android:textSize="@dimen/tv_size_10" />
+
+    <LinearLayout
+        android:id="@+id/ll_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/chat_again_btn"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_fc_chat"
+                app:tint="@color/primary_orange" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnViewChat"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_fc_history"
+                app:tint="@color/primary_orange" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/call_now_btn"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_fc_call"
+                app:tint="@color/primary_orange" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

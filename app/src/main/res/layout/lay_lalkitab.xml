@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:clipToPadding="false">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:clipToPadding="false">
+
+    <include
+        android:id="@+id/date_view"
+        layout="@layout/pridiction_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/llLalkitabContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColorView"
+        android:paddingBottom="@dimen/bottom_margin_for_kundli"
+        android:orientation="horizontal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

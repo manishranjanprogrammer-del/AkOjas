@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_outer">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ganesh_popup" />
+
+    <LinearLayout
+        android:id="@+id/middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card_view_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="-5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Title"
+            android:textColor="@color/colorPrimary_day_night"
+            android:textSize="@dimen/yohonews_heading"
+             />
+        <!-- android:text="@string/app_rater_mainheading_text" -->
+
+        <TextView
+            android:id="@+id/textViewsubheading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/yohonews_child_heading" />
+        <!-- android:textColor="#a3a2a2"android:text="@string/app_rater_subheading_text" -->
+
+        <TextView
+            android:id="@+id/textViewsubchildheading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/yohonews_child_heading"
+            android:textStyle="italic"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+        <!-- android:textColor="#a3a2a2"android:text="@string/app_rater_subchild_text" -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/starshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#f7f7f7"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:layout_width="@dimen/image_width_hight"
+                android:layout_height="@dimen/image_width_hight"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="@dimen/image_width_hight"
+                android:layout_height="@dimen/image_width_hight"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="@dimen/image_width_hight"
+                android:layout_height="@dimen/image_width_hight"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="@dimen/image_width_hight"
+                android:layout_height="@dimen/image_width_hight"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="@dimen/image_width_hight"
+                android:layout_height="@dimen/image_width_hight"
+                android:src="@drawable/star" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/starshow"
+        android:background="#eee" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:background="@drawable/rate_app_button_bg"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card_view_color"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textViewNotNowrating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/yohonews_ratingbutton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/hint_text_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card_view_color"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textViewRatenow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/light_green"
+                android:textSize="@dimen/yohonews_ratingbutton" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

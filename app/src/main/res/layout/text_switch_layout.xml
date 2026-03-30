@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/topic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Cricket"
+        android:textColor="@color/black"
+        android:textSize="@dimen/body_text_size" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/topic_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:thumbTint="@color/colorPrimary_day_night"
+        app:trackTint="@color/color_selected_unselected_swicth"
+        />
+
+</FrameLayout>

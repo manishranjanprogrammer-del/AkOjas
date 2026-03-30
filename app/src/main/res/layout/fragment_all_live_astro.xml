@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/swipeToRefresh"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_above="@+id/homeBottomNav"
+android:layout_below="@+id/toolbar"
+android:descendantFocusability="blocksDescendants"
+tools:context=".varta.ui.fragments.AllLiveAstroFragment">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_not_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_white_rounded"
+        android:backgroundTint="@color/backgroundColor"
+        android:padding="@dimen/dimen_20dp">
+
+        <TextView
+            android:id="@+id/tvNoLiveAstro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_astrologer_is_live"
+            android:textSize="@dimen/tv_size_18"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/dimen_20dp"/>
+
+        <Button
+            android:id="@+id/btnNoLiveAstro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNoLiveAstro"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_button_orange"
+            android:padding="10dp"
+            android:text="@string/show_all_online_astrologers"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_15" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/liveAstroRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:descendantFocusability="blocksDescendants"
+            android:paddingBottom="0dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/live_astrologer_row_layout_grid" />
+
+    </LinearLayout>
+
+</FrameLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

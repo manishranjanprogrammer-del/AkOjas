@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F7F7F7"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvpayMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center_vertical"
+                            android:padding="2dp"
+                            android:text="@string/select_pay_mode"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="18sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <RadioButton
+                                    android:id="@+id/radiocreditcard"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:text=""
+                                    android:theme="@style/MyCheckBox" />
+
+                                <TextView
+                                    android:id="@+id/txtcreditcard"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="16dp"
+                                    android:text="@string/astroshop_credit_card"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_creditcard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <include
+                                    android:id="@+id/inccredit"
+                                    layout="@layout/lay_astro_shop_payment_include"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <RadioButton
+                                    android:id="@+id/radiodebitcard"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:text=""
+                                    android:theme="@style/MyCheckBox" />
+
+                                <TextView
+                                    android:id="@+id/txtdebitcard"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="16dp"
+                                    android:text="@string/astroshop__debit_card"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_debitditcard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <include
+                                    android:id="@+id/incdebit"
+                                    layout="@layout/lay_astro_shop_payment_include"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <RadioButton
+                                    android:id="@+id/radionetbanking"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:text=""
+                                    android:theme="@style/MyCheckBox" />
+
+                                <TextView
+                                    android:id="@+id/txtnetbanking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="16dp"
+                                    android:text="@string/astroshop__net_banking"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_net_banking"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <include
+                                    android:id="@+id/incnetbanking"
+                                    layout="@layout/lay_astro_shop_payment_include"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <RadioButton
+                                    android:id="@+id/radiocheque"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:text=""
+                                    android:theme="@style/MyCheckBox" />
+
+                                <TextView
+                                    android:id="@+id/txtcheque"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="16dp"
+                                    android:text="@string/astroshop__cheque_dd"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_cheque_dd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_marginRight="25dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txtchequedd"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="left"
+                                        android:paddingBottom="2dp"
+                                        android:paddingTop="2dp"
+                                        android:text="@string/astroshop_you_pay"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtchequeddcost"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right|end"
+                                        android:paddingBottom="2dp"
+                                        android:paddingTop="2dp"
+                                        android:text="2777Rs"
+                                        android:textSize="16sp" />
+                                </LinearLayout>
+
+
+                                <Button
+                                    android:id="@+id/btn_pay_place_order_cheque_dd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_marginRight="25dp"
+                                    android:layout_marginTop="15dp"
+                                    android:elevation="7dp"
+                                    android:gravity="center"
+                                    android:text="@string/astroshop_place_order"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:theme="@style/MyDialogeButton" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/semi_transparent_black">
+
+    <LinearLayout
+        android:id="@+id/llUserProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="6dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circle_orange"
+            android:src="@drawable/ic_female"/>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/no_change_black"
+            android:textSize="@dimen/tv_size_13"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_3dp"
+            android:text="A user"
+            android:paddingHorizontal="@dimen/dimen_10dp"
+            android:paddingVertical="3dp"
+            android:background="@drawable/bg_white_rounded"
+            android:backgroundTint="@color/no_change_white"/>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/callout_right"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="@id/tv_msg"
+        app:layout_constraintStart_toStartOf="@id/tv_msg"
+        app:layout_constraintBottom_toBottomOf="@id/tv_msg"
+        app:layout_constraintEnd_toEndOf="@id/tv_msg"/>
+
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_birth_details_here"
+        android:textSize="16dp"
+        android:paddingEnd="@dimen/margin_25dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_7dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="-5dp"
+        android:textColor="@color/no_change_black"
+        app:layout_constraintEnd_toStartOf="@id/llUserProfile"
+        app:layout_constraintTop_toTopOf="@id/llUserProfile"
+        app:layout_constraintBottom_toBottomOf="@id/llUserProfile"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

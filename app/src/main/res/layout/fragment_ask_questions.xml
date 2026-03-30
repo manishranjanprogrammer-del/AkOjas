@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card_view_color"
+    tools:context=".ui.fragments.AskQuestionsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/innerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/white_trans_gradient"
+                    android:elevation="@dimen/dimen_10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_astrologer_image" />
+
+                <ImageView
+                    android:id="@+id/iv_astrologer_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:minHeight="300dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toTopOf="@+id/clBottomView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBottomView"
+                    android:layout_width="match_parent"
+                    android:background="@color/backgroundColorWhiteBlack"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/mainViewDialoag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <!-- Layout
+                                   for
+                                   dialogue matching-->
+                        <LinearLayout
+                            android:id="@+id/llMatching"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/txt_heading_pop_up"-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:gravity="center"-->
+                            <!--                        android:text="@string/pop_up_heading_kundli_matching"-->
+                            <!--                        android:textColor="@color/colorPrimary_day_night"-->
+                            <!--                        android:textSize="24sp" />-->
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/txt_sub_heading_pop_up"-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_gravity="center_horizontal|center_vertical"-->
+                            <!--                        android:layout_marginStart="35dp"-->
+                            <!--                        android:layout_marginTop="@dimen/dimen_10dp"-->
+                            <!--                        android:layout_marginEnd="35dp"-->
+                            <!--                        android:text="@string/pop_up_sub_heading_kundli_matching"-->
+                            <!--                        android:textAlignment="center"-->
+                            <!--                        android:textColor="@color/black"-->
+                            <!--                        android:textSize="19sp" />-->
+
+                        </LinearLayout>
+
+                        <!--                <ImageView-->
+                        <!--                    android:id="@+id/iv_expression_icon"-->
+                        <!--                    android:layout_width="200dp"-->
+                        <!--                    android:layout_height="200dp"-->
+                        <!--                    android:layout_gravity="center"-->
+                        <!--                    android:src="@drawable/astrologer_icon_3" />-->
+
+                        <TextView
+                            android:id="@+id/consultPremiumAstrologersTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_10dp"
+                            android:gravity="center"
+                            android:text="@string/consult_with_our_premium_ai_astrologer"
+                            android:textColor="@color/black"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/first_call_in_1rs_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnCallNow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/dimen_10dp"
+                            android:layout_marginBottom="90dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_button_yellow_less_round"
+                            android:backgroundTint="@color/colorPrimary_day_night"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp"
+                            android:text="@string/txt_chat_now"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--            <ImageView-->
+            <!--                android:id="@+id/top_View"-->
+            <!--                android:layout_width="80dp"-->
+            <!--                android:layout_height="80dp"-->
+            <!--                android:layout_alignParentStart="true"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:src="@drawable/varta_icon_96" />-->
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/dismissDialogBack"-->
+            <!--                android:layout_width="30dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_alignParentStart="true"-->
+            <!--                android:layout_alignParentTop="true"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:src="@drawable/ic_back_arrow"-->
+            <!--                app:tint="@color/white" />-->
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/top_View">-->
+            <!-- Layout
+            for
+            dialogue-->
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/mainViewDialoag"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginLeft="16dp"-->
+            <!--                    android:layout_marginTop="@dimen/dimen_10dp"-->
+            <!--                    android:layout_marginRight="16dp"-->
+            <!--                    android:background="@drawable/white_rounded_rectangle"-->
+            <!--                    android:backgroundTint="@color/backgroundColor"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    android:paddingBottom="10dp"-->
+            <!--                    android:visibility="visible">-->
+            <!--                    &lt;!&ndash; Layout-->
+            <!--                               for-->
+            <!--                               dialogue matching&ndash;&gt;-->
+            <!--                    <LinearLayout-->
+            <!--                        android:id="@+id/llMatching"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:visibility="visible">-->
+
+            <!--                        <TextView-->
+            <!--                            android:id="@+id/txtHeadingPopUp"-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:gravity="center"-->
+            <!--                            android:text="@string/pop_up_heading_kundli_matching"-->
+            <!--                            android:textColor="@color/colorPrimary_day_night"-->
+            <!--                            android:textSize="22sp" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:id="@+id/txtSubHeadingPopUp"-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_gravity="center_horizontal|center_vertical"-->
+            <!--                            android:layout_marginStart="35dp"-->
+            <!--                            android:layout_marginTop="@dimen/dimen_10dp"-->
+            <!--                            android:layout_marginEnd="35dp"-->
+            <!--                            android:text="@string/pop_up_sub_heading_kundli_matching"-->
+            <!--                            android:textAlignment="center"-->
+            <!--                            android:textColor="@color/black"-->
+            <!--                            android:textSize="18sp" />-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                    <ImageView-->
+            <!--                        android:id="@+id/iv_expression_icon"-->
+            <!--                        android:layout_width="180dp"-->
+            <!--                        android:layout_height="180dp"-->
+            <!--                        android:layout_gravity="center"-->
+            <!--                        android:src="@drawable/astrologer_icon_1" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/consultPremiumAstrologersTv"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginTop="-20dp"-->
+            <!--                        android:layout_marginBottom="@dimen/dimen_5dp"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:text="@string/consult_premium_astrologers"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:textSize="20sp" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/firstCallIn1rsTv"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="10dp"-->
+            <!--                        android:layout_marginRight="10dp"-->
+            <!--                        android:layout_marginBottom="@dimen/dimen_10dp"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:text="@string/first_calL_free"-->
+            <!--                        android:textColor="@color/colorPrimary_day_night"-->
+            <!--                        android:textSize="24sp" />-->
+
+            <!--                    <Button-->
+            <!--                        android:id="@+id/btnCallNow"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_gravity="center_horizontal"-->
+            <!--                        android:layout_marginBottom="@dimen/dimen_15dp"-->
+            <!--                        android:background="@drawable/bg_button_yellow"-->
+            <!--                        android:backgroundTint="@color/colorPrimary_day_night"-->
+            <!--                        android:paddingLeft="26dp"-->
+            <!--                        android:paddingTop="10dp"-->
+            <!--                        android:paddingRight="26dp"-->
+            <!--                        android:paddingBottom="10dp"-->
+            <!--                        android:text="@string/get_free_call_now"-->
+            <!--                        android:textAllCaps="false"-->
+            <!--                        android:textColor="@color/white"-->
+            <!--                        android:textSize="@dimen/tv_size_20" />-->
+            <!--                </LinearLayout>-->
+            <!--            </FrameLayout>-->
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llParent"
+    android:background="@color/backgroundColor">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        style="@style/SelectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center|left">
+
+                <ImageView
+                    android:id="@+id/listIcon"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    app:tint="@color/text_color_black"
+                    android:alpha="0.8"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/listText"
+            android:layout_width="0dp"
+            android:layout_weight=".8"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_centerVertical="true"
+            android:gravity="center|left"
+            android:layout_gravity="center_vertical"
+            android:text="Dummy Text"
+            android:textSize="15sp"
+            style="@style/content_style"
+            android:textColor="@color/text_color_black"
+            />
+    </LinearLayout>
+
+</LinearLayout>

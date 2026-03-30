@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color and border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/bg_card_view_color" />
+
+        </shape>
+    </item>
+
+    <!-- Arrow icon on the right -->
+    <item android:right="8dp" android:gravity="end|center_vertical">
+        <bitmap
+            android:src="@drawable/down_arrow"
+        android:tint="@color/text_day_gray_night_white" />
+    </item>
+
+</layer-list>

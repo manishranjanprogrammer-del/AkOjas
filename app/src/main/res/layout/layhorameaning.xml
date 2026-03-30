@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:paddingLeft="24dp"
+         android:paddingRight="24dp"
+         android:paddingTop="24dp">
+
+         <TextView
+             android:id="@+id/txvHoraIsAuspicious1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/hora_is_auspicious_for_heading"
+             android:textColor="@color/black"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+     </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txvHoraIsAuspicious"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textAllCaps="false"
+            android:text="@string/hora_is_auspicious_for"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/txvHoraPlanetMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subheading_text_size" />
+
+        <TextView
+            android:id="@+id/txvHoraPlanetMeanings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subheading_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txvHoraPlanetMeaningswiki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subheading_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txvHoraPlanetMeaningssecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subheading_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txvHoraPlanetMeaningprahar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subheading_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txvdoghatimuhurat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subheading_text_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/butSet"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/ColorPrimaryDark" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_25dp"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivCPCClose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        android:padding="5dp"
+        android:src="@drawable/cross_grey" />
+
+    <TextView
+        android:id="@+id/tvCPCText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/continue_this_chat_with_expert_insights_free"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnCPCNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border_orange_less_corner"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingHorizontal="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/no"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_15" />
+
+        <Button
+            android:id="@+id/btnCPCYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_yellow_less_round"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:paddingHorizontal="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/yes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:elevation="@dimen/dimen_10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/btnCallRL"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_yellow_less_round"
+            android:backgroundTint="@color/color_jade"
+            android:paddingLeft="6dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="2dp">
+
+            <ImageView
+                android:id="@+id/call_now_img"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dimen_5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/call_icon_btn"
+                app:tint="@color/no_change_white">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/btnTalk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_toEndOf="@+id/call_now_img"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/call"
+                android:textColor="@color/no_change_white"
+                android:textSize="@dimen/tv_size_17" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/callWithAstroTV"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/btnTalk"-->
+            <!--                android:layout_toRightOf="@id/call_now_img"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:gravity="center_horizontal"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:text="@string/with_astrologer"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="@dimen/tv_size_12" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnChatRL"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_yellow_less_round"
+            android:backgroundTint="@color/color_steel_blue"
+            android:paddingHorizontal="@dimen/dimen_10dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="2dp">
+
+            <ImageView
+                android:id="@+id/chat_now_img"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dimen_5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chat_icon_btn"
+                app:tint="@color/no_change_white">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/btnChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/chat_now_img"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/chat_now"
+                android:textColor="@color/no_change_white"
+                android:textSize="@dimen/tv_size_17" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/chatWithAstroTV"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/btnChat"-->
+            <!--                android:layout_toRightOf="@id/chat_now_img"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:gravity="center_horizontal"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:text="@string/with_astrologer"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="@dimen/tv_size_12" />-->
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

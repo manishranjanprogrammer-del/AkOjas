@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_large">
+
+            <TextView
+                android:id="@+id/lblNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/edit_text_blue_border"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="26"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color" />
+
+            <TextView
+                android:id="@+id/lblGenderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/gender"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/edit_text_blue_border">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_drop_down"
+                    app:tint="@color/black" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lblEmailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/emailId"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/edit_text_blue_border"
+                android:hint="@string/emailId"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/lblMobileNoTV"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="@string/cat_mobile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/input_screen_text_size" />
+
+                <Space
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/lbldobTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_dob"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/input_screen_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtMobileNo"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_blue_border"
+                    android:hint="@string/cat_mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color" />
+
+                <View
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_date_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/dobTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_blue_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:hint="@string/dd_mm_yyyy"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_vertical_margin"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/font_medium" />
+
+                    <ImageView
+                        android:layout_width="26dip"
+                        android:layout_height="26dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_calender"
+                        app:tint="@color/black" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_text_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/lblTobTV"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_tob"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/input_screen_text_size" />
+
+                <View
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/lblPobTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_pob"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/input_screen_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_time_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tobTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_blue_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:hint="HH:MM:SS"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_vertical_margin"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/font_medium" />
+
+                    <ImageView
+                        android:layout_width="26dip"
+                        android:layout_height="26dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_time"
+                        app:tint="@color/black" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/pobTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_blue_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:hint="@string/lbl_pob"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_vertical_margin"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/font_medium" />
+
+                    <ImageView
+                        android:layout_width="26dip"
+                        android:layout_height="26dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_location"
+                        app:tint="@color/black" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/lblPaymentReceivedTV"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="@string/payment_received"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/input_screen_text_size" />
+
+                <View
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/lblAppointmentDateTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="@string/appoinment_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/input_screen_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPaymentReceived"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_blue_border"
+                    android:hint="0.0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color" />
+
+                <Space
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_appointment_date_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/appointmentDateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_blue_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:hint="dd/mm/yyyy"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_vertical_margin"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/font_medium" />
+
+                    <ImageView
+                        android:layout_width="26dip"
+                        android:layout_height="26dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_calender"
+                        app:tint="@color/black" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblAppointmentTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/appoinment_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_blue_border">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/startTimeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_drop_down"
+                        app:tint="@color/black" />
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_blue_border">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/endTimeSpinner"
+                        style="@style/Spinnerwithunderline"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_drop_down"
+                        android:tint="@color/black"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblRemarksTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/remarks"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size" />
+
+            <EditText
+                android:id="@+id/edtRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/edit_text_blue_border"
+                android:hint="@string/remarks"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color" />
+
+            <Button
+                android:id="@+id/btnBook"
+                style="@style/buttonstyle"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:background="@drawable/bg_button_blue"
+                android:textColor="@color/no_change_white"
+                android:gravity="center"
+                android:text="@string/btn_book"
+                android:textSize="@dimen/font_xlarge" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/notifyCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorBlue"
+                    android:checked="true"
+                    android:textColor="@color/black_87" />
+
+                <TextView
+                    android:id="@+id/notifyTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/notify_person"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_large" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/search_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_border_dark_grey"
+            android:padding="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextSearchKundli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:dropDownHeight="wrap_content"
+                android:hint="@string/type_few_character"
+                android:dropDownVerticalOffset="8dp"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:textColorHint="@color/hint_text_color"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/tv_size_16"
+                android:theme="@style/Autocomplete" />
+
+            <EditText
+                android:id="@+id/search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_astrologer"
+                android:textSize="@dimen/tv_size_12"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:textColorHint="@color/hint_text_color"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent">
+            </EditText>
+
+            <ImageView
+                android:id="@+id/iv_search_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_search"
+                app:tint="@color/text_day_gray_night_white">
+
+            </ImageView>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:alpha="0.1"
+        android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp">
+
+    </RelativeLayout>
+
+    </FrameLayout>
+</RelativeLayout>

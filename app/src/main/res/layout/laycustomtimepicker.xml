@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="277dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:id="@+id/tvTimePickerHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:15:00"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:orientation="horizontal"
+    >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/butHP"
+                android:layout_width="74dp"
+                android:layout_height="41dp"
+                android:background="@drawable/image_button_up"
+                android:gravity="center_vertical|center_horizontal"
+                android:tag="1"
+                android:textColor="@color/LightBlack"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/etHour"
+                style="@style/EditTextStyle2"
+                android:layout_width="74dp"
+                android:layout_height="49dp"
+                android:background="@drawable/picker_middle"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2" />
+
+            <Button
+                android:id="@+id/butHN"
+                android:layout_width="74dp"
+                android:layout_height="41dp"
+                android:background="@drawable/image_button_down"
+                android:gravity="center_vertical|center_horizontal"
+                android:tag="0"
+                android:textColor="@color/LightBlack"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/butMP"
+                android:layout_width="74dp"
+                android:layout_height="41dp"
+                android:background="@drawable/image_button_up"
+                android:gravity="center_vertical|center_horizontal"
+                android:tag="1"
+                android:textColor="@color/LightBlack"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/etMinute"
+                style="@style/EditTextStyle2"
+                android:layout_width="74dp"
+                android:layout_height="49dp"
+                android:background="@drawable/picker_middle"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2" />
+
+            <Button
+                android:id="@+id/butMN"
+                android:layout_width="74dp"
+                android:layout_height="41dp"
+                android:background="@drawable/image_button_down"
+                android:gravity="center_vertical|center_horizontal"
+                android:tag="0"
+                android:textColor="@color/LightBlack"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/butSP"
+                android:layout_width="74dp"
+                android:layout_height="41dp"
+                android:background="@drawable/image_button_up"
+                android:gravity="center_vertical|center_horizontal"
+                android:tag="1"
+                android:textColor="@color/LightBlack"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/etSecond"
+                style="@style/EditTextStyle2"
+                android:layout_width="74dp"
+                android:layout_height="49dp"
+                android:background="@drawable/picker_middle"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2" />
+
+            <Button
+                android:id="@+id/butSN"
+                android:layout_width="74dp"
+                android:layout_height="41dp"
+                android:background="@drawable/image_button_down"
+                android:gravity="center_vertical|center_horizontal"
+                android:tag="0"
+                android:textColor="@color/LightBlack"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/butTimeCancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToExit"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/ColorPrimaryDark" />
+
+
+        <Button
+            android:id="@+id/butTimeOK"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:onClick="goToOk"
+            android:textAllCaps="false"
+            android:textColor="@color/ColorPrimaryDark" />
+
+
+    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/DateTimePicker"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/butTimeOK"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goToOk"
+            android:text="@string/set"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ResetDateTime"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/butTimeCancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goToExit"
+            android:text="@string/cancel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

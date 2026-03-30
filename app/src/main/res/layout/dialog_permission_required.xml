@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_rounded"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/permissions_needed"
+        android:textSize="@dimen/tv_size_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:textColor="@color/LightBlack"
+        android:text="@string/permission_to_make_call_to_this_astrologer"
+        android:textSize="@dimen/tv_size_18"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_border_grey"
+            android:backgroundTint="@color/gray_color"
+            android:text="@string/cancel"
+            android:textSize="@dimen/tv_size_16"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_border_grey"
+            android:backgroundTint="@color/dark_yellow"
+            android:text="@string/ok"
+            android:textSize="@dimen/tv_size_16"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

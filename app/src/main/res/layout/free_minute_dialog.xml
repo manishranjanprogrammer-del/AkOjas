@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/thanku_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/thank_you"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_20"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/get_call_shortly_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="@string/get_call_from_our_astrologer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_15"/>
+
+        <Button
+            android:id="@+id/free_minute_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_purple"
+            android:gravity="center"
+            android:text="@string/first_minute_free"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_20"/>
+
+        <TextView
+            android:id="@+id/call_not_recieve_msg_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/not_recieve_call"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_15"/>
+
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_button_orange"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_20"/>
+    </LinearLayout>
+</LinearLayout>

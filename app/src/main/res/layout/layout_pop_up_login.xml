@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="70dp"
+    android:paddingHorizontal="10dp"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/bg_card_view_color"
+        app:cardCornerRadius="@dimen/dimen_20dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/top_View"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:src="@drawable/yellow_rounded_top_corners"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:tint="@color/colorPrimary_day_night" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:src="@drawable/varta_icon_96"-->
+<!--            />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/dismissDialog"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:src="@drawable/ic_close_live"-->
+<!--            app:tint="@color/white" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/dismissDialog"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:padding="6dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:elevation="@dimen/dimen_10dp"
+                app:backgroundTint="@color/white"
+                android:background="@drawable/circle_orange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_close_black"
+                app:tint="@color/black"
+                android:focusable="true" />
+
+            <View
+                android:id="@+id/innerView"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:elevation="@dimen/dimen_10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_astrologer_image"
+                android:background="@drawable/white_trans_gradient" />
+
+            <ImageView
+                android:id="@+id/iv_astrologer_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:minHeight="300dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/clBottomView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBottomView"
+            android:layout_width="match_parent"
+            android:background="@color/backgroundColorWhiteBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content">
+            <!-- Layout
+           for
+           dialogue-->
+            <LinearLayout
+                android:id="@+id/mainViewDialoag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:visibility="visible">
+                <!-- Layout
+                           for
+                           dialogue matching-->
+                <LinearLayout
+                    android:id="@+id/llMatching"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/consult_premium_astrologers_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:text="@string/consult_with_our_premium_ai_astrologer"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/first_call_in_1rs_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/get_your_free_chat"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCallNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_button_yellow_less_round"
+                    android:backgroundTint="@color/colorPrimary_day_night"
+                    android:paddingLeft="40dp"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingRight="40dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:text="@string/chat_free_now"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    />
+            </LinearLayout>
+            <!-- Layout
+         for
+         enter phone number-->
+            <LinearLayout
+                android:id="@+id/enterPhoneNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/login_heading_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:gravity="center"
+                    android:text="@string/enter_your_mobile_number_on_which_you_want_to_receive_call_from_astrologer"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_20"
+                    android:textStyle="normal" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bg_border_orange1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/country_code_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:gravity="center_vertical"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/country_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:text="@string/country_code"
+                            android:textColor="@color/text_color"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/dropdown_img"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="0dp"
+                            android:src="@drawable/ic_spinner_down_image"
+                            android:visibility="visible"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/light_gray" />
+
+                    <EditText
+                        android:id="@+id/mobile_number_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:background="@android:color/transparent"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/mobile_number"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/tv_size_17" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sendOtpMsgTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:paddingRight="@dimen/margin_medium"
+                    android:text="@string/send_otp_desc"
+                    android:textColor="@color/color_sub_info"
+                    android:textSize="@dimen/tv_size_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dip"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/agreeCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:textColor="@color/Orangecolor"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/agree_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:gravity="left"
+                        android:text="@string/agree_text"
+                        android:textColor="@color/color_title"
+                        android:textSize="@dimen/tv_size_14" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/get_otp_btn"
+                    style="@style/buttonBackground"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/bg_button_yellow_less_round"
+                    android:backgroundTint="@color/colorPrimary_day_night"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="5dp"
+                    android:minWidth="150dp"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:visibility="visible" />
+            </LinearLayout>
+            <!-- Layout
+                 for
+                 enter otp-->
+            <LinearLayout
+                android:id="@+id/enterOtpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/otp_msg_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/enter_four_digit_otp_to_verify_your_mobile_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_20" />
+                <LinearLayout
+                    android:id="@+id/ll_change_mobile_no"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="@string/text_or"
+                        android:textColor="@color/colorPrimary_day_night"
+                        android:textSize="@dimen/tv_size_15" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text=",  "
+                        android:textColor="@color/colorPrimary_day_night"
+                        android:textSize="@dimen/tv_size_15" />
+                    <TextView
+                        android:id="@+id/edit_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="@string/add_another_number"
+                        android:textColor="@color/colorPrimary_day_night"
+                        android:textSize="@dimen/tv_size_15" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <com.ojassoft.astrosage.varta.customwidgets.CustomEditText
+                        android:id="@+id/otp_edt1"
+                        style="@style/OtpEdittext"
+                        android:layout_marginRight="6dp"
+                        android:focusable="true"
+                        android:textCursorDrawable="@null"
+                        android:imeOptions="actionNext" />
+
+                    <com.ojassoft.astrosage.varta.customwidgets.CustomEditText
+                        android:id="@+id/otp_edt2"
+                        style="@style/OtpEdittext"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:textCursorDrawable="@null"
+                        android:imeOptions="actionNext" />
+
+
+                    <com.ojassoft.astrosage.varta.customwidgets.CustomEditText
+                        android:id="@+id/otp_edt3"
+                        style="@style/OtpEdittext"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:textCursorDrawable="@null"
+                        android:imeOptions="actionNext" />
+
+                    <com.ojassoft.astrosage.varta.customwidgets.CustomEditText
+                        android:id="@+id/otp_edt4"
+                        style="@style/OtpEdittext"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:textCursorDrawable="@null"
+                        android:imeOptions="actionNext" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/verify_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/colorPrimary_day_night"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bg_button_yellow_less_round"
+                    android:text="@string/get_free_call"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textViewTimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:gravity="end"
+                    android:text="00"
+                    android:textColor="@color/colorPrimary_day_night"
+                    android:textSize="@dimen/tv_size_18"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/resend_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/resend_otp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_17"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/get_otp_via_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/get_otp_via_phone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_17"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dimen_50dp"-->
+<!--            android:layout_below="@+id/top_View">-->
+<!--           -->
+<!--        </FrameLayout>-->
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

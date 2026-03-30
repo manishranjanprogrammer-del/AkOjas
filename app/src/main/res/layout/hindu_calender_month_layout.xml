@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/topAdImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/orange_rect"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight=".4"
+                        android:background="@drawable/rect_rounded_image"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnPreviousDate"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:alpha=".9"
+                            android:background="@drawable/ic_keyboard_arrow_left_black"/>
+
+                        <TextView
+                            android:id="@+id/tvDatePicker"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="DD-MM-YYYY"
+                            android:singleLine="false"
+                            android:textSize="@dimen/input_screen_text_size" />
+
+                        <Button
+                            android:id="@+id/btnNextDate"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:alpha=".9"
+                            android:background="@drawable/ic_keyboard_arrow_right_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layPlaceHolder"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_weight=".6"
+                        android:background="@drawable/rect_rounded_image"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewPlaceName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="New Delhi"
+                            android:textSize="@dimen/input_screen_text_size" />
+
+                        <TextView
+                            android:id="@+id/textViewPlaceDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="( 28N36, 77E12 +5.5 )"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- <TextView
+                         android:id="@+id/tvTajikYearTitle"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/rect_rounded_image"
+                         android:gravity="center"
+                         android:padding="10dp"
+                         android:text="ANBBF"
+                         android:textColor="@color/black"
+                         android:textSize="16dp" />-->
+                </LinearLayout>
+
+                <!-- <include
+                     android:id="@+id/date_view"
+                     layout="@layout/pridiction_header_layout"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginRight="10dp"
+                     android:layout_marginTop="16dp" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/hindu_calender_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+                <include
+                    layout="@layout/custom_advertisement_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>

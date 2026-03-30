@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+  <!--  <RelativeLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:orientation="vertical">-->
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/wallet_toolbar" />
+
+        <!--<TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/feedback_form"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:typeface="serif" />-->
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/nav_view"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/margin_large"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/ic_feedback"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/ColorPrimaryDark"
+                    android:gravity="center_vertical"
+                    android:text="@string/feedback_form"
+                    android:textColor="@color/ColorPrimaryDark"
+                    android:textSize="@dimen/tv_size_20"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="@string/varta_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_16" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_desc"
+                        android:layout_marginTop="6dip">
+
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_border"
+                            android:hint="@string/varta_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/margin_xXlarge"
+                            android:paddingLeft="@dimen/margin_mlarge"
+                            android:textColor="@color/LightBlack"
+                            android:textColorHint="@color/LightBlack"
+                            android:textSize="@dimen/tv_size_16" />
+
+                        <ImageView
+                            android:layout_width="26dip"
+                            android:layout_height="26dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/card_corner"
+                            android:scaleType="fitCenter"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvEmailId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="15dip"
+                        android:gravity="left"
+                        android:text="@string/varta_emailId"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_16" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_desc"
+                        android:layout_marginTop="6dip">
+
+
+                        <EditText
+                            android:id="@+id/etEmailId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_border"
+                            android:hint="@string/varta_emailId"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:longClickable="false"
+                            android:maxLength="71"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/margin_xXlarge"
+                            android:paddingLeft="@dimen/margin_mlarge"
+                            android:textColor="@color/LightBlack"
+                            android:textColorHint="@color/LightBlack"
+                            android:textSize="@dimen/tv_size_16" />
+
+                        <ImageView
+                            android:layout_width="26dip"
+                            android:layout_height="26dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/card_corner"
+                            android:scaleType="fitCenter"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="15dip"
+                        android:gravity="left"
+                        android:text="@string/phone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_16" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_desc"
+                        android:layout_marginTop="6dip">
+
+
+                        <EditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_border"
+                            android:hint="@string/phone"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/margin_xXlarge"
+                            android:paddingLeft="@dimen/margin_mlarge"
+                            android:textColor="@color/LightBlack"
+                            android:textColorHint="@color/LightBlack"
+                            android:textSize="@dimen/tv_size_16" />
+
+                        <ImageView
+                            android:layout_width="26dip"
+                            android:layout_height="26dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/card_corner"
+                            android:scaleType="fitCenter"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvMsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="left"
+                            android:text="@string/feedback_form"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/textViewCharCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="500"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="15dip"
+                        android:gravity="left"
+                        android:text="@string/Msg_message"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_16" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_desc"
+                        android:layout_marginTop="6dip">
+
+
+                        <EditText
+                            android:id="@+id/etMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_border"
+                            android:gravity="top|left"
+                            android:hint="@string/message"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:maxLength="501"
+                            android:maxLines="7"
+                            android:minHeight="80dp"
+                            android:minLines="1"
+                            android:paddingLeft="@dimen/margin_mlarge"
+                            android:paddingTop="8dp"
+                            android:paddingRight="15dip"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/LightBlack"
+                            android:textColorHint="@color/LightBlack"
+                            android:textSize="@dimen/tv_size_16" />
+
+                        <ImageView
+                            android:layout_width="26dip"
+                            android:layout_height="26dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/card_corner"
+                            android:scaleType="fitCenter"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/hint_color"
+                        android:text="@string/max_msg_chars" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/butCancel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/cancel"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_18"
+                        android:visibility="gone" />
+
+                    <!--<Button
+                        android:id="@+id/butSend"
+                        android:layout_width="fill_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/send"
+                        android:textSize="18sp"
+                        android:elevation="3dp"
+                        android:textAllCaps="false"
+                        android:theme="@style/MyDialogeButton"
+                        android:textColor="@color/white"/>-->
+                    <!--<Button
+                        android:id="@+id/butSend"
+                        android:layout_marginTop="@dimen/button_top_margin_small"
+                        android:text="@string/send"
+                        style="@style/buttonstyle"
+                        android:theme="@style/buttonstyle"/>-->
+
+                    <Button
+                        android:id="@+id/butSend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/button_top_margin_small"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:background="@drawable/bg_button_orange"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:text="@string/varta_send"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_emailid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_email"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/email"
+                        android:drawableTint="@color/ColorPrimaryDark"
+                        android:textColor="@color/ColorPrimaryDark"
+                        android:textSize="@dimen/tv_size_20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_customer_care_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/customer_care_email"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_17" />
+
+                    <TextView
+                        android:id="@+id/tv_email_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/email_msg"
+                        android:textColor="@color/LightBlack"
+                        android:textSize="@dimen/tv_size_15" />
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:drawableLeft="@drawable/ic_phone"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/ColorPrimaryDark"
+                        android:gravity="center_vertical"
+                        android:text="@string/phone_txt"
+                        android:textColor="@color/ColorPrimaryDark"
+                        android:textSize="@dimen/tv_size_20"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_customer_care_phone1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/customer_care_phone1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_care_phone2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/customer_care_phone2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_care_phone3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/customer_care_phone3"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_phone_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/phone_msg"
+                        android:textColor="@color/LightBlack"
+                        android:textSize="@dimen/tv_size_15" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+ <!--   </RelativeLayout>-->
+
+</LinearLayout>

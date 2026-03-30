@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/backgroundColor"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvSelectTimeZone"
+                        style="@style/subheading_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/text_color_black"
+                        android:text="@string/time_zone" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarForGPS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spiTimeZone"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/custom_btn_height"
+
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:theme="@style/ActionBarThemeOverlay" />
+
+                    <ImageView
+                        android:id="@+id/timeZoneStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/timezone_status"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLatitude"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_color_black"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:text="@string/latitude" />
+
+                <RadioGroup
+                    android:id="@+id/rbGroupPlaceLat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:theme="@style/MyCheckBox"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbLatNorth"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/text_north"
+                        android:textColor="@color/text_color_black"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rbLatSouth"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/text_south"
+                        android:textColor="@color/text_color_black"
+                        />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_lat_deg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="title">
+
+                        <EditText
+                            android:id="@+id/editTxtVLatDeg"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:ems="10"
+                            android:hint="Lat Deg"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:numeric="integer"
+                            android:textColorHint="@color/hint_text_color"
+                            android:textColor="@color/text_color_black"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_lat_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="title">
+
+                        <EditText
+                            android:id="@+id/editTxtVLatMin"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:hint="Lat Min"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:numeric="integer"
+                            android:textColorHint="@color/hint_text_color"
+                            android:textColor="@color/text_color_black"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLongitude"
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:textColor="@color/text_color_black"
+                    android:text="@string/logitude" />
+
+                <RadioGroup
+                    android:id="@+id/rbGroupPlaceLong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:theme="@style/MyCheckBox">
+
+                    <RadioButton
+                        android:id="@+id/rbLongEast"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/text_east"
+                        android:textColor="@color/text_color_black"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rbLongWest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/text_west"
+                        android:textColor="@color/text_color_black"
+                        />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_long_deg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="title">
+
+                        <EditText
+                            android:id="@+id/editTxtVLongDeg"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:hint="Long Deg"
+                            android:maxLength="3"
+                            android:maxLines="1"
+                            android:numeric="integer"
+                            android:textColorHint="@color/hint_text_color"
+                            android:textColor="@color/text_color_black"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_long_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="title">
+
+                        <EditText
+                            android:id="@+id/editTxtVLongMin"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:hint="Long Min"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:numeric="integer"
+                            android:textColorHint="@color/hint_text_color"
+                            android:textColor="@color/text_color_black"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:id="@+id/check_save_city_in_pref_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:text="@string/make_it_default_city"
+                    android:theme="@style/MyCheckBox"
+                    android:textColor="@color/text_color_black"
+                    />
+
+                <Button
+                    android:id="@+id/butPlaceCustomOk"
+                    style="@style/buttonstyle"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:backgroundTint="@color/currentThemeColor"
+                    android:text="@string/ok"
+                    android:theme="@style/buttonstyle" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>

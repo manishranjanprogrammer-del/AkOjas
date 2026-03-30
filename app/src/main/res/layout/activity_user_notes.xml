@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColorView"
+    tools:context=".ui.act.indnotes.UserNotesActivity">
+
+    <LinearLayout
+        android:id="@+id/categoryLL"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="@dimen/margin_xXlarge"
+        android:layout_marginTop="@dimen/margin_mlarge"
+        android:layout_marginRight="@dimen/margin_xXlarge"
+        android:background="@drawable/bg_button"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textCategory"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/margin_mlarge"
+            android:text="@string/wizard_choose_category_title"
+            android:textColor="@color/no_change_white"
+            android:textSize="@dimen/font_large" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@mipmap/ic_down_arrow"
+            app:tint="@color/no_change_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <EditText
+                android:id="@+id/notesETV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top|left"
+                android:hint="@string/hint_notes"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:maxLength="4000"
+                android:padding="@dimen/margin_large"
+
+                android:textColorHint="@color/hint_text_color"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large" />
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/msgNotesTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_mlarge"
+        android:layout_marginTop="@dimen/margin_mlarge"
+        android:layout_marginRight="@dimen/margin_mlarge"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:gravity="right"
+        android:text="@string/msg_notes"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_large" />
+</LinearLayout>

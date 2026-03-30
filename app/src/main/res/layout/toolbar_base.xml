@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appbarBGColor"
+        android:elevation="4dip"
+        app:titleTextColor="@color/black"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.claudiodegio.msv.MaterialSearchView
+        android:id="@+id/searchViewNotes"
+        style="@style/MaterialSearchViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dip"
+        android:hint="@string/hint_search"
+        android:theme="@style/MaterialSearchViewStyle" />
+</FrameLayout>
+
+    <!--<android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        style="@style/NotesTabStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="20dip"
+        app:tabPaddingStart="20dip" />
+-->

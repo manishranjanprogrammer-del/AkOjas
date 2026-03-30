@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingBottom="@dimen/dimen_16dp"
+    android:paddingTop="@dimen/dimen_5dp"
+    android:background="@drawable/bg_top_curved_orange_border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:orientation="horizontal">
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvBFQRHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/insufficient_wallet_balance_"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:textSize="@dimen/tv_size_17"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/ivBFQRClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_close_live"
+            android:clickable="true"
+            android:padding="@dimen/dimen_1dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:background="?attr/selectableItemBackground"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+    <!-- Sub title -->
+    <TextView
+        android:id="@+id/txtMinBalanceNeeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:background="@color/text_gray_bg"
+        android:paddingVertical="@dimen/dimen_5dp"
+        android:paddingHorizontal="@dimen/dimen_10dp"
+        android:text="@string/minimum_balance_required_to_talk_with_new"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <!-- Recharge list -->
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+    <!-- Proceed Button -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBFQRAmounts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="4"
+        tools:listitem="@layout/item_recharge_suggestion" />
+
+    <Button
+        android:id="@+id/btnProceedRecharge"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/proceed"
+        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:textAllCaps="false"
+        android:textSize="@dimen/dimen_16dp"
+       android:background="@drawable/bg_button_yellow_less_round"/>
+
+</LinearLayout>

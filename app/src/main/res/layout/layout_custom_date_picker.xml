@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginHorizontal="@dimen/dimen_20dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_today_black_icon"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_selected_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_size_20"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/dimen_10dp"/>
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_size_10"
+        android:layout_marginHorizontal="@dimen/dimen_50dp">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/day"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_month"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ojassoft.astrosage.utils.NumberPicker
+            android:id="@+id/picker_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:theme="@style/DefaultNumberPickerTheme"
+            app:layout_constraintEnd_toEndOf="@+id/tv_day"
+            app:layout_constraintStart_toStartOf="@id/tv_day"
+            app:layout_constraintTop_toBottomOf="@id/tv_day" />
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/month"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_year"
+            app:layout_constraintStart_toEndOf="@+id/tv_day"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/year"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_month"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ojassoft.astrosage.utils.NumberPicker
+            android:id="@+id/picker_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:theme="@style/DefaultNumberPickerTheme"
+            app:layout_constraintEnd_toEndOf="@+id/tv_month"
+            app:layout_constraintStart_toStartOf="@id/tv_month"
+            app:layout_constraintTop_toBottomOf="@+id/tv_month" />
+
+        <com.ojassoft.astrosage.utils.NumberPicker
+            android:id="@+id/picker_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="5dp"
+            android:theme="@style/DefaultNumberPickerTheme"
+            app:layout_constraintEnd_toEndOf="@+id/tv_year"
+            app:layout_constraintStart_toStartOf="@id/tv_year"
+            app:layout_constraintTop_toBottomOf="@+id/tv_year" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:layout_gravity="end">
+
+    <Button
+        android:id="@+id/button_cancel"
+        style="?borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:background="?attr/selectableItemBackground"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:paddingHorizontal="@dimen/dimen_15dp"
+        android:minWidth="@dimen/dimen_0dp"
+        android:textSize="@dimen/tv_size_16" />
+        <Button
+            android:id="@+id/button_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/set"
+            android:textAllCaps="false"
+            android:padding="@dimen/dimen_15dp"
+            android:minWidth="@dimen/dimen_0dp"
+            android:textColor="@color/colorPrimary_day_night"
+            android:textSize="@dimen/tv_size_16" />
+    </LinearLayout>
+</LinearLayout>
+
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@drawable/live_astrologer_desc_background_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:id="@+id/end_text_1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/tv_size_16"
+            android:text="@string/live_session_end_txt3" />
+
+        <TextView
+            android:id="@+id/end_text_2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/tv_size_16"
+            android:text="@string/check_other_live_sessions" />
+
+        <LinearLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:weightSum="2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1.0dip">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_not_live_ok"
+                style="@style/buttonBackgroundBorder"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textAllCaps="false"
+                android:text="@string/ok"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

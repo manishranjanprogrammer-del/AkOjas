@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/appbarBGColor"
+    app:contentInsetStart="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingLeft="16dp"
+        android:paddingRight="12dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_back_arrow" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/toolbar_title"
+        android:gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/astrologer_detail" />
+
+        <RelativeLayout
+            android:id="@+id/wallet_box_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="right|center_vertical"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:id="@+id/wallet_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:gravity="center_vertical"
+                android:paddingRight="8dp"
+                android:layout_centerVertical="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/bg_border_black">
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wallet_new">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wallet_price_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:maxLines="1"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/tv_size_13">
+                </TextView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/backgroundColorView">
+
+    <include
+        android:id="@+id/toolbar_magazine"
+        layout="@layout/tool_bar_magazine"
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateOnly="true"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar_magazine" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/backgroundColorView"
+        android:layout_above="@+id/imgBanner"
+        android:layout_below="@+id/progressBar1" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_above="@+id/homeBottomNav"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:id="@+id/advLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/homeBottomNav"
+        android:orientation="vertical" />
+    <include
+        android:id="@+id/homeBottomNav"
+        layout="@layout/custom_bottom_nav_with_gif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

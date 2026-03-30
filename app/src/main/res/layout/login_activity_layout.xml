@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/top_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:paddingRight="@dimen/activity_vertical_margin">
+
+            <Button
+                android:id="@+id/skip_textview"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:drawableEnd="@drawable/ic_arrow_next"
+                android:text="@string/SKIP"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_icon"
+                android:layout_width="@dimen/language_notification_icon_size"
+                android:layout_height="@dimen/language_notification_icon_size"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_user"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/heading_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/AstroSage_Cloud"
+                style="@style/title_style_color"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/des_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/save_kundli_on_server_access_from_any_device"
+                style="@style/title_style_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/sperator_view"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/ColorPrimary"
+            android:visibility="gone" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            style="@style/CustomTabText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ColorPrimary"
+            android:elevation="3dp"
+            android:minHeight="?attr/actionBarSize"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/color_title"
+            app:tabIndicatorHeight="4dp"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp" />
+
+
+        <com.ojassoft.astrosage.ui.customcontrols.CustomViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

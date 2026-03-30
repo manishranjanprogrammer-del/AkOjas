@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">Internal Error</string>
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="disclaimer_text">The information and data contained in this app is to be treated purely for your entertainment purposes only. Any prediction or other message that you receive is not a substitute for advice, programs, or treatment that you would normally receive from a licensed professional such as a lawyer, doctor, psychiatrist, or financial advisor. Accordingly, astrosage.com provides no guarantees, implied warranties, or assurances of any kind, and will not be responsible for any interpretation made or use by the recipient of the information and data mentioned above. </string>
+    <string name="i_accept">I Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="lib_astro_shop">Astro Shop</string>
+    <string name="lib_ask_our_astrologer">Ask Astrologer</string>
+    <string name="lib_app_version_text">Version</string>
+    <string name="lib_cancel">Cancel</string>
+    <string name="lib_pleasewait">Please wait...</string>
+    <string name="lib_msg_ok">OK</string>
+    <string name="lib_available_languages">Available Languages </string>
+    <string name="lib_english"> English</string>
+    <string name="lib_hindi"> Hindi</string>
+    <string name="LibNotificationConffigHeading">Notification Frequency</string>
+    <string name="LibOnce">Once in a day</string>
+    <string name="LibTwice">Twice in a day</string>
+    <string name="LibAsManyTime">As many time as it comes</string>
+    <string name="LibNever">Never</string>
+    <string name="Lib_Save">Save</string>
+    <string name="Lib_Name">Name</string>
+    <string name="Lib_EmailId">Email Id</string>
+    <string name="Lib_Phone">Phone</string>
+    <string name="Lib_Message">Message</string>
+    <string name="Lib_Feedback_form">Feedback</string>
+    <string name="Lib_Send">Send</string>
+    <string name="please_enter_name">Please enter your name...</string>
+    <string name="name_limit">Name should be with in 50 characters...</string>
+    <string name="email_one">Please Enter e-mail Id...</string>
+    <string name="email_two">e-mail should be with in 70 characters...</string>
+    <string name="email_three">Enter valid e-mail Id...</string>
+    <string name="feedback_message_one">Please write feedback message...</string>
+    <string name="feedback_message_two">Message should be with in 500 characters...</string>
+    <string name="phone_validation">Enter 10 digit number...</string>
+    <string name="phone_should_be_numeric">Phone number should be numeric...</string>
+    <string name="feedback_sent">Feedback Sent Successfully...</string>
+    <string name="please_try_again">Please, try again...</string>
+    <string name="internet_is_not_working">Internet is not working...</string>
+</resources>

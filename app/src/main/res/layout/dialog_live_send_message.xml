@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayoutCL"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dimen_10dp"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="55dp"
+        android:layout_weight="1"
+        android:background="@drawable/message_input_shape_live"
+        android:hint="@string/write_comment"
+        android:imeOptions="actionSend"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:maxHeight="100dp"
+        android:maxLength="256"
+        android:minHeight="@dimen/dimen_45dp"
+        android:paddingStart="@dimen/dimen_20dp"
+        android:paddingTop="@dimen/dimen_7dp"
+        android:paddingEnd="@dimen/dimen_20dp"
+        android:paddingBottom="@dimen/dimen_7dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_text_color"
+        android:textSize="@dimen/tv_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/buttonSend"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circle_gray_live"
+        android:contentDescription="@string/write_comment"
+        android:padding="10dp"
+        android:src="@drawable/icon_send"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextMessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

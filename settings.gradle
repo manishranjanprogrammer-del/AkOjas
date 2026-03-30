@@ -1,0 +1,6 @@
+include ':app', ':HoroN', ':LibOjasKpExtension', ':libojassoft1.0', ':libmsv'//, ':volley-master'
+project(':HoroN').projectDir = new File('libraries/HoroN')
+project(':LibOjasKpExtension').projectDir = new File('libraries/LibOjasKpExtension')
+project(':libojassoft1.0').projectDir = new File('libraries/libojassoft1.0')
+//project(':volley-master').projectDir = new File('libraries/volley-master')
+//include ':vartalive'

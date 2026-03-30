@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:paddingBottom="30dp"
+    android:clipToPadding="false">
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         >-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWelcomeUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:gravity="left"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textquestiondes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:gravity="left"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_discount_plan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/gold_icon"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="Gold Plan 10% extra discount"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/basic_plan_user_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/golden_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="2dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/msg_for_basic_plan_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:drawableLeft="@mipmap/gold_icon"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="2"
+                        android:paddingLeft="4dp"
+                        android:text="@string/basic_user_text_dhruv"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/msg_for_basic_plan_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="4"
+                        android:paddingRight="2dp"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textColor="@color/gold_plan"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/unlock_plan_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@mipmap/left_arrow_icon"
+                    android:drawableLeft="@mipmap/lock_icon"
+                    android:gravity="right"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/buy_now"
+                style="@style/buttonstyle"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/ColorPrimaryDark"
+                android:text="@string/msg_please_wait"
+                android:theme="@style/buttonstyle" />
+
+            <Button
+                android:id="@+id/btnRentry"
+                style="@style/buttonstyle"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/ColorPrimaryDark"
+                android:text="No Internet, Tap here to retry !"
+                android:theme="@style/buttonstyle"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminateOnly="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--</ScrollView>-->
+
+</ScrollView>

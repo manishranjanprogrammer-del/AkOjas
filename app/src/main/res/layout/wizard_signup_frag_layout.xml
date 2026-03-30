@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/fb_google_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <include layout="@layout/fb_google_layout" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/signup_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/signup_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/heading_text"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rect_rounded_image">
+
+                    <Spinner
+                        android:id="@+id/spinnerScreenList"
+                        style="@style/Base.Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:alpha="0.8"
+                        android:background="@drawable/ic_person_black_new" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edtMailId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:maxLength="50"
+                            android:hint="@string/text_email"
+                            android:inputType="textEmailAddress"
+                            style="@style/Theme.App.Base" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:alpha="0.8"
+                        android:background="@drawable/ic_lock_black_new" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:maxLength="50"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:ems="10"
+                            android:hint="@string/text_password"
+                            android:inputType="textPassword"
+                            style="@style/Theme.App.Base" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/show_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:checked="false"
+                    android:text="@string/show_password"
+                    android:textSize="14sp"
+                    android:theme="@style/MyCheckBox" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/agree_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/agree_text"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textViewDisclaimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:clickable="true"
+                    android:text="@string/disclaimer_on_about"
+                    android:textColor="@color/ColorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/and_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/and"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewPrivacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:clickable="true"
+                    android:text="@string/privacy_policy_on_aboutus"
+                    android:textColor="@color/ColorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/buttonstyle"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/button_top_margin_small"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:textAllCaps="false"
+                android:text="@string/start_using_astrosage"
+                android:theme="@style/buttonstyle" />
+
+        </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

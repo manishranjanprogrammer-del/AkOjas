@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    >
+        <!--<include layout="@layout/toolbar" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/astrologer_list"
+            android:layout_width="match_parent"
+             android:layout_above="@+id/questionask"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/questionask"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/userQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="5dp"
+            android:maxLines="2"
+            android:hint="@string/type_text" />
+
+        <ImageView
+            android:id="@+id/sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_send_black" />
+
+    </LinearLayout>
+
+</RelativeLayout>

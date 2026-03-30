@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainlayout"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="35dp">
+
+        <TextView
+            android:id="@+id/heading_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_18"
+            android:text="@string/insufficient_wallet_balance"
+            android:gravity="center">
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/available_bal_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_day_gray_night_white"
+                android:textSize="@dimen/tv_size_16"
+                android:paddingLeft="8dp"
+                android:layout_weight="1.4"
+                android:text="@string/available_bal"
+                android:gravity="left|center_vertical">
+            </TextView>
+
+            <TextView
+                android:id="@+id/balance_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/tv_size_16"
+                android:layout_weight="0.6"
+                android:text="00.0"
+                android:paddingRight="8dp"
+                android:gravity="right|center_vertical">
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/balance_msg_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/max_wallet_msg"
+            android:padding="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/text_day_gray_night_white"
+            android:background="@drawable/bg_gray">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_rect_with_round_corner"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/cancel"
+                android:textColor="@color/no_change_white"
+                android:layout_weight="1"
+                android:foreground="?android:selectableItemBackground"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:textSize="@dimen/tv_size_18">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/recharge_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/orange_rect_with_round_corner"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/title_recharge"
+                android:foreground="?android:selectableItemBackground"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/tv_size_18">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

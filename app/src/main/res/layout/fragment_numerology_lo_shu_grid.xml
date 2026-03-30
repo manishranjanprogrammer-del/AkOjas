@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".ui.fragments.NumerologyLoShuGridFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/topAdImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/orange_rect"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dip"
+            android:background="@drawable/bg_numerology">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4c176a9a"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/loShuGridIcon"
+                    android:layout_width="92dip"
+                    android:layout_height="92dip"
+                    android:background="@drawable/ic_lo_shu_grid"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblHeadingTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/lo_shu_grid"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_large" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:horizontalSpacing="@dimen/dimen_6dp"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="@dimen/dimen_6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_card_view_color"
+            android:layout_margin="@dimen/dimen_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/dimen_5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/plane_name"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/present"
+                        android:textAlignment="center"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/mental_plane"
+                        android:textSize="@dimen/tv_size_18"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/iv_mental_plane"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/emotional_plane"
+                        android:textSize="@dimen/tv_size_18"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/iv_emotional_plane"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/practical_plane"
+                        android:textSize="@dimen/tv_size_18" />
+
+                    <ImageView
+                        android:id="@+id/iv_practical_plane"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_red_cross" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/vision_plane"
+                        android:textSize="@dimen/tv_size_18" />
+
+                    <ImageView
+                        android:id="@+id/iv_vision_plane"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/will_plane"
+                        android:textSize="@dimen/tv_size_18" />
+
+                    <ImageView
+                        android:id="@+id/iv_will_plane"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/action_plane"
+                        android:textSize="@dimen/tv_size_18" />
+
+                    <ImageView
+                        android:id="@+id/iv_action_plane"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_red_cross" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/rajyog_golden"
+                        android:textSize="@dimen/tv_size_18" />
+
+                    <ImageView
+                        android:id="@+id/iv_rajyog_golden"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_20dp"
+                        android:text="@string/rajyog_silver"
+                        android:textSize="@dimen/tv_size_18"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/iv_rajyog_silver"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_red_cross" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <include
+            layout="@layout/custom_advertisement_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <!-- Scale animation: Zoom in from 0.5x to 1.0x -->
+    <scale
+        android:duration="1000"
+        android:fillAfter="true"
+        android:fromXScale="0.5"
+        android:fromYScale="0.5"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="1.0"
+        android:toYScale="1.0" />
+
+    <!-- Alpha animation: Fade in from 0% to 100% opacity -->
+    <alpha
+        android:duration="1000"
+        android:fillAfter="true"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+</set>

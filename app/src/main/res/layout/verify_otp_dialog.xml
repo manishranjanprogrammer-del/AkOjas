@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="@dimen/activity_vertical_margin"
+    card_view:cardElevation="0dip"
+    card_view:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/imgDialogClose"
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_close"
+                android:foreground="?android:attr/selectableItemBackground"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_mobile_number"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_xxlarge" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_mobile_number_desc"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_xlarge"
+            android:lineSpacingExtra="3dip"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_xlarge">
+
+            <EditText
+                android:id="@+id/edtNum1"
+                android:layout_width="@dimen/otp_edt_width"
+                android:layout_height="@dimen/button_dialog_height"
+                android:background="@drawable/bg_edit_otp"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_large"
+                android:imeOptions="actionNext" />
+
+            <Space
+                android:layout_width="8dip"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtNum2"
+                android:layout_width="@dimen/otp_edt_width"
+                android:layout_height="@dimen/button_dialog_height"
+                android:background="@drawable/bg_edit_otp"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_large"
+                android:imeOptions="actionNext" />
+
+            <Space
+                android:layout_width="8dip"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtNum3"
+                android:layout_width="@dimen/otp_edt_width"
+                android:layout_height="@dimen/button_dialog_height"
+                android:background="@drawable/bg_edit_otp"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_large"
+                android:imeOptions="actionNext" />
+
+            <Space
+                android:layout_width="8dip"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtNum4"
+                android:layout_width="@dimen/otp_edt_width"
+                android:layout_height="@dimen/button_dialog_height"
+                android:background="@drawable/bg_edit_otp"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_large"
+                android:imeOptions="actionNext" />
+            <Space
+                android:layout_width="8dip"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtNum5"
+                android:layout_width="@dimen/otp_edt_width"
+                android:layout_height="@dimen/button_dialog_height"
+                android:background="@drawable/bg_edit_otp"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_large"
+                android:imeOptions="actionNext" />
+            <Space
+                android:layout_width="8dip"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtNum6"
+                android:layout_width="@dimen/otp_edt_width"
+                android:layout_height="@dimen/button_dialog_height"
+                android:background="@drawable/bg_edit_otp"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_large"
+                android:imeOptions="actionDone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_code"
+            android:textSize="@dimen/font_large"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginTop="@dimen/margin_large"
+            android:textColor="@color/colorPurple" />
+
+        <Button
+            android:id="@+id/btnVerify"
+            style="@style/buttonstyle"
+            android:layout_height="@dimen/custom_btn_height"
+            android:layout_width="@dimen/button_width"
+            android:background="@drawable/bg_button_purple"
+            android:gravity="center"
+            android:text="@string/verify_now"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_medium"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

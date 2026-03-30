@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="@color/appbarBGColor"
+    app:contentInsetStart="0dp">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="16dp"
+        android:paddingRight="12dp"
+        android:src="@drawable/ic_back_arrow" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/downloaded_kundli"
+        android:layout_toLeftOf="@+id/linLayoutShare"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/dimen_18sp"
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/linLayoutShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/dimen_3dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:src="@drawable/download_brihat"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/imgViewWhatsapp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/dimen_3dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:src="@drawable/ic_toolbar_share_whatsapp" />
+
+        <ImageView
+            android:id="@+id/imgViewDownload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/dimen_3dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:src="@drawable/download_brihat"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/imgViewShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/dimen_3dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:src="@drawable/ic_share_pdf" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

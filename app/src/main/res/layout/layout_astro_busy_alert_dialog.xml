@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_white_rounded"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_close_view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="7dp"
+        android:src="@drawable/ic_close_circle_grey600_24dp" />
+
+    <LinearLayout
+        android:id="@+id/main_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_close_view"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dimen_5dp"
+            android:text="@string/thank_you_msg"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_22"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNotifAlertMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_grey_box_rounded"
+            android:backgroundTint="@color/wallet_grey_line"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/astrologer_is_busy_in_another_chat_please_wait_for_some_time_and_re_initiate_the_chat"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chat_with_simi_ai_astrologer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_yellow_less_round"
+                android:backgroundTint="@color/colorPrimary_day_night">
+
+                <com.ojassoft.astrosage.beans.CircularNetworkImageView
+                    android:id="@+id/ivAIAstroImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:src="@drawable/astro_mr_krishnamurti"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:text="@string/chat_with_ai_astrologer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivAIAstroImage" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:text="Ai Astrologer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_13"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivAIAstroImage"
+                    app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chat_with_similar_astrologer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_yellow_less_round"
+                android:backgroundTint="@color/colorPrimary_day_night">
+
+                <ImageView
+                    android:id="@+id/ivAstroImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:src="@drawable/astrologer2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:text="@string/chat_with_similar_astrologer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivAstroImage" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:text="Astrologer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_13"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivAstroImage"
+                    app:layout_constraintTop_toBottomOf="@+id/text2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/getNotificationAstrologerFree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@string/notification_alert_astro"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAstroImage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_close_view"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_20dp"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/astro_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivAstroImageChat"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:src="@drawable/astro_mr_krishnamurti"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tv_size_10"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:gravity="start"
+                android:text="@string/do_you_want_to_start_chat_at_u20b9_min_with_"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivAstroImageChat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/chat_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_box_orange_border"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:text="@string/no"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_16"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/chat_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_yellow_less_round"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:text="@string/yes"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_16"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

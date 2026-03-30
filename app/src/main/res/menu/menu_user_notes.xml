@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_calendar"
+        android:icon="@mipmap/ic_calendar_black"
+        android:orderInCategory="100"
+        android:title="@string/save"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_category"
+        android:icon="@mipmap/ic_category"
+        android:orderInCategory="100"
+        android:title="@string/save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_save"
+        android:icon="@mipmap/ic_save"
+        android:orderInCategory="100"
+        android:title="@string/save"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@mipmap/ic_share_black"
+        android:orderInCategory="100"
+        android:title="@string/hint_search"
+        app:showAsAction="always" />
+</menu>

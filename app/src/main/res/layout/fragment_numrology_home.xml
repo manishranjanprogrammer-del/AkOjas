@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".ui.fragments.NumerologyHomeFragment"
+    android:paddingBottom="0dp"
+    android:clipToPadding="false">
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:overScrollMode="never"
+         android:scrollbars="none">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/topAdImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/orange_rect"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="20dip"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="2dip"
+                android:layout_weight="1"
+                cardView:cardElevation="2dip"
+                cardView:cardBackgroundColor="@color/bg_card_view_color"
+                cardView:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_medium">
+
+                    <TextView
+                        android:id="@+id/valRadicalNumberTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_orange"
+                        android:textSize="@dimen/font_xxXlarge" />
+
+                    <TextView
+                        android:id="@+id/lblRadicalNumberTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center_horizontal"
+                        android:text="@string/lbl_home_radical_num"
+                        android:textSize="@dimen/font_small" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dip"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="2dip"
+                android:layout_weight="1"
+                cardView:cardElevation="2dip"
+                cardView:cardBackgroundColor="@color/bg_card_view_color"
+                cardView:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_medium">
+
+                    <TextView
+                        android:id="@+id/valDestinyNumTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ColorPrimary"
+                        android:textSize="@dimen/font_xxXlarge" />
+
+                    <TextView
+                        android:id="@+id/lblDestinyNumTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center_horizontal"
+                        android:text="@string/lbl_home_destiny_num"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dip"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                cardView:cardElevation="2dip"
+                cardView:cardBackgroundColor="@color/bg_card_view_color"
+                cardView:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_medium">
+
+                    <TextView
+                        android:id="@+id/valNameNumberTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/numrologyBlue"
+                        android:textSize="@dimen/font_xxXlarge" />
+
+                    <TextView
+                        android:id="@+id/lblNameNumberTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center_horizontal"
+                        android:text="@string/lbl_home_name_num"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <include layout="@layout/layout_numrology_table" />
+
+        <include
+            layout="@layout/custom_advertisement_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--</ScrollView>-->
+</ScrollView>

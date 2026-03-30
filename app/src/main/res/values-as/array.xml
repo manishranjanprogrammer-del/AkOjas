@@ -1,0 +1,2563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cloud_plans_on_menu">
+        <item>বেসিক </item>
+        <item>সিলভাৰ </item>
+        <item>গোল্ড </item>
+        <!--Added by Tejinder added plan id-->
+        <item>সিলভাৰ </item>
+        <item>সিলভাৰ </item>
+        <item>গোল্ড </item>
+        <item>গোল্ড </item>
+        <item>@string/dhruv</item>
+        <item>@string/dhruv</item>
+        <item>@string/dhruv</item>
+        <item>@string/platinum_plan</item>
+        <item>@string/dhruv</item>
+    </string-array>
+    <string-array name="cloud_plans">
+    <item>বেসিক</item>
+    <item>সিলভাৰ</item>
+    <item>গোল্ড</item>
+    <item>@string/platinum_plan</item>
+    <item>@string/dhruv</item>
+    </string-array>
+    <string-array name="purchase_plan_tab_titles_list">
+        <item>বেসিক</item>
+        <item>সিলভাৰ</item>
+        <item>গোল্ড</item>
+        <item>@string/platinum_plan</item>
+        <item>@string/dhruv</item>
+    </string-array>
+    <string-array name="purchase_plan_tab_titles_list1">
+        <item>বেসিক</item>
+        <item>গোল্ড</item>
+        <item>@string/platinum_plan</item>
+        <item>@string/dhruv</item>
+    </string-array>
+    <string-array name="purchase_plan_tab_titles_list2">
+        <item>বেসিক</item>
+        <item>@string/platinum_plan</item>
+        <item>@string/dhruv</item>
+    </string-array>
+    <string-array name="purchase_plan_tab_titles_list3">
+        <item>বেসিক</item>
+        <item>সিলভাৰ</item>
+        <item>@string/platinum_plan</item>
+        <item>@string/premium</item>
+    </string-array>
+    <string-array name="module_list">
+        <item>মূলপৃষ্ঠা</item>
+        <item>@string/bookMarkScreenHeading</item>
+        <item>মৌলিক</item>
+        <item>দশা</item>
+        <item>ফলাদেশ</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>ষোড়শৱৰ্গ</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+        <item>@string/miscellaneous</item>
+        <item>@string/Numerology</item>
+    </string-array>
+    <string-array name="module_names_for_title_and_home_screen">
+        <item>মৌলিক</item>
+        <item>দশা</item>
+        <item>ফলাদেশ</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>ৱৰ্গ</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+        <item>মিলন</item>
+        <item>অ্যাস্ট্ৰোসেজ মেগাজিন</item>
+        <item>অ্যাস্ট্ৰো দোকান</item>
+        <item>জ্যোতিষী পেনেল</item>
+    </string-array>
+    <string-array name="dst_list">
+        <item>০</item>
+        <item>১</item>
+        <item>২</item>
+    </string-array>
+    <string-array name="order_price_data">
+        <item>কমৰপৰা অধিকলৈ</item>
+        <item>অধিকৰপৰা কমলৈ</item>
+    </string-array>
+    <string-array name="ayan_list">
+        <item>এন.সি.লাহিৰী </item>
+        <item>কেপি নতুন</item>
+        <item>কেপি পুৰণি </item>
+        <item>ৰামন</item>
+        <item>কেপি খুল্লাৰ </item>
+        <item>সায়ন</item>
+    </string-array>
+    <string-array name="basic_module_list">
+        <item>মৌলিক</item>
+        <item>লগ্ন</item>
+        <item>নৱমাংশ</item>
+        <item>চন্দ্ৰ</item>
+        <item>চলিত</item>
+        <item>গ্ৰহ</item>
+        <item>গ্ৰহ-উপগ্ৰহ</item>
+        <item>চলিত তালিকা</item>
+        <item>জন্ম বিৱৰণ</item>
+        <item>পঞ্চাঙ্গ</item>
+        <item>অষ্টকৱৰ্গ</item>
+        <item>কৰকাংশ</item>
+        <item>স্বামশ</item>
+        <!-- <item>Arudha</item>-->
+        <item>গোচৰ</item>
+        <item>ষড়বল</item>
+        <item>প্ৰস্থাৰাষ্টকৱৰ্গ</item>
+        <item>ভাৱ মধ্য </item>
+        <item>মিত্ৰতা</item>
+        <item>ব্যক্তি বিৱৰণ</item>
+        <item>অৱকহাদ চক্ৰ</item>
+        <item>ঘাতক আৰু অনুকূল</item>
+        <item>পিডিএফ ডাউনল\'ড</item>
+        <item>@string/reports</item>
+        <item>@string/ask_questions</item>
+    </string-array>
+
+    <string-array name="misc_sub">
+        <item>@string/miscellaneous</item>
+        <item>@string/yoga_dosha_summary</item>
+        <item>@string/remedies_recommendations</item>
+        <item>@string/karak</item>
+        <item>@string/avastha</item>
+        <item>@string/navatara</item>
+        <item>@string/upgraha_table</item>
+        <item>@string/upgraha_chart</item>
+        <item>@string/arudha_chart</item>
+        <!--<item>@string/current_ruling_planets</item>-->
+        <item>@string/shodashvarta_table_rashi</item>
+        <!--<item>@string/shodashvarga_bhava</item>-->
+        <!-- end -->
+    </string-array>
+    <string-array name="predictions_module_list">
+        <item>ফলাদেশ</item>
+        <item>জীৱন ফলাদেশ</item>
+        <item>মাহেকীয়া ফলাদেশ</item>
+        <item>দৈনিক ফলাদেশ</item>
+        <item>মঙ্গল দোষ</item>
+        <item>সদে সতি জীৱন প্ৰতিবেদন</item>
+        <item>কালসৰ্প দোষ</item>
+        <item>লাল কিতাব ঋণ</item>
+        <item>লাল কিতাব তেব্বা প্ৰকাৰ</item>
+        <item>লাল কিতাব উপায়</item>
+        <item>উদয় ৰাশি ফলাদেশ</item>
+        <item>গ্ৰহ বিবেচনা</item>
+        <item>ৰত্ন প্ৰতিবেদন</item>
+        <item>আজিৰ গোচৰ</item>
+        <item>মহাদশা ফল</item>
+        <item>নক্ষত্ৰ প্ৰতিবেদন</item>
+        <item>ফলাদেশ</item>
+        <!-- tejinder added new item -->
+        <item>শিশুৰ নাম</item>
+        <item>চন্দ্ৰ ৰাশি </item>
+        <!--Moon Sign(Western) -->
+        <item>চন্দ্ৰ ৰাশি (ক্লাছিকেল)</item>
+        <item>ৰুদ্ৰাক্ষ</item>
+        <item>জড়ি</item>
+        <item>যন্ত্ৰ</item>
+        <item>@string/askaquestion</item>
+        <!-- end work -->
+    </string-array>
+    <string-array name="kpsystem_module_list">
+        <item>কেপি </item>
+        <item>কেপি চাৰ্ট</item>
+        <item>ৰাশি চাৰ্ট</item>
+        <item>গ্ৰহ</item>
+        <item>কুস্প</item>
+        <item>গ্ৰহ সুস্পষ্টকৰণ</item>
+        <item>ঘৰ সুস্পষ্টকৰক</item>
+        <item>গ্ৰহ সুস্পষ্টকৰণ(দৃশ্য২)</item>
+        <item>নক্ষত্ৰ নাড়ী</item>
+        <item>চিআইএল (উপ উপ)</item>
+        <item>৪-স্টেপ</item>
+        <item>চিআইএল (উপ)</item>
+        <item>শাসক গ্ৰহ</item>
+        <item>@string/current_ruling_planets</item>
+        <item>বিবিধ</item>
+        <!-- tejinder added module -->
+        <item>কেপি কুস্প</item>
+        <item>@string/askaquestion</item>
+        <!-- end -->
+    </string-array>
+    <string-array name="shodasvarga_module_list">
+        <item>ষোড়শৱৰ্গ</item>
+        <item>লগ্ন - ডি১</item>
+        <item>হোৰা - ডি২ </item>
+        <item>দ্ৰেক্কণ - ডি৩ </item>
+        <item>চতুৰ্থাংশ - ডি৪ </item>
+        <item>সপ্তমাংশ - ডি৭ </item>
+        <item>নৱমাংশ - ডি৯ </item>
+        <item>দশমাংশ - ডি১০ </item>
+        <item>দ্বাদশাংশ - ডি১২ </item>
+        <item>ষোড়শাংশ - ডি১৬ </item>
+        <item>ৱিংশাংশ - ডি২০ </item>
+        <item>সপ্তৱিংশাংশ - ডি২৭ </item>
+        <item>চতুৰ্বিংশাংশ - ডি২৪ </item>
+        <item>ত্ৰিংশাংশ - ডি৩০ </item>
+        <item>খৱেদাংশ - ডি৪০ </item>
+        <item>অক্ষৱেদাংশ - ডি৪৫ </item>
+        <item>ষষ্ঠীয়াংশ - ডি৬০ </item>
+        <!-- Tejinder added -->
+        <item>ষোড়শৱৰ্গ</item>
+        <item>@string/askaquestion</item>
+    </string-array>
+    <string-array name="lalkitab_module_list">
+        <item>লাল কিতাব </item>
+        <item>লাল কিতাব কুণ্ডলী</item>
+        <item>ফলাদেশ আৰু উপায়</item>
+        <item>বৰ্ষ কুণ্ডলী</item>
+        <item>ঋণ</item>
+        <item>তেব্বা প্ৰকাৰ</item>
+        <item>@string/text_lalkitab_dasha</item>
+        <item>@string/hora_planet_name</item>
+        <item>@string/text_lalkitab_house_positions</item>
+        <item>@string/askaquestion</item>
+    </string-array>
+    <string-array name="tajik_module_list">
+        <item>বৰ্ষফল</item>
+        <item>চাৰ্ট</item>
+        <item>গ্ৰহ</item>
+        <item>ফলাদেশ</item>
+        <item>@string/panchadhikari</item>
+        <item>@string/askaquestion</item>
+    </string-array>
+    <string-array name="kp_planetary_positions_sub_heading_list">
+        <item>গ্ৰ</item>
+        <item>ডিগ্ৰী</item>
+        <item>ৰা.প</item>
+        <item>ন.প</item>
+        <item>উ.প</item>
+        <item>উ.উ.</item>
+        <item>অৱ</item>
+    </string-array>
+    <string-array name="rasi_lord_short_name_list">
+        <item>মা</item>
+        <item>শু</item>
+        <item>বু</item>
+        <item>চ</item>
+        <item>সূ</item>
+        <item>বু</item>
+        <item>শু</item>
+        <item>মা</item>
+        <item>বৃ</item>
+        <item>শ</item>
+        <item>শ</item>
+        <item>বৃ</item>
+    </string-array>
+    <string-array name="nak_lord_short_name_list">
+        <item>কে</item>
+        <item>শু</item>
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>ৰা</item>
+        <item>বৃ</item>
+        <item>শ</item>
+        <item>বু</item>
+        <item>কে</item>
+        <item>শু</item>
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>ৰা</item>
+        <item>বৃ</item>
+        <item>শ</item>
+        <item>বু</item>
+        <item>কে</item>
+        <item>শু</item>
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>ৰা</item>
+        <item>বৃ</item>
+        <item>শ</item>
+        <item>বু</item>
+    </string-array>
+    <string-array name="VarKPCuspalPositionsHeading">
+        <item>ঘৰ</item>
+        <item>ডিগ্ৰী</item>
+        <item>ৰা.প</item>
+        <item>ন.প</item>
+        <item>উ.প</item>
+        <item>উ.উ.</item>
+    </string-array>
+    <string-array name="VarKPPlanetSigHeading">
+        <item>গ্ৰহ</item>
+        <item>সুস্পষ্ট ঘৰ</item>
+    </string-array>
+    <string-array name="VarChartPlanets">
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>বু</item>
+        <item>বৃ</item>
+        <item>শু</item>
+        <item>শ</item>
+        <item>ৰা</item>
+        <item>কে</item>
+        <item>উৰ</item>
+        <item>নে</item>
+        <item>প্ল</item>
+        <item>লা</item>
+        <item>উদয়</item>
+    </string-array>
+    <string-array name="kp_house_sig_heading_list">
+        <item>ঘৰ</item>
+        <item>সুস্পষ্টকৰক</item>
+    </string-array>
+    <string-array name="kp_significator_heading_list">
+        <item>গ্ৰ.</item>
+        <item>এল১</item>
+        <item>এল২</item>
+        <item>এল৩</item>
+        <item>এল৪</item>
+    </string-array>
+
+    <string-array name="kp_significator_notes_list">
+        <item> নোট</item>
+        <item>: গ্ৰহ</item>
+        <item>: তাৰা প্ৰভুৰ অধিষ্ঠান</item>
+        <item>: অধিষ্ঠান</item>
+        <item>: তাৰা প্ৰভুৰ মালিকী</item>
+        <item>: মালিকী</item>
+        <item>+ : গ্ৰহৰ নক্ষত্ৰত কোনো গ্ৰহ নাই অথবা গ্ৰহ নিজৰ নক্ষত্ৰত</item>
+    </string-array>
+    <string-array name="kp_misc_list">
+        <item>ফৰ্টুনা </item>
+        <item>ফৰ্টুনা ৰাশি</item>
+        <item>ফৰ্টুনা উপ উপ</item>
+        <item>কেপি আয়নাংশ</item>
+        <item>কেপি সংখ্যা</item>
+    </string-array>
+    <string-array name="rasi_lord_full_name_list">
+        <item>মঙ্গল</item>
+        <item>শুক্ৰ</item>
+        <item>বুধ</item>
+        <item>চন্দ্ৰ</item>
+        <item>সূৰ্য্য</item>
+        <item>বুধ</item>
+        <item>শুক্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>বৃহস্পতি</item>
+        <item>শনি</item>
+        <item>শনি</item>
+        <item>বৃহস্পতি</item>
+    </string-array>
+
+    <string-array name="kp_nakshatra_nadi_notes_list">
+        <item>নোট</item>
+        <item>: গ্ৰহ</item>
+        <item>: তাৰা প্ৰভু</item>
+        <item>: উপ প্ৰভু</item>
+    </string-array>
+    <string-array name="kp_chart_planet_ext_list">
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>বু</item>
+        <item>বৃ</item>
+        <item>শু</item>
+        <item>শ</item>
+        <item>ৰা</item>
+        <item>কে</item>
+    </string-array>
+    <string-array name="kp_nakshatra_nadi_heading_list">
+        <item>পিএল.</item>
+        <item>টিএসএল.</item>
+        <item>এছবিএল.</item>
+    </string-array>
+    <string-array name="kp_planet_full_name_ext_list">
+        <item>সূৰ্য্য</item>
+        <item>চন্দ্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>বুধ</item>
+        <item>বৃহস্পতি</item>
+        <item>শুক্ৰ</item>
+        <item>শনি</item>
+        <item>ৰাহু</item>
+        <item>কেতু</item>
+    </string-array>
+    <string-array name="kp_kcil_heading_list">
+        <item>গ্ৰহ</item>
+        <item>তাৰা</item>
+        <item>উপ</item>
+        <item>উপ উপ</item>
+        <item>অৱ. অৱস্থা</item>
+    </string-array>
+    <string-array name="kp_four_step_notes_list">
+        <item>+\u0020:\u0020গ্ৰহ নিজ তাৰাত.</item>
+        <item>\u0020-\u0020:\u0020তাৰাত কোনো গ্ৰহ নাই</item>
+    </string-array>
+    <string-array name="day_lord_full_name_list">
+        <item>সূৰ্য্য</item>
+        <item>চন্দ্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>বুধ</item>
+        <item>বৃহস্পতি</item>
+        <item>শুক্ৰ</item>
+        <item>শনি</item>
+        <item>ৰাহু</item>
+        <item>কেতু</item>
+        <item>
+    </item></string-array>
+    <string-array name="kp_cil_heading_list">
+        <item>ঘৰ</item>
+        <item>টি১</item>
+        <item>টি২</item>
+        <item>টি৩</item>
+        <item>টি৪</item>
+    </string-array>
+
+    <string-array name="kp_cil_notes_list">
+        <item>নোট</item>
+        <item>: ঘৰ</item>
+        <item>: উপ প্ৰভুত উপলব্ধি হোৱা তাৰা/উপ প্ৰভু</item>
+        <item>: উপ প্ৰভুত একে গ্ৰহ উপলব্ধি</item>
+        <item>: একে গ্ৰহ উপ প্ৰভুৰ তাৰা প্ৰভু</item>
+        <item>: অধিবাসী</item>
+    </string-array>
+    <string-array name="kp_ruling_planets_heading_list">
+        <item>দিন প্ৰভু</item>
+        <item>উদয় ৰাশি প্ৰভু</item>
+        <item>উদয় নক্ষত্ৰ প্ৰভু</item>
+        <item>উদয় উপ প্ৰভু</item>
+        <item>চন্দ্ৰ ৰাশি প্ৰভু</item>
+        <item>চন্দ্ৰ নক প্ৰভু</item>
+        <item>চন্দ্ৰ উপ প্ৰভু</item>
+    </string-array>
+    <string-array name="nakshatra_lord_full_name_list">
+        <item>কেতু</item>
+        <item>শুক্ৰ</item>
+        <item>সূৰ্য্য</item>
+        <item>চন্দ্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>ৰাহু</item>
+        <item>বৃহস্পতি</item>
+        <item>শনি</item>
+        <item>বুধ</item>
+        <item>কেতু</item>
+        <item>শুক্ৰ</item>
+        <item>সূৰ্য্য</item>
+        <item>চন্দ্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>ৰাহু</item>
+        <item>বৃহস্পতি</item>
+        <item>শনি</item>
+        <item>বুধ</item>
+        <item>কেতু</item>
+        <item>শুক্ৰ</item>
+        <item>সূৰ্য্য</item>
+        <item>চন্দ্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>ৰাহু</item>
+        <item>বৃহস্পতি</item>
+        <item>শনি</item>
+        <item>বুধ</item>
+    </string-array>
+    <string-array name="Vimshottari_dasa_planets_list">
+        <item>কে</item>
+        <item>শু</item>
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>ৰা</item>
+        <item>বৃ</item>
+        <item>শ</item>
+        <item>বু</item>
+    </string-array>
+    <string-array name="Vimshottari_dasa_heading_list">
+        <item>ৱিমশোত্তৰী মহা দশা</item>
+        <item>ৱিমশোত্তৰী অন্তৰ দশা</item>
+        <item>ৱিমশোত্তৰী প্ৰত্যন্তৰ দশা</item>
+        <item>ৱিমশোত্তৰী সূক্ষ্ম দশা</item>
+        <item>ৱিমশোত্তৰী প্ৰাণ দশা</item>
+    </string-array>
+    <string-array name="planet_and_lagna_name_list">
+        <item>লগ</item>
+        <item>সূৰ্য্য</item>
+        <item>চন্দ্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>বুধ</item>
+        <item>বৃহস্পতি</item>
+        <item>শুক্ৰ</item>
+        <item>শনি</item>
+        <item>ৰাহু</item>
+        <item>কেতু</item>
+        <item>উৰণুস</item>
+        <item>নেপচুন</item>
+        <item>প্লুটো</item>
+        <item>উদয়</item>
+    </string-array>
+    <string-array name="rasi_short_name_list">
+        <item>মেষ</item>
+        <item>বৃষ</item>
+        <item>মিথুন</item>
+        <item>কৰ্কট</item>
+        <item>সিংহ</item>
+        <item>কন্যা</item>
+        <item>তুলা</item>
+        <item>বৃশ্চিক</item>
+        <item>ধনু</item>
+        <item>মকৰ</item>
+        <item>কুম্ভ</item>
+        <item>মীন</item>
+    </string-array>
+    <string-array name="nakshatra_short_name_list">
+        <item>অশ্বিনী</item>
+        <item>ভৰণী</item>
+        <item>কৃত্তিকা</item>
+        <item>ৰোহিণী</item>
+        <item>মৃগশিৰা</item>
+        <item>আৰ্দ্ৰা</item>
+        <item>পুনৰ্বসু</item>
+        <item>পুষ্য</item>
+        <item>আশ্লেষা</item>
+        <item>মঘা</item>
+        <item>পূৰ্বফাল্গুনী</item>
+        <item>উত্তৰফাল্গুনী</item>
+        <item>হস্ত</item>
+        <item>চিত্ৰা</item>
+        <item>স্বাতী</item>
+        <item>বিশাখা</item>
+        <item>অনুৰাধা</item>
+        <item>জ্যেষ্ঠা</item>
+        <item>মূল</item>
+        <item>পূৰ্বাষাঢ়া</item>
+        <item>উত্তৰাষাঢ়া</item>
+        <item>শ্ৰৱণ</item>
+        <item>ধনিষ্ঠা</item>
+        <item>শতভিষা</item>
+        <item>পূৰ্বভাদ্ৰপদ</item>
+        <item>উত্তৰভাদ্ৰপদ</item>
+        <item>ৰেবতী</item>
+    </string-array>
+    <string-array name="planet_position_normal_heading_list">
+        <item>গ্ৰ</item>
+        <item>ৰাশি</item>
+        <item>ডিগ্ৰী</item>
+        <item>নক্ষ</item>
+        <item>সম্পৰ্ক</item>
+    </string-array>
+    <string-array name="chalit_bhava_table_heading_list">
+        <item>ভা</item>
+        <item>ৰাশি</item>
+        <item>ভা.আৰম্ভ</item>
+        <item>ৰাশি</item>
+        <item>ভা.মধ্য</item>
+    </string-array>
+    <string-array name="birth_detail_heading_list">
+        <item>নাম</item>
+        <item>তাৰিখ</item>
+        <item>সময়</item>
+        <item>স্থান</item>
+        <item>লিংগ</item>
+        <item>আয়নাংশ</item>
+        <item>ডিএছটি</item>
+        <item>মঙ্গল দোষ</item>
+        <item>ৰাশি</item>
+        <item>বয়স</item>
+        <item>বাকী দশা</item>
+        <item>কেপি সংখ্যা</item>
+    </string-array>
+    <string-array name="year_month_day_short_list">
+        <item>ব</item>
+        <item>মা</item>
+        <item>দি</item>
+    </string-array>
+    <string-array name="mangal_dosh_list">
+        <item> নাই </item>
+        <item> হয় (কম) </item>
+        <item> হয় (উচ্চ) </item>
+    </string-array>
+    <string-array name="rasi_full_name_list">
+        <item>মেষ</item>
+        <item>বৃষ</item>
+        <item>মিথুন</item>
+        <item>কৰ্কট</item>
+        <item>সিংহ</item>
+        <item>কন্যা</item>
+        <item>তুলা</item>
+        <item>বৃশ্চিক</item>
+        <item>ধনু</item>
+        <item>মকৰ</item>
+        <item>কুম্ভ</item>
+        <item>মীন</item>
+    </string-array>
+    <string-array name="panchang_heading_list">
+        <item>পক্ষ</item>
+        <item>তিথি </item>
+        <item>নক্ষত্ৰ(সি)</item>
+        <item>হিন্দু দিন</item>
+        <item>ইংৰাজী দিন</item>
+        <item>যোগ</item>
+        <item>কৰণ</item>
+        <item>সূৰ্য্যোদয়</item>
+        <item>সূৰ্য্যাস্ত</item>
+    </string-array>
+    <string-array name="week_day_sunday_to_saturday_list">
+        <item>ভাণবাৰ</item>
+        <item>চন্দ্ৰবাৰ</item>
+        <item>মঙ্গলবাৰ</item>
+        <item>বুধবাৰ</item>
+        <item>বৃহস্পতিবাৰ</item>
+        <item>শুক্ৰবাৰ</item>
+        <item>শনিবাৰ</item>
+    </string-array>
+    <string-array name="week_day_monday_to_sunday_list">
+        <item>চন্দ্ৰবাৰ</item>
+        <item>মঙ্গলবাৰ</item>
+        <item>বুধবাৰ</item>
+        <item>বৃহস্পতিবাৰ</item>
+        <item>শুক্ৰবাৰ</item>
+        <item>শনিবাৰ</item>
+        <item>ভাণবাৰ</item>
+    </string-array>
+    <string-array name="astakvarga_table_heading_list">
+        <item>আৰএন</item>
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>বু</item>
+        <item>বৃ</item>
+        <item>শু</item>
+        <item>শ</item>
+        <item>মুঠ</item>
+    </string-array>
+    <string-array name="tajik_planet_table_heading_list">
+        <item>গ্ৰহ</item>
+        <item>ৰাশি</item>
+        <item>ডিগ্ৰী</item>
+    </string-array>
+    <string-array name="input_page_titles_list">
+        <item>কুণ্ডলী খোলক</item>
+        <item>নতুন কুণ্ডলী</item>
+    </string-array>
+    <string-array name="month_short_name_list">
+        <item>জানু</item>
+        <item>ফেব্ৰু</item>
+        <item>মাৰ্চ</item>
+        <item>এপ্ৰিল</item>
+        <item>মে</item>
+        <item>জুন</item>
+        <item>জুলাই</item>
+        <item>আগষ্ট</item>
+        <item>ছেপ্তেম্বৰ</item>
+        <item>অক্টোবৰ</item>
+        <item>নৱেম্বৰ</item>
+        <item>ডিচেম্বৰ</item>
+    </string-array>
+    <string-array name="month_short_name_list_for_panchang">
+        <item>জানু</item>
+        <item>ফেব্ৰু</item>
+        <item>মাৰ্চ</item>
+        <item>এপ্ৰিল</item>
+        <item>মে</item>
+        <item>জুন</item>
+        <item>জুলাই</item>
+        <item>আগষ্ট</item>
+        <item>ছেপ্তেম্বৰ</item>
+        <item>অক্টোবৰ</item>
+        <item>নৱেম্বৰ</item>
+        <item>ডিচেম্বৰ</item>
+    </string-array>
+    <string-array name="matching_mangal_dosh_list">
+        <item>মঙ্গল দোষ নাই</item>
+        <item>কম মঙ্গল দোষ</item>
+        <item>উচ্চ মঙ্গল দোষ</item>
+        <item>উচ্চ মঙ্গল দোষ</item>
+    </string-array>
+    <string-array name="matching_detail_heading_list">
+        <item>অষ্টকূট মিলন বিন্দু</item>
+        <item>বৰ্ণ (কাম) ব্যাখ্যা</item>
+        <item>বশ্য (প্ৰাধান্য) ব্যাখ্যা</item>
+        <item>তাৰা (ভাগ্য) ব্যাখ্যা</item>
+        <item>যোনি (মানসিকতা) ব্যাখ্যা</item>
+        <item>মৈত্ৰী (সংগতি) ব্যাখ্যা</item>
+        <item>গণ (গুণ স্তৰ) ব্যাখ্যা</item>
+        <item>ভকূট (প্ৰেম) ব্যাখ্যা</item>
+        <item>নাড়ী (স্বাস্থ্য) ব্যাখ্যা</item>
+    </string-array>
+    <string-array name="main_menu_output_matching">
+        <item>মূলপৃষ্ঠা</item>
+        <item>মিলন ফলাফল</item>
+        <item>বিৱৰণত ফলাফল</item>
+        <item>বৰ্ণ (কাম)</item>
+        <item>বশ্য (প্ৰাধান্য) </item>
+        <item>তাৰা (ভাগ্য)</item>
+        <item>যোনি (মানসিকতা)</item>
+        <item>মৈত্ৰী (সংগতি)</item>
+        <item>গণ (গুণ স্তৰ)</item>
+        <item>ভকূট (প্ৰেম)</item>
+        <item>নাড়ী (স্বাস্থ্য)</item>
+    </string-array>
+    <string-array name="input_matching_page_title_list">
+        <item>কুণ্ডলী খোলক</item>
+        <item>নতুন মিলন</item>
+    </string-array>
+    <string-array name="output_matching_tab_list">
+        <item>ফলাফলসমূহ</item>
+        <item>বিৱৰণ</item>
+        <item>বৰ্ণ</item>
+        <item>বশ্য</item>
+        <item>তাৰা</item>
+        <item>যোনি</item>
+        <item>মৈত্ৰী</item>
+        <item>গণ</item>
+        <item>ভকূট</item>
+        <item>নাড়ী</item>
+        <item>পিডিএফ ডাউনল\'ড</item>
+        <item>@string/birth_detail_top_heading</item>
+        <item>@string/ask_questions</item>
+    </string-array>
+    <string-array name="rasiname_list_share_whatsapp">
+        <item>মেষ</item>
+        <item>বৃষ</item>
+        <item>মিথুন</item>
+        <item>কৰ্কট</item>
+        <item>সিংহ</item>
+        <item>কন্যা</item>
+        <item>তুলা</item>
+        <item>বৃশ্চিক</item>
+        <item>ধনু</item>
+        <item>মকৰ</item>
+        <item>কুম্ভ</item>
+        <item>মীন</item>
+    </string-array>
+    <string-array name="rashiName_list">
+        <item>মেষ</item>
+        <item>বৃষ</item>
+        <item>মিথুন</item>
+        <item>কৰ্কট</item>
+        <item>সিংহ</item>
+        <item>কন্যা</item>
+        <item>তুলা</item>
+        <item>বৃশ্চিক</item>
+        <item>ধনু</item>
+        <item>মকৰ</item>
+        <item>কুম্ভ</item>
+        <item>মীন</item>
+    </string-array>
+    <string-array name="horoscope_tab_titles_list">
+        <item>AI ৰাশিফল</item>
+        <item>দৈনিক</item>
+        <item>আজিৰ পঞ্চাং</item>
+        <item>সাপ্তাহিক</item>
+        <item>সাপ্তাহিক প্ৰেম</item>
+        <item>মাসিক</item>
+        <item>বাৰ্ষিক</item>
+        <item>প্ৰশ্ন সোধক</item>
+    </string-array>
+    <string-array name="MonthName">
+        <item>জানুৱাৰী</item>
+        <item>ফেব্ৰুৱাৰী</item>
+        <item>মাৰ্চ</item>
+        <item>এপ্ৰিল</item>
+        <item>মে</item>
+        <item>জুন</item>
+        <item>জুলাই</item>
+        <item>আগষ্ট</item>
+        <item>ছেপ্তেম্বৰ</item>
+        <item>অক্টোবৰ</item>
+        <item>নৱেম্বৰ</item>
+        <item>ডিচেম্বৰ</item>
+    </string-array>
+
+    <string-array name="matching_home_menu_item_list">
+        <item>নতুন মিলন</item>
+        <item>কুণ্ডলী খোলক</item>
+        <item>অ্যাস্ট্ৰোসেজ এআই প্ৰবন্ধ</item>
+        <item>প্লেন আপগ্ৰেড কৰক</item>
+        <!--<item>Share App</item>-->
+        <item>প্ৰতিক্ৰিয়া</item>
+        <item>অধিসূচনা ছেটিংসমূহ</item>
+        <item>ভাষা সলনি কৰক</item>
+        <!--<item>Call Us</item>-->
+        <item>অ্যাস্ট্ৰোসেজ এআইক ৰেটিং দিয়ক</item>
+        <item>আমাৰ বিষয়ে</item>
+        <item>@string/join_varta</item>
+        <item>লগ আউট কৰক</item>
+    </string-array>
+    <string-array name="matching_home_menu_item_list_icon">
+        <item>@drawable/horo_matching</item>
+        <item>@drawable/open_kundli</item>
+        <item>@drawable/ic_description</item>
+        <item>@drawable/ic_purchase</item>
+        <!--<item>@drawable/ic_action_share</item>-->
+        <item>@drawable/feedback</item>
+        <item>@drawable/ic_notification_setting</item>
+        <item>@drawable/change_lang</item>
+        <!--<item>@drawable/call_us</item>-->
+        <item>@drawable/rating</item>
+        <item>@drawable/ic_about_us</item>
+        <item>@drawable/ic_action_join_panel</item>
+        <item>@drawable/ic_logout</item>
+    </string-array>
+    <string-array name="kundli_output_menu_item_list">
+    <!--<item>FILE</item>-->
+    <item>মূলপৃষ্ঠা</item>
+    <item>চাৰ্ট নোট</item>
+    <item>নতুন কুণ্ডলী/চাৰ্ট</item>
+    <item>কুণ্ডলী খোলক</item>
+    <item>কুণ্ডলী/চাৰ্ট সম্পাদনা কৰক</item>
+    <item>পিডিএফ ডাউনল\'ড</item>
+    <item>প্লেন আপগ্ৰেড কৰক</item>
+    <item>পৰ্দা শ্বেয়াৰ কৰক</item>
+    <!--<item>SETTINGS</item>-->
+    <item>চাৰ্ট শৈলী</item>
+    <item>ভাষা সলনি কৰক</item>
+    <item>আয়নাংশ সলনি কৰক</item>
+    <!--<item>MISC</item>-->
+    <item>সহায়</item>
+    <item>প্ৰতিক্ৰিয়া</item>
+    <item>অ্যাস্ট্ৰোসেজ এআইক ৰেটিং দিয়ক</item>
+    <!--<item>Share App</item>-->
+    <item>আমাৰ অন্যান্য এপ</item>
+    <!--<item>Call Us</item>-->
+    <item>অ্যাস্ট্ৰো দোকান</item>
+    <item>আমাৰ জ্যোতিষীক সুধক</item>
+    <item>চাৰ্ট শ্বেয়াৰ কৰক</item>
+    <item>আমাৰ বিষয়ে</item>
+    <item>@string/join_varta</item>
+    <item>লগ আউট কৰক</item>
+    </string-array>
+    <string-array name="matching_output_menu_item_list">
+        <!--<item>FILE</item>-->
+        <item>মূলপৃষ্ঠা</item>
+        <item>নতুন মিলন</item>
+        <item>ইনপুট বিৱৰণ সম্পাদনা কৰক</item>
+        <item>ছেলৰ কুণ্ডলী চাওক</item>
+        <item>মেয়েছিলৰ কুণ্ডলী চাওক</item>
+        <item>পিডিএফ ডাউনল\'ড</item>
+        <item>পৰ্দা শ্বেয়াৰ কৰক</item>
+        <!--<item>SETTINGS</item>-->
+        <item>ভাষা বদলাওক</item>
+        <!--<item>MISC</item>-->
+        <item>প্ৰতিক্ৰিয়া</item>
+        <item>অ্যাস্ট্ৰোসেজ ৰেটিং দিয়ক</item>
+        <item>প্লেণ আপগ্ৰেড কৰক</item>
+        <!--<item>Share App</item>-->
+        <item>আমাৰ অন্যান্য এপ</item>
+        <!--<item>Call Us</item>-->
+        <item>অ্যাস্ট্ৰো দোকান</item>
+        <item>আমাৰ জ্যোতিষীৰ পৰা সুধক</item>
+        <item>আমাৰ সম্পৰ্কে</item>
+        <item>@string/join_varta</item>
+        <item>প্ৰস্থান কৰক</item>
+    </string-array>
+
+    <string-array name="module_icons">
+        <item>@drawable/ic_action_event_app_home_icon</item>
+        <item>@drawable/ic_bookmark</item>
+        <item>@drawable/basic</item>
+        <item>@drawable/dasa</item>
+        <item>@drawable/prediction</item>
+        <item>@drawable/kp_system</item>
+        <item>@drawable/shodashvarga</item>
+        <item>@drawable/lalkitab</item>
+        <item>@drawable/varshaphal</item>
+        <item>@drawable/miscellaneous</item>
+        <item>@drawable/numerology</item>
+    </string-array>
+
+    <string-array name="kundli_output_menu_item_list_icon">
+        <!--<item>@drawable/new_kundli</item>-->
+        <item>@drawable/ic_action_event_app_home_icon</item>
+        <item>@drawable/ic_speaker_notes_black</item>
+        <item>@drawable/new_kundli</item>
+        <item>@drawable/open_kundli</item>
+        <item>@drawable/ic_action_edit</item>
+        <item>@drawable/ic_action_download</item>
+        <item>@drawable/ic_purchase</item>
+        <item>@drawable/share_screen</item>
+        <!--<item>@drawable/north_chart</item>-->
+        <item>@drawable/north_chart</item>
+        <item>@drawable/change_lang</item>
+        <item>@drawable/aynamsha</item>
+        <!--<item>@drawable/feedback</item>-->
+        <item>@drawable/ic_help</item>
+        <item>@drawable/feedback</item>
+        <item>@drawable/rating</item>
+        <!--<item>@drawable/ic_action_share</item>-->
+        <item>@drawable/other_apps</item>
+        <!--<item>@drawable/call_us</item>-->
+        <item>@drawable/astro_shop</item>
+        <item>@drawable/astrologer</item>
+        <item>@drawable/ic_action_share</item>
+        <item>@drawable/ic_about_us</item>
+        <item>@drawable/ic_action_join_panel</item>
+        <item>@drawable/ic_logout</item>
+    </string-array>
+    <string-array name="kp_planet_note_item_list">
+        <item>নোট:</item>
+        <item>ৰা.প - ৰাশি পতি</item>
+        <item>ন.প - নক্ষত্ৰ পতি</item>
+        <item>উ.প - উপ পতি</item>
+        <item>উ.উ - উপ উপ পতি</item>
+    </string-array>
+
+    <string-array name="kp_planet_sig_note_list">
+        <item>নোট:</item>
+        <item>গ্ৰ- গ্ৰহ</item>
+    </string-array>
+    <string-array name="app_home_menu_item_list">
+        <!-- <item>SETTINGS</item>-->
+        <item>জ্যোতিষী ডাইৰেক্টৰী</item>
+        <item>আপোনাৰ চাৰ্ট আপল\'ড কৰক</item>
+        <item>পছন্দ সংৰিম্ভ কৰক</item>
+        <item>সুতিৰা সংৰিম্ভ</item>
+        <item>ভাষা বদলাওক</item>
+        <!--<item>@string/invite_friends</item>-->
+        <!--<item>MISC</item>-->
+        <item>প্লেণ আপগ্ৰেড কৰক</item>
+        <item>বিজ্ঞাপন আঁতৰাই লওক</item>
+        <!--<item>Share App</item>-->
+        <item>প্ৰতিক্ৰিয়া</item>
+        <!-- <item>Call Us</item>-->
+        <item>অ্যাস্ট্ৰোসেজ ৰেটিং দিয়ক</item>
+        <!--   <item>Share With Friends</item>-->
+        <item>আমাৰ সম্পৰ্কে</item>
+        <item>@string/join_varta</item>
+        <item>আপোনাৰ কুণ্ডলী বাছক</item>
+        <item>@string/title_downloads</item>
+        <item>পাৰ্চৱৰ্ড সংৰিম্ভ কৰক</item>
+        <item>@string/refer_and_earn</item>
+        <item>@string/myaccount</item>
+        <item>@string/call_us</item>
+        <item>প্ৰস্থান কৰক</item>
+        <item>@string/manage_subscription</item>
+        <!-- <item>Purchase Silver Plan</item> -->
+    </string-array>
+    <string-array name="app_home_menu_item_list_icon">
+        <!-- <item>@drawable/new_kundli</item>-->
+        <item>@drawable/ic_astrologer</item>
+        <item>@drawable/ic_upload</item>
+        <item>@drawable/ic_action_action_settings</item>
+        <item>@drawable/ic_notification_setting</item>
+        <item>@drawable/change_lang</item>
+        <!--<item>@drawable/horo_matching</item>-->
+        <!-- <item>@drawable/new_kundli</item>-->
+        <item>@drawable/ic_upgrade_plan</item>
+        <item>@drawable/ads_free</item>
+        <!--<item>@drawable/ic_action_share</item>-->
+        <item>@drawable/feedback</item>
+        <!--<item>@drawable/call_us</item>-->
+        <item>@drawable/rating</item>
+        <!--   <item>@drawable/ic_action_share</item>-->
+        <item>@drawable/ic_about_us</item>
+        <item>@drawable/ic_action_join_panel</item>
+        <item>@drawable/mychart</item>
+        <item>@drawable/ic_downloads</item>
+        <item>@drawable/ic_lock_black</item>
+        <item>@drawable/refer_earn_black</item>
+        <item>@drawable/ic_user_menu</item>
+        <item>@drawable/ic_support</item>
+        <item>@drawable/ic_logout</item>
+        <item>@drawable/manage_subscription</item>
+        <!-- <item>@drawable/ic_action_navigation_cancel</item> -->
+    </string-array>
+    <string-array name="horoscope_menu_item_list">
+        <!-- <item>KNOW YOUR MOON SIGN</item>-->
+        <item>নাম অনুসৰি</item>
+        <item>জন্ম তাৰিখ অনুসৰি</item>
+        <!-- <item>SETTINGS</item>-->
+        <item>জ্যোতিষীয় সুতিৰা</item>
+        <!-- <item>MISC</item>-->
+        <item>প্ৰতিক্ৰিয়া</item>
+        <item>অ্যাস্ট্ৰোসেজ ৰেটিং দিয়ক</item>
+        <!--<item>Share App</item>-->
+        <item>আমাৰ অন্যান্য এপ</item>
+        <!--<item>Call Us</item>-->
+        <item>অ্যাস্ট্ৰো দোকান</item>
+        <item>আমাৰ জ্যোতিষীৰ পৰা সুধক</item>
+        <item>আমাৰ সম্পৰ্কে</item>
+        <item>@string/join_varta</item>
+        <item>প্ৰস্থান কৰক</item>
+    </string-array>
+    <string-array name="horoscope_menu_item_list_icons">
+        <!-- <item>@drawable/ic_action_social_person</item>-->
+        <item>@drawable/ic_person_black</item>
+        <item>@drawable/ic_today_black</item>
+        <!-- <item>@drawable/ic_notification_setting</item>-->
+        <item>@drawable/ic_notification_setting</item>
+        <item>@drawable/feedback</item>
+        <!--<item>@drawable/rating</item>-->
+        <item>@drawable/rating</item>
+        <!--<item>@drawable/ic_action_share</item>-->
+        <item>@drawable/other_apps</item>
+        <!--<item>@drawable/call_us</item>-->
+        <item>@drawable/astro_shop</item>
+        <item>@drawable/astrologer</item>
+        <item>@drawable/ic_about_us</item>
+        <item>@drawable/ic_action_join_panel</item>
+        <item>@drawable/ic_logout</item>
+    </string-array>
+    <string-array name="detailed_horoscope_menu_titles_list">
+        <!-- <item>Horoscope</item>-->
+        <item>মূলপৃষ্ঠা</item>
+        <item>আজিৰ</item>
+        <item>@string/panchang_for_today</item>
+        <item>সাপ্তাহিক</item>
+        <item>সাপ্তাহিক প্ৰেম</item>
+        <item>মাহেকীয়া</item>
+        <item>বাৰ্ষিক</item>
+        <!-- <item>Settings</item>-->
+        <item>জ্যোতিষীয় সুতিৰা</item>
+        <!-- <item>Misc</item>-->
+        <item>প্ৰতিক্ৰিয়া</item>
+        <item>অ্যাস্ট্ৰোসেজ ৰেটিং দিয়ক</item>
+        <!--<item>Share App</item>-->
+        <item>আমাৰ অন্যান্য এপ</item>
+        <!--<item>Call Us</item>-->
+        <item>অ্যাস্ট্ৰো দোকান</item>
+        <item>আমাৰ জ্যোতিষীৰ পৰা সুধক</item>
+        <item>আমাৰ সম্পৰ্কে</item>
+        <item>@string/join_varta</item>
+        <item>প্ৰস্থান কৰক</item>
+    </string-array>
+    <string-array name="detailed_horoscope_menu_titles_icon_list">
+        <!--<item>@drawable/ic_action_event_app_home_icon</item>-->
+        <item>@drawable/ic_action_event_app_home_icon</item>
+        <item>@drawable/daily</item>
+        <item>@drawable/ic_panchang_drawer</item>
+        <item>@drawable/weekly</item>
+        <item>@drawable/weekly_love</item>
+        <item>@drawable/ic_month</item>
+        <item>@drawable/yearly</item>
+        <!-- <item>@drawable/ic_notification_setting</item>-->
+        <item>@drawable/ic_notification_setting</item>
+        <!-- <item>@drawable/ic_notification_setting</item>-->
+        <item>@drawable/feedback</item>
+        <item>@drawable/rating</item>
+        <!--<item>@drawable/ic_action_share</item>-->
+        <item>@drawable/other_apps</item>
+        <!--<item>@drawable/call_us</item>-->
+        <item>@drawable/astro_shop</item>
+        <item>@drawable/astrologer</item>
+        <item>@drawable/ic_about_us</item>
+        <item>@drawable/ic_action_join_panel</item>
+        <item>@drawable/ic_logout</item>
+    </string-array>
+    <string-array name="kundliModulesList">
+        <item>কুণ্ডলী এআই</item>
+        <item>মিলন</item>
+        <item>জ্যোতিষীয়</item>
+        <item>ফলাদেশ</item>
+        <item>দৈনিক পঞ্চাঙ্গ</item>
+        <item>$সুধক</item>
+        <item>@string/module_cogni_astro</item>
+        <item>@string/platinum_plan</item>
+        <item>@string/module_brihat</item>
+        <item>@string/title_numrology_input</item>
+        <item>@string/text_daily_notes</item>
+        <item>বিনামূলীয়া #+ পৃষ্ঠা</item>
+        <!-- <item>Occult Directory</item>-->
+        <item>অ্যাস্ট্ৰো দোকান</item>
+        <item>অ্যাস্ট্ৰোসেজ টিভি</item>
+        <item>অ্যাস্ট্ৰোসেজ মেগাজিন</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+        <item>জ্যোতিষ শিকক</item>
+        <item>পৰুথম</item>
+        <item>বিনামূলীয়া বিবাহ</item>
+    </string-array>
+    <string-array name="reportModulesList">
+        <item>জীৱন প্ৰতিবেদন</item>
+        <item>মাহেকীয়া প্ৰতিবেদন</item>
+        <item>দৈনিক প্ৰতিবেদন</item>
+        <item>সদে সতি প্ৰতিবেদন</item>
+        <item>উদয় ফলাদেশ</item>
+        <item>বাৰ্ষিক ফলাদেশ</item>
+        <item>মঙ্গল দোষ</item>
+        <item>কালসৰ্প দোষ</item>
+        <item>চন্দ্ৰ ৰাশি</item>
+        <item>লাল কিতাব ঋণ</item>
+        <item>লাল কিতাব তেব্বা</item>
+        <item>শিশুৰ নাম</item>
+        <item>লাল কিতাব উপায়</item>
+        <item>গ্ৰহ বিবেচনা</item>
+        <item>ৰত্ন প্ৰতিবেদন</item>
+        <item>আজিৰ গোচৰ</item>
+        <item>মহাদশা ফল</item>
+        <item>নক্ষত্ৰ প্ৰতিবেদন</item>
+    </string-array>
+    <string-array name="reportModulesListForHeading">
+        <item> ফলাদেশ</item>
+        <item>জীৱন প্ৰতিবেদন</item>
+        <item>মাহেকীয়া প্ৰতিবেদন</item>
+        <item>দৈনিক প্ৰতিবেদন</item>
+        <item>মঙ্গল দোষ</item>
+        <item>সদে সতি প্ৰতিবেদন</item>
+        <item>কালসৰ্প দোষ</item>
+        <item>লাল কিতাব ঋণ</item>
+        <item>লাল কিতাব তেব্বা</item>
+        <item>লাল কিতাব উপায়</item>
+        <item>উদয় ফলাদেশ</item>
+        <item>গ্ৰহ বিবেচনা</item>
+        <item>ৰত্ন প্ৰতিবেদন</item>
+        <item>আজিৰ গোচৰ</item>
+        <item>মহাদশা ফল</item>
+        <item>নক্ষত্ৰ প্ৰতিবেদন</item>
+        <item>বাৰ্ষিক ফলাদেশ</item>
+        <item>শিশুৰ নাম</item>
+        <item>চন্দ্ৰ ৰাশি</item>
+        <item>চন্দ্ৰ ৰাশি</item>
+    </string-array>
+    <string-array name="reportModulesListForHeadingModules">
+        <item> কুণ্ডলী</item>
+        <item> কুণ্ডলী</item>
+        <item>ফলাদেশ</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item> কুণ্ডলী</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+        <item>@string/miscellaneous</item>
+    </string-array>
+    <string-array name="horoscopeModulesList">
+        <item>দৈনিক</item>
+        <item>সাপ্তাহিক</item>
+        <item>সাপ্তাহিক প্ৰেম</item>
+        <item>মাহেকীয়া</item>
+        <item>বাৰ্ষিক</item>
+    </string-array>
+    <string-array name="astroshopModulesList">
+        <item>বৃহৎ জ্যোতিষীয়</item>
+        <item>ৰত্ন</item>
+        <item>যন্ত্ৰ</item>
+        <item>ৰুদ্ৰাক্ষ</item>
+        <item>মালা</item>
+        <!--
+                <item>@string/vastu_painting_txt</item>
+        -->
+        <item>জড়ি</item>
+        <item>ছেবাবেচনা</item>
+        <!--<item>Astrologer</item>-->
+        <item>@string/platinum_plan</item>
+        <item>@string/module_cogni_astro</item>
+        <item>@string/aroma_txt</item>
+        <item>@string/fortuna_top_heading</item>
+        <!--<item>Misc</item>-->
+    </string-array>
+    <string-array name="WhatsAppMonthName">
+        <item>জানুৱাৰী</item>
+        <item>ফেব্ৰুৱাৰী</item>
+        <item>মাৰ্চ</item>
+        <item>এপ্ৰিল</item>
+        <item>মে</item>
+        <item>জুন</item>
+        <item>জুলাই</item>
+        <item>আগষ্ট</item>
+        <item>ছেপ্তেম্বৰ</item>
+        <item>অক্টোবৰ</item>
+        <item>নৱেম্বৰ</item>
+        <item>ডিচেম্বৰ</item>
+    </string-array>
+    <string-array name="category_basic_list">
+        <item>দশা</item>
+        <item>ফলাদেশ</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>ষোড়শৱৰ্গ</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+    </string-array>
+    <string-array name="module_board_kp_list">
+        <item>মৌলিক</item>
+        <item>দশা</item>
+        <item>ফলাদেশ</item>
+        <item>ষোড়শৱৰ্গ</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+    </string-array>
+    <string-array name="module_board_prediction_list">
+        <item>মৌলিক</item>
+        <item>দশা</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>ষোড়শৱৰ্গ</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+    </string-array>
+    <string-array name="module_board_shodashvarga_list">
+        <item>মৌলিক</item>
+        <item>দশা</item>
+        <item>ফলাদেশ</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>লাল কিতাব</item>
+        <item>বৰ্ষফল</item>
+    </string-array>
+    <string-array name="module_board_lalkitab_list">
+        <item>মৌলিক</item>
+        <item>দশা</item>
+        <item>ফলাদেশ</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>ষোড়শৱৰ্গ</item>
+        <item>বৰ্ষফল</item>
+    </string-array>
+    <string-array name="module_board_varshpal_list">
+        <item>মৌলিক</item>
+        <item>দশা</item>
+        <item>ফলাদেশ</item>
+        <item>কেপি ব্যৱস্থা</item>
+        <item>ষোড়শৱৰ্গ</item>
+        <item>লাল কিতাব</item>
+    </string-array>
+    <string-array name="hora_planets_meaning">
+        <item>ৰাজনীতি, চৰকাৰী কাৰ্য, চৰকাৰী চাকৰি, অদালত, সাহসিকতা</item>
+        <item>ভ্ৰমণ, ৰোমাঞ্চ, অলংকাৰ, শিল্প</item>
+        <item>ভূমি আৰু কৃষি, ভাই, ইঞ্জিনিয়াৰিং, ক্ৰীড়া</item>
+        <item>বাণিজ্য, শিক্ষা, জ্যোতিষ, পঢ়া আৰু লিখা </item>
+        <item>সকলোবোৰ: কাম, চাকৰি, ব্যৱসায়</item>
+        <item>প্ৰেম, বিবাহ, অলংকাৰ, বিনোদন, নৃত্য</item>
+        <item>শ্ৰম, লোহা, তেল, চৰকাৰী, ত্যাগ</item>
+    </string-array>
+    <string-array name="pla_mean">
+        <item>ৰাজনীতি আৰু চৰকাৰী চাকৰিৰ বাবে শুভ</item>
+        <item>ভ্ৰমণ আৰু শিল্পৰ বাবে শুভ</item>
+        <item>সম্পত্তি আৰু ক্ৰীড়াৰ বাবে শুভ</item>
+        <item>বাণিজ্য আৰু শিক্ষাৰ বাবে শুভ</item>
+        <item>সকলোবোৰৰ বাবে শুভ</item>
+        <item>ৰোমাঞ্চ আৰু বিনোদনৰ বাবে শুভ</item>
+        <item>তন্ত্ৰ আৰু আধ্যাত্মিকতাৰ বাবে শুভ</item>
+    </string-array>
+    <string-array name="hora_planets">
+        <item>সূৰ্য্য</item>
+        <item>চন্দ্ৰ</item>
+        <item>মঙ্গল</item>
+        <item>বুধ</item>
+        <item>বৃহস্পতি</item>
+        <item>শুক্ৰ</item>
+        <item>শনি</item>
+    </string-array>
+    <string-array name="do_ghati_name_list">
+        <item>প্ৰতঃ</item>
+        <item>সংগৱ</item>
+        <item>মধ্যাহ্ন</item>
+        <item>অপৰাহ্ন</item>
+        <item>সায়ন</item>
+        <item>প্ৰদোষ</item>
+        <item>ৰাত্ৰি</item>
+        <item>নিশীথ</item>
+        <item>ৰাত্ৰি</item>
+        <item>অৰুণোদয়</item>
+    </string-array>
+    <string-array name="do_ghati_name_list_meaning">
+        <item>ৰুদ্ৰ</item>
+        <item>অহি</item>
+        <item>মিত্ৰ</item>
+        <item>পিতৃ</item>
+        <item>বাসু</item>
+        <item>বৰ</item>
+        <item>বিশ্বদেব</item>
+        <item>বিধি</item>
+        <item>শতমুখী</item>
+        <item>পুৰুহুত</item>
+        <item>বাহিনী</item>
+        <item>নক্তাঞ্চৰ</item>
+        <item>বৰুণ</item>
+        <item>আৰ্যমা</item>
+        <item>ভগ</item>
+        <item>গিৰিশ</item>
+        <item>অজপদ</item>
+        <item>অহিৰ্বুধ্ন্য</item>
+        <item>পূষা</item>
+        <item>অশ্বিনী</item>
+        <item>যম</item>
+        <item>অগ্নি</item>
+        <item>বিধাতৃ</item>
+        <item>কণ্ড</item>
+        <item>অদিতি</item>
+        <item>জীৱ/অমৃত</item>
+        <item>বিষ্ণু</item>
+        <item>যুমিগদ্যুতি</item>
+        <item>ব্ৰহ্মা</item>
+        <item>সমুদ্ৰম</item>
+    </string-array>
+    <string-array name="do_ghati_name_list_Muhurat">
+        <item>ৰৌদ্ৰ </item>
+        <item>চিত </item>
+        <item>মৈত্ৰ </item>
+        <item>চাৰমথ </item>
+        <item>সৱিত্ৰ   </item>
+        <item>ৱৈৰাজ  </item>
+        <item>গন্ধৰ্বস </item>
+        <item>অভিজিৎ </item>
+        <item>ৰোহিণী </item>
+        <item>বল </item>
+        <item>বিজয় </item>
+        <item>নৈৰৃত </item>
+        <item>ইন্দ্ৰ </item>
+        <item>বৰুণ </item>
+        <item>ভগ </item>
+        <item>ৰৌদ্ৰ </item>
+        <item>গন্ধৰ্বস </item>
+        <item>পক্ষ </item>
+        <item>চাৰণ </item>
+        <item>বায়ু </item>
+        <item>অগ্নি </item>
+        <item>ৰাক্ষস </item>
+        <item>ব্ৰহ্মা </item>
+        <item>সৌম্য </item>
+        <item>কমলজ </item>
+        <item>গুৰু </item>
+        <item>পৌষ্ণ </item>
+        <item>ৱৈকুণ্ঠ </item>
+        <item>সমীৰ </item>
+        <item>নিৰৃতি </item>
+    </string-array>
+    <string-array name="do_ghati_muhurut_meaning">
+        <item>আৰ্দ্ৰা</item>
+        <item>আশ্লেষা</item>
+        <item>অনুৰাধা </item>
+        <item>মঘা </item>
+        <item>ধনিষ্ঠা</item>
+        <item>পূৰ্বাষাঢ়া </item>
+        <item>উত্তৰাষাঢ়া </item>
+        <item>অভিজিৎ </item>
+        <item>ৰোহিণী </item>
+        <item>জ্যেষ্ঠা</item>
+        <item>বিশাখা </item>
+        <item>মূল </item>
+        <item>শতভিষা</item>
+        <item>উত্তৰ ফাল্গুনী </item>
+        <item>পূৰ্ব ফাল্গুনী </item>
+        <item>আৰ্দ্ৰা</item>
+        <item>পূৰ্ব ভাদ্ৰপদ </item>
+        <item>উত্তৰ ভাদ্ৰপদ </item>
+        <item>ৰেবতী  </item>
+        <item>অশ্বিনী </item>
+        <item>ভৰণী </item>
+        <item>কৃত্তিকা  </item>
+        <item>ৰোহিণী </item>
+        <item>মৃগশিৰা </item>
+        <item>পুনৰ্বসু </item>
+        <item>পুষ্য </item>
+        <item>শ্ৰৱণ </item>
+        <item>হস্ত </item>
+        <item>চিত্ৰা </item>
+        <item>স্বাতী</item>
+    </string-array>
+    <string-array name="chogadiya_day_names_list">
+        <item>উদ্বেগ</item>
+        <item>চল</item>
+        <item>লাভ</item>
+        <item>অমৃত</item>
+        <item>কাল</item>
+        <item>শুভ</item>
+        <item>ৰোগ</item>
+    </string-array>
+    <string-array name="chogadiya_day_names_list_meaning">
+        <item>অশুভ</item>
+        <item>ভাল</item>
+        <item>শুভ</item>
+        <item>শুভ</item>
+        <item>অশুভ</item>
+        <item>শুভ</item>
+        <item>অশুভ</item>
+    </string-array>
+    <string-array name="chogadiya_night_names_list">
+        <item>শুভ</item>
+        <item>অমৃত</item>
+        <item>চল</item>
+        <item>ৰোগ</item>
+        <item>কাল</item>
+        <item>লাভ</item>
+        <item>উদ্বেগ</item>
+    </string-array>
+    <string-array name="chogadiya_night_names_list_meaning">
+        <item>শুভ</item>
+        <item>শুভ</item>
+        <item>ভাল</item>
+        <item>অশুভ</item>
+        <item>অশুভ</item>
+        <item>শুভ</item>
+        <item>অশুভ</item>
+    </string-array>
+
+    <string-array name="panchang_menu_item_list">
+        <!--<item>Share</item>-->
+        <item>সাৰাংশ শ্বেয়াৰ কৰক</item>
+        <!--<item>MISC</item>-->
+        <item>প্ৰতিক্ৰিয়া</item>
+        <item>অ্যাস্ট্ৰোসেজ ৰেটিং দিয়ক</item>
+        <!-- <item>Share App</item>-->
+        <item>আমাৰ অন্যান্য এপ</item>
+        <!--<item>Call Us</item>-->
+        <item>অ্যাস্ট্ৰো দোকান</item>
+        <item>আমাৰ জ্যোতিষীৰ পৰা সুধক</item>
+        <item>আমাৰ সম্পৰ্কে</item>
+        <item>@string/join_varta</item>
+        <item>প্ৰস্থান কৰক</item>
+    </string-array>
+    <string-array name="do_ghati_name_list_meaning_second">
+        <item> শিৱ 	</item>
+        <item>সৰ্প </item>
+        <item>মিত্ৰ </item>
+        <item>পিতৃ </item>
+        <item>বাসু </item>
+        <item>জল </item>
+        <item>বিশ্বদেব </item>
+        <item>ব্ৰহ্মা </item>
+        <item>সূৰ্য্য </item>
+        <item>ইন্দ্ৰ </item>
+        <item>অগ্নি </item>
+        <item>ৰাক্ষস </item>
+        <item>বৰুণ </item>
+        <item>আৰ্যমা </item>
+        <item>ভগ </item>
+        <item>শিৱ	</item>
+        <item>অজপদ </item>
+        <item>অহিৰ্বুধ্ন্য </item>
+        <item>পূষা </item>
+        <item>অশ্বিনী কুমাৰ </item>
+        <item>যম </item>
+        <item>অগ্নি </item>
+        <item>ব্ৰহ্মা </item>
+        <item>চন্দ্ৰ </item>
+        <item>অদিতি </item>
+        <item>বৃহস্পতি </item>
+        <item>বিষ্ণু </item>
+        <item>সূৰ্য্য </item>
+        <item>ত্বষ্টৃ  </item>
+        <item>বায়ু </item>
+    </string-array>
+    <string-array name="playlist_category">
+        <item>সংখ্যা জ্যোতিষ</item>
+        <!--<item>Learn Astrology</item>-->
+        <item>যোগ আৰু আধ্যাত্মিকতা</item>
+        <!-- <item>Zodiac Signs</item>-->
+        <item>হিন্দী</item>
+        <item>জ্যোতিষীয়</item>
+        <item>জ্যোতিষ টিউটৰিয়েল</item>
+        <item>জ্যোতিষ কোৰ্চ</item>
+        <item>জ্যোতিষ পাঠ</item>
+        <item> ১২ ৰাশি</item>
+        <item>মিথ্যা আৰু ভুল ধাৰণা</item>
+        <item>সংখ্যাতত্ত্ব</item>
+    </string-array>
+    <string-array name="horo_rasi_full_name_list">
+        <item>মেষ</item>
+        <item>বৃষ</item>
+        <item>মিথুন</item>
+        <item>কৰ্কট</item>
+        <item>সিংহ</item>
+        <item>কন্যা</item>
+        <item>তুলা</item>
+        <item>বৃশ্চিক</item>
+        <item>ধনু</item>
+        <item>মকৰ</item>
+        <item>কুম্ভ</item>
+        <item>মীন</item>
+    </string-array>
+    <string-array name="MonthName_en_hi">
+        <item>জানুৱাৰী</item>
+        <item>ফেব্ৰুৱাৰী</item>
+        <item>মাৰ্চ</item>
+        <item>এপ্ৰিল</item>
+        <item>মে</item>
+        <item>জুন</item>
+        <item>জুলাই</item>
+        <item>আগষ্ট</item>
+        <item>ছেপ্তেম্বৰ</item>
+        <item>অক্টোবৰ</item>
+        <item>নৱেম্বৰ</item>
+        <item>ডিচেম্বৰ</item>
+    </string-array>
+    <string-array name="astroshop_output_menu_item_list">
+        <item>@string/order_history_title_text</item>
+    </string-array>
+    <string-array name="astroshop_output_menu_item_list_icon">
+        <!--<item>@drawable/new_kundli</item>-->
+        <item>@drawable/ic_history_white</item>
+    </string-array>
+    <string-array name="weekday_short_name">
+        <item>সূ</item>
+        <item>চ</item>
+        <item>মা</item>
+        <item>বু</item>
+        <item>বৃ</item>
+        <item>শু</item>
+        <item>শ</item>
+    </string-array>
+    <string-array name="type_list">
+        <item>চেইৰো / চাল্ডিয়ান</item>
+        <item>ছেফেৰিয়েল</item>
+        <item>আধুনিক</item>
+        <item>পাইথাগোৰিয়ান</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
+
+    <string-array name="input_page_titles_list_panchang">
+        <item>@string/home_tag</item>
+        <item>@string/panchang_top_heading</item>
+        <item>@string/month_view__title</item>
+        <item>@string/hindu_calender</item>
+        <item>@string/vrat_title</item>
+        <item>@string/indian_calender_title</item>
+        <item>@string/hora_name</item>
+        <item>@string/chogadia_name</item>
+        <item>@string/doghati_name</item>
+        <item>@string/rahu_kaal</item>
+        <item>@string/panchak</item>
+        <item>@string/bhadra</item>
+        <item>@string/muhurat</item>
+        <item>@string/lagna</item>
+        <item>@string/calendar_title</item>
+    </string-array>
+
+    <string-array name="input_page_titles_list_panchang_home">
+        <item>@string/panchang_top_heading</item>
+        <item>@string/month_view__title</item>
+        <item>@string/hindu_calender</item>
+        <item>@string/vrat_title</item>
+        <item>@string/indian_calender_title</item>
+        <item>@string/hora_name</item>
+        <item>@string/chogadia_name</item>
+        <item>@string/doghati_name</item>
+        <item>@string/rahu_kaal</item>
+        <item>@string/calendar_title</item>
+        <item>@string/panchak</item>
+        <item>@string/bhadra</item>
+        <item>@string/muhurat</item>
+        <item>@string/lagna</item>
+        <!--<item>@string/text_daily_notes</item>-->
+    </string-array>
+
+    <string-array name="titles_list_panchang">
+        <item>@string/dash_board</item>
+        <item>@string/panchang_top_heading</item>
+        <item>@string/daily_horoscope</item>
+        <item>@string/hora_name</item>
+        <item>@string/chogadia_name</item>
+        <item>@string/doghati_name</item>
+        <item>@string/rahu_kaal</item>
+        <item>@string/panchak</item>
+        <item>@string/bhadra</item>
+        <item>@string/muhurat</item>
+        <item>@string/lagna</item>
+        <item>@string/ask_questions</item>
+    </string-array>
+
+
+    <string-array name="panchang_menu_item_list_icons">
+        <!-- <item>@drawable/ic_action_share</item>-->
+        <item>@drawable/ic_action_share</item>
+        <!--<item>@drawable/feedback</item>-->
+        <item>@drawable/feedback</item>
+        <item>@drawable/rating</item>
+        <!--<item>@drawable/ic_action_share</item>-->
+        <item>@drawable/other_apps</item>
+        <!--<item>@drawable/call_us</item>-->
+        <item>@drawable/astro_shop</item>
+        <item>@drawable/astrologer</item>
+        <item>@drawable/ic_about_us</item>
+        <item>@drawable/ic_action_join_panel</item>
+        <item>@drawable/ic_logout</item>
+    </string-array>
+
+    <string-array name="Login_titles_list">
+        <item>@string/sign_in_capital</item>
+        <item>@string/sign_up_capital</item>
+    </string-array>
+
+
+    <string-array name="input_page_titles_list_for_ask_question">
+        <item>@string/profile_list</item>
+        <item>@string/new_profile</item>
+    </string-array>
+
+    <string-array name="vrat_page_titles_list">
+        <item>@string/purnima_fast_fast_name</item>
+        <item>@string/ekadashi_fast_name</item>
+        <item>@string/pradosh_fast_name</item>
+        <item>@string/masik_shiratri_fast_name</item>
+        <item>@string/sankashti_chaturthi_fast_name</item>
+        <item>@string/amavasya_dates</item>
+        <item>@string/sankranti_dates</item>
+    </string-array>
+
+    <string-array name="module_icons_for_panchang">
+        <item>@drawable/ic_home_black_24dp </item>
+        <item>@drawable/ic_panchang_drawer</item>
+        <item>@drawable/ic_monthly_drawer</item>
+        <item>@drawable/ic_hindu_calendar_drawer</item>
+        <item>@drawable/ic_vart_drawer</item>
+        <item>@drawable/ic_indian_calendar_drawer</item>
+        <item>@drawable/ic_hora_drawer</item>
+        <item>@drawable/ic_time_drawer</item>
+        <item>@drawable/ic_do_ghati_drawer</item>
+        <item>@drawable/ic_time_drawer</item>
+        <item>@mipmap/ic_panchak_drawer</item>
+        <item>@mipmap/ic_bhadra_drawer</item>
+        <item>@mipmap/ic_muhurat_drawer</item>
+        <item>@mipmap/ic_lagna_black</item>
+        <item>@drawable/ic_today_drawer</item>
+    </string-array>
+
+    <string-array name="magzine_tabs_text">
+        <item>@string/new_magzine</item>
+        <item>@string/old_magzine</item>
+    </string-array>
+
+    <string-array name="ask_a_question_list">
+        <item>@string/astro_astrologer</item>
+        <item>@string/order_history_title_text</item>
+        <item>@string/customer_support</item>
+        <item>@string/terms_and_privacy</item>
+    </string-array>
+
+    <string-array name="ask_a_question_list_icon">
+        <item>@drawable/ic_astrologer</item>
+        <item>@drawable/ic_history_black_24dp</item>
+        <item>@drawable/ic_contact_phone_black_24dp</item>
+        <item>@drawable/ic_assignment_black_24dp</item>
+    </string-array>
+
+    <string-array name="hora_planets_short_meaning">
+        <item>Govt. dealing</item>
+        <item>Travelling &amp; arts</item>
+        <item>Sports &amp; property</item>
+        <item>Trade &amp; study</item>
+        <item>Everything</item>
+        <item>Love &amp; entertainment</item>
+        <item>Meditation &amp; hard-work</item>
+    </string-array>
+
+    <string-array name="do_ghati_muhurat">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Abhijit Muhurat</item>
+        <item></item>
+        <item></item>
+        <item>Vijay Muhurat</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Sayan Sandhya</item>
+        <item>1/2 Sayan Sandhya</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Mahanishita Muhurat</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>1/2 Pratah Sandhya</item>
+        <item>Pratah Sandhya</item>
+    </string-array>
+
+    <string-array name="yearlyModulesList">
+        <item>@string/horoscope</item>
+
+        <item>@string/jupiter_transit</item>
+        <item>@string/saturn_transit</item>
+
+        <item>@string/love_horoscope</item>
+        <item>@string/career_horoscope</item>
+        <item>@string/chinese_horoscope</item>
+        <item>@string/education_horoscope</item>
+        <item>@string/finance_horoscope</item>
+        <item>@string/lalkitab_horoscope</item>
+
+        <item>@string/title_numrology_input</item>
+        <item>@string/viah_muhurat</item>
+        <item>@string/mundan_muhurat</item>
+        <item>@string/griha_muhurat</item>
+        <item>@string/namkaran_muhurat</item>
+        <item>@string/annaprashan_muhurat</item>
+        <item>@string/karnavedha_muhurat</item>
+        <item>@string/vidyarambh_muhurat</item>
+
+        <item>@string/ketu_transit</item>
+        <item>@string/rahu_transit</item>
+        <item>@string/lunar_eclipse</item>
+        <item>@string/solar_eclipse</item>
+        <item>@string/planets_in_retrograde</item>
+        <item>@string/mercury_retrograde</item>
+
+        <!--<item>@string/calendar</item>-->
+        <!--<item>@string/muhurat_</item>
+        <item>@string/sports</item>
+        <item>@string/movies</item>
+        <item>@string/elections</item>
+        <item>@string/ipl</item>
+        <item>@string/festivals</item>
+        <item>@string/grahan</item>-->
+    </string-array>
+
+
+
+
+    <string-array name="mundan_muhurat">
+
+        <item>@string/text_no_muhurat</item>
+        <item>@string/text_no_muhurat</item>
+        <item>21, 29</item> <!-- January -->
+        <item>11, 12, 18, 26, 27</item> <!-- February -->
+        <item>6, 16, 25, 27</item> <!-- March -->
+        <item>3, 13, 23</item> <!-- April -->
+        <item>1, 4, 11</item> <!-- May -->
+        <item>17, 24, 25</item> <!-- June -->
+        <item>2, 3, 9, 15, 20</item> <!-- July -->
+        <item>@string/text_no_muhurat</item> <!-- August -->
+        <item>@string/text_no_muhurat</item> <!-- September -->
+        <item>@string/text_no_muhurat</item> <!-- October -->
+        <item>@string/text_no_muhurat</item> <!-- November -->
+        <item>@string/text_no_muhurat</item> <!-- December -->
+
+
+
+    </string-array>
+
+    <string-array name="griha_pravesh">
+
+        <item>3, 7, 14, 15, 17, 20, 21</item>
+        <item>@string/text_no_muhurat</item>
+        <item>@string/text_no_muhurat</item> <!--January-->
+        <item>19, 20, 21, 26</item> <!--February-->
+        <item>4, 6, 14</item> <!--March-->
+        <item>@string/text_no_muhurat</item> <!--April-->
+        <item>4, 8, 13, 14</item> <!--May-->
+        <item>24, 27</item> <!--June-->
+        <item>1, 2, 6</item> <!--July-->
+        <item>@string/text_no_muhurat</item> <!--August-->
+        <item>@string/text_no_muhurat</item> <!--September-->
+        <item>@string/text_no_muhurat</item> <!--October-->
+        <item>11, 20, 25, 26</item> <!--November-->
+        <item>4, 12, 19, 30</item> <!--December-->
+
+    </string-array>
+
+    <string-array name="namkaran_muhurat">
+
+
+        <item>2, 3, 7, 10, 14, 16, 17, 20, 21, 26, 27, 28, 30</item>
+        <item>1, 4, 5, 8, 12, 14, 15, 17, 22, 25, 28, 29, 31</item>
+        <item>1, 4, 5, 8, 9, 12, 14, 19, 21, 23, 25, 26, 28, 29</item> <!--January-->
+        <item>1, 6, 8, 15, 18, 19, 20, 22, 26</item> <!--February-->
+        <item>4, 5, 6, 8, 9, 15, 19, 20, 23, 25, 27</item> <!--March-->
+        <item>1, 2, 3, 6, 10, 12, 13, 15, 17, 23, 24, 27, 29</item> <!--April-->
+        <item>1, 3, 4, 7, 8, 11, 13, 14</item> <!--May-->
+        <item>17, 21, 22, 24, 25, 26</item> <!--June-->
+        <item>1, 2, 3, 5, 6, 8, 9, 12, 15, 19, 20, 24, 29, 30, 31</item> <!--July-->
+        <item>3, 5, 7, 9, 16, 17, 20, 24, 28, 30</item> <!--August-->
+        <item>3, 4, 7, 11, 13, 16, 17, 21, 24, 27, 28</item> <!--September-->
+        <item>1, 2, 5, 11, 12, 18, 19, 21, 22, 23, 25, 26, 28</item> <!--October-->
+        <item>1, 5, 6, 11, 15, 16, 20, 22, 25, 26, 29</item> <!--November-->
+        <item>3, 4, 6, 13, 16, 17, 20, 23, 25, 30, 31</item> <!--December-->
+
+
+    </string-array>
+
+    <string-array name="vehicle_purchase_muhurat">
+
+        <item>3, 7, 9, 10, 17, 20, 21, 26, 28, 30</item>
+        <item>1, 4, 5, 7, 8, 14, 15, 17, 24, 25</item>
+        <item>1, 4, 12, 14, 19, 21, 28, 29</item> <!--January-->
+        <item>1, 6, 18, 26, 27</item> <!--February-->
+        <item>5, 6, 8, 9, 16, 23, 27</item> <!--March-->
+        <item>1, 2, 6, 12, 13, 23, 24, 29</item> <!--April-->
+        <item>1, 4, 10, 11, 14</item> <!--May-->
+        <item>17, 22, 24, 25</item> <!--June-->
+        <item>2, 3, 5, 8, 12, 15, 19, 24, 29, 30</item> <!--July-->
+        <item>3, 7, 9, 10, 16, 17, 20, 27, 28</item> <!--August-->
+        <item>4, 6, 7, 13, 16, 17, 21, 24, 27</item> <!--September-->
+        <item>1, 2, 5, 11, 21, 22, 25, 28</item> <!--October-->
+        <item>1, 6, 25, 26, 29</item> <!--November-->
+        <item>3, 4, 6, 13, 14, 23, 30, 31</item> <!--December-->
+    </string-array>
+
+    <string-array name="vivah_muhurat">
+
+        <item>2, 3, 6, 8, 12, 13, 15, 16, 17, 18, 21, 22, 23, 25, 30</item>
+        <item>4, 5, 6</item>
+
+        <!-- जनवरी 2026 -->
+        <item>5, 9, 10, 11, 12, 13, 14</item>
+        <!-- फरवरी 2026 -->
+        <item>17, 18, 22, 23, 27, 28</item>
+        <!-- मार्च 2026 -->
+        <item>7, 8, 10, 12, 14, 15, 16, 17, 22, 23, 27, 28</item>
+        <!-- अप्रैल 2026 -->
+        <item>2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 18, 19, 21, 29</item>
+        <!-- मई 2026 -->
+        <item>1, 2, 3</item>
+        <!-- जून 2026 -->
+        <item>@string/text_no_muhurat</item>
+        <!-- जुलाई 2026 -->
+        <item>@string/text_no_muhurat</item>
+        <!-- अगस्त 2026 -->
+        <item>@string/text_no_muhurat</item>
+        <!-- सितंबर 2026 -->
+        <item>30</item>
+        <!-- अक्टूबर 2026 -->
+        <item>4, 5, 6</item>
+        <!-- नवंबर 2026 -->
+        <item>@string/text_no_muhurat</item>
+        <!-- दिसंबर 2026 -->
+        <item>11, 12, 14, 19, 20, 21, 27</item>
+
+    </string-array>
+
+    <string-array name="karnavedha_muhurat">
+
+        <item>3, 10, 16, 17, 20, 21, 26, 27</item>
+        <item>1, 5, 6, 7, 15, 17, 24, 25, 28, 29</item>
+        <!-- जनवरी 2026 -->
+        <item>4, 5, 10, 11, 14, 19, 21, 24, 25, 26, 29, 31</item>
+        <!-- फरवरी 2026 -->
+        <item>6, 7, 21, 22</item>
+        <!-- मार्च 2026 -->
+        <item>5, 15, 16, 20, 21, 25, 27, 28</item>
+        <!-- अप्रैल 2026 -->
+        <item>2, 3, 6, 12, 13, 18, 23, 24, 29</item>
+        <!-- मई 2026 -->
+        <item>3, 4, 9, 10, 14, 15</item>
+        <!-- जून 2026 -->
+        <item>15, 17, 22, 24, 27</item>
+        <!-- जुलाई 2026 -->
+        <item>2, 4, 8, 9, 12, 15, 20, 24, 29, 30, 31</item>
+        <!-- अगस्त 2026 -->
+        <item>5, 9, 10, 16, 17, 20, 26</item>
+        <!-- सितंबर 2026 -->
+        <item>7, 12, 13, 17, 23, 24</item>
+        <!-- अक्टूबर 2026 -->
+        <item>11, 21, 26, 30, 31</item>
+        <!-- नवंबर 2026 -->
+        <item>1, 6, 7, 11, 16, 21, 22, 26, 28, 29</item>
+        <!-- दिसंबर 2026 -->
+        <item>3, 4, 5, 14, 19, 20, 25, 26, 31</item>
+
+    </string-array>
+
+    <string-array name="vidyarambh_muhurat">
+
+        <item>21</item>
+        <item>1, 5</item>
+        <item>4, 7, 8, 14, 16, 21, 23, 25, 29, 30</item> <!--January-->
+        <item>2, 5, 9, 11, 13, 16, 18, 23, 25</item> <!--February-->
+        <item>4, 6, 11, 13, 16, 18, 23, 25, 27</item> <!--March-->
+        <item>1, 3, 6, 8, 10, 15, 17, 20, 22, 24, 29</item> <!--April-->
+        <item>1, 4, 6, 8, 11, 13, 15, 18, 20, 22, 27, 29</item> <!--May-->
+        <item>1, 3, 5, 8, 10, 12, 15, 17, 19, 22, 24, 26, 29</item> <!--June-->
+        <item>1, 3, 6, 8, 10, 13, 15, 17, 20, 22, 24, 27, 29, 31</item> <!--July-->
+        <item>5, 9, 14, 16, 23, 28</item> <!--August-->
+        <item>9, 13, 17, 23, 24</item> <!--September-->
+        <item>16, 21, 22, 23, 30</item> <!--October-->
+        <item>1, 4, 6, 11, 12, 19, 22, 26, 29</item> <!--November-->
+        <item>3, 4, 6, 10, 11, 16, 24, 25</item> <!--December-->
+
+    </string-array>
+
+    <string-array name="annaprashan_muhurat">
+
+        <item>3, 7, 17, 27</item>
+        <item>4, 8, 17, 22, 24, 25, 29</item>
+        <item>1, 5, 9, 12, 21, 23, 28</item> <!--January-->
+        <item>6, 18, 20</item> <!--February-->
+        <item>20, 25, 27</item> <!--March-->
+        <item>20, 21, 26, 27, 29</item> <!--April-->
+        <item>1, 3, 5, 6, 7, 8, 13, 14</item> <!--May-->
+        <item>21, 22, 23, 24, 26, 27</item> <!--June-->
+        <item>15, 20, 24, 29</item> <!--July-->
+        <item>3, 5, 7, 10, 17, 26, 28</item> <!--August-->
+        <item>14, 17, 21, 24</item> <!--September-->
+        <item>12, 21, 26, 30</item> <!--October-->
+        <item>11, 16</item> <!--November-->
+        <item>14, 16</item> <!--December-->
+
+    </string-array>
+
+    <string-array name="upnayan_muhurat">
+
+        <item>1, 2, 7, 9, 23, 30</item>
+        <item>1, 5, 6, 21, 22, 24, 25, 29</item>
+        <item>3, 4, 5, 7, 21, 23, 28, 29, 30</item> <!--January-->
+        <item>2, 6, 19, 20, 21, 22</item> <!--February-->
+        <item>4, 5, 8, 20, 21, 27, 28, 29</item> <!--March-->
+        <item>2, 3, 4, 6, 20</item> <!--April-->
+        <item>3, 6, 7</item> <!--May-->
+        <item>17, 19, 24</item> <!--June-->
+        <item>1, 2, 4, 5, 15, 16, 18, 24, 26, 30, 31</item> <!--July-->
+        <item>3, 14, 15, 16, 17, 23, 24, 28, 29, 30</item> <!--August-->
+        <item>12, 13, 21, 23</item> <!--September-->
+        <item>12, 21, 22, 23, 26, 30</item> <!--October-->
+        <item>11, 12, 14, 19, 20, 21, 25, 26, 28</item> <!--November-->
+        <item>10, 11, 12, 14, 19, 20, 24, 25</item> <!--December-->
+
+    </string-array>
+
+    <string-array name="sarvart_muhurat">
+
+        <item>2, 4, 5, 10, 11, 16, 20, 21, 23, 30</item>
+        <item>2, 3, 7, 8, 9, 14, 17, 18, 21, 22, 28, 30, 31</item>
+        <item>4, 5, 6, 14, 18, 19, 25, 27, 28, 30</item> <!-- January -->
+        <item>1, 7, 11, 15, 16, 20, 22, 24, 25, 27</item> <!-- February -->
+        <item>1, 7, 9, 14, 19, 20, 23, 25, 26, 27</item> <!-- March -->
+        <item>1, 4, 6, 11, 16, 17, 20, 23, 29</item> <!-- April -->
+        <item>4, 8, 9, 12, 14, 15, 18, 21, 24, 27</item> <!-- May -->
+        <item>5, 6, 9, 11, 12, 13, 15, 18, 21, 26, 28</item> <!-- June -->
+        <item>3, 7, 9, 11, 13, 19, 23, 24, 26</item> <!-- July -->
+        <item>2, 4, 8, 16, 20, 21, 23, 30</item> <!-- August -->
+        <item>1, 2, 7, 8, 13, 16, 17, 20, 27, 29, 30</item> <!-- September -->
+        <item>4, 5, 6, 14, 18, 19, 25, 27, 28</item> <!-- October -->
+        <item>1, 7, 11, 15, 16, 22, 24, 25, 27, 29</item> <!-- November -->
+        <item>5, 7, 12, 14, 18, 20, 22, 23, 24, 25, 30</item> <!-- December -->
+
+    </string-array>
+
+    <string-array name="amrit_muhurat">
+
+        <item>4, 16</item>
+        <item>2, 14, 17</item>
+        <item>14</item> <!-- January -->
+        <item>11, 20</item> <!-- February -->
+        <item>20</item> <!-- March -->
+        <item>17, 20, 23</item> <!-- April -->
+        <item>18, 21</item> <!-- May -->
+        <item>13, 15, 18</item> <!-- June -->
+        <item>11, 13, 19</item> <!-- July -->
+        <item>4, 8, 16</item> <!-- August -->
+        <item>1, 13, 16, 29</item> <!-- September -->
+        <item>14</item> <!-- October -->
+        <item>11</item> <!-- November -->
+        <item>18</item> <!-- December -->
+
+    </string-array>
+
+    <string-array name="panchak_muhurat">
+
+        <item>1, 2, 3, 4, 27, 28, 29, 30</item>
+        <item>1, 24, 25, 26, 27, 28, 29</item>
+        <item>21</item> <!-- January -->
+        <item>17</item> <!-- February -->
+        <item>16</item> <!-- March -->
+        <item>13</item> <!-- April -->
+        <item>10</item> <!-- May -->
+        <item>6</item> <!-- June -->
+        <item>4, 31</item> <!-- July -->
+        <item>27</item> <!-- August -->
+        <item>23</item> <!-- September -->
+        <item>21</item> <!-- October -->
+        <item>17</item> <!-- November -->
+        <item>14</item> <!-- December -->
+
+    </string-array>
+
+    <string-array name="bhadra_muhurat">
+
+        <item>1, 4, 7, 11, 14, 18, 24, 28</item>
+        <item>1, 4, 7, 10, 14, 18, 24, 27, 30</item>
+        <item>2, 5, 9, 13, 16, 22, 25, 29</item> <!-- January -->
+        <item>1, 4, 8, 11, 15, 21, 24, 27</item> <!-- February -->
+        <item>2, 6, 9, 13, 17, 22, 25, 28</item> <!-- March -->
+        <item>1, 4, 8, 12, 15, 20, 23, 27, 30</item> <!-- April -->
+        <item>4, 8, 12, 15, 20, 23, 26, 30</item> <!-- May -->
+        <item>3, 7, 10, 13, 18, 21, 25, 29</item> <!-- June -->
+        <item>2, 6, 9, 12, 17, 21, 24, 28</item> <!-- July -->
+        <item>1, 4, 8, 11, 16, 19, 23, 27, 30</item> <!-- August -->
+        <item>3, 6, 9, 14, 18, 22, 25, 29</item> <!-- September -->
+        <item>2, 5, 8, 14, 18, 22, 25, 28, 31</item> <!-- October -->
+        <item>3, 7, 13, 17, 20, 23, 26, 30</item> <!-- November -->
+        <item>3, 7, 13, 16, 20, 23, 26, 29</item> <!-- December -->
+
+
+    </string-array>
+
+    <string-array name="property_purchase_muhurat">
+
+        <item>1, 9, 10, 14, 19, 20, 21, 30</item>
+        <item>1, 5, 9, 10, 19, 20, 26</item>
+        <item>3, 4, 7, 8, 13, 14, 23, 24, 29</item> <!--January-->
+        <item>1, 2, 12, 13, 21, 26, 27</item> <!--February-->
+        <item>2, 3, 8, 9, 13, 18, 27, 28</item> <!--March-->
+        <item>6, 8, 16, 17, 21, 25, 26, 27</item> <!--April-->
+        <item>2, 6, 7, 12</item> <!--May-->
+        <item>18, 19, 20, 29, 30</item> <!--June-->
+        <item>5, 6, 14, 18, 23, 24</item> <!--July-->
+        <item>3, 4, 8, 9, 12, 13, 22, 23, 29</item> <!--August-->
+        <item>6, 7, 10, 11, 15, 16, 17, 20, 26, 27</item> <!--September-->
+        <item>2, 5, 6, 16, 25, 31</item> <!--October-->
+        <item>3, 4, 9, 10, 13, 14, 19, 28, 29</item> <!--November-->
+        <item>8, 9, 19, 23, 27, 28, 29</item> <!--December-->
+        <!--<item>03rd, 04th, 13th, 14th, 18th, 23rd, 24th</item>
+        <item>03rd, 08th, 09th, 13th, 14th, 23rd, 24th, 28th</item>
+
+        <item>06th, 07th, 11th, 12th, 16th, 17th, 18th, 25th, 26th, 31st</item>
+        <item>01st, 05th, 06th, 16th</item>
+        <item>02nd, 06th, 07th, 12th, 13th, 16th, 21st, 22nd, 31st</item>
+        <item>01st, 10th, 11th, 19th, 24th, 26th, 29th, 30th</item>
+        <item>01st, 05th, 06th, 09th, 10th, 14th, 24th, 25th</item>
+        <item>03rd, 12th, 13th, 17th, 18th, 22nd, 23rd, 24th, 29th</item>
+        <item>02nd, 03rd, 07th, 08th, 17th</item>
+        <item>17th, 26th, 27th, 31st</item>
+        <item>09th, 10th, 14th, 19th, 20th, 21st, 28th, 29th, 30th</item>
+        <item>04th, 09th, 10th, 19th, 20th</item>
+        <item>03rd, 07th, 08th, 13th, 14th, 17th, 22nd</item>
+        <item>02nd, 03rd, 12th, 13th, 21st, 26th, 27th, 31st</item>-->
+
+        <!--<item>04th, 09th, 10th, 19th, 20th</item>-->
+        <item>02nd, 06th, 07th, 11th, 19th, 20th, 30th</item>
+        <item>01st, 10th, 11th, 15th, 19th, 20th, 21st, 26th, 30th, 31st</item>
+
+        <item>4th, 5th, 13th, 18th, 23rd, 24th</item>             <!--2025-->
+        <item>3rd, 7th, 8th, 11th, 12th, 13th, 22nd, 23rd, 24th, 28th</item>
+        <item>9th, 13th, 19th, 20th, 29th, 30th</item>
+        <item>3rd, 7th, 8th, 18th, 19th</item>
+        <item>2nd, 6th, 7th, 12th, 13th, 17th, 22nd, 23rd, 31st</item>
+        <item>1st, 10th, 11th, 12th, 20th, 24th, 25th, 26th, 29th, 30th</item>
+        <item>5th, 6th, 10th, 15th, 24th, 25th</item>
+        <item>3rd, 13th, 18th, 22nd, 23rd, 24th, 29th</item>
+        <item>2nd, 3rd, 7th, 8th, 16th, 26th, 27th</item>
+        <item>7th, 11th, 12th, 15th, 16th, 17th, 26th, 27th</item>
+        <item>1st, 9th, 10th, 14th, 19th, 20th, 21st, 30th</item>
+        <item>1st, 5th, 9th, 10th, 19th, 20th, 26th</item>
+
+    </string-array>
+
+    <!-- Muhurat End-->
+    <string-array name="material_status">
+        <item>@string/not_specified</item>
+        <item>@string/single</item>
+        <item>@string/married</item>
+        <item>@string/divorced</item>
+    </string-array>
+    <string-array name="occupations">
+        <item>@string/not_specified</item>
+        <item>@string/student</item>
+        <item>@string/businessperson</item>
+        <item>@string/employee</item>
+        <item>@string/retired</item>
+        <item>@string/housewife</item>
+    </string-array>
+
+    <string-array name="print_module">
+        <item>@string/module</item>
+        <item>@string/basic_module</item>
+        <item>@string/easy_module</item>
+        <item>@string/varshphal_module</item>
+        <item>@string/kp_module</item>
+        <item>@string/lal_kitab_module</item>
+        <item>@string/jaimini_module</item>
+        <item>@string/special_module</item>
+        <!-- <item>@string/dhruv_module</item>-->
+
+    </string-array>
+
+    <string-array name="arr_apmt_time">
+        <item>00:00</item>
+        <item>00:15</item>
+        <item>00:30</item>
+        <item>00:45</item>
+        <item>01:00</item>
+        <item>01:15</item>
+        <item>01:30</item>
+        <item>01:45</item>
+        <item>02:00</item>
+        <item>02:15</item>
+        <item>02:30</item>
+        <item>02:45</item>
+        <item>03:00</item>
+        <item>03:15</item>
+        <item>03:30</item>
+        <item>03:45</item>
+        <item>04:00</item>
+        <item>04:15</item>
+        <item>04:30</item>
+        <item>04:45</item>
+        <item>05:00</item>
+        <item>05:15</item>
+        <item>05:30</item>
+        <item>05:45</item>
+        <item>06:00</item>
+        <item>06:15</item>
+        <item>06:30</item>
+        <item>06:45</item>
+        <item>07:00</item>
+        <item>07:15</item>
+        <item>07:30</item>
+        <item>07:45</item>
+        <item>08:00</item>
+        <item>08:15</item>
+        <item>08:30</item>
+        <item>08:45</item>
+        <item>09:00</item>
+        <item>09:15</item>
+        <item>09:30</item>
+        <item>09:45</item>
+        <item>10:00</item>
+        <item>10:15</item>
+        <item>10:30</item>
+        <item>10:45</item>
+        <item>11:00</item>
+        <item>11:15</item>
+        <item>11:30</item>
+        <item>11:45</item>
+        <item>12:00</item>
+        <item>12:15</item>
+        <item>12:30</item>
+        <item>12:45</item>
+        <item>13:00</item>
+        <item>13:15</item>
+        <item>13:30</item>
+        <item>13:45</item>
+        <item>14:00</item>
+        <item>14:15</item>
+        <item>14:30</item>
+        <item>14:45</item>
+        <item>15:00</item>
+        <item>15:15</item>
+        <item>15:30</item>
+        <item>15:45</item>
+        <item>16:00</item>
+        <item>16:15</item>
+        <item>16:30</item>
+        <item>16:45</item>
+        <item>17:00</item>
+        <item>17:15</item>
+        <item>17:30</item>
+        <item>17:45</item>
+        <item>18:00</item>
+        <item>18:15</item>
+        <item>18:30</item>
+        <item>18:45</item>
+        <item>19:00</item>
+        <item>19:15</item>
+        <item>19:30</item>
+        <item>19:45</item>
+        <item>20:00</item>
+        <item>20:15</item>
+        <item>20:30</item>
+        <item>20:45</item>
+        <item>21:00</item>
+        <item>21:15</item>
+        <item>21:30</item>
+        <item>21:45</item>
+        <item>22:00</item>
+        <item>22:15</item>
+        <item>22:30</item>
+        <item>22:45</item>
+        <item>23:00</item>
+        <item>23:15</item>
+        <item>23:30</item>
+        <item>23:45</item>
+    </string-array>
+    <string-array name="dhruv_drawer_item_list">
+        <item>@string/home_tag</item>
+        <item>@string/new_kundli</item>
+        <item>@string/matching</item>
+        <item>@string/PrintKundli</item>
+        <item>@string/Dasha</item>
+        <item>@string/Predictions</item>
+        <item>@string/title_numrology_input</item>
+        <item>@string/KPSystem</item>
+        <item>@string/Shodashvarga</item>
+        <item>@string/LalKitab</item>
+        <item>@string/Varshphal</item>
+    </string-array>
+    <string-array name="dhruv_drawer_item_list_icon">
+        <item>@drawable/ic_action_event_app_home_icon</item>
+        <item>@drawable/new_kundli</item>
+        <item>@drawable/match_making_icon</item>
+        <item>@drawable/print</item>
+        <item>@drawable/ic_module_dasha</item>
+        <item>@drawable/prediction</item>
+        <item>@drawable/numerology_icon</item>
+        <item>@drawable/kp_system</item>
+        <item>@drawable/shodashvarga</item>
+        <item>@drawable/lalkitab</item>
+        <item>@drawable/varshaphal</item>
+
+    </string-array>
+
+    <string-array name="arr_myapmt_time">
+        <item>00:00</item>
+        <item>01:00</item>
+        <item>02:00</item>
+        <item>03:00</item>
+        <item>04:00</item>
+        <item>05:00</item>
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+    </string-array>
+
+
+    <string-array name="planet_color">
+        <item>@color/colorSu</item>
+        <item>@color/colorMo</item>
+        <item>@color/colorMa</item>
+        <item>@color/colorMe</item>
+        <item>@color/colorJu</item>
+        <item>@color/colorVe</item>
+        <item>@color/colorSa</item>
+        <item>@color/colorRa</item>
+        <item>@color/colorKe</item>
+        <item>@color/colorUr</item>
+        <item>@color/colorNe</item>
+        <item>@color/colorPl</item>
+        <item>@color/colorLa</item>
+        <item>@color/colorLa</item>
+    </string-array>
+    <!--<string-array name="order_spinner_data">
+        <item>@string/sort_filter</item>
+        <item>@string/price_low_to_high</item>
+        <item>@string/price_high_to_low</item>
+        <item>@string/rating_high_to_low</item>
+        <item>@string/most_followers</item>
+    </string-array>-->
+    <string-array name="order_spinner_data">
+        <item>অৰ্থনৈতিক</item>
+        <item>প্ৰিমিয়াম</item>
+        <!--<item>জনপ্ৰিয়</item>-->
+        <item>সৰ্বাধিক ৰে\'টেড</item>
+    </string-array>
+<!--
+    <string-array name="order_spinner_data">
+        <item>অৰ্থনৈতিক</item>
+        <item>প্ৰিমিয়াম</item>
+        <item>জনপ্ৰিয়</item>
+        <item>সৰ্বাধিক ৰে\'টেড</item>
+        <item>বিবাহ</item>
+    </string-array>
+-->
+
+
+    <string-array name="CountryCodes" >
+        <item>93,AF</item>
+        <item>355,AL</item>
+        <item>213,DZ</item>
+        <item>376,AD</item>
+        <item>244,AO</item>
+        <item>672,AQ</item>
+        <item>54,AR</item>
+        <item>374,AM</item>
+        <item>297,AW</item>
+        <item>61,AU</item>
+        <item>43,AT</item>
+        <item>994,AZ</item>
+        <item>973,BH</item>
+        <item>880,BD</item>
+        <item>375,BY</item>
+        <item>32,BE</item>
+        <item>501,BZ</item>
+        <item>229,BJ</item>
+        <item>975,BT</item>
+        <item>591,BO</item>
+        <item>387,BA</item>
+        <item>267,BW</item>
+        <item>55,BR</item>
+        <item>673,BN</item>
+        <item>359,BG</item>
+        <item>226,BF</item>
+        <item>95,MM</item>
+        <item>257,BI</item>
+        <item>855,KH</item>
+        <item>237,CM</item>
+        <item>1,CA</item>
+        <item>238,CV</item>
+        <item>236,CF</item>
+        <item>235,TD</item>
+        <item>56,CL</item>
+        <item>86,CN</item>
+        <item>61,CX</item>
+        <item>61,CC</item>
+        <item>57,CO</item>
+        <item>269,KM</item>
+        <item>242,CG</item>
+        <item>243,CD</item>
+        <item>682,CK</item>
+        <item>506,CR</item>
+        <item>385,HR</item>
+        <item>53,CU</item>
+        <item>357,CY</item>
+        <item>420,CZ</item>
+        <item>45,DK</item>
+        <item>253,DJ</item>
+        <item>670,TL</item>
+        <item>593,EC</item>
+        <item>20,EG</item>
+        <item>503,SV</item>
+        <item>240,GQ</item>
+        <item>291,ER</item>
+        <item>372,EE</item>
+        <item>251,ET</item>
+        <item>500,FK</item>
+        <item>298,FO</item>
+        <item>679,FJ</item>
+        <item>358,FI</item>
+        <item>33,FR</item>
+        <item>689,PF</item>
+        <item>241,GA</item>
+        <item>220,GM</item>
+        <item>995,GE</item>
+        <item>49,DE</item>
+        <item>233,GH</item>
+        <item>350,GI</item>
+        <item>30,GR</item>
+        <item>299,GL</item>
+        <item>502,GT</item>
+        <item>224,GN</item>
+        <item>245,GW</item>
+        <item>592,GY</item>
+        <item>509,HT</item>
+        <item>504,HN</item>
+        <item>852,HK</item>
+        <item>36,HU</item>
+        <item>91,IN</item>
+        <item>62,ID</item>
+        <item>98,IR</item>
+        <item>964,IQ</item>
+        <item>353,IE</item>
+        <item>44,IM</item>
+        <item>972,IL</item>
+        <item>39,IT</item>
+        <item>225,CI</item>
+        <item>81,JP</item>
+        <item>962,JO</item>
+        <item>7,KZ</item>
+        <item>254,KE</item>
+        <item>686,KI</item>
+        <item>965,KW</item>
+        <item>996,KG</item>
+        <item>856,LA</item>
+        <item>371,LV</item>
+        <item>961,LB</item>
+        <item>266,LS</item>
+        <item>231,LR</item>
+        <item>218,LY</item>
+        <item>423,LI</item>
+        <item>370,LT</item>
+        <item>352,LU</item>
+        <item>853,MO</item>
+        <item>389,MK</item>
+        <item>261,MG</item>
+        <item>265,MW</item>
+        <item>60,MY</item>
+        <item>960,MV</item>
+        <item>223,ML</item>
+        <item>356,MT</item>
+        <item>692,MH</item>
+        <item>222,MR</item>
+        <item>230,MU</item>
+        <item>262,YT</item>
+        <item>52,MX</item>
+        <item>691,FM</item>
+        <item>373,MD</item>
+        <item>377,MC</item>
+        <item>976,MN</item>
+        <item>382,ME</item>
+        <item>212,MA</item>
+        <item>258,MZ</item>
+        <item>264,NA</item>
+        <item>674,NR</item>
+        <item>977,NP</item>
+        <item>31,NL</item>
+        <item>599,AN</item>
+        <item>687,NC</item>
+        <item>64,NZ</item>
+        <item>505,NI</item>
+        <item>227,NE</item>
+        <item>234,NG</item>
+        <item>683,NU</item>
+        <item>850,KP</item>
+        <item>47,NO</item>
+        <item>968,OM</item>
+        <item>92,PK</item>
+        <item>680,PW</item>
+        <item>507,PA</item>
+        <item>675,PG</item>
+        <item>595,PY</item>
+        <item>51,PE</item>
+        <item>63,PH</item>
+        <item>870,PN</item>
+        <item>48,PL</item>
+        <item>351,PT</item>
+        <item>1,PR</item>
+        <item>974,QA</item>
+        <item>40,RO</item>
+        <item>7,RU</item>
+        <item>250,RW</item>
+        <item>590,BL</item>
+        <item>685,WS</item>
+        <item>378,SM</item>
+        <item>239,ST</item>
+        <item>966,SA</item>
+        <item>221,SN</item>
+        <item>381,RS</item>
+        <item>248,SC</item>
+        <item>232,SL</item>
+        <item>65,SG</item>
+        <item>421,SK</item>
+        <item>386,SI</item>
+        <item>677,SB</item>
+        <item>252,SO</item>
+        <item>27,ZA</item>
+        <item>82,KR</item>
+        <item>34,ES</item>
+        <item>94,LK</item>
+        <item>290,SH</item>
+        <item>508,PM</item>
+        <item>249,SD</item>
+        <item>597,SR</item>
+        <item>268,SZ</item>
+        <item>46,SE</item>
+        <item>41,CH</item>
+        <item>963,SY</item>
+        <item>886,TW</item>
+        <item>992,TJ</item>
+        <item>255,TZ</item>
+        <item>66,TH</item>
+        <item>228,TG</item>
+        <item>690,TK</item>
+        <item>676,TO</item>
+        <item>216,TN</item>
+        <item>90,TR</item>
+        <item>993,TM</item>
+        <item>688,TV</item>
+        <item>971,AE</item>
+        <item>256,UG</item>
+        <item>44,GB</item>
+        <item>380,UA</item>
+        <item>598,UY</item>
+        <item>1,US</item>
+        <item>998,UZ</item>
+        <item>678,VU</item>
+        <item>39,VA</item>
+        <item>58,VE</item>
+        <item>84,VN</item>
+        <item>681,WF</item>
+        <item>967,YE</item>
+        <item>260,ZM</item>
+        <item>263,ZW</item>
+    </string-array>
+
+    <string-array name="rating_spinner_data">
+        <item>@string/rating_text</item>
+        <item>@string/low_to_high</item>
+        <item>@string/high_to_low</item>
+    </string-array>
+
+    <string-array name="follower_spinner_data">
+        <item>@string/follower_text</item>
+        <item>@string/most_followers</item>
+        <item>@string/least_followers</item>
+    </string-array>
+
+
+
+    <string-array name="consultation_history_title">
+
+        <item>@string/wallet</item>
+        <item>কল হিষ্ট্ৰী</item>
+        <item>চাট্ হিষ্ট্ৰী</item>
+        <item>@string/text_kundli_ai</item>
+        <item>ভিডিঅ\' হিষ্ট্ৰী</item>
+        <item>লাইভ হিষ্ট্ৰী</item>
+        <item>উপহাৰ</item>
+        <item>ৱালেট ডিডাকশন</item>
+
+    </string-array>
+
+    <string-array name="gender_list">
+        <item>@string/not_specified</item>
+        <item>@string/male</item>
+        <item>@string/female</item>
+    </string-array>
+
+    <string-array name="gender_list_new">
+        <item>@string/male</item>
+        <item>@string/female</item>
+    </string-array>
+
+
+
+
+    <string-array name="astro_expertise_names">
+        <item>বৈদিক জ্যোতিষী</item>
+        <item>@string/kp_astrologers</item>
+        <item>লাল কিতাপ জ্যোতিষী</item>
+        <item>বাস্তু বিশেষজ্ঞ</item>
+        <item>অংক জ্যোতিষী</item>
+        <item>@string/tarot_astrologers</item>
+        <item>ৰেইকি হীলাৰ</item>
+        <item>ফেং শ্যুই বিশেষজ্ঞ</item>
+        <item>হ\'ৰেৰী জ্যোতিষী</item>
+        <item>মুহুৰ্ত বিশেষজ্ঞ</item>
+        <item>ক্ৰিষ্টেল হিলীং বিশেষজ্ঞ</item>
+        <item>পেণ্ডুলাম ডাউজিং বিশেষজ্ঞ</item>
+        <item>পশ্চিমীয়া জ্যোতিষী</item>
+        <item>হস্তৰেখা বিশেষজ্ঞ</item>
+        <item>চাইকিক ৰিডিং বিশেষজ্ঞ</item>
+        <item>নাড়ী জ্যোতিষী</item>
+        <item>অষ্টকবৰ্গ জ্যোতিষী</item>
+        <item>ফে\'চ ৰিডিং বিশেষজ্ঞ</item>
+        <item>বিবাহৰ যোৰা মিলোৱা জ্যোতিষী</item>
+        <item>জৈমিনী জ্যোতিষী</item>
+        <item>ৰমল জ্যোতিষী</item>
+        <item>এঞ্জেল ৰিডীং বিশেষজ্ঞ</item>
+        <item>তাজিক জ্যোতিষী</item>
+    </string-array>
+    <string-array name="filter_category">
+        <item>@string/all</item>
+        <item>@string/mm_love</item>
+        <item>@string/career</item>
+        <item>@string/marriage_title</item>
+        <item>@string/mm_health</item>
+        <item>@string/finance</item>
+        <item>@string/business</item>
+        <item>@string/education</item>
+        <item>@string/pregnency</item>
+        <item>@string/legal</item>
+    </string-array>
+
+    <string-array name="kundli_home_menu_item_list">
+        <item>নতুন কুণ্ডলী</item>
+        <item>কুণ্ডলী খোলক</item>
+        <item>অ্যাস্ট্ৰোসেজ এআই প্ৰবন্ধ</item>
+        <item>প্লেন আপগ্ৰেড কৰক</item>
+        <item>প্ৰতিক্ৰিয়া</item>
+        <item>পছন্দ নিৰ্ধাৰণ কৰক</item>
+        <item>অধিসূচনা ছেটিং</item>
+        <item>ভাষা সলনি কৰক</item>
+        <item>অ্যাস্ট্ৰোসেজ এআইক ৰেটিং দিয়ক</item>
+        <item>আমাৰ বিষয়ে</item>
+        <item>@string/join_varta</item>
+        <item>লগ আউট কৰক</item>
+    </string-array>
+</resources>

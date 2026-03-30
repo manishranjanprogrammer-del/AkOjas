@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_view"
+        layout="@layout/dashboard_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/inc_return_chat"
+        layout="@layout/return_to_chat"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+        <include
+            android:id="@+id/chat_initiate_info_layout"
+            layout="@layout/chat_initiate_waiting_info"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_above="@+id/homeBottomNav"
+            android:layout_height="wrap_content"/>
+        <include
+            android:id="@+id/join_ongoing_chat_layout"
+            layout="@layout/ongoing_chat_join_chat"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_above="@+id/homeBottomNav"
+            android:layout_height="80dp"/>
+        <include
+            android:id="@+id/call_initiate_info_layout"
+            layout="@layout/ai_call_strip_layout"
+            android:visibility="gone"
+            android:layout_above="@id/homeBottomNav"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        <include
+            android:id="@+id/homeBottomNav"
+            layout="@layout/custom_bottom_nav_with_gif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    <!-- <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+         android:id="@+id/swipeToRefresh"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@+id/nav_view"
+         android:layout_below="@+id/toolbar_view">-->
+
+    <RelativeLayout
+        android:layout_above="@+id/chat_initiate_info_layout"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/toolbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/demo_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        </TextView>
+
+        <FrameLayout
+            android:id="@+id/nav_host_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/demo_txt"/>
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        app:backgroundTint="@color/menus"
+        app:borderWidth="@dimen/dimen_0dp"
+        android:src="@drawable/ic_live_unmute_video"
+		android:visibility="gone"/>
+
+    <!-- </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+</RelativeLayout>
+
+    <!--app:defaultNavHost="false"
+    app:navGraph="@navigation/mobile_navigation"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    -->

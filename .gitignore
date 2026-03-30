@@ -1,0 +1,33 @@
+# Gradle
+.gradle
+.gradle-user
+
+# Local config
+local.properties
+
+# IDE
+.idea
+*.iml
+
+# Build
+build
+/app/build
+
+# Native
+.cxx
+.externalNativeBuild
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# ZIP / large files
+*.zip
+
+# SVN
+.svn
+
+# Misc
+captures

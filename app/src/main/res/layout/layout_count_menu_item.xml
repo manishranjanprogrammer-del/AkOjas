@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notificationcenter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_marginLeft="10dp"
+    android:minHeight="?attr/actionBarSize"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/notificationcentericon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:background="?android:attr/selectableItemBackground"
+        app:tint="@color/ivTintColorDN"
+        app:contentDescription="notification"
+        android:src="@drawable/ic_notifications" />
+
+    <TextView
+        android:id="@+id/notificationcount"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignRight="@+id/notificationcentericon"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/cart_red_circle"
+        android:gravity="center"
+        android:maxLength="2"
+        android:textColor="@color/no_change_white"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+

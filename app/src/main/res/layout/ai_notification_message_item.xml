@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_15dp">
+
+    <LinearLayout
+        android:id="@+id/llMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:background="@drawable/rect_rounded_image"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen_10dp"
+            android:paddingVertical="5dp"
+            android:text="@string/warning_message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_17"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/astrologer_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginEnd="@dimen/dimen_50dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/youtubeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="40dp">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/youtubeThumbnailIV"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="start"
+                    android:src="@drawable/ic_video_player" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal">
+
+                <!--    <ImageView
+                        android:id="@+id/ivFRPAFC"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="7dp"
+                        android:src="@mipmap/appicon"
+                        android:padding="1dp" /> -->
+                <ImageView
+                    android:id="@+id/ivFRPAFC"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:adjustViewBounds="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/astrosage_app_icon" />
+
+                <LinearLayout
+                    android:id="@+id/ll_astro_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/type_writer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.ojassoft.astrosage.varta.utils.TypeWriterNotification
+                            android:id="@+id/textViewMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoLink="web"
+                            android:background="@drawable/bg_chat_white"
+                            android:minWidth="40dp"
+                            android:paddingVertical="@dimen/dimen_4dp"
+                            android:paddingStart="@dimen/dimen_10dp"
+                            android:paddingEnd="@dimen/dimen_10dp"
+                            android:text=""
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_18"
+                            android:visibility="visible"
+                            tools:ignore="RtlCompat" />
+
+                        <com.ojassoft.astrosage.varta.utils.TypeWritterKundali
+                            android:id="@+id/textViewKundaliMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoLink="web"
+                            android:minWidth="40dp"
+                            android:paddingVertical="@dimen/dimen_4dp"
+                            android:paddingStart="@dimen/dimen_10dp"
+                            android:paddingEnd="@dimen/dimen_10dp"
+                            android:text="dfkdvfdkfwvdfdckhdvkdviwkfvwidqdqefqefdqdqed"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_18"
+                            android:visibility="gone"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_date_and_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="-5dp"
+                        android:background="@drawable/bg_ai_chat_date"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/hint_text_color"
+                            android:textSize="12sp"
+                            tools:ignore="RtlCompat" />
+
+                        <LinearLayout
+                            android:id="@+id/llButtonsParent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:id="@+id/tv_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/grey_light" />
+
+                            <LinearLayout
+                                android:id="@+id/llChatButtons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_10dp"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLikeUnlike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivLikeMessage"
+                    android:layout_width="@dimen/dimen_24dp"
+                    android:layout_height="@dimen/dimen_24dp"
+                    android:layout_marginStart="@dimen/dimen_50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_like_outline"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivUnlikeMessage"
+                    android:layout_width="@dimen/dimen_24dp"
+                    android:layout_height="@dimen/dimen_24dp"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:rotation="180"
+                    android:src="@drawable/ic_like_outline"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivShareMessage"
+                    android:layout_width="@dimen/dimen_24dp"
+                    android:layout_height="@dimen/dimen_24dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="2.5dp"
+                    android:src="@drawable/share_black"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/dimen_50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/error_layout"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivError"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/not_verified" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_chat_purple"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/usertextViewMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:autoLink="all"
+                        android:minWidth="40dp"
+                        android:paddingVertical="@dimen/dimen_4dp"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_4dp"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_18"
+                        tools:ignore="RtlCompat" />
+
+
+                    <TextView
+                        android:id="@+id/usertextViewDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/usertextViewMessage"
+                        android:layout_gravity="end"
+                        android:paddingStart="15dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="7dp"
+                        android:paddingBottom="7dp"
+                        android:text="dfkhfvefkhev"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="12sp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivWaitMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/margin_xMedium"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:background="@drawable/bg_chat_white"
+        android:padding="7dp"
+        android:visibility="gone" />
+
+</LinearLayout>

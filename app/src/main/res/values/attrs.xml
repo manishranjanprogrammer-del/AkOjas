@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircularImageView">
+        <attr name="civ_border" format="boolean"/>
+        <attr name="civ_border_width" format="dimension"/>
+        <attr name="civ_border_color" format="color"/>
+        <attr name="civ_shadow" format="boolean"/>
+        <attr name="civ_shadow_color" format="color"/>
+        <attr name="civ_shadow_radius" format="float"/>
+
+
+    </declare-styleable>
+
+
+    <declare-styleable name="MaterialSearchView">
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchCloseIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+        <attr name="searchSuggestionIcon" format="integer" />
+        <attr name="searchSuggestionBackground" format="integer" />
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+
+    </declare-styleable>
+
+    <declare-styleable name="AnimateHorizontalProgressBar">
+        <attr name="ahp_progressColor" format="color|reference" />
+        <attr name="ahp_backgroundColor" format="color|reference" />
+        <attr name="ahp_cornerRadius" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="CalendarView">
+        <attr name="dateFormat" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularTabLayout">
+        <attr name="scrollMillisecondsPerInch"
+            format="float"/>
+        <attr name="triggerOffset"
+            format="float"/>
+        <attr name="flingFactor"
+            format="float"/>
+        <attr name="scrollEnabled"
+            format="boolean"/>
+        <attr name="tabTextSize"
+            format="dimension"/>
+
+        <attr name="tabMargins"
+            format="dimension"/>
+        <attr name="tabMarginStart"
+            format="dimension"/>
+        <attr name="tabMarginTop"
+            format="dimension"/>
+        <attr name="tabMarginEnd"
+            format="dimension"/>
+        <attr name="tabMarginBottom"
+            format="dimension"/>
+
+    </declare-styleable>
+    <declare-styleable name="ReadMoreTextView">
+        <attr name="trimExpandedText" format="string" />
+        <attr name="trimCollapsedText" format="string" />
+        <attr name="trimLength" format="integer" />
+        <attr name="showTrimExpandedText" format="boolean" />
+        <attr name="colorClickableText" format="color" />
+        <attr name="trimLines" format="integer" />
+        <attr name="trimMode">
+            <enum name="trimModeLine" value="0"/>
+            <enum name="trimModeLength" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RatingReviews">
+
+        <attr name="style" format="enum">
+            <enum name="style1" value="1" />
+            <enum name="style2" value="2" />
+        </attr>
+
+        <attr name="color" format="color" />
+        <attr name="rounded" format="boolean"/>
+        <attr name="gradiant" format="integer" />
+        <attr name="width" format="dimension" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color" />
+        <attr name="spaces" format="dimension" />
+        <attr name="max_value" format="integer" />
+        <attr name="show_label" format="boolean" />
+        <attr name="show_raters" format="boolean" />
+        <attr name="animation" format="boolean" />
+
+    </declare-styleable>
+    <declare-styleable name="RippleBackground">
+        <attr name="rb_color" format="color" />
+        <attr name="rb_strokeWidth" format="dimension"/>
+        <attr name="rb_radius" format="dimension"/>
+        <attr name="rb_duration" format="integer"/>
+        <attr name="rb_rippleAmount" format="integer"/>
+        <attr name="rb_scale" format="float"/>
+        <attr name="rb_type" format="enum">
+            <enum name="fillRipple" value="0"/>
+            <enum name="strokeRipple" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

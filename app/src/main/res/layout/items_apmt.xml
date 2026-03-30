@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_layout_clickable"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_medium">
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_large" />
+
+        <LinearLayout
+            android:id="@+id/apmtLL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iconAdd"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_gravity="right|center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_plus"
+            android:visibility="visible"
+            android:clickable="true"
+            style="@style/SelectableItemBackground"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineViewLL"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dip"
+        android:layout_marginLeft="@dimen/margin_mlarge"
+        android:layout_marginRight="@dimen/margin_mlarge"
+        android:background="@color/colorBlack30"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:paddingVertical="90dp"
+    android:paddingHorizontal="20dp"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/bg_card_view_color"
+        app:cardCornerRadius="20dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_close_view"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:padding="6dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:elevation="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_close_black"
+                app:tint="@color/no_change_white"
+                android:focusable="true" />
+
+            <View
+                android:id="@+id/innerView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_astrologer_image"
+                android:background="@drawable/white_trans_gradient" />
+
+            <ImageView
+                android:id="@+id/iv_astrologer_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mr_krishnamurti_zoom"
+                app:layout_constraintBottom_toTopOf="@+id/clBottomView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBottomView"
+                android:layout_width="match_parent"
+                android:background="@color/backgroundColorWhiteBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/bottom_top_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/astrologer_busy_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/oops_astrologer_busy"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:maxLines="2"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/consult_premium_astrologers_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:paddingHorizontal="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/but_ai_astrologer_available_text"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/chat_with_simi_ai_astrologer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_button_yellow_less_round"
+                        android:backgroundTint="@color/colorPrimary_day_night"
+                        android:layout_marginHorizontal="20dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:text="@string/chat_now_with_mr_krishnamurti"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/getNotificationAstrologerFree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:text="@string/notify_me_when_the_astrologer_is_free"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

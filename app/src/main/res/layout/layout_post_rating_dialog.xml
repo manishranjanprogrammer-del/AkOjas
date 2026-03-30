@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_filter"
+        android:paddingVertical="@dimen/dimen_20dp"
+        android:paddingHorizontal="@dimen/dimen_15dp"
+        android:layout_marginHorizontal="@dimen/dimen_20dp">
+
+        <ImageView
+            android:id="@+id/ivPostRatingClose"
+            android:layout_width="@dimen/dimen_24dp"
+            android:layout_height="@dimen/dimen_24dp"
+            android:src="@drawable/ic_close_live"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvPostRatingHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:text="@string/share_the_word"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/clPostRatingGift"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPostRatingGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"
+            android:background="@drawable/bg_gray"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_10dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/tvPostRatingHeading">
+
+            <ImageView
+                android:id="@+id/ivPostRatingGift"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/new_gift_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tvPostRatingGift"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPostRatingGift"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:gravity="start"
+                android:text="@string/send_gifts"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ivPostRatingGift"
+                app:layout_constraintRight_toLeftOf="@id/ivPostRatingGiftShare"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivPostRatingGiftShare"
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
+                android:src="@drawable/new_share_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvPostRatingGift"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorPrimary_day_night" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPostRatingShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"
+            android:background="@drawable/bg_gray"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_10dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/clPostRatingGift">
+
+            <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+                android:id="@+id/ivPostRatingShare"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_profile_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tvPostRatingShare"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPostRatingShare"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:gravity="start"
+                android:text="@string/share_astrologer_s_profile"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ivPostRatingShare"
+                app:layout_constraintRight_toLeftOf="@id/ivPostRatingGiftShareShare"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivPostRatingGiftShareShare"
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
+                android:src="@drawable/new_share_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvPostRatingShare"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorPrimary_day_night" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPostRatingRateAK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"
+            android:background="@drawable/bg_gray"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_10dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/clPostRatingShare">
+
+            <ImageView
+                android:id="@+id/ivPostRatingRateAK"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/astrosage_app_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tvPostRatingRateAK"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPostRatingRateAK"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:gravity="start"
+                android:text="@string/rate_astrosage_kundli_app"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ivPostRatingRateAK"
+                app:layout_constraintRight_toLeftOf="@id/ivPostRatingGiftRateAKShare"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivPostRatingGiftRateAKShare"
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
+                android:src="@drawable/playstore"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvPostRatingRateAK"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llPostRatingButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:padding="@dimen/dimen_10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clPostRatingRateAK"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvPostRatingChatAgain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_yellow_less_round"
+                android:gravity="center"
+                android:paddingVertical="@dimen/dimen_15dp"
+                android:paddingHorizontal="@dimen/dimen_5dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:maxLines="1"
+                android:text="@string/chat_again"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tvPostRatingCallAgain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_yellow_less_round"
+                android:gravity="center"
+                android:paddingVertical="@dimen/dimen_15dp"
+                android:paddingHorizontal="@dimen/dimen_5dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:maxLines="1"
+                android:text="@string/call_again"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

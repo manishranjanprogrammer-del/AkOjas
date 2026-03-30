@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_user_plan_details"
+        layout="@layout/tool_bar_magazine" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/footer_card"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card_view_color">
+        <LinearLayout
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/footer_detail_heading"
+                android:textSize="18sp"
+                android:text="@string/footer_detail_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/footer_detail"
+                android:textSize="@dimen/font_small"
+                android:text="@string/footer_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewHeading"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:alpha=".9"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/heading"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayHeading"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_day_gray_night_white">
+
+                    <EditText
+                        android:id="@+id/heading_edittext"
+                        style="@style/Theme.App.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Astrologer / Company name"
+                        android:maxLength="100"
+                        android:backgroundTint="@color/ColorPrimary"
+                        android:capitalize="sentences"
+                        android:textColor="@color/black"
+                        android:inputType="textCapWords" />
+                    <!-- android:inputType="textNoSuggestions"-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewLine1"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:alpha=".9"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/line1"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayLine1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_day_gray_night_white">
+
+                    <EditText
+                        android:id="@+id/line1_edittext"
+                        style="@style/Theme.App.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="100"
+                        android:hint="Address"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/ColorPrimary"
+                        android:capitalize="sentences"
+                        android:inputType="textCapWords" />
+                    <!-- android:inputType="textNoSuggestions"-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewLine2"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:alpha=".9"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/line2"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayLine2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_day_gray_night_white">
+
+                    <EditText
+                        android:id="@+id/line2_edittext"
+                        style="@style/Theme.App.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="100"
+                        android:backgroundTint="@color/ColorPrimary"
+                        android:capitalize="sentences"
+                        android:hint="Contact Details"
+                        android:textColor="@color/black"
+                        android:inputType="textCapWords" />
+                    <!-- android:inputType="textNoSuggestions"-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/saveBtn"
+        style="@style/buttonstyle"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/save_kundli"
+        android:textAllCaps="false"
+        android:layout_marginBottom="0dp"
+        android:theme="@style/buttonstyle" />
+
+
+        <TextView
+            android:id="@+id/noteTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center|left"
+            android:lineSpacingExtra="5dip"
+            android:text="@string/note_user_plan_details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_small" />
+
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="8dip"
+        android:paddingEnd="8dip">
+
+
+        <ImageView
+            android:id="@+id/Astrofeatureheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            app:tint="@color/colorPrimary_day_night" />
+        <ImageView
+            android:id="@+id/platinum_imageview"
+            android:layout_width="176dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            app:tint="@color/colorPrimary_day_night"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/txtHeading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:layout_marginTop="2dip"
+            android:text="@string/kundali_that_talks"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/Astrofeaturesubheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:maxLines="4"
+            android:paddingLeft="8dp"
+            android:paddingRight="10dp"
+            android:text="@string/upgrade_silver_text"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/selected_and_unselected_tab_bg"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/black"
+        app:tabIndicatorHeight="0dp"
+        app:tabGravity="center"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"/>
+
+
+
+    <com.ojassoft.astrosage.ui.customcontrols.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"/>
+
+</LinearLayout>

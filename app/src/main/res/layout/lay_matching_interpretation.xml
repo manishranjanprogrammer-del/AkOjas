@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="0dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMatchingInterpretationHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="16dp"
+            android:paddingLeft="@dimen/matchingScreenLeftPadding"
+            android:text="Swipe Left Or Right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/matchingScreenTitleText"
+            style="@style/title_style_new"/>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@color/ColorPrimary" />-->
+
+        <TextView
+            android:id="@+id/tvMatchingInterpretationDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="@dimen/matchingScreenLeftPadding"
+            android:text="detail matching"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/matchingScreenContentText"
+            android:lineSpacingExtra="1dp"
+            style="@style/content_style"
+            android:textColor="@color/black"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/adImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/orange_rect"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

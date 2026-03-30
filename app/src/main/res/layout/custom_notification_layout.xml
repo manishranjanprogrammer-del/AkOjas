@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/astro_avatar"
+        android:layout_alignParentStart="true"
+        android:layout_height="48dp"
+        android:layout_width="48dp"
+        android:src="@mipmap/icon" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_alignBottom="@id/astro_avatar"
+        android:layout_alignEnd="@id/astro_avatar"
+        android:layout_height="18dp"
+        android:layout_width="18dp"
+        android:padding="@dimen/dimen_3dp"
+        android:src="@drawable/calling_icon_" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/astro_avatar"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Line2" />
+    </LinearLayout>
+
+    <Button
+        android:background="@drawable/bg_rounded_box_orange_border"
+        android:id="@+id/button_hangup"
+        android:layout_below="@id/astro_avatar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="0dp"
+        android:paddingVertical="3dp"
+        android:text="@string/hang_up"
+        android:textAllCaps="false" />
+
+    <Chronometer
+        android:id="@+id/notification_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format="%s"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@android:color/white"/>
+
+
+</RelativeLayout>

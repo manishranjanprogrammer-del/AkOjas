@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="4dp"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="16dp"
+            app:contentInsetStart="0dp"
+            app:theme="@style/SelectableItemBackgroundMenusNotes">
+
+            <ImageView
+                android:id="@+id/ivToggleImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="@dimen/dimen_10dp"
+                android:background="?selectableItemBackground"
+                android:layout_marginHorizontal="@dimen/tv_size_16"
+                android:src="@drawable/ic_back_arrow"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:text="Notes"
+                android:textAllCaps="false"
+                android:textSize="@dimen/title_text_size" />
+
+
+            <ImageView
+                android:id="@+id/ivSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="10dp"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:contentDescription="@string/save"
+                android:background="?selectableItemBackground"
+                android:src="@drawable/ic_save_black_24"
+                app:tint="@color/black" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </FrameLayout>
+
+</com.google.android.material.appbar.AppBarLayout>

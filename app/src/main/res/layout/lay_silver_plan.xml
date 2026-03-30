@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/expiry_date_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_rounded_blue_image"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvPlanExpiryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SilverPlanFrag"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/Astrofeatureheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/upgrade_to_silver"
+                    android:textColor="#191919"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Astrofeaturesubheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Astrofeatureheading"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="2"
+                    android:paddingRight="60sp"
+                    android:text="@string/upgrade_to_silver_desc"
+                    android:textColor="#818181"
+                    android:textSize="13sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_feature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Astrofeaturesubheading"
+                    android:layout_marginTop="@dimen/standard_top_margin"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/silver_plan_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:textColor="@color/light_green"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/llPlanCointainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"/>
+
+                        <View
+                            android:id="@+id/exploremorefeaturedivider"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/light_gray" />
+
+                        <TextView
+                            android:id="@+id/moreexploresilverplan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:minWidth="@dimen/min_height"
+                            android:minHeight="@dimen/min_height"
+                            android:text="@string/explore_feature_silver"
+                            android:textColor="@color/colorPrimary_day_night"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <include
+                    android:id="@+id/planexpirydate"
+                    layout="@layout/plan_expiry_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_view_feature"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/plan_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Astrofeaturesubheading" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/buy_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary_day_night"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/rupees_for_silver_plan"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/buy_disable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="#4C000000"/>
+
+</FrameLayout>
+
+</LinearLayout>

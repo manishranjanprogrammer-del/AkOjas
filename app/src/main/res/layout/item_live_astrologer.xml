@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayoutLL"
+    android:layout_width="92dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/backgroundColorView">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dimen_6dp"
+        android:layout_marginBottom="@dimen/dimen_6dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_weight="0.70"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+                    android:id="@+id/ri_profile_img"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_profile_view" />
+
+                <ImageView
+                    android:id="@+id/online_offline_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/green"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/text_live"
+                android:textStyle="bold"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:textAllCaps="true"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium"
+                android:background="@drawable/bg_button_white_color"
+                android:backgroundTint="@color/colorPrimary_day_night"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_weight="0.30"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:paddingTop="@dimen/dimen_4dp"
+                android:layout_gravity="left"
+                android:gravity="top"
+                android:text=""
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:id="@+id/astroTitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_16"/>
+
+
+            <TextView
+                android:id="@+id/expertiseNameTV"
+                style="@style/content_textview_live"
+                android:maxLines="2"
+                android:layout_gravity="left|top"
+                android:gravity="left|top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:textSize="@dimen/tv_size_15" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

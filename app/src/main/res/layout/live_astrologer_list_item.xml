@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayoutFr"
+    android:layout_width="88dp"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true">
+
+        <com.ojassoft.astrosage.beans.CircularNetworkImageView
+            android:id="@+id/txtAstroImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/circle_orange_border"
+            android:contentDescription="@string/live_astrologers"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="2dp"
+            app:layout_constraintBottom_toTopOf="@id/txtAstroName"/>
+
+        <TextView
+            android:id="@+id/txtAstroName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_14"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:text="Ravindara M"
+            android:elevation="@dimen/dimen_12dp"
+            app:layout_constraintTop_toBottomOf="@id/txtAstroImage"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

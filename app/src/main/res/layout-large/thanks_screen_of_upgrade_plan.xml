@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:background="@drawable/purchase_plan_backgrounds"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:src="@drawable/ico_purchaged"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/plan_login_activation_text"
+            android:textColor="#368402"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/recharge_sucessful_content"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/plan_login_activation_text"
+            android:textColor="#368402"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvContactDetails"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="#368402"
+            android:textSize="25sp"
+            android:text="+91-9911840126"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/done_btn"
+            style="@style/buttonstyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ColorPrimaryDark"
+            android:text="@string/button_thanks"
+            android:contentDescription="@string/button_thanks"
+            android:theme="@style/buttonstyle"
+            android:layout_margin="16dp"/>
+
+    </LinearLayout>
+</LinearLayout>

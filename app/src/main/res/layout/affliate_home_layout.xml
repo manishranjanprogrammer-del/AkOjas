@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/act_app_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="124dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/my_product_sevices_ll"
+                android:layout_width="100dip"
+                android:layout_height="104dip"
+                android:background="@drawable/bg_dotted_purple"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="76dip"
+                    android:layout_height="76dip"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/my_product_service_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/my_product_sevices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/my_product_n_service"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_medium" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="44dip"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="124dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/my_earning_ll"
+                android:layout_width="100dip"
+                android:layout_height="104dip"
+                android:background="@drawable/bg_dotted_orange"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="76dip"
+                    android:layout_height="76dip"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/my_earning_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/my_earning_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/my_earning"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

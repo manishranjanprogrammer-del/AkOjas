@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtyoupay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_weight="1"
+                            android:layout_gravity="left"
+                            android:padding="2dp"
+                            android:text="@string/you_pay"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:padding="2dp"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:text="50"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etCardnumber_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" ">
+
+                        <EditText
+                            android:id="@+id/etCardnumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/card_number"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:textSize="16sp"
+                            style="@style/Theme.App.Base" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etCardCvv_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" ">
+
+                        <EditText
+                            android:id="@+id/etCardCvv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/ColorPrimary"
+                            android:hint="@string/cvv"
+                            android:inputType="numberPassword"
+                            android:maxLength="3"
+                            android:textSize="16sp"
+                            style="@style/Theme.App.Base" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <Spinner
+                                android:id="@+id/spnMonth"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="left"
+                                style="@style/Spinnerwithunderline"
+                                android:padding="4dp"
+                                android:spinnerMode="dropdown" />
+
+                            <!--<Spinner-->
+                                <!--android:id="@+id/spnMonth"-->
+                                <!--style="@style/Spinnerwithunderline"-->
+                                <!--android:layout_width="0dp"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:spinnerMode="dropdown"-->
+                                <!--android:textSize="16sp" />-->
+
+                            <Spinner
+                                android:id="@+id/spnYear"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="left"
+                                style="@style/Spinnerwithunderline"
+                                android:padding="4dp"
+                                android:spinnerMode="dropdown" />
+
+
+                            <!--<Spinner-->
+                                <!--android:id="@+id/spnYear"-->
+                                <!--style="@style/Spinnerwithunderline"-->
+                                <!--android:layout_width="0dp"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:spinnerMode="dropdown"-->
+                                <!--android:textSize="16sp" />-->
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/etIssuingBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/bank"
+                        android:inputType="text"
+                        android:backgroundTint="@color/ColorPrimary"
+                        android:visibility="gone"
+                        android:maxLength="50"
+                        android:textSize="16sp"
+                        style="@style/Theme.App.Base" />
+
+
+
+                    <CheckBox
+                        android:id="@+id/checkSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/min_height"
+                        android:minHeight="@dimen/min_height"
+                        android:checked="false"
+                        android:text="@string/astrochk_save_card"
+                        android:textSize="@dimen/input_screen_text_size"
+                        android:theme="@style/MyCheckBox" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btn_pay_complete"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/complete_pay"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:theme="@style/MyDialogeButton" />
+
+            <TextView
+                android:id="@+id/tvTrustMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:alpha="0.6"
+                android:paddingStart="10dp"
+                android:drawableLeft="@drawable/ic_beenhere_black"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="TrustPay 100% money back gurantee"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

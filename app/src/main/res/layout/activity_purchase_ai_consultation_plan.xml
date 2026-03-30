@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/planDhruvRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorView">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColorView"
+        android:layout_above="@+id/bottom_layout"
+        android:fillViewport="true">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/planAiConsultationPlanRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorView"
+    tools:context=".ui.act.PurchaseAiConsultationPlan">
+
+    <FrameLayout
+        android:id="@+id/astro_img_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tab_layout"
+        app:layout_constraintVertical_weight="1" >
+
+        <ImageView
+            android:id="@+id/kundli_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ai_astrologers" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/gradient_overlay" />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/ivClosePage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="@dimen/dimen_7dp"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:src="@drawable/cancel_icon_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/shadow2"-->
+    <!--        android:layout_width="@dimen/dimen_0dp"-->
+    <!--        android:layout_height="82dp"-->
+    <!--        android:src="@drawable/ic_black_layer"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/heading_layout"-->
+    <!--        />-->
+
+    <LinearLayout
+        android:id="@+id/heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tab_layout">
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:text="@string/unlimited_ai_chats"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary_day_night"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/txtHeading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:text="@string/accurate_ai_astrologers_now_at_your_fingertips"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_border_orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/plan_features_layout">
+
+        <LinearLayout
+            android:id="@+id/pro_tab_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selected_background"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/pro_tab_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/pro"
+                android:textColor="@drawable/text_selector_for_primary_bg"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/premium_tab_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_unselected_background"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/premium_tab_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dhruv"
+                android:layout_gravity="center"
+                android:textSize="13sp"
+                android:textColor="@drawable/text_selector_for_primary_bg"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plan_features_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:id="@+id/pro_plan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+
+                <ImageView
+                    android:id="@+id/ivRightTick1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+                <TextView
+                    android:id="@+id/ai_pass_plan_text_pro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ask_up_to_100_question_a_day_with_ai_astrologer"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_24_7_availability"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+
+                <ImageView
+                    android:id="@+id/ivRightTick2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ask_whatever_you_want"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/premium_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:visibility="visible"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivRightTick9"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/our_most_advanced_AI_model"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivRightTick5"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+
+                <TextView
+                    android:id="@+id/dhruv_plan_question_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ques_day_to_ai_astrologers"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivRightTick100x"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+
+                <TextView
+                    android:id="@+id/dhruv_plan_kundli_100x_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_more_kundli_ai_ques_day_than_basic"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:id="@+id/ivRightTick8"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/premium_kundlis_monthly_n_worth_50_000"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivRightTick7"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personalized_branding_on_all_kundli_pdfs"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:paddingBottom="4dp"-->
+            <!--            android:orientation="horizontal">-->
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/ivRightTick4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:checked="true"-->
+            <!--                android:enabled="false"-->
+            <!--                android:scaleX="0.8"-->
+            <!--                android:scaleY="0.8"-->
+            <!--                android:theme="@style/MyCheckBox"-->
+            <!--                app:tint="@color/colorPrimary_day_night" />-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/unlock_all_premium_reports"-->
+            <!--                android:textColor="@color/text_color"-->
+            <!--                android:textSize="18sp" />-->
+            <!--        </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivRightTick6"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/additional_10_per_discount"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:id="@+id/ivRightTick10"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:src="@drawable/ic_checkbox"
+                    android:layout_marginHorizontal="@dimen/dimen_3dp"/>
+
+
+                <TextView
+                    android:id="@+id/enjoyAnAdFreeExperienceDhruv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:text="@string/ad_free_uninterrupted_app_experience"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+
+        <RelativeLayout
+            android:id="@+id/subscribeForBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_24dp"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:paddingVertical="@dimen/tv_size_12">
+
+            <TextView
+                android:id="@+id/tv_btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/dimen_20dp"
+                android:text="@string/subscribe_for_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_20dp" />
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_keyboard_arrow_right_black"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/subscribeForBtnDiable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_35dp"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:backgroundTint="@color/colorPrimary_day_night_very_lighter"
+            android:paddingVertical="@dimen/tv_size_12"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_btn_txt_diable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/subscribe_for_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_20dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_keyboard_arrow_right_black"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_already_purchase_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:maxLines="1"
+            android:text="@string/already_purchased_plan"
+            android:textColor="@color/red"
+            android:textSize="@dimen/tv_size_16"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/subHeading4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivRightTick4" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+

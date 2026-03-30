@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".varta.ui.activity.GenerateTicketActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/wallet_toolbar" />
+
+            <LinearLayout
+                android:id="@+id/llTicketGenerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_margin="30dp"
+                android:background="@drawable/bg_border_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_5dp"
+                    android:layout_marginVertical="@dimen/dimen_5dp"
+                    android:background="@drawable/circle_orange"
+                    android:padding="20dp"
+                    android:src="@drawable/ic_support"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvGenerateTicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/generate_ticket"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_below="@id/llTicketGenerate"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_emailid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimary_day_night"
+                    android:gravity="center_vertical"
+                    android:text="@string/email"
+                    android:textColor="@color/colorPrimary_day_night"
+                    android:textSize="@dimen/tv_size_20"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCustomerCareEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/customer_care_email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_17" />
+
+
+                <TextView
+                    android:id="@+id/tv_email_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/email_msg"
+                    android:textColor="@color/LightBlack"
+                    android:textSize="@dimen/tv_size_15" />
+                <LinearLayout
+                    android:id="@+id/phone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimary_day_night"
+
+                    android:gravity="center_vertical"
+                    android:text="@string/phone_txt"
+                    android:textColor="@color/colorPrimary_day_night"
+                    android:textSize="@dimen/tv_size_20"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCustomerCarePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/generate_ticket_cnumber"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_15" />
+
+                <TextView
+                    android:id="@+id/tv_phone_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/phone_msg"
+                    android:textColor="@color/LightBlack"
+                    android:textSize="@dimen/tv_size_15" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/homeBottomNav"
+                layout="@layout/custom_bottom_nav_with_gif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabGenerateTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/ic_live_unmute_video"
+            app:backgroundTint="@color/menus"
+            app:borderWidth="@dimen/dimen_0dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

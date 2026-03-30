@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <shortcut-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/pdf"-->
+<!--        android:shortcutId="5"-->
+<!--        android:shortcutLongLabel="@string/create_free_kundli"-->
+<!--        android:shortcutShortLabel="@string/free_brihat_kundli_worth_rs499">-->
+<!--        <intent-->
+<!--            android:action="android.intent.action.VIEW"-->
+<!--            android:targetClass="com.ojassoft.astrosage.ui.act.BrihatKundliDownload"-->
+<!--            android:targetPackage="com.ojassoft.astrosage"/>-->
+<!--    </shortcut>-->
+
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_kundali_icon"
+        android:shortcutId="1"
+        android:shortcutLongLabel="@string/create_free_kundli"
+        android:shortcutShortLabel="@string/free_kundli">
+        <!-- Each one of these intents needs an android:action, even if you don't
+             do anything with it. Otherwise you're in for a crash! -->
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.ojassoft.astrosage.ui.act.HomeInputScreen"
+            android:targetPackage="com.ojassoft.astrosage"/>
+    </shortcut>
+
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_match_macking_icon"
+        android:shortcutId="2"
+        android:shortcutLongLabel="@string/free_matching_desc"
+        android:shortcutShortLabel="@string/free_matching">
+        <!-- Each one of these intents needs an android:action, even if you don't
+             do anything with it. Otherwise you're in for a crash! -->
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.ojassoft.astrosage.ui.act.matching.HomeMatchMakingInputScreen"
+            android:targetPackage="com.ojassoft.astrosage"/>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_free_chat_icon"
+        android:shortcutId="3"
+        android:shortcutLongLabel="@string/local_noti_free_chat_desc"
+        android:shortcutShortLabel="@string/free_chat">
+        <!-- Each one of these intents needs an android:action, even if you don't
+             do anything with it. Otherwise you're in for a crash! -->
+        <intent
+            android:action="android.intent.action.QUICK_VIEW"
+            android:targetClass="com.ojassoft.astrosage.varta.ui.activity.DashBoardActivity"
+            android:targetPackage="com.ojassoft.astrosage"/>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_horoscope_icon"
+        android:shortcutId="4"
+        android:shortcutLongLabel="@string/today_horoscope"
+        android:shortcutShortLabel="@string/today_horoscope">
+        <!-- Each one of these intents needs an android:action, even if you don't
+             do anything with it. Otherwise you're in for a crash! -->
+        <intent
+            android:action="android.intent.action.QUICK_VIEW"
+            android:targetClass="com.ojassoft.astrosage.ui.act.horoscope.HoroscopeHomeActivity"
+            android:targetPackage="com.ojassoft.astrosage"/>
+    </shortcut>
+
+</shortcuts>

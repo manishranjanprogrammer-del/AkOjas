@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainChatLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_bg"
+    tools:context=".varta.ui.activity.AIChatWindowActivity">
+
+    <RelativeLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/includeLayoutBottomSheet"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back_ground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/chat_bg" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/appbarBGColor"
+            android:visibility="visible"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_close_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+                    android:id="@+id/astrologer_profile_pic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@+id/iv_close_chat"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_profile_view" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/ll_end_chat_button"
+                    android:layout_toRightOf="@+id/astrologer_profile_pic"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title_text_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Astrologer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/chat_status_size" />
+
+                    <TextView
+                        android:id="@+id/timer_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="00:00:00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/chat_font_size"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/typingTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Astrologer is typing..."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_13"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/ai_call_btn"
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:background="@drawable/bg_circle_green"
+                    android:padding="@dimen/dimen_8dp"
+                    android:src="@drawable/call_icon_btn"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/call"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_end_chat_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/end_chat_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_orange"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/end_chat"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_18"
+                        android:visibility="gone">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/iv_share_chat"
+                        android:layout_width="@dimen/dimen_35dp"
+                        android:layout_height="@dimen/dimen_35dp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:src="@mipmap/ic_share_black"
+                        android:visibility="gone"
+                        app:tint="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/iv_copy_chat"
+                        android:layout_width="@dimen/dimen_35dp"
+                        android:layout_height="@dimen/dimen_35dp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:src="@mipmap/ic_copy_paste"
+                        android:visibility="gone"
+                        app:tint="@color/black" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listViewMessages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:padding="0dp"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            android:visibility="visible"
+            android:layout_below="@id/toolbar_chat"
+            android:layout_above="@id/relSendMessage"
+            tools:listitem="@layout/ai_chat_message_item" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clChatHeaders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_chat"
+            android:background="@color/lightyellow">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clExtendChatReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="@dimen/dimen_20dp"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:paddingVertical="@dimen/dimen_5dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvChatRechargeTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_5dp"
+                    android:textColor="@color/red1"
+                    android:textSize="19sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvChatRechargeButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvExtendChatMsg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/extend_now_desc"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/tv_size_15"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tvChatRechargeTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvChatRechargeButton"/>
+
+                <TextView
+                    android:id="@+id/tvChatRechargeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_choose_kundli"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:paddingHorizontal="@dimen/dimen_16dp"
+                    android:paddingVertical="@dimen/dimen_7dp"
+                    android:singleLine="true"
+                    android:text="@string/title_recharge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_18"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tvChatRechargeTitle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tvFreeChatBlinker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dimen_5dp"
+                android:text="@string/free_chat"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/tv_size_16"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/clExtendChatReminder" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/btn_options_view"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white_black_trans"
+            android:baselineAligned="false"
+            android:paddingHorizontal="@dimen/tv_size_10"
+            android:paddingVertical="@dimen/dimen_5dp"
+            android:visibility="gone"
+            android:weightSum="4"
+            android:layout_below="@id/clChatHeaders">
+
+            <LinearLayout
+                android:id="@+id/btn_kundli"
+                style="@style/SelectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_kundali" />
+
+                <TextView
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="@string/txt_kundli"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black_87DN" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnMatching"
+                style="@style/SelectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_matching" />
+
+                <TextView
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="@string/matching"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black_87DN" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnHoroscope"
+                style="@style/SelectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_horoscope" />
+
+                <TextView
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="@string/horoscope"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black_87DN" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnPanchang"
+                style="@style/SelectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_panchang" />
+
+                <TextView
+                    style="@style/subheading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="@string/panchang_tag"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black_87DN" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llConnectAgain"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChatAgain"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="0.5dp"
+                android:background="@color/colorPrimary_day_night"
+                android:text="@string/chat_again"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btnCallAgain" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCallAgain"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:background="@color/colorOrangeDark"
+                android:text="@string/call_again"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btnChatAgain"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imgViewDowmArrow"
+            android:layout_width="@dimen/dimen_32dp"
+            android:layout_height="@dimen/dimen_32dp"
+            android:layout_alignBottom="@+id/listViewMessages"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:background="@drawable/circle_orange"
+            android:backgroundTint="@color/astro_chat_bg"
+            android:padding="@dimen/dimen_10dp"
+            android:src="@drawable/ic_down_scroll"
+            android:visibility="gone"
+            app:tint="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/relSendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:visibility="visible">
+
+
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/message_input_shape"
+                android:hint="@string/say_something"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxHeight="100dp"
+                android:maxLength="255"
+                android:minHeight="40dp"
+                android:padding="7dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/chat_font_size" />
+
+            <RelativeLayout
+                android:id="@+id/buttonSend"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/circle_orange"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_stop"
+                    android:visibility="gone"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_send"
+                    android:visibility="visible"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buttonKundli"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/circle_orange"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="10dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_kundli_white"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/includeLayoutBottomSheet"
+        layout="@layout/bottom_sheet_continue_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

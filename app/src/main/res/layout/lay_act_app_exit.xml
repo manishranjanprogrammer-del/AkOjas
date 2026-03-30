@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/advLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical" />
+    <!--
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:contentDescription=""
+            android:visibility="visible"
+            android:layout_below="@+id/advLayout"/>-->
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/advLayout"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_margin="30dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/min_height"
+            android:minWidth="@dimen/min_height"
+            android:paddingLeft="10dp"
+            android:text="@string/are_you_sure_you_want_to_exit"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/no"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:textAllCaps="true"
+                android:textColor="@color/ColorPrimaryDark" />
+
+            <View
+                android:layout_width="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/yes"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes"
+                android:textAllCaps="true"
+                android:textColor="@color/ColorPrimaryDark" />
+
+            <!-- <TextView
+                 android:id="@+id/no"
+                 android:layout_width="0dp"
+                 android:layout_height="48dp"
+                 android:layout_weight="1"
+                 android:gravity="center"
+                 android:textColor="@color/ColorPrimaryDark"
+                 style="@style/SelectableItemBackground"
+                 android:text="@string/no" />
+
+             <TextView
+                 android:id="@+id/yes"
+                 android:layout_width="0dp"
+                 android:layout_height="48dp"
+                 android:layout_weight="1"
+                 android:gravity="center"
+                 android:textColor="@color/ColorPrimaryDark"
+                 style="@style/SelectableItemBackground"
+                 android:text="@string/yes" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

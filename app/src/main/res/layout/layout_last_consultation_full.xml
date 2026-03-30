@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_5dp"
+    android:layout_marginEnd="@dimen/dimen_5dp"
+    android:background="@drawable/bg_border_grey_outline"
+    android:padding="@dimen/dimen_5dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+        android:id="@+id/ri_profile_img"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile_view" />
+
+    <LinearLayout
+        android:id="@+id/llc_const"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ri_profile_img"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@id/ll_chat"
+        android:layout_toRightOf="@+id/ri_profile_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/astrologer_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:textColor="@color/txtColorBlWh"
+            android:textSize="@dimen/heading_text_size" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_87DN"
+            android:text="12:15:30"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:id="@+id/chat_again_btn"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:layout_marginBottom="2dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_fc_chat"
+                app:tint="@color/white"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnViewChat"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:layout_marginTop="2dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_fc_history"
+                app:tint="@color/white"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/call_now_btn"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_button_choose_kundli">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_fc_call"
+                app:tint="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>

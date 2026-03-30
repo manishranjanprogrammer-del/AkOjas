@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:paddingHorizontal="@dimen/dimen_16dp"
+    android:paddingVertical="60dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/dimen_16dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_dialog_border_curved_primary"
+            android:foreground="@drawable/fg_dialog_border_curved_primary">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_dialog_top_curve"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ai_kundli_popup_image"
+                app:layout_constraintBottom_toBottomOf="@+id/heading_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivClosePage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="@dimen/dimen_10dp"
+                android:src="@drawable/ic_close_live"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/heading_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtHeading1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:src="@drawable/kundli_ai_plus_logo"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:text="@string/platinum_plan"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary_day_night"
+                    android:textSize="@dimen/tv_size_32"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtHeading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:letterSpacing="0.01"
+                android:text="@string/read_kundli_like_a_pro"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_16"
+                app:layout_constraintBottom_toTopOf="@+id/headingTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/headingTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:maxLines="2"
+                android:paddingEnd="20dp"
+                android:text="@string/kundli_ai_first_msg_text"
+                app:layout_constraintBottom_toTopOf="@+id/subHeading3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <CheckBox
+                android:id="@+id/ivRightTick2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                android:checked="true"
+                android:enabled="false"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="@+id/subHeading3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/subHeading3"
+                app:tint="@color/colorPrimary_day_night" />
+
+            <TextView
+                android:id="@+id/subHeading3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:maxLines="1"
+                android:text="@string/talk_to_your_kundli"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"
+                app:layout_constraintBottom_toTopOf="@+id/subHeading2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivRightTick2" />
+
+            <CheckBox
+                android:id="@+id/ivRightTick1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                android:checked="true"
+                android:enabled="false"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="@+id/subHeading2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/subHeading2"
+                app:tint="@color/colorPrimary_day_night" />
+
+            <TextView
+                android:id="@+id/subHeading2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:maxLines="1"
+                android:text="@string/master_astrology_at_the_high_level"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"
+                app:layout_constraintBottom_toTopOf="@+id/welcome_to_AI_revolution_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivRightTick1" />
+
+
+            <TextView
+                android:id="@+id/welcome_to_AI_revolution_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="40dp"
+                android:maxLines="1"
+                android:text="@string/welcome_to_ai_revolution_in_astrology"
+                app:layout_constraintBottom_toTopOf="@+id/explore_tv_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/explore_tv_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_24dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_button_choose_kundli"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:text="@string/explore"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

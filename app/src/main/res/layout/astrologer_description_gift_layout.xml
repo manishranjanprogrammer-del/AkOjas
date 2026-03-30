@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/dimen_10dp"
+
+    android:background="@drawable/bg_black_transparent_rounded_box"
+    android:id="@+id/rlAstroDescGiftParent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_15dp">
+
+        <ImageView
+            android:id="@+id/ivAstroDescGiftClose"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:src="@drawable/ic_close_grey600_24dp"
+            android:background="@drawable/bg_button_white_sp"
+            android:backgroundTint="@color/no_change_white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        
+        <TextView
+            android:id="@+id/tvAstroDescGiftHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dakshina"
+            android:textColor="@color/no_change_white"
+            android:textSize="@dimen/tv_size_20"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAstroDescGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_live_gift"
+            tools:itemCount="3"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAstroDescGiftHeading"/>
+
+        <Button
+            android:id="@+id/btnAstroDescGiftRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_recharge"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_orange"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:textColor="@color/white"
+            android:paddingHorizontal="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvAstroDescGift"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvAstroDescGiftBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="Balance: 0"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvAstroDescGift"
+            app:layout_constraintRight_toLeftOf="@id/btnAstroDescGiftSend"
+            app:layout_constraintLeft_toRightOf="@id/btnAstroDescGiftRecharge"/>
+
+        <Button
+            android:id="@+id/btnAstroDescGiftSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_white_sp"
+            android:backgroundTint="@color/no_change_white"
+            android:textColor="@color/no_change_black"
+            android:paddingHorizontal="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvAstroDescGift"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

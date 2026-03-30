@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/selectKundliTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_button_height"
+            android:text="@string/choose_kundli"
+            android:textAllCaps="false"
+            android:layout_gravity="right"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/white"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:theme="@style/buttonstyle"
+            android:includeFontPadding="false"
+            android:minHeight="0dip"
+            android:minWidth="0dip"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/heading_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_18"
+            android:textStyle="bold"
+            android:text="@string/share_birth_detail" />
+
+        <TextView
+            android:id="@+id/subheading_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/text_day_gray_night_white"
+            android:textSize="@dimen/tv_size_16"
+            android:text="@string/birth_detail_share_msg" />
+
+
+
+        <TextView
+            android:id="@+id/tv_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            android:text="@string/full_name"
+            android:visibility="visible"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/et_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/profile_txt"
+                android:background="@drawable/edit_text_border"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:paddingLeft="8dp"
+                android:textColorHint="@color/black"
+                android:maxLines="1"
+                android:minHeight="@dimen/margin_xXlarge" />
+
+            <ImageView
+                android:layout_width="26dip"
+                android:layout_height="26dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/card_corner"
+                android:scaleType="fitCenter"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/gender"
+            android:textSize="@dimen/tv_size_16"
+            android:textColor="@color/black" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_gender1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_gender_txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_border"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minHeight="@dimen/margin_xXlarge"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:text="@string/birth_place"
+                android:textSize="@dimen/tv_size_16" />
+
+            <ImageView
+                android:layout_width="26dip"
+                android:layout_height="26dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/card_corner"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_place" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/tv_gender_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_border"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minHeight="@dimen/margin_xXlarge"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/ActionBarThemeOverlay" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="20dp"
+                android:src="@drawable/ic_spinner_down_image"
+                card_view:tint="@color/colorPrimary_day_night" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_place_of_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/place_of_birth"
+            android:textSize="@dimen/tv_size_16"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/rl_place_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_place_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/profile_txt"
+                android:background="@drawable/text_view_border"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minHeight="@dimen/margin_xXlarge"
+                android:paddingLeft="10dp"
+                android:text="@string/birth_place" />
+
+            <ImageView
+                android:layout_width="26dip"
+                android:layout_height="26dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/card_corner"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_place"
+                card_view:tint="@color/colorPrimary_day_night" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_text_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth"
+                android:textSize="@dimen/tv_size_16"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rl_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_date_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/profile_txt"
+                    android:background="@drawable/text_view_border"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="@dimen/margin_xXlarge"
+                    android:paddingLeft="10dp"
+                    android:text="@string/dd_mm_yyyy" />
+
+                <ImageView
+                    android:layout_width="26dip"
+                    android:layout_height="26dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/card_corner"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_date"
+                    card_view:tint="@color/colorPrimary_day_night" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_date_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_time_of_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/time_of_birth"
+                android:visibility="visible"
+                android:textSize="@dimen/tv_size_16"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_time_of_birth"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_time_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/profile_txt"
+                    android:background="@drawable/text_view_border"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="@dimen/margin_xXlarge"
+                    android:paddingLeft="10dp"
+                    android:text="@string/hh_mm_ss" />
+
+                <ImageView
+                    android:layout_width="26dip"
+                    android:layout_height="26dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/card_corner"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_clock"
+                    card_view:tint="@color/colorPrimary_day_night"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_marital_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/marital_status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_16"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_marital_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <Spinner
+                    android:id="@+id/tv_marital_status_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_view_border"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="@dimen/margin_xXlarge"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/ActionBarThemeOverlay" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="20dp"
+                    card_view:tint="@color/colorPrimary_day_night"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_spinner_down_image"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_occupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/occupation"
+                android:visibility="visible"
+                android:textSize="@dimen/tv_size_16"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rl_occupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <Spinner
+                    android:id="@+id/tv_occupation_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_view_border"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="@dimen/margin_xXlarge"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/ActionBarThemeOverlay" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    card_view:tint="@color/colorPrimary_day_night"
+                    android:src="@drawable/ic_spinner_down_image"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_place_picker"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="@dimen/service_button_height">
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:background="@drawable/bg_button_orange"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:stateListAnimator="@null"
+                android:textSize="@dimen/tv_size_20" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

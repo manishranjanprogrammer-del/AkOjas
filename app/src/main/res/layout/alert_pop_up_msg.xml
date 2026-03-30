@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:text="@string/are_you_sure_to_disable_call_recording"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_size_18">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/_yes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_button_yellow_less_round"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/yes"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_18"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_button_yellow_less_round"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:backgroundTint="@color/light_gray_day_night"
+                android:text="@string/no"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="@dimen/tv_size_18"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

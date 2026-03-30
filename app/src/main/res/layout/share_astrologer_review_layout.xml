@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/review_container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorView">
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/share_review_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/app_logo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/astrosage_app_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewKundli"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash_icon_astrosage_ai_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo"
+            app:layout_constraintLeft_toRightOf="@+id/iv_logo"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo"
+            app:tint="@color/primary_orange" />
+    </LinearLayout>
+    <com.ojassoft.astrosage.varta.utils.RoundImage
+        android:id="@+id/astro_profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_male"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo_layout"
+        android:layout_marginTop="@dimen/dimen_32dp"/>
+    <TextView
+        android:id="@+id/astro_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tv_size_28"
+        android:text="Pandit Hanuman Mishra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:textColor="@color/colorPrimary_day_night"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/astro_profile_image"/>
+    <TextView
+        android:id="@+id/astro_exp_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tv_size_16"
+        android:text="vedic, Numerology"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/astro_name_tv"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_box_color"
+        app:layout_constraintTop_toBottomOf="@id/astro_exp_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/dimen_20dp"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/review_heading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimen_10dp"
+            android:paddingHorizontal="@dimen/dimen_20dp"
+            android:textSize="@dimen/dimen_18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/rating_and_review"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/review_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/review_heading_tv"
+            android:text="24 apr 2023"
+            android:paddingHorizontal="@dimen/dimen_20dp"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/star_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/myRatingBar"
+            android:numStars="5"
+            android:rating="0"
+          android:maxHeight="@dimen/dimen_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/review_date_tv"
+            android:layout_marginStart="@dimen/dimen_20dp"/>
+        <TextView
+            android:id="@+id/review_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimen_10dp"
+            android:paddingHorizontal="@dimen/dimen_20dp"
+            android:text="fjbrgcnhbegrf4gffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+            android:textSize="@dimen/tv_size_18"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/star_rating"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

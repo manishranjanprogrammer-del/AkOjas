@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".ui.fragments.NumerologyHomeFragment"
+    android:paddingBottom="0dp"
+    android:clipToPadding="false">
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:overScrollMode="never"
+         android:scrollbars="none">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/topAdImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/orange_rect"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_numerology" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4cffc107"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="92dip"
+                    android:layout_height="92dip"
+                    android:background="@drawable/circle_yellow_textview"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dip"
+                        android:layout_height="48dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_fast"
+                        cardView:tint="@color/no_change_black" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/lblHeadingTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/lbl_fast_remd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_large" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:visibility="visible"
+            cardView:cardElevation="2dip"
+            cardView:cardBackgroundColor="@color/bg_card_view_color"
+            cardView:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_mlarge">
+
+                <TextView
+                    android:id="@+id/fastTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:lineSpacingExtra="8dip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_large" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <include
+            layout="@layout/custom_advertisement_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!-- </ScrollView>-->
+
+</ScrollView>

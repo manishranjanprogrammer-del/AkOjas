@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <!-- <LinearLayout
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_marginLeft="24dp"
+             android:layout_marginRight="24dp"
+             android:gravity="center"
+             android:layout_height="wrap_content">
+     -->
+        <!-- Date -->
+        <com.ojassoft.astrosage.utils.NumberPicker
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <!-- month -->
+        <com.ojassoft.astrosage.utils.NumberPicker
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:scaleX="1.1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <!-- year -->
+        <com.ojassoft.astrosage.utils.NumberPicker
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:scaleX="1.1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    <!--</LinearLayout>-->

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_card_view_color"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/bg_gray"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:padding="@dimen/dimen_5dp">
+        <ImageView
+            android:id="@+id/imgViewSearch"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dimen_5dp"
+            android:src="@mipmap/ic_search"
+            android:tint="@color/hint_text_color"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/edtcountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Country Name"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"
+            android:textColorHint="@color/hint_text_color"
+            android:layout_toRightOf="@+id/imgViewSearch"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

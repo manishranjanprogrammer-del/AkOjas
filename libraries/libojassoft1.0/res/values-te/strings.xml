@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">ఇంటర్నల్ ఎర్రర్</string>
+    <string name="disclaimer_title">పరిత్యాగపత్రం</string>
+    <string name="disclaimer_text">ఈ యాప్ నందు పొందుపరిచిన సమాచారము కేవలము మీ స్వాంతన కొరకు ఇవ్వబడినదని గ్రహించవలెను. సాధారణముగా లాయరు, డాక్టరు, ఆర్ధిక సలహాదారు లేక మానసిక వైద్య నిపుణుడు ఇచ్చే సలహాలు సూచనలకు ప్రత్యామ్నాయముగా మా సందేశములు లేక ఫలితములను పరిగణించరాదు. అదేవిధముగా ఆస్ట్రోసేజ్.కామ్ వారు మీరు పొందిన సందేశముల వినియోగము లేక నిర్వచనములకు ఎటువంటి హామీ లేక పూచీ ఇచ్చుట లేదు. </string>
+    <string name="i_accept">నేను ఆమోదిస్తున్నాను</string>
+    <string name="cancel">క్యాన్సిల్</string>
+    <string name="lib_astro_shop">యాస్ట్రో షాప్</string>
+    <string name="lib_ask_our_astrologer">మా జ్యోతిష్కుని అడగండి</string>
+    <string name="lib_app_version_text">వెర్షన్</string>
+    <string name="lib_cancel">క్యాన్సిల్</string>
+    <string name="lib_pleasewait">దయచేసి వేచి ఉండండి...</string>
+    <string name="lib_msg_ok">ఓకె</string>
+    <string name="lib_available_languages">అందుబాటులో ఉన్న భాషలు</string>
+    <string name="lib_english"> English</string>
+    <string name="lib_hindi"> Hindi</string>
+    <string name="LibNotificationConffigHeading">నోటిఫికేషన్ ఫ్రీక్వెన్సి</string>
+    <string name="LibOnce">రోజూ ఒకసారి</string>
+    <string name="LibTwice">రోజూ రెండు సార్లు</string>
+    <string name="LibAsManyTime">ఎన్ని సార్లు వస్తే అన్నిసార్లు</string>
+    <string name="LibNever">అసలు వద్దు</string>
+    <string name="Lib_Save">సేవ్</string>
+    <string name="Lib_Name">పేరు</string>
+    <string name="Lib_EmailId">ఇమెయిల్ ఐడి</string>
+    <string name="Lib_Phone">ఫోను</string>
+    <string name="Lib_Message">మెసేజ్</string>
+    <string name="Lib_Feedback_form">అభిప్రాయం</string>
+    <string name="Lib_Send">పంపండి</string>
+    <string name="please_enter_name">దయచేసి మీ పేరును ఎంటర్ చేయండి ...</string>
+    <string name="name_limit">పేరు 50 అక్షరముల లోపుగా ఉండాలి...</string>
+    <string name="email_one">దయచేసి ఈ-మెయిల్ ఐడిని ఎంటర్ చేయండి...</string>
+    <string name="email_two">ఈ-మెయిల్ 70 అక్షరముల లోపుగా ఉండాలి...</string>
+    <string name="email_three">సరియగు ఈ-మెయిల్ ఐడిని ఎంటర్ చేయండి...</string>
+    <string name="feedback_message_one">దయచేసి మీ అభిప్రాయము తెలియచేయండి...</string>
+    <string name="feedback_message_two">మెసేజ్ 500 అక్షరముల లోపుగా ఉండాలి...</string>
+    <string name="phone_validation">10 అంకెల సంఖ్యను ఎంటర్ చేయండి...</string>
+    <string name="phone_should_be_numeric">ఫోన్ నేంబరు సంఖ్యా రూపములో ఉండాలి</string>
+    <string name="feedback_sent">మీ అభిప్రాయము విజయవంతముగా పంపబడినది</string>
+    <string name="please_try_again">దయచేసి మరల ప్రయత్నించండి...</string>
+    <string name="internet_is_not_working">ఇంటర్నెట్ పనిచేయుట లేదు</string>
+</resources>

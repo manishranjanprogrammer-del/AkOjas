@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:id="@+id/scScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/top_framelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/gray_color"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/tablogin"
+                            android:layout_width="@dimen/dimen_50dp"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/circle_gray"
+                            android:contentDescription="@null"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_account_circle_white"
+                            app:tint="@color/no_change_black" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1.5dp"
+
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/gray_color" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtlogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/astroshop_login"
+                        android:alpha="0.7"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/gray_color" />
+
+
+                        <ImageView
+                            android:id="@+id/tabShipping"
+                            android:layout_width="@dimen/dimen_50dp"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/circle_gray"
+                            android:contentDescription="@null"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_local_shipping_white"
+                            app:tint="@color/no_change_black" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/gray_color" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtshipping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/astroshop_Shipping"
+                        android:alpha="0.7"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/gray_color" />
+
+                        <ImageView
+                            android:id="@+id/tabpayment"
+                            android:layout_width="@dimen/dimen_50dp"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/circle_gray"
+                            android:contentDescription="@null"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_rupees_sign_black"
+                            app:tint="@color/no_change_black" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/gray_color"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtpayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/astroshop_Payment"
+                        android:alpha="0.7"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+
+                        />
+
+                    <!-- </LinearLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_framelayout">
+
+            </FrameLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

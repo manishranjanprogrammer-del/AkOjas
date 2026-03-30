@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/circle_enable" />
+
+                <ImageView
+                    android:id="@+id/vedioplayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_video_player"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:minHeight="10dp">
+
+                <!-- <Button
+                     android:id="@+id/recent_uploads"
+                     style="@style/tvbuttonstyle"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginRight="8dp"
+                     android:layout_weight="1"
+                     android:backgroundTint="@color/ColorPrimaryDark"
+                     android:paddingBottom="14dp"
+                     android:paddingLeft="40dp"
+                     android:paddingRight="40dp"
+                     android:paddingTop="14dp"
+                     android:text="RECENT UPLOADS"
+                     android:theme="@style/tvbuttonstyle" />-->
+
+                <Button
+                    android:id="@+id/recent_uploads"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="#B54803"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/recent_uploads"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/popular_uploads"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="#06387D"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/popular_uploads"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="#F5F5F5" />
+
+                <TextView
+                    android:id="@+id/more_vedios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:text="@string/more_vedios"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="#F5F5F5" />
+            </LinearLayout>
+
+            <com.ojassoft.astrosage.ui.customviews.basic.ScrollableGridView
+                android:id="@+id/playlists"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="250dip"
+                android:gravity="center"
+                android:horizontalSpacing="0dp"
+                android:numColumns="2"
+                android:padding="2dp"
+                android:overScrollMode="never"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0dp">
+
+            </com.ojassoft.astrosage.ui.customviews.basic.ScrollableGridView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

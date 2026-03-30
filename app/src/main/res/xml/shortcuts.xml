@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <shortcut-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/pdf">-->
+<!--        <intent-->
+<!--            android:action="android.intent.action.VIEW"-->
+<!--            android:targetClass="com.ojassoft.astrosage.ui.act.BrihatKundliDownload"-->
+<!--            android:targetPackage="com.ojassoft.astrosage"/>-->
+<!--    </shortcut>-->
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_kundali_icon">
+        <!-- Each one of these intents needs an android:action, even if you don't
+             do anything with it. Otherwise you're in for a crash! -->
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.ojassoft.astrosage.ui.act.HomeInputScreen"
+            android:targetPackage="com.ojassoft.astrosage"/>
+
+    </shortcut>
+
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_match_macking_icon">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.ojassoft.astrosage.ui.act.matching.HomeMatchMakingInputScreen"
+            android:targetPackage="com.ojassoft.astrosage"/>
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_free_chat_icon">
+        <!-- Each one of these intents needs an android:action, even if you don't
+             do anything with it. Otherwise you're in for a crash! -->
+        <intent
+            android:action="android.intent.action.QUICK_VIEW"
+            android:targetClass="com.ojassoft.astrosage.varta.ui.activity.DashBoardActivity"
+            android:targetPackage="com.ojassoft.astrosage"/>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_horoscope_icon">
+        <!-- Each one of these intents needs an android:action, even if you don't
+             do anything with it. Otherwise you're in for a crash! -->
+        <intent
+            android:action="android.intent.action.QUICK_VIEW"
+            android:targetClass="com.ojassoft.astrosage.ui.act.horoscope.HoroscopeHomeActivity"
+            android:targetPackage="com.ojassoft.astrosage"/>
+    </shortcut>
+
+</shortcuts>

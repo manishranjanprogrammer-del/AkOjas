@@ -1,0 +1,35 @@
+<sqlpersonalinfo>
+    <statement>
+        CREATE TABLE IF NOT EXISTS tblHoroPersonalInfo (
+        id VARCHAR(30) ,
+        M_UserId VARCHAR(15) ,
+        M_PName VARCHAR(50) ,
+        M_Sex VARCHAR(1) ,
+        M_Day VARCHAR(2) ,
+        M_Month VARCHAR(2),
+        M_Year VARCHAR(5),
+        M_Hr VARCHAR(2) ,
+        M_Min VARCHAR(2),
+        M_Sec VARCHAR(2) ,
+        M_DST VARCHAR(5) ,
+        M_Place VARCHAR(50),
+        M_LongDeg VARCHAR(3),
+        M_LongMin VARCHAR(2),
+        M_LongSec VARCHAR(2),
+        M_LongEW VARCHAR(1),
+        M_LatDeg VARCHAR(3),
+        M_LatMin VARCHAR(2),
+        M_LatSec VARCHAR(2),
+        M_LatNS VARCHAR(1),
+        M_TimeZone VARCHAR(6),
+        M_Ayanamsa VARCHAR(1),
+        M_TimeStamp long not null default 0,
+        onlinechartid VARCHAR(30),
+        M_State VARCHAR(50) default 'not define',
+        M_Country VARCHAR(50) default 'not define'
+        )
+    </statement>
+
+
+</sqlpersonalinfo>
+

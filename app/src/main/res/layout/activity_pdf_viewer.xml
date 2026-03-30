@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no_change_white"
+    tools:context=".ui.act.PdfViewerActivity">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/toolbar_pdf_viewer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!--<androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_above="@+id/homeBottomNav">
+
+        <LinearLayout
+            android:id="@+id/pdfContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </androidx.core.widget.NestedScrollView>-->
+    <com.ojassoft.astrosage.varta.adapters.ZoomableRecyclerViewLayout
+        android:id="@+id/pdfRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/appbarAppModule"
+        android:layout_above="@+id/homeBottomNav"
+        android:background="@color/no_change_white"
+        />
+    <include
+        android:id="@+id/homeBottomNav"
+        layout="@layout/custom_bottom_nav_with_gif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+</RelativeLayout>

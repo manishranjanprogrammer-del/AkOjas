@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_layout"
+    style="@style/SelectableItemBackground"
+    android:layout_width="88dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingVertical="@dimen/dimen_10dp"
+    android:background="@color/backgroundColorView">
+
+        <ImageView
+            android:id="@+id/imageViewRashiIcon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circle_white"
+            android:padding="@dimen/dimen_10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cancer" />
+
+        <TextView
+            android:id="@+id/textViewRashiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toStartOf="@+id/imageViewProductIcon"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewProductIcon"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewProductIcon"
+            android:textColor="@color/black_87DN"
+            android:text="Medium Text"
+            android:textSize="@dimen/tv_size_14"
+            android:paddingHorizontal="2dp"
+            android:maxLines="3" />
+
+    </LinearLayout>
+

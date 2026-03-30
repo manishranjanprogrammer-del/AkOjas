@@ -1,0 +1,198 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/wallet_toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_16dp">
+
+        <CheckBox
+            android:id="@+id/use_wallet_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:translationX="-7dp"
+            android:text="@string/use_wallet_amount"
+            android:buttonTint="@color/colorPrimary_day_night"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <Button
+            android:id="@+id/recharge_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/buttonstyle"
+            android:padding="@dimen/dimen_16dp"
+            android:textAllCaps="false"
+            android:text="@string/title_recharge"
+            android:visibility="visible"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            app:layout_constraintTop_toTopOf="@id/use_wallet_amount"
+            app:layout_constraintBottom_toBottomOf="@id/use_wallet_amount"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/grey_light"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:layout_constraintTop_toBottomOf="@id/use_wallet_amount"
+            app:layout_constraintBottom_toTopOf="@id/payment_details"/>
+
+        <TextView
+            android:id="@+id/payment_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_detail"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_18"
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/total_mrp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/total_mrp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toBottomOf="@id/payment_details"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/total_mrp_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="700"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/total_mrp_text"
+            app:layout_constraintBottom_toBottomOf="@id/total_mrp_text"/>
+
+        <TextView
+            android:id="@+id/discount_mrp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/discount_mrp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toBottomOf="@id/total_mrp_text"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/discount_mrp_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_red"
+            android:text="100"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toTopOf="@id/discount_mrp_text"
+            app:layout_constraintBottom_toBottomOf="@id/discount_mrp_text"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/shipping_fee_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/shipping_fee"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toBottomOf="@id/discount_mrp_text"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/shipping_fee_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toTopOf="@id/shipping_fee_text"
+            app:layout_constraintBottom_toBottomOf="@id/shipping_fee_text"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/grey_light"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:layout_constraintTop_toBottomOf="@id/shipping_fee_text"/>
+
+        <TextView
+            android:id="@+id/total_payable_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/total_payable_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toBottomOf="@id/line2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/total_payable_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16"
+            app:layout_constraintTop_toTopOf="@id/total_payable_text"
+            app:layout_constraintBottom_toBottomOf="@id/total_payable_text"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/pay_via_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/buttonstyle"
+            android:padding="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/pay_via_wallet"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            app:layout_constraintTop_toBottomOf="@id/total_payable_text"/>
+
+        <Button
+            android:id="@+id/pay_via_paytm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/buttonstyle"
+            android:padding="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/pay_via_paytm"
+            android:visibility="visible"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            app:layout_constraintTop_toBottomOf="@id/pay_via_wallet"/>
+
+        <Button
+            android:id="@+id/pay_via_razorpay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/buttonstyle"
+            android:padding="@dimen/dimen_16dp"
+            android:textAllCaps="false"
+            android:text="@string/pay_via_razorpay"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:visibility="visible"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            app:layout_constraintTop_toBottomOf="@id/pay_via_paytm"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

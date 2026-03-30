@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbarBGColor"
+    tools:context=".varta.ui.activity.FirstTimeProfileDetailsActivity">
+
+    <include
+        android:id="@+id/toolbarTop"
+        layout="@layout/wallet_toolbar"
+        />
+
+    <include
+        android:id="@+id/includeLayoutName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_name"
+        android:layout_below="@+id/toolbarTop"
+        android:visibility="visible"
+       />
+
+    <include
+        android:id="@+id/includeLayoutGender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_gender"
+        android:layout_below="@+id/toolbarTop"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/includeLayoutDate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_enter_birth_date"
+        android:layout_below="@+id/toolbarTop"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/includeLayoutTime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_enter_birth_time"
+        android:layout_below="@+id/toolbarTop"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/includeLayoutBornPlace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_where_were_you_born"
+        android:layout_below="@+id/toolbarTop"
+        android:visibility="gone"
+        />
+
+    <!--<include
+        android:id="@+id/includeLayoutOccupation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_occupation"
+        android:layout_below="@+id/toolbarTop"
+        android:visibility="gone" />-->
+
+    <include
+        android:id="@+id/includeLayoutMarital"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_marital_status"
+        android:layout_below="@+id/toolbarTop"
+        android:visibility="gone" />
+
+</RelativeLayout>

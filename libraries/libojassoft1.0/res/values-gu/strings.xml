@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">આંતરિક ભૂલ</string>
+    <string name="disclaimer_title">અસ્વીકૃતિ</string>
+    <string name="disclaimer_text">આ એપ્લિકેશનમાં સમાવિષ્ટ માહિતી અને ડેટા ફક્ત તમારા મનોરંજનનાં હેતુઓ માટે જ સારવાર માટે છે. કોઈપણ પૂર્વાનુમાન અથવા અન્ય સંદેશ કે જેને તમે પ્રાપ્ત કરો છો તે કોઈ સલાહ, પ્રોગ્રામ્સ અથવા સારવાર માટે અવેજી નથી જે તમે સામાન્ય રીતે એક વકીલ, ડૉક્ટર, મનોચિકિત્સક, અથવા નાણાકીય સલાહકાર જેવા લાઇસેંસ પ્રાપ્ત વ્યવસાયમાંથી મેળવે છે. તદનુસાર, astrosage.com કોઈ બાંયધરી, ગર્ભિત વૉરંટીઝ અથવા કોઈપણ પ્રકારની ખાતરીઓ પૂરી પાડે છે, અને ઉપરોક્ત સૂચિત માહિતી અને માહિતીના પ્રાપ્તકર્તા દ્વારા કરવામાં અથવા ઉપયોગમાં લેવાતા કોઈ પણ અર્થઘટન માટે જવાબદાર નહીં રહે. </string>
+    <string name="i_accept">સ્વીકાર્ય  </string>
+    <string name="cancel">રદ</string>
+    <string name="lib_astro_shop">જ્યોતિષ દુકાન </string>
+    <string name="lib_ask_our_astrologer">જ્યોતિષીને પૂછો</string>
+    <string name="lib_app_version_text">સંસ્કરણ</string>
+    <string name="lib_cancel">રદ</string>
+    <string name="lib_pleasewait">મહેરબાની કરી રાહ જુવો</string>
+    <string name="lib_msg_ok">ઠીક છે</string>
+    <string name="lib_available_languages">ઉપલબ્ધ ભાષાઓ</string>
+    <string name="lib_english"> English</string>
+    <string name="lib_hindi"> Hindi</string>
+    <string name="LibNotificationConffigHeading">સૂચના ફ્રીક્વન્સી</string>
+    <string name="LibOnce">એક દિવસમાં એકવાર</string>
+    <string name="LibTwice">એક દિવસમાં બે વાર</string>
+    <string name="LibAsManyTime">તે આવે છે તેટલા સમય</string>
+    <string name="LibNever">ક્યારેય</string>
+    <string name="Lib_Save">સાચવો</string>
+    <string name="Lib_Name">નામ</string>
+    <string name="Lib_EmailId">ઇમેઇલ આઈડી</string>
+    <string name="Lib_Phone">ફોન </string>
+    <string name="Lib_Message">સંદેશ</string>
+    <string name="Lib_Feedback_form">પ્રતિસાદ</string>
+    <string name="Lib_Send">મોકલો</string>
+    <string name="please_enter_name">કૃપા કરીને તમારું નામ દાખલ કરો ...</string>
+    <string name="name_limit">નામ 50 અક્ષરો સાથે હોવું જોઈએ ...</string>
+    <string name="email_one">ઈ-મેલ આઈડી દાખલ કરો ...</string>
+    <string name="email_two">ઈ-મેલ 70 અક્ષરોમાં હોવો જોઈએ ...</string>
+    <string name="email_three">માન્ય ઈ-મેલ ID દાખલ કરો ...</string>
+    <string name="feedback_message_one">કૃપા કરીને પ્રતિસાદ સંદેશ લખો ...</string>
+    <string name="feedback_message_two">સંદેશ 500 અક્ષરો સાથે હોવો જોઈએ ...</string>
+    <string name="phone_validation">10 અંક નંબર દાખલ કરો ...</string>
+    <string name="phone_should_be_numeric">ફોન નંબર આંકડાકીય હોવો જોઈએ ...</string>
+    <string name="feedback_sent">પ્રતિસાદ સફળતાપૂર્વક મોકલ્યો ...</string>
+    <string name="please_try_again">મહેરબાની કરીને ફરીથી પ્રયતન કરો...</string>
+    <string name="internet_is_not_working">ઇન્ટરનેટ કાર્ય કરી રહ્યું નથી</string>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/toolbar"
+            android:background="@color/appbarBGColor"
+            app:contentInsetStart="0dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:paddingLeft="16dp"
+                android:paddingRight="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/astrologer_detail" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/CustomTabText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:minHeight="?attr/actionBarSize"
+            app:tabGravity="fill"
+            app:elevation="2dp"
+            android:background="@color/tabBGColor"
+            app:tabIndicatorColor="@color/tabIndicatorBGColor"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            android:layout_below="@+id/toolbar"
+            app:tabSelectedTextColor="@color/tab_seleced_unseleced"
+            app:tabTextColor="@color/grey_light"
+            />
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_layout"
+            android:layout_above="@id/homeBottomNav"/>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/homeBottomNav"
+            android:visibility="gone"
+            android:layout_below="@+id/toolbar"
+            android:descendantFocusability="blocksDescendants">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/liveAstroRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                app:spanCount="3"
+                tools:listitem="@layout/live_astrologer_row_layout_grid"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                android:descendantFocusability="blocksDescendants"
+                android:paddingBottom="0dp" />
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/homeBottomNav"
+            layout="@layout/custom_bottom_nav_with_gif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAllLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_live_unmute_video"
+        android:tint="@color/white"
+        app:backgroundTint="@color/orange"
+        app:borderWidth="@dimen/dimen_0dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

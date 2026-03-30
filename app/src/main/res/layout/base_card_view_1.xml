@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center"
+        android:text=""
+        android:textSize="@dimen/heading_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_black"/>
+
+    <TextView
+        android:id="@+id/tvSubHeader1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center"
+        android:text=""
+        android:textSize="@dimen/subheading_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_black"/>
+
+    <com.ojassoft.astrosage.misc.ExpandableHeightListView
+        android:id="@+id/rvListData1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"/>
+
+    <TextView
+        android:id="@+id/tvSubHeader2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="6dp"
+        android:gravity="left|center"
+        android:text=""
+        android:textSize="@dimen/subheading_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_black"/>
+
+    <com.ojassoft.astrosage.misc.ExpandableHeightListView
+        android:id="@+id/rvListData2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:divider="@color/light_dividerColor"
+        android:dividerHeight="1dp"
+        />
+
+    <TextView
+        android:id="@+id/tvSubHeader3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="6dp"
+        android:gravity="left|center"
+        android:text=""
+        android:textSize="@dimen/subheading_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_black"/>
+
+    <com.ojassoft.astrosage.misc.ExpandableHeightListView
+        android:id="@+id/rvListData3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:divider="@color/light_dividerColor"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

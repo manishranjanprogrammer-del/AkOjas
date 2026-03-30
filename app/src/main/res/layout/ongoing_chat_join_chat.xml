@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayoutLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FBD664"
+    android:elevation="@dimen/dimen_10dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_10dp"
+    android:weightSum="15">
+
+    <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+        android:id="@+id/chatAstroProfileImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/join_ongoing_chat"
+        app:layout_constraintBottom_toBottomOf="@+id/chatAstroProfileImage"
+        app:layout_constraintStart_toEndOf="@+id/chatAstroProfileImage"
+        app:layout_constraintTop_toTopOf="@+id/chatAstroProfileImage">
+
+        <TextView
+            android:id="@+id/chatAstroName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/no_change_black"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/chatRemTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_footer_grey"
+            android:textSize="@dimen/font_small"
+             />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/join_ongoing_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_border_orange_less_corner"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/no_change_black"
+        android:textSize="@dimen/tv_size_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

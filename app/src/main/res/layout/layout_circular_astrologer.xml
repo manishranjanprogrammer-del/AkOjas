@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/constraint_layout"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_7dp"
+    android:layout_marginBottom="@dimen/dimen_7dp">
+
+    <View
+        android:id="@+id/border_red"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/circle_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile_img"
+        android:layout_width="@dimen/dimen_61dp"
+        android:layout_height="@dimen/dimen_61dp"
+        android:src="@drawable/ic_profile_view"
+        app:layout_constraintEnd_toEndOf="@id/border_red"
+        app:layout_constraintStart_toStartOf="@id/border_red"
+        app:layout_constraintTop_toTopOf="@id/border_red"
+        app:layout_constraintBottom_toBottomOf="@id/border_red"/>
+
+    <!--<com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+        android:id="@+id/profile_img"
+        android:layout_width="@dimen/dimen_61dp"
+        android:layout_height="@dimen/dimen_61dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile_view"
+        app:layout_constraintBottom_toBottomOf="@+id/border_red"
+        app:layout_constraintEnd_toEndOf="@+id/border_red"
+        app:layout_constraintStart_toStartOf="@+id/border_red"
+        app:layout_constraintTop_toTopOf="@+id/border_red" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="45dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/bg_button_orange_less_round"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        app:layout_constraintEnd_toEndOf="@+id/border_red"
+        app:layout_constraintStart_toStartOf="@+id/border_red"
+        app:layout_constraintTop_toBottomOf="@+id/border_red">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/circle_with_white_border" />
+
+        <TextView
+            android:id="@+id/text_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="3dp"
+            android:text="@string/text_live"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/astrologerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/border_red"
+        app:layout_constraintStart_toStartOf="@+id/border_red"
+        app:layout_constraintTop_toBottomOf="@+id/ll_button"
+        tools:ignore="SmallSp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

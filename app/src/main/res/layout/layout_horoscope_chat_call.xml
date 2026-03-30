@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_medium"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/backgroundColorView"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/backgroundColor"
+        android:padding="@dimen/cardview_keyline_1_minus_8dp">
+
+        <TextView
+            android:id="@+id/titleChatCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_more_about_rashi"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/call_now_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip">
+
+            <RelativeLayout
+                android:id="@+id/call_now_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_yellow"
+                android:padding="6dip">
+
+                <ImageView
+                    android:id="@+id/call_now_img"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginStart="2dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/call_black_logo"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/call_now_btn_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/call_now_img"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="6dip"
+                    android:paddingRight="6dip"
+                    android:text="@string/call_now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_21" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chat_now_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_toRightOf="@id/call_now_btn"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_yellow"
+                android:padding="6dip">
+
+                <ImageView
+                    android:id="@+id/chat_now_img"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginStart="2dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/chat_black_logo"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/chat_now_btn_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/chat_now_img"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="6dip"
+                    android:paddingRight="6dip"
+                    android:text="@string/txt_chat_now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_21" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

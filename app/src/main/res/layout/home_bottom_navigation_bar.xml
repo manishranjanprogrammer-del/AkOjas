@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appbarBGColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appbarBGColor"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/shaddowView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/shadow"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appbarBGColor"
+            app:itemIconTint="@drawable/bottom_icon_color"
+            app:itemTextColor="@drawable/bottom_text_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/new_home_bottom_nav_menu"
+            app:itemIconSize="@dimen/bottom_navigation_icon_size"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/orange_color"
+        android:src="@drawable/ic_live_unmute_video"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_20dp">
+
+    <TextView
+        android:id="@+id/txtViewEnterYourBirthTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_your_birth_time"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_26sp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+
+    />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consLayoutDateOfTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_size_10"
+        android:layout_marginHorizontal="@dimen/dimen_50dp"
+        android:layout_below="@+id/txtViewEnterYourBirthTime">
+
+        <!-- Date Picker using NumberPickers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Month Picker -->
+            <com.ojassoft.astrosage.utils.NumberPicker
+                android:id="@+id/np_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/DefaultNumberPickerTheme2"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                />
+
+            <!-- Day Picker -->
+            <com.ojassoft.astrosage.utils.NumberPicker
+                android:id="@+id/np_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/DefaultNumberPickerTheme2"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <!-- Year Picker -->
+            <com.ojassoft.astrosage.utils.NumberPicker
+                android:id="@+id/np_ampm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/DefaultNumberPickerTheme2"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <CheckBox
+        android:id="@+id/checkBoxDontKnowMyExactTimeOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dont_know_my_exact_time_of_birth"
+        android:textSize="@dimen/dimen_16sp"
+        android:textColor="@color/black"
+        android:buttonTint="@color/black"
+        android:layout_below="@+id/consLayoutDateOfTime"
+    />
+    <TextView
+        android:id="@+id/btnNextTime"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_52dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/next"
+        android:textSize="@dimen/tv_size_20"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/drawable_otp_box_bg"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        android:layout_below="@+id/checkBoxDontKnowMyExactTimeOfBirth"
+
+    />
+    <LinearLayout
+        android:id="@+id/linLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp" />
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:src="@mipmap/ic_time"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            app:tint="@color/white"/>
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp" />
+
+        <!--<ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:backgroundTint="@color/grey_light"
+            app:tint="@color/black"
+            android:src="@drawable/plan_work_sheet_icon"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:onClick="onOccupationIconClicked"/>-->
+
+        <ImageView
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            android:background="@drawable/circle_gray"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

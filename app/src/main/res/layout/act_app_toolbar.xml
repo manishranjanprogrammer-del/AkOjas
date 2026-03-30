@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">-->
+
+
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appbarBGColor"
+    android:elevation="4dp"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_barAppModule"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="10dp"
+            app:contentInsetStart="0dp"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/toolbarBGColor">
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:paddingRight="16dp">-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivToggleImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="start"
+                android:contentDescription="navigation drawer"
+                android:padding="@dimen/dimen_12dp"
+                android:src="@drawable/ic_action_device_access_storage"
+                android:visibility="visible"
+                app:tint="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <RelativeLayout
+                android:id="@+id/notificationcenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="5dp"
+                android:minHeight="?attr/actionBarSize"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:visibility="gone"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/notificationcentericon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="notification"
+                    android:src="@drawable/ic_notifications" />
+
+                <TextView
+                    android:id="@+id/notificationcount"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignEnd="@+id/notificationcentericon"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/cart_red_circle"
+                    android:gravity="center"
+                    android:maxLength="2"
+                    android:textColor="@color/no_change_white"
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/title_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/astrosage_name"
+                android:textAllCaps="false"
+                android:textSize="@dimen/title_text_size"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ivToggleImage"
+                app:layout_constraintRight_toLeftOf="@id/wallet_box_layout"/>
+
+            <RelativeLayout
+                android:id="@+id/wallet_box_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_8dp"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/wallet_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_border_black"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="@dimen/dimen_5dp">
+
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/wallet_new" />
+
+                    <TextView
+                        android:id="@+id/wallet_price_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_13"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <!-- </LinearLayout>-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.ojassoft.astrosage.utils.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_hint"
+            android:minHeight="?attr/actionBarSize"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        style="@style/CustomTabText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_barAppModule"
+        android:minHeight="?attr/actionBarSize"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/color_title"
+        app:tabIndicatorHeight="4dp"
+        app:tabMaxWidth="0dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="0dp"
+        app:tabPaddingStart="0dp" />
+
+</com.google.android.material.appbar.AppBarLayout><!--
+</android.support.design.widget.CoordinatorLayout>-->

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".varta.ui.activity.AgoraCallAcceptRejectActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/full_screen_bg"
+        android:contentDescription="TODO"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp"
+    app:layout_constraintTop_toTopOf="parent">
+        <com.ojassoft.astrosage.varta.utils.RippleBackground
+            android:id="@+id/rippleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rb_color="#5EFF5722"
+            app:rb_duration="3000"
+            app:rb_radius="24dp"
+            app:rb_rippleAmount="6"
+            app:rb_scale="6">
+
+            <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+                android:id="@+id/centerImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/astrologer1" />
+
+            <TextView
+                android:id="@+id/astrologerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/centerImage"
+                android:layout_marginTop="80dp"
+                android:text="Rahul is calling..."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_22sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Varta Video Call"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/tv_size_10"
+                android:layout_below="@+id/astrologerName"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+        </com.ojassoft.astrosage.varta.utils.RippleBackground>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+    app:layout_constraintHorizontal_bias="0.5"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/dimen_20dp"
+    app:layout_constraintHorizontal_chainStyle="spread"
+    app:layout_constraintStart_toStartOf="parent" >
+
+    <ImageView
+        android:id="@+id/ivVideoCallEnd"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/end_call_icon" />
+    <TextView
+        android:id="@+id/rejectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reject_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"/>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    app:layout_constraintHorizontal_bias="0.5"
+    android:layout_marginBottom="@dimen/dimen_20dp"
+    app:layout_constraintStart_toEndOf="@+id/linearLayout2" >
+    <ImageView
+        android:id="@+id/ivUpArrowVideoCall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/up_double_arrow_image" />
+    <ImageView
+        android:id="@+id/ivVideoCallStart"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/icon_video_call" />
+    <TextView
+        android:id="@+id/acceptBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accept_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"/>
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

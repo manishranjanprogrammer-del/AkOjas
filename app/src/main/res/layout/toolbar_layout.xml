@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolbarBGColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--app:contentInsetStart="0dp"-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back_title_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="12dp"
+                    android:tint="@color/black"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_back_arrow"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/toolbar_title"
+                    android:singleLine="true"
+                    android:text="@string/astrologer_detail" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/varta_icon_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/varta_icon_xlarge">
+                </ImageView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/astrosage_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/astrosage"
+                    android:textColor="@color/black"
+                    android:textSize="12sp">
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/varta_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/astrosage_text">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/call_color_logo">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/varta"
+                        android:textColor="@color/black"
+                        android:textSize="25sp">
+                    </TextView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/wallet_box_layout"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="0.4"
+                android:layout_gravity="center_vertical"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp">
+
+                <LinearLayout
+                    android:id="@+id/wallet_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/bg_border_black">
+
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wallet_new"
+                        app:tint="@color/black">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/wallet_price_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/tv_size_13">
+                    </TextView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/three_dots"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_small"
+                app:tint="@color/black"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:visibility="gone">
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

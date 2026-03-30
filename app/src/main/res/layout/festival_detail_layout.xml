@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolBar_InputKundli"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/backgroundLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:id="@+id/backImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5">
+
+                        <ImageView
+                            android:id="@+id/festival_image_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/festival_Detail_Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fest_D_DayMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/no_change_white"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fest_D_Day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wednesday"
+                        android:textColor="@color/no_change_white"
+                        android:textSize="@dimen/note_text_size"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/fest_paksh_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/no_change_white"
+                            android:textSize="@dimen/note_text_size" />
+
+                        <TextView
+                            android:id="@+id/fest_day_stand_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/fest_paksh_value"
+                            android:text="|"
+                            android:textColor="@color/no_change_white"
+                            android:textSize="@dimen/note_text_size" />
+
+                        <TextView
+                            android:id="@+id/fest_tithi_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/fest_day_stand_0"
+
+                            android:textColor="@color/no_change_white"
+                            android:textSize="@dimen/note_text_size" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/fest_month_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/no_change_white"
+                            android:textSize="@dimen/note_text_size" />
+
+                        <TextView
+                            android:id="@+id/fest_day_stand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/fest_month_value"
+                            android:text="|"
+                            android:textColor="@color/no_change_white"
+                            android:textSize="@dimen/note_text_size" />
+
+                        <TextView
+                            android:id="@+id/fest_samvat_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/fest_day_stand"
+                            android:textColor="@color/no_change_white"
+                            android:textSize="@dimen/note_text_size" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/muhuratRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+                app:cardBackgroundColor="@color/bg_card_view_color">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                    android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fest_main_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fest_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+                        android:textSize="@dimen/body_text_size" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

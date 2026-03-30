@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    style="@style/SelectableItemBackground"
+    android:layout_height="wrap_content"
+    android:layout_width="88dp"
+    android:background="@color/backgroundColorView"
+    android:foreground="?attr/selectableItemBackground"
+   >
+
+        <ImageView
+            android:id="@+id/imageViewRashiIcon"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/dimen_10dp"
+            app:tint="@color/colorPrimary_day_night"
+            android:background="@drawable/circle_white"
+            android:src="@drawable/cancer" />
+
+        <TextView
+            android:id="@+id/textViewRashiName"
+            style="@style/subheading_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@+id/imageViewRashiIcon"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewRashiIcon"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewRashiIcon"
+            android:textColor="@color/black_87DN"
+            android:text="Medium Text"
+            android:textSize="@dimen/tv_size_14"
+            android:maxLines="2"
+            android:paddingHorizontal="2dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

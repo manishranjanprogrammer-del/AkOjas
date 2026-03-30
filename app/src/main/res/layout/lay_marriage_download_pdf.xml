@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/subheading_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".8"
+        android:text="@string/price_to_download_kundli"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/subheading_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+        android:text="@string/desc_marriage_download_kundli"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDownloadPDF"
+        style="@style/buttonstyle"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        android:drawableLeft="@drawable/ic_file_download_white_24dp"
+        android:drawableTint="@color/white"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:padding="16dp"
+        android:text="@string/download_pdf"
+        android:theme="@style/buttonstyle" />
+
+    <TextView
+        android:id="@+id/tvOrText"
+        style="@style/subheading_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/min_height"
+        android:minHeight="@dimen/min_height"
+        android:gravity="center"
+        android:text="@string/text_or"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnOrderPrintedKundli"
+        style="@style/buttonstyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        android:drawableLeft="@drawable/ic_chat_white"
+        android:drawableTint="@color/white"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:padding="16dp"
+        android:text="@string/askaquestion"
+        android:theme="@style/buttonstyle"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/title_home" />
+
+    <!--<item
+        android:id="@+id/navigation_recharge"
+        android:icon="@drawable/wallet_black"
+        android:title="@string/wallet" />-->
+
+    <item
+        android:id="@+id/navigation_recharge"
+        android:icon="@drawable/call_white_logo_large"
+        android:title="@string/call" />
+
+    <item
+        android:id="@+id/navigation_share"
+        android:title="@string/live"
+        android:icon="@drawable/video_call_icon"
+        android:titleCondensed="@string/livelong"/>
+    <!--<item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/ic_shopping_cart_white"
+        android:title="@string/shop" />-->
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/chat_logo"
+        android:title="@string/chat_now" />
+    <!-- SAN History bottom navigation -->
+    <!--<item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/my_account" />
+        -->
+
+        <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/history_icon"
+        android:title="@string/history" />
+
+</menu>

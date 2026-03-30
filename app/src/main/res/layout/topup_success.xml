@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_rect_corner_dialog">
+
+    <TextView
+        android:id="@+id/heading_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/thank_you_msg"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_24dp" />
+
+    <ImageView
+        android:id="@+id/cancelIV"
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dip"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_cancel_black"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/dhruvPlan_desc_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading_tv"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="@dimen/dimen_18dp"
+        android:layout_marginBottom="@dimen/dimen_18dp"
+        android:background="@color/light_gray_bg"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/dimen_5dp"
+        android:textSize="20sp"
+        android:paddingHorizontal="@dimen/dimen_10dp"
+        android:text="@string/free_question_limit_exceed_msg"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dhruvPlan_desc_tv"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/purchase_btn"
+            android:layout_width="136dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/orange_rect_with_round_corner"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_18" />
+    </LinearLayout>
+
+
+</RelativeLayout>

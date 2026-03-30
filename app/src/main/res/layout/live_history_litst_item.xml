@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColorView"
+    android:layout_height="wrap_content">
+
+    <!--  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="16dp"
+          android:paddingBottom="16dp">-->
+
+    <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+        android:id="@+id/ri_profile_img"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_profile_view" />
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toRightOf="@+id/ri_profile_img"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/astrologer_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Astro Guru Margaank"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14" />
+
+            <TextView
+                android:id="@+id/astrologer_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 120"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_20" />
+
+            <TextView
+                android:id="@+id/refund_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="3dp"
+                android:text="@string/refunded"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_18"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="25 May 2020,12:15:30"
+                android:textSize="@dimen/tv_size_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rate_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="\@ rs 25/min "
+                    android:textSize="@dimen/tv_size_14" />
+
+                <TextView
+                    android:id="@+id/duration_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+                    android:text="Duration: 3 minutes"
+                    android:textSize="@dimen/tv_size_14" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/call_now_btn"
+                style="@style/buttonBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_button_yellow"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/call_icon"
+                android:drawablePadding="12dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="5dp"
+                android:text="@string/call_again"
+                android:textSize="@dimen/tv_size_17"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--</LinearLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/content_layout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/separator_line" />
+</RelativeLayout>

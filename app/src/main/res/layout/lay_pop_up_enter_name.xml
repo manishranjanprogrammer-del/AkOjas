@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card_view_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/moon_sign_by_name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvPopupHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/Enter_Your_name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etPopupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:textColorHint="@color/hint_text_color"
+                android:minHeight="@dimen/min_height"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                style="@style/Theme.App.Base" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingRight="8dp">
+
+        <Button
+            android:id="@+id/btnPopupGetRashi"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/get_your_moon_sign"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

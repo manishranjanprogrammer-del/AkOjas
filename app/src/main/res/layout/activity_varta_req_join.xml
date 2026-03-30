@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_large">
+
+            <TextView
+                android:id="@+id/headingTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/request_joining"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <TextView
+                android:id="@+id/heading2TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:text="@string/astrosage_varta"
+                android:textAllCaps="true"
+                android:textColor="@color/currentThemeColor"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <TextView
+                android:id="@+id/descriptionTV"
+                style="@style/subheading_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/astrosage_varta_desc"
+                android:textColor="@color/text_color_black" />
+
+            <TextView
+                android:id="@+id/heading3TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="@string/sign_up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtFirstName"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_varta_req"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/font_medium" />
+
+                <View
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/edtLastName"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_varta_req"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/font_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edit_text_varta_req"
+                android:minHeight="@dimen/button_height_normal">
+
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:background="@null"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/country_code_layout"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/bg_edit_text_varta_req"
+                    android:gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/country_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/country_code"
+                        android:textColor="@color/darker_gray"
+                        android:textSize="15sp"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/dropdown_img"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_vertical_margin"
+                        android:src="@drawable/ic_spinner_down_image"
+                        android:visibility="visible"
+                        app:tint="@color/text_color" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/edtMobileNo"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/custom_btn_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_varta_req"
+                    android:hint="@string/phone_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/font_medium" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtMailId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edit_text_varta_req"
+                android:hint="@string/emailId"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/font_medium" />
+
+            <EditText
+                android:id="@+id/edtExperience"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edit_text_varta_req"
+                android:hint="@string/experience"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/font_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtCity"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_varta_req"
+                    android:hint="@string/lbl_city"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/font_medium" />
+
+                <View
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/edtCountry"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_varta_req"
+                    android:hint="@string/country"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/font_medium" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtExpert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edit_text_varta_req"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/system_known"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/button_height_normal"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/font_medium" />
+
+            <EditText
+                android:id="@+id/edtLang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edit_text_varta_req"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/select_language"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/custom_btn_height"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/font_medium" />
+
+            <EditText
+                android:id="@+id/edtShortBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edit_text_varta_req"
+                android:hint="@string/short_bio"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/button_height_normal"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/font_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:minHeight="@dimen/button_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/agreeCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary_day_night"
+                    android:checked="true"
+                    android:textColor="@color/colorPrimary_day_night" />
+
+                <TextView
+                    android:id="@+id/agree_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/agree_text_varta"
+                    android:textColor="@color/colorPrimary_day_night"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/buttonstyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_btn_height"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/bg_button_purple"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/send_req" />
+
+            <LinearLayout
+                android:id="@+id/btnLoginLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dontAcTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/createTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

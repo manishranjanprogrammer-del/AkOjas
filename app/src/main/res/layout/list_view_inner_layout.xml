@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/bg_card_view_color"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:gravity="center|left"
+        android:text="Tithi"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/subheading_text_size" />
+
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|left"
+        android:scrollbars="vertical"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/subheading_text_size" />
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".8">
+
+        <ImageView
+            android:id="@+id/info_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha=".9"
+            android:src="@drawable/ic_information_outline_grey600_24dp"
+            app:tint="@color/text_color_black"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/subheading_text_size" />
+
+
+    </LinearLayout>
+</LinearLayout>

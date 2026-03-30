@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:background="@color/bg_card_view_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center"
+        android:textSize="@dimen/heading_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSubHeader1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center"
+        android:textSize="@dimen/subheading_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSubContent1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center"
+        android:textSize="@dimen/subheading_text_size" />
+
+    <TextView
+        android:id="@+id/tvSubHeader2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center"
+        android:textSize="@dimen/subheading_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSubContent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center"
+        android:textSize="@dimen/subheading_text_size" />
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">Internal Error</string>
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="disclaimer_text">இந்த ஆப்பில் இருக்கின்ற விஷயம், விவரம் உங்கள் பொழுதுபோக்குக்காக தயாரிக்கப்பட்டது. இது டாக்டர், லாயர், மனோவிஞானி அல்லது நிதி ஆலோசகர்களுக்கு ஈடு ஆகாது. ஆஸ்ட்ரோசேஜில்  எந்த விளக்கங்களுக்கும் உத்தரவாதம் கொடுக்க முடியாது.</string>
+    <string name="i_accept">I Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="lib_astro_shop">Astro Shop</string>
+    <string name="lib_ask_our_astrologer">Ask Astrologer</string>
+    <string name="lib_app_version_text">வடிவம் </string>
+    <string name="lib_cancel">ரத்து செய்</string>
+    <string name="lib_pleasewait">Please wait...</string>
+    <string name="lib_msg_ok">OK</string>
+    <string name="lib_available_languages">Available Languages </string>
+    <string name="lib_english"> English</string>
+    <string name="lib_hindi"> Hindi</string>
+    <string name="LibNotificationConffigHeading">நோடிஃபிகேஷன்களின் அவதி.</string>
+    <string name="LibOnce">நாளில் ஒரு முறை.</string>
+    <string name="LibTwice">நாளில் இரண்டு முறை.</string>
+    <string name="LibAsManyTime">எவ்வளவு முறை வருகின்றனவோ அத்தனை முறை.</string>
+    <string name="LibNever">Never</string>
+    <string name="Lib_Save">Save</string>
+    <string name="Lib_Name">பெயர்</string>
+    <string name="Lib_EmailId">மின்னஞ்சல்</string>
+    <string name="Lib_Phone">தொலைபேசி</string>
+    <string name="Lib_Message">கருத்து</string>
+    <string name="Lib_Feedback_form">கருத்து</string>
+    <string name="Lib_Send">அனுப்பவும்</string>
+    <string name="please_enter_name">Please enter your name...</string>
+    <string name="name_limit">Name should be with in 50 characters...</string>
+    <string name="email_one">Please Enter e-mail Id...</string>
+    <string name="email_two">e-mail should be with in 70 characters...</string>
+    <string name="email_three">Enter valid e-mail Id...</string>
+    <string name="feedback_message_one">தயவு செய்து உங்கள் கருத்து தெரிவுக்கவும்....</string>
+    <string name="feedback_message_two">Message should be with in 500 characters...</string>
+    <string name="phone_validation">Enter 10 digit number...</string>
+    <string name="phone_should_be_numeric">Phone number should be numeric...</string>
+    <string name="feedback_sent">கருத்து வெற்றிகரமாக அனுப்பபட்டது ...</string>
+    <string name="please_try_again">Please, try again...</string>
+    <string name="internet_is_not_working">Internet is not working...</string>
+</resources>

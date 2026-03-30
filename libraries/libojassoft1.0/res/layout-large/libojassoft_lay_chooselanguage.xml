@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/advLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" />
+         <TextView
+            android:id="@+id/tvAvailableLanguages"
+            style="@style/libTextViewOrangeHeadingStyle"          
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:text="@string/lib_available_languages" />
+          <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+               <RadioButton
+                android:id="@+id/radioEnglish"                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                 android:paddingLeft="20dp"
+                  style="@style/libTextViewBlueStyle"               
+                android:text="@string/lib_english" />
+                <RadioButton
+                android:id="@+id/radioHindi"   
+                style="@style/libTextViewBlueStyle" 
+                 android:paddingLeft="20dp"            
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lib_hindi" />
+         </RadioGroup>
+         
+               <Button
+                android:id="@+id/butOK"
+               android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"	            
+	            android:layout_marginBottom="15dip"
+	            android:layout_marginLeft="10dip"
+	            android:layout_marginRight="10dip"
+	            android:layout_marginTop="10dip"              
+                android:onClick="goToOk"
+                style="@style/libButtonStyle"  
+               android:text="@string/lib_msg_ok"
+               android:gravity="bottom|center"
+               />
+               
+               	<LinearLayout android:id="@+id/layKundliID"			
+    		android:layout_width="fill_parent"
+    		android:orientation="horizontal"
+    		android:layout_height="wrap_content" android:paddingTop="10dp" />
+       
+    </LinearLayout>
+   

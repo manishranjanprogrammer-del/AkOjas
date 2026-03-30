@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fillViewport="false">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:background="@color/backgroundColor"
+    android:fillViewport="false">
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/boy_detail_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/boy_detail"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/subheading_text_size" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_card_view_color"
+            app:cardElevation="@dimen/dimen_10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewUserNamePerson1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:alpha=".9"
+                        android:drawableTint="@color/text_color_black"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_person_black" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_boy_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/etUserNamePerson1"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/boy_name"
+                            android:backgroundTint="@color/rect_input_box_color"
+                            android:inputType="textCapWords|textPersonName|textFilter"
+                            android:textSize="@dimen/input_screen_text_size"
+                            android:textColor="@color/text_color_black"
+                            android:textColorHint="@color/hint_text_color">
+
+                        </EditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewCalendarPerson1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:alpha=".9"
+                        android:drawableTint="@color/text_color_black"
+                        android:clickable="true"
+                        android:textColor="@color/text_color_black"
+                        android:drawableLeft="@drawable/ic_today_black_icon" />
+
+                    <TextView
+                        android:id="@+id/buttonCalendarPerson1"
+                        style="@style/SelectableItemBackground"
+                        android:layout_width="0dip"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/rect_light_yellow_box"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="Birth Date"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/input_screen_text_size" />
+
+                    <TextView
+                        android:id="@+id/buttonTimePerson1"
+                        style="@style/SelectableItemBackground"
+                        android:layout_width="0dip"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_light_yellow_box"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_black"
+                        android:text="Birth Time"
+                        android:textSize="@dimen/input_screen_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewPlacePerson1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:alpha=".9"
+                        android:clickable="true"
+                        android:drawableTint="@color/text_color_black"
+                        android:drawableLeft="@drawable/ic_location_on_black" />
+
+                    <LinearLayout
+                        android:id="@+id/layPlaceHolderPerson1"
+                        style="@style/SelectableItemBackground"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/rect_light_yellow_box"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewPlaceNamePerson1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:text="Jhansi Jhansi Jhansi Jhansi Jhansi"
+                            android:textSize="@dimen/input_screen_text_size"
+                            android:textColor="@color/text_color_black"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textViewPlaceDetailsPerson1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:text="(11E34:34N34-5.5)"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/girl_detail_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/girl_detail"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/input_screen_text_size" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_card_view_color"
+            app:cardElevation="@dimen/dimen_10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewUserNamePerson2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:alpha=".9"
+                        android:clickable="true"
+                        android:drawableTint="@color/text_color_black"
+                        android:drawableLeft="@drawable/ic_person_black" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_girl_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/etUserNamePerson2"
+                            style="@style/Theme.App.Base"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/girl_name"
+                            android:backgroundTint="@color/rect_input_box_color"
+                            android:inputType="textCapWords|textPersonName|textFilter"
+                            android:textSize="@dimen/input_screen_text_size"
+                            android:textColor="@color/text_color_black"
+                            android:textColorHint="@color/hint_text_color">
+
+                        </EditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewCalendarPerson2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:alpha=".9"
+                        android:clickable="true"
+                        android:drawableTint="@color/text_color_black"
+                        android:drawableLeft="@drawable/ic_today_black_icon" />
+
+                    <TextView
+                        android:id="@+id/buttonCalendarPerson2"
+                        android:layout_width="0dip"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/rect_light_yellow_box"
+                        android:gravity="center"
+                        android:text="Birth Date"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/input_screen_text_size" />
+
+                    <TextView
+                        android:id="@+id/buttonTimePerson2"
+                        android:layout_width="0dip"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_light_yellow_box"
+                        android:gravity="center"
+                        android:text="Birth Time"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/input_screen_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewPlacePerson2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:alpha=".9"
+                        android:clickable="true"
+                        android:drawableTint="@color/text_color_black"
+                        android:drawableLeft="@drawable/ic_location_on_black" />
+
+                    <LinearLayout
+                        android:id="@+id/layPlaceHolderPerson2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/custom_btn_height"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/rect_light_yellow_box"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewPlaceNamePerson2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_black"
+                            android:text="Jhansi Jhansi Jhansi Jhansi Jhansi"
+                            android:textSize="@dimen/input_screen_text_size" />
+
+                        <TextView
+                            android:id="@+id/textViewPlaceDetailsPerson2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_black"
+                            android:text="(11E34:34N34-5.5)"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <CheckBox
+            android:id="@+id/checkBoxSaveKundli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:checked="true"
+            android:text="@string/match_save_kundli"
+            android:textColor="@color/text_color_black"
+            android:theme="@style/MyCheckBox" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/btnShowInputBirthDet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:background="@drawable/rect_light_yellow_box"
+                android:drawableRight="@drawable/ic_birthdetailsetting_plus"
+                android:drawablePadding="2dp"
+                android:drawableTint="@color/black"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:paddingStart="20dp"
+                android:visibility="visible"
+                android:paddingVertical="3dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/type_or_paste_birth_details"
+                android:textAllCaps="false"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/black"
+                android:textSize="@dimen/input_screen_text_size"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card_view_color"
+                app:cardElevation="@dimen/dimen_10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+            <LinearLayout
+                android:id="@+id/llEnterBirthDetails"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_7dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etBirthDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="80dp"
+                    android:textSize="15sp"
+                    android:inputType="text|textMultiLine"
+                    android:hint="@string/type_or_paste_birth_details_here"
+                    android:paddingVertical="@dimen/dimen_5dp"
+                    android:paddingHorizontal="@dimen/dimen_10dp"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_text_color"
+                    android:gravity="top|start"/>
+                <RelativeLayout
+                    android:id="@+id/getFillDetails"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="end|bottom"
+                    android:background="@drawable/circle_orange"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_send"
+                        android:padding="2dp"
+                        app:tint="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/buttonCalculateMatching"
+                android:layout_marginTop="@dimen/button_top_margin_small"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/show_match"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                style="@style/buttonstyle"
+                android:theme="@style/buttonstyle"
+                android:textColor="@color/white"/>
+            <View
+                android:id="@+id/viewDummy"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="300dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

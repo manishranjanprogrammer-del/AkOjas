@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/titleAstrosage_Kundali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/Choose_personalkundli_heading"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/isyourpersonalkundali"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingRight="8dp">
+
+        <Button
+            android:id="@+id/nobtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night" />
+
+        <View
+            android:layout_width="@dimen/cardview_keyline_1_minus_8dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/yesbtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

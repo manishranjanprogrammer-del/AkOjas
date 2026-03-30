@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="0dp"
+    android:clipToPadding="false"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/topAdImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/orange_rect"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/lay_date_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sunrise_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="2dp"
+            android:background="@color/backgroundColor"
+            app:cardBackgroundColor="@color/bg_card_view_color"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/backgroundColor"
+                >
+
+                <TextView
+                    android:id="@+id/tv_sunrise_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="@dimen/heading_text_size"
+                    android:textColor="@color/text_color_black"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/ll_two_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/left_card_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:cardElevation="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/bg_card_view_color"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_current_lagna"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingTop="2dp"
+                        android:text="@string/current_lagna"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_rashi_lagna_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:paddingTop="1dp"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/title_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_current_lagna_nature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_lagna_nature_current"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:textSize="@dimen/heading_text_size" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_nature_current"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:gravity="center_vertical|end"
+                            android:layout_marginRight="5dp"
+                            android:padding="2dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_lagna_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingTop="1dp"
+                        android:autoSizeTextType="uniform"
+                        android:textSize="@dimen/subheading_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_lagna_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingTop="1dp"
+                        android:autoSizeTextType="uniform"
+                        android:textSize="@dimen/subheading_text_size" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/right_card_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:cardElevation="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/bg_card_view_color"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/lagna_at_sun_rise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingTop="2dp"
+                        android:text="@string/lagna_at_sunrise"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_rashi_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:paddingTop="1dp"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/title_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sunrise_lagna_nature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_lagna_nature_sunrise"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:textSize="@dimen/heading_text_size" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_nature_sunrise"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:gravity="center_vertical|end"
+                            android:layout_marginRight="5dp"
+                            android:padding="2dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_lagna_degree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingTop="1dp"
+                        android:textSize="@dimen/subheading_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_lagna_nakshatra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingTop="1dp"
+                        android:textSize="@dimen/subheading_text_size" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_marginTop="4dp" />
+
+        <include
+            layout="@layout/custom_advertisement_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

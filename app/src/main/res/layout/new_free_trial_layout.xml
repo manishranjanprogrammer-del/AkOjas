@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorView">
+
+    <ScrollView
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+            <ImageView
+                android:id="@+id/kundli_img"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_full_screen_kundli_ai"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivClosePage"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="2dp"
+                android:padding="8dp"
+                android:visibility="visible"
+                android:src="@drawable/cross_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/proceed_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proceed"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                android:paddingVertical="4dp"
+                android:paddingHorizontal="12dp"
+                android:background="@drawable/bg_primary_curved_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+
+            <LinearLayout
+                android:id="@+id/headerGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_35dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="1.2">
+
+                <LinearLayout
+                    android:id="@+id/heading_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="4dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/platinumImageview"
+                        android:layout_width="240dp"
+                        android:layout_height="46dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/kundli_ai_plus_logo"
+                        android:visibility="visible"
+                        app:tint="@color/colorPrimary_day_night" />
+
+                    <TextView
+                        android:id="@+id/tv_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:text="@string/platinum_plan"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary_day_night"
+                        android:textSize="@dimen/tv_size_32"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtHeading1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="@dimen/dimen_10dp"
+                        android:letterSpacing="0.05"
+                        android:text="@string/kundali_that_talks_caps"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_18" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/bg_border_orange"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/plus_tab_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_selected_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/plus_tab_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/plus_plan"
+                            android:textColor="@drawable/text_selector_for_primary_bg"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/premium_tab_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_unselected_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/premium_tab_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dhruv"
+                            android:textColor="@drawable/text_selector_for_primary_bg"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kudli_ai_free_trial_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/headerGroup">
+
+                <TextView
+                    android:id="@+id/free_trial_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/free_trial_7day"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="10dp"
+                    android:text="@string/unlock_premium_kundli_for_free"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_20" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_kundli_ai" />
+
+                        <TextView
+                            android:id="@+id/kundliAIQuestCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/hun_prem_ques"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_premium_kundli"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/premium_kundli_txt"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_14" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_cloud"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/unlimited_cloud_storage"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/ic_no_ad"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/ad_free_experience"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_14" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/timelineCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/light_gray_btn"
+                    android:padding="@dimen/dimen_20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/subscribeForBtn"
+                    app:layout_constraintVertical_weight="0.8">
+
+                    <View
+                        android:id="@+id/verticalLine"
+                        android:layout_width="1.5dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="56dp"
+                        android:background="@color/colorPrimary_day_night"
+                        app:layout_constraintBottom_toBottomOf="@id/itemDay7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/itemToday" />
+
+                    <LinearLayout
+                        android:id="@+id/itemToday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dimen_16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/itemDay5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/bulleted_circle_filled" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/start_free_trial_today"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvTrialByPaying"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pay_deducted_refunded_immediately"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_14" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/itemDay5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dimen_16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/itemDay7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/itemToday">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/bulleted_circle" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/reminder_before_trial_ends"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/will_remind_you_before_trial_eds"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_14" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/itemDay7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/itemDay5">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/bulleted_circle" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/auto_pay_time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/subscription_begins"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvRepaymentDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/subscription_begins_on_date_cancel_anytime_before_no_charges_no_penalties"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dhruv_plan_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/headerGroup">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="10dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="@string/unlock_all_premium_with_dhruv"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/ai_icon_new" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/advanced_ai_model"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_kundli_ai" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/five_x_premium_ques_per_day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_msg"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:maxWidth="150dp"
+                            android:text="@string/hun_ai_astrologers_query"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_premium_kundli"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/hun_prem_kundli"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_notes"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/personaized_branding_on_kundlis"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/ic_discount"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/additional_10_per_discount"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/icon_cloud"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/unlimited_cloud_storage"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="@dimen/dimen_10dp"
+                            android:src="@drawable/ic_no_ad"
+                            app:tint="@color/colorPrimary_day_night" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/ad_free_experience"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Bottom Layout remains anchored to the bottom -->
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColorView"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <!-- All content inside bottom_layout remains unchanged -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/errorHeadingLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:background="@drawable/limit_reached_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/errorHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingBottom="20dip"
+                android:text="@string/chat_limit_reached"
+                android:textColor="@color/no_change_white"
+                android:textSize="@dimen/tv_size_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Bottom Layout remains anchored to the bottom -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phonePePaymentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sectionColor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/spinnerApps"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:spinnerMode="dropdown"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!-- Left: payment chooser (icon + label + arrow) -->
+            <LinearLayout
+                android:id="@+id/llPaymentChooser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/sectionColor"
+                android:clipToPadding="false"
+                android:gravity="center_vertical"
+                android:minHeight="40dp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dimen_24dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnStartSubsPayment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <!-- Hidden Spinner used to show choices -->
+
+
+                <ImageView
+                    android:id="@+id/ivSelectedAppIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="app icon" />
+
+                <LinearLayout
+                    android:id="@+id/llSelectedAppName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtSelectedAppName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/pay_via"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_14" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSelectedAppName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivDropArrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="@dimen/dimen_5dp"
+                            android:contentDescription="open"
+                            android:src="@drawable/ic_arrow_down_24px"
+                            app:tint="@color/ivTintColorDN" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Right: Pay button -->
+            <Button
+                android:id="@+id/btnStartSubsPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_24dp"
+                android:background="@drawable/bg_button_yellow"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_17"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/llPaymentChooser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/llPaymentChooser"
+                app:layout_constraintTop_toTopOf="@+id/llPaymentChooser" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/subscribeForBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingVertical="@dimen/dimen_8dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_btn_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_toLeftOf="@+id/imgViewArrowRight"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/subscribe_for_text"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_20" />
+
+            <ImageView
+                android:id="@+id/imgViewArrowRight"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_keyboard_arrow_right_black"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/subscribeForBtnDiable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_35dp"
+            android:background="@drawable/bg_button_choose_kundli"
+            android:backgroundTint="@color/colorPrimary_day_night_very_lighter"
+            android:paddingVertical="@dimen/dimen_8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_btn_txt_diable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/subscribe_for_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_20dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_keyboard_arrow_right_black"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_already_purchase_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-30dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:maxLines="1"
+            android:text="@string/already_purchased_plan"
+            android:textColor="@color/red"
+            android:textSize="@dimen/tv_size_16"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

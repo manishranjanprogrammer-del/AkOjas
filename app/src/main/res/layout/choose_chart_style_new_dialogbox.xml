@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/choose_chart_style"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupChartStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+
+        <RadioButton
+            android:id="@+id/radioNorth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:checked="true"
+            android:paddingLeft="16dp"
+            android:text="@string/north"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_text_size"
+            android:theme="@style/MyCheckBox" />
+
+        <RadioButton
+            android:id="@+id/radioSouth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:paddingLeft="16dp"
+            android:text="@string/south"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_text_size"
+            android:theme="@style/MyCheckBox" />
+
+        <RadioButton
+            android:id="@+id/radioEast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:paddingLeft="16dp"
+            android:text="@string/east"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_text_size"
+            android:theme="@style/MyCheckBox" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="right"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/butChooseChartStyleCancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night" />
+
+        <Button
+            android:id="@+id/butChooseChartStyleOk"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary_day_night" />
+
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@string/loving_astrosage"
+        android:textColor="@color/black"
+        android:textSize="@dimen/invite_friend_image"  />
+
+    <TextView
+        android:id="@+id/tv_rate_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="@dimen/tv_size_16"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorTextGrey"
+        android:text="@string/rate_us" />
+
+    <TextView
+        android:id="@+id/tv_rate_now"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_ratenow"
+        android:background="@drawable/bg_border_live_call"
+        android:padding="15dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:focusable="true"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/remind_me_later"
+        android:background="@drawable/rating_remind_later_btn"
+        android:padding="15dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:focusable="true"
+        android:clickable="true"/>
+
+</LinearLayout>

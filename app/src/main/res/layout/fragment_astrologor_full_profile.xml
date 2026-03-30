@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/status_bar_height"
+    android:background="@color/profile_bg">
+
+    <ImageView
+        android:id="@+id/imgViewBack"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:padding="@dimen/dimen_7dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtViewAstrologer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgViewBack"
+        android:layout_alignBottom="@+id/imgViewBack"
+        android:layout_marginStart="@dimen/dimen_7dp"
+        android:layout_toEndOf="@+id/imgViewBack"
+        android:gravity="center_vertical"
+        android:text="@string/astro_astrologer"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_22sp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgViewBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgViewBack"
+        app:layout_constraintTop_toTopOf="@+id/imgViewBack" />
+
+
+    <ImageView
+        android:id="@+id/imgViewAstrologer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:src="@drawable/ic_profile_view"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/astro_astrologer" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorPrimary_day_night"
+        app:layout_constraintTop_toTopOf="@+id/imgViewAstrologer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imgViewAstrologer"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

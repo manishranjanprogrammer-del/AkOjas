@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@color/backgroundColorView"
+    android:id="@+id/llParent">
+
+
+    <RelativeLayout
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dimen_14dp">
+
+        <!--<com.ojassoft.contasty.customcontrols.ContastyTextView
+            android:id="@+id/listIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="24sp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/black_translucent"
+            app:fontName="@string/Awesome_webfont"
+            />-->
+        <ImageView
+            android:id="@+id/listIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_alignBottom="@+id/listText"
+            android:alpha="0.8"
+            app:tint="@color/text_color_black"/>
+
+        <TextView
+            android:id="@+id/listText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="68dp"
+            android:text="Dummy Text"
+            style="@style/subheading_style"
+            android:textColor="@color/text_color_black"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

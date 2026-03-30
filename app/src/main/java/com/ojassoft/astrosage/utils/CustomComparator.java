@@ -1,0 +1,43 @@
+package com.ojassoft.astrosage.utils;
+
+import com.ojassoft.astrosage.beans.PlaylistVedio;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Comparator;
+import java.util.Date;
+
+public class CustomComparator implements Comparator<PlaylistVedio> {
+    @Override
+    public int compare(PlaylistVedio o1, PlaylistVedio o2) {
+        PlaylistVedio.Snippet snippet1 = o1.getSnippet();
+        PlaylistVedio.Snippet snippet2 = o2.getSnippet();
+        if (snippet1 == null || snippet2 == null) return 0;
+        String publishAt1 = snippet1.getPublishedAt();
+        String publishAt2 = snippet2.getPublishedAt();
+        Date date1 = getDateFromString(publishAt1);
+        Date date2 = getDateFromString(publishAt2);
+        return date2.compareTo(date1);
+    }
+
+    private Date getDateFromString(String dateStr) {
+        Date date = null;
+
+        //String dtStart = "2010-10-15T09:27:37Z";
+        // yyyy-MM-dd'T'HH:mm:ss.SSSZ
+        //2017-07-03T11:15:15.000Z
+        //SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        // new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'000Z'");
+        //2020-05-14T13:30:05Z
+        try {
+            date = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")).parse(dateStr.replaceAll("Z$", "+0000"));
+            //date = format.parse(dateStr);
+            System.out.println(date);
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <View
+        android:id="@+id/dividerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/dividerColor"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_7dp"
+    >
+    <ImageView
+        android:id="@+id/imgViewPdf"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pdf_male"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_7dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imgViewPremium"
+        android:layout_toRightOf="@+id/imgViewPdf"
+        >
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Anil"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/fileDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="1dp"
+            android:text="19-May-!992, 06:45pm, Agra, up"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgViewPremium"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="@dimen/dimen_3dp"
+        android:src="@drawable/ic_premium_kundli"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentEnd="true"
+        />
+</RelativeLayout>
+
+
+
+</LinearLayout>

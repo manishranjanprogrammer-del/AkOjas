@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card_view_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/choose_payment_option"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            android:paddingTop="2dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/SelectableItemBackground"
+            android:id="@+id/llRazor"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/radioRazor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:text="@string/razor_pay_international_india"
+                android:textColor="@color/black"
+                android:textSize="@dimen/body_text_size"
+                />
+
+            <TextView
+                android:id="@+id/radiosubRazor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingLeft="16dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="16dp"
+                android:alpha="0.5"
+                android:text="@string/wallet_netbanking_cards_international"
+                android:textColor="@color/black"
+                android:textSize="@dimen/note_text_size"
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/razorpayview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/black_87"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:alpha="0.4"/>
+
+
+        <LinearLayout
+            android:id="@+id/llPaytm"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/radioPaytm"
+                android:layout_width="match_parent"
+                android:paddingLeft="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/opt_paytm"
+                android:focusable="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/body_text_size"
+                android:theme="@style/MyCheckBox" />
+
+            <TextView
+                android:id="@+id/radiosubPaytm"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:paddingTop="3dp"
+                android:paddingBottom="16dp"
+                android:alpha="0.5"
+                android:text="@string/wallet_netbanking_cards_india"
+                android:textColor="@color/black"
+                android:textSize="@dimen/note_text_size"
+                android:theme="@style/MyCheckBox" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/paytmview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/black_87"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:alpha="0.4"/>
+
+        <LinearLayout
+            style="@style/SelectableItemBackground"
+            android:id="@+id/llGoogle"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/radioGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/google_wallet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/body_text_size"
+                />
+
+            <TextView
+                android:id="@+id/radiosubGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingLeft="16dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="16dp"
+                android:alpha="0.5"
+                android:text="@string/credit_debit_cards_international"
+                android:textColor="@color/black"
+                android:textSize="@dimen/note_text_size"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_mobile"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/etmobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:backgroundTint="@color/ColorPrimary"
+            style="@style/Theme.App.Base" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/ColorPrimaryDark" />
+
+
+        <Button
+            android:id="@+id/btnOk"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/ColorPrimaryDark" />
+
+
+    </LinearLayout>
+</LinearLayout>

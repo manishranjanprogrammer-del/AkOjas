@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/tv_astrologer_filter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/Expertise"
+    android:padding="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="5dp"
+    android:textStyle="bold"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/bg_button_orange_min"
+    android:textColor="@color/white">
+   <!-- bg_light_orange-->
+</TextView>

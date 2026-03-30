@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:id="@+id/rl_main_view"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_5dp"
+    android:layout_marginEnd="@dimen/dimen_5dp"
+    android:background="@drawable/yellow_stroke_rounded">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/iv_verified"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            app:layout_constraintRight_toLeftOf="@id/txt_today_offer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_today_offer"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_yellow_strip"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dimen_5dp"
+            android:text="@string/today_s_offer"
+            android:textSize="@dimen/font_veryVerySmall"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+            android:id="@+id/ri_profile_img"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_profile_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_today_offer" />
+
+        <ImageView
+            android:id="@+id/online_offline_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="-12dp"
+            android:layout_marginTop="4dp"
+            android:padding="2dp"
+            android:src="@drawable/green"
+            app:layout_constraintStart_toEndOf="@+id/ri_profile_img"
+            app:layout_constraintTop_toTopOf="@+id/ri_profile_img" />
+
+        <TextView
+            android:id="@+id/astroTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dimen_4dp"
+            android:text="Astro Guru Mragaank"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_12"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ri_profile_img" />
+
+        <RelativeLayout
+            android:id="@+id/rlBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/astroTitleTV">
+
+            <TextView
+                android:id="@+id/astro_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/dimen_3dp"
+                android:text="4.5"
+                android:textSize="@dimen/tv_size_10" />
+
+            <ImageView
+                android:id="@+id/iv_star"
+                android:layout_width="15dp"
+                android:layout_height="@dimen/tv_size_20"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/astro_rating"
+                android:contentDescription="null"
+                android:src="@drawable/star"
+                app:tint="@color/color_yellow" />
+
+            <TextView
+                android:id="@+id/seprator_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@+id/iv_star"
+                android:text="I" />
+
+            <TextView
+                android:id="@+id/new_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:layout_toEndOf="@+id/seprator_line"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/new_user"
+                android:textSize="@dimen/tv_size_10" />
+
+            <TextView
+                android:id="@+id/ruppee_sign"
+                style="@style/content_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_1dp"
+                android:layout_toEndOf="@+id/new_user"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/dimen_1dp"
+                android:text="@string/rs_sign"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_10" />
+
+            <TextView
+                android:id="@+id/priceTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:layout_toEndOf="@+id/ruppee_sign"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:text="22"
+                android:textSize="@dimen/tv_size_10" />
+
+            <TextView
+                android:id="@+id/priceTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_3dp"
+                android:layout_toEndOf="@+id/priceTv1"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:text="62/min"
+                android:textSize="@dimen/tv_size_10" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvAstroGridWaitTime"
+            style="@style/content_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Wait time:"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/tv_size_10"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/dimen_5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rlBottomLayout"/>
+
+        <LinearLayout
+            android:id="@+id/llAstroGridLayoutChat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_24dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"
+            android:background="@drawable/bg_button_yellow"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAstroGridWaitTime">
+
+          <!--  <ImageView
+                android:layout_width="@dimen/dimen_14dp"
+                android:layout_height="@dimen/dimen_14dp"
+                android:src="@drawable/chat_logo"/>-->
+
+            <TextView
+                android:id="@+id/tvAstroGridLayoutChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_chat_now"
+                android:ellipsize="end"
+                android:paddingHorizontal="@dimen/dimen_5dp"
+                android:maxLines="1"
+                android:textColor="@color/no_change_white"
+                android:textSize="@dimen/font_very_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAstroGridLayoutCall"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_24dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"
+            android:background="@drawable/bg_button_yellow"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAstroGridWaitTime">
+
+          <!--  <ImageView
+                android:layout_width="@dimen/dimen_14dp"
+                android:layout_height="@dimen/dimen_14dp"
+                android:src="@drawable/call_white_logo"/>-->
+
+            <TextView
+                android:id="@+id/tvAstroGridLayoutCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_now"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dimen_5dp"
+                android:textColor="@color/no_change_white"
+                android:textSize="@dimen/font_very_small"
+                android:layout_marginStart="0dp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

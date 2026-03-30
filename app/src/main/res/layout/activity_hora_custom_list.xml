@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    style="@style/SelectableItemBackground"
+    android:padding="15dp">
+
+    <!-- <LinearLayout
+         android:weightSum="3"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:gravity="center"
+         android:orientation="horizontal"
+         >
+ -->
+    <TextView
+        android:id="@+id/tvlistplanet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Planet"
+        android:textSize="@dimen/subheading_text_size" />
+
+    <TextView
+        android:id="@+id/tvMuhurat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Muhurat"
+        android:textSize="@dimen/subheading_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvlistentrytme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Entrytime"
+        android:textSize="@dimen/subheading_text_size" />
+
+    <TextView
+        android:id="@+id/tvlistexittme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Exittime"
+        android:textSize="@dimen/subheading_text_size" />
+    <!--</LinearLayout>-->
+
+</LinearLayout>

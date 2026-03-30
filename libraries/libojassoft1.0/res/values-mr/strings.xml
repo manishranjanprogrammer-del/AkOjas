@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">libojassoft</string>
+    <string name="internal_error">आंतरिक त्रुटी </string>
+    <string name="disclaimer_title">अस्वीकृती</string>
+    <string name="disclaimer_text">या अॅपमध्ये समाविष्ट असलेली माहिती आणि डेटा केवळ आपल्या मनोरंजन हेतूसाठीच हाताळला पाहिजे. आपण मिळविलेले कोणतेही भविष्यवाणी किंवा इतर संदेश सल्ला, प्रोग्राम्स किंवा उपचारांसाठी पर्याय नाही जो सामान्यत: एक वकील, डॉक्टर, मनोचिकित्सक किंवा आर्थिक सल्लागार अशा एखाद्या धिकृत व्यावसायिकांकडून प्राप्त होतो. त्यानुसार, एस्ट्रोसेज.कॉम (astrosage.com) कोणतीही हमी, निहित वॉरंटी, किंवा कोणत्याही प्रकारचे आश्वासन देत नाही आणि उपरोक्त नमूद केलेल्या माहिती व डेटा प्राप्तकर्त्याद्वारे केलेल्या किंवा वापरलेल्या कोणत्याही अर्थासाठी जबाबदार असणार नाही. </string>
+    <string name="i_accept">मी स्वीकारतो /ते </string>
+    <string name="cancel">खोडा </string>
+    <string name="lib_astro_shop">ऍस्ट्रो शॉप (दुकान)</string>
+    <string name="lib_ask_our_astrologer">ज्योतिष्यांना विचारा</string>
+    <string name="lib_app_version_text">आवृत्ती</string>
+    <string name="lib_cancel">खोडा </string>
+    <string name="lib_pleasewait">कृपया थांबा ...</string>
+    <string name="lib_msg_ok">ठीक </string>
+    <string name="lib_available_languages">उपलब्ध भाषा  </string>
+    <string name="lib_english"> English</string>
+    <string name="lib_hindi"> Hindi</string>
+    <string name="LibNotificationConffigHeading">सूचना वारंवारता</string>
+    <string name="LibOnce">दिवसातून एकदा</string>
+    <string name="LibTwice">दिवसातून दोनदा</string>
+    <string name="LibAsManyTime">येईल तितक्या वेळा</string>
+    <string name="LibNever">कधीही नाही</string>
+    <string name="Lib_Save">साठवा </string>
+    <string name="Lib_Name">नाव </string>
+    <string name="Lib_EmailId">ई-मेल आयडी </string>
+    <string name="Lib_Phone">फोन</string>
+    <string name="Lib_Message">संदेश </string>
+    <string name="Lib_Feedback_form">प्रतिक्रिया </string>
+    <string name="Lib_Send">पाठवा </string>
+    <string name="please_enter_name">कृपया आपल्या नाव प्रविष्ट करा...</string>
+    <string name="name_limit">नाव ५० वर्णाच्या अंतर्गत असावे...</string>
+    <string name="email_one">कृपया ई-मेल आयडी प्रविष्ट करा ...</string>
+    <string name="email_two">ई-मेल ७० वर्णाच्या अंतर्गत असावे.  ...</string>
+    <string name="email_three">साधार ई-मेल आयडी प्रविष्ट करा. ...</string>
+    <string name="feedback_message_one">कृपया अभिप्राय संदेश लिहा. ...</string>
+    <string name="feedback_message_two">५०० वर्णाच्या अंतर्गत संदेश असावे...</string>
+    <string name="phone_validation">१० अंक संख्या प्रविष्ट करा....</string>
+    <string name="phone_should_be_numeric">फोन नंबर अंकीय असावा ...</string>
+    <string name="feedback_sent">अभिप्राय यशस्वीरित्या पाठविला ...</string>
+    <string name="please_try_again">पुन्हा प्रयत्न करा...</string>
+    <string name="internet_is_not_working">इंटरनेट कार्य करीत नाही ...</string>
+</resources>

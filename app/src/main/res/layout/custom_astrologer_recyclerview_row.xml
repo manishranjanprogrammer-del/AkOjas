@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    style="@style/SelectableItemBackground"
+    android:id="@+id/llParent">
+
+
+    <RelativeLayout
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_16dp"
+        android:paddingBottom="@dimen/dimen_16dp"
+        android:gravity="center">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/listIcon"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="left|center"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignBottom="@+id/listText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/listTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="72dp"
+                android:text="Dummy Text"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/listSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="72dp"
+                android:text="Dummy Text"
+                android:layout_below="@+id/listTitle"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

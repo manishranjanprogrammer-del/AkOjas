@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        style="@style/SelectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fest_name_text_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="Purnima vart"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fest_week_day_text_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha=".4"
+                android:text="wednesday" />
+        </LinearLayout>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/image_view_nav"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/splash_icon_kundli" />
+
+        <ImageView
+            android:id="@+id/add_to_calender_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha=".7"
+            android:src="@drawable/ic_more_vert_black"
+            app:tint="@color/text_day_gray_night_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seprator_nav"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha=".1"
+        android:background="@color/black"
+        android:orientation="vertical" />
+
+
+</LinearLayout>

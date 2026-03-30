@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="vertical"
+    android:paddingBottom="0dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/tvMatchingConclusionHeading"
+            style="@style/title_style_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/matchingScreenLeftPadding"
+            android:paddingTop="16dp"
+            android:text="TextView"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/matchingScreenTitleText"
+            android:textStyle="bold" />
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@color/ColorPrimary" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_gray_bg"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMatchingConclusionPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25.5"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/36"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/tvMatchingConclusionBoy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/matchingScreenLeftPadding"
+                android:text="text1" />
+
+            <TextView
+                android:id="@+id/tvMatchingConclusionBoy3"
+                style="@style/content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvMatchingConclusionGirl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/matchingScreenLeftPadding"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tvMatchingConclusionGirl3"
+                style="@style/content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tvSugMarriageDate"
+            style="@style/buttonstyle"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawableTint="@color/white"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:padding="16dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/upcoming_marriage_muhurat"
+            android:theme="@style/buttonstyle"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_gray_bg"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/cardview_keyline_1_minus_8dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tvMatchingConclusionResult"
+                style="@style/content_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvMatchingConclusionResultValues"
+                style="@style/content_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/share_pdf_btn"
+            style="@style/buttonstyle"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:drawableLeft="@drawable/ic_share1"
+            android:drawableTint="@color/white"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/share_matching_pdf"
+            android:theme="@style/buttonstyle"
+            android:visibility="visible" />
+
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/adImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/bottom_margin_for_kundli"
+            android:background="@color/colorPrimary_day_night"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

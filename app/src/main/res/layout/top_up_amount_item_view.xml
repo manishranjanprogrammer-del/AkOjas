@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_5dp"
+    android:layout_gravity="center"
+    >
+    <TextView
+        android:id="@+id/top_up_price_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="₹200"
+        android:textColor="@drawable/text_selector_for_primary_bg"
+        android:gravity="center"
+        android:background="@drawable/bg_button_selector_orange_gray"
+        android:paddingVertical="@dimen/dimen_8dp"
+        android:textSize="@dimen/tv_size_18"/>
+
+</LinearLayout>

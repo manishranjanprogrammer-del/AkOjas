@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/chat_bg"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/chatContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnChatAgain">
+
+    <ListView
+        android:id="@+id/listViewMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvWaitMsg"
+        android:layout_alignParentTop="true"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:padding="0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/message" />
+
+    <TextView
+        android:id="@+id/tvWaitMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relSendMessage"
+        android:layout_marginStart="@dimen/margin_xMedium"
+        android:autoLink="all"
+        android:background="@drawable/bg_chat_white"
+        android:minWidth="@dimen/margin_xXlarge"
+        android:padding="7dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_size_15"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/relSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
+
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/message_input_shape"
+            android:hint="@string/say_something"
+            android:imeOptions="actionSend"
+            android:maxHeight="100dp"
+            android:maxLength="200"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/tv_size_14" />
+
+        <RelativeLayout
+            android:id="@+id/buttonSend"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/circle_orange"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_send" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnChatAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:background="@color/colorOrangeDark"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:text="@string/chat_again"/>
+
+</RelativeLayout>

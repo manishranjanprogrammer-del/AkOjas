@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Astrosage" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="actionBarItemBackground">@drawable/selectable_background_astrosage</item>-->
+        <!-- <item name="popupMenuStyle">@style/PopupMenu.Astrosage</item>-->
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:colorControlHighlight">@color/appRippleEffectColor</item>
+
+        <item name="spinnerStyle">@style/my_custom_spinner</item>
+        <item name="spinnerDropDownItemStyle">@android:style/Widget.DropDownItem.Spinner</item>
+        <!--<item name="spinnerItemStyle">@android:style/Widget.TextView.SpinnerItem</item>-->
+
+        <item name="android:editTextStyle">@style/Theme.App.Base</item>
+        <!-- <item name="dropDownListViewStyle">@style/DropDownListView.Astrosage</item>-->
+        <!--<item name="actionBarTabStyle">@style/ActionBarTabStyle.Astrosage</item>-->
+        <!--<item name="actionDropDownStyle">@style/DropDownNav.Astrosage</item>-->
+        <!-- <item name="actionBarStyle">@style/ActionBar.Solid.Astrosage</item>-->
+        <item name="actionModeBackground">@color/ColorPrimary</item>
+        <!--<item name="actionModeSplitBackground">@drawable/cab_background_bottom_astrosage</item>-->
+        <!--<item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Astrosage</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarHukumTheme</item>-->
+        <!-- Light.DarkActionBar specific -->
+        <!-- <item name="actionBarWidgetTheme">@style/Theme.Astrosage.Widget</item>-->
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="android:textViewStyle">@style/custom_textview</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:ratingBarStyle">@style/myRatingBarSmall</item>
+        <item name="android:statusBarColor" >@color/statusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- <item name="windowActionBar">false</item>
+         <item name="elevation">0dp</item>
+         <item name="android:shadowColor">@color/white</item>
+         <item name="windowNoTitle">true</item>-->
+    </style>
+
+    <style name="Theme.Astrosage.Custom" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlHighlight">@color/appRippleEffectColor</item>
+        <item name="spinnerStyle">@style/my_custom_spinner</item>
+        <item name="spinnerDropDownItemStyle">@android:style/Widget.DropDownItem.Spinner</item>
+        <item name="android:editTextStyle">@style/Theme.App.Base</item>
+        <item name="actionModeBackground">@color/ColorPrimary</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
+        <item name="android:windowBackground">@color/light_grey</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:ratingBarStyle">@style/myRatingBarSmall</item>
+        <item name="android:statusBarColor" >@color/statusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="AppTheme.NoActionBar" >
+        <item name="windowActionBar">false</item>
+        <item name="elevation">0dp</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="custom_textview" parent="android:Widget.TextView">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="custom_button" parent="android:Widget.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="DefaultNumberPickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/black</item>
+    </style>
+
+    <!--<style name="ActionBar.Solid.Astrosage" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/ab_solid_astrosage</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_astrosage</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_astrosage</item>
+        <item name="progressBarStyle">@style/ProgressBar.Astrosage</item>
+    </style>-->
+
+    <!--<style name="ActionBar.Transparent.Astrosage" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@drawable/ab_transparent_astrosage</item>
+        <item name="progressBarStyle">@style/ProgressBar.Astrosage</item>
+    </style>-->
+
+    <!--  <style name="PopupMenu.Astrosage" parent="@style/Widget.AppCompat.ListPopupWindow">
+          <item name="android:popupBackground">@drawable/menu_dropdown_panel_astrosage</item>
+      </style>-->
+
+    <!-- <style name="DropDownListView.Astrosage" parent="@style/Widget.AppCompat.ListView.DropDown">
+         <item name="android:listSelector">@drawable/selectable_background_astrosage</item>
+     </style>-->
+
+    <!--<style name="ActionBarTabStyle.Astrosage" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_astrosage</item>
+    </style>-->
+
+    <!-- <style name="DropDownNav.Astrosage" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
+         <item name="android:background">@drawable/spinner_background_ab_astrosage</item>
+         <item name="android:popupBackground">@drawable/menu_dropdown_panel_astrosage</item>
+         <item name="android:dropDownSelector">@drawable/selectable_background_astrosage</item>
+     </style>-->
+
+    <!-- <style name="ProgressBar.Astrosage" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+         <item name="android:progressDrawable">@drawable/progress_horizontal_astrosage</item>
+     </style>-->
+
+    <!-- <style name="ActionButton.CloseMode.Astrosage" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
+         <item name="android:background">@drawable/btn_cab_done_astrosage</item>
+     </style>-->
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <!-- <style name="Theme.Astrosage.Widget" parent="@style/Theme.AppCompat">
+         <item name="popupMenuStyle">@style/PopupMenu.Astrosage</item>
+         <item name="dropDownListViewStyle">@style/DropDownListView.Astrosage</item>
+     </style>-->
+
+    <style name="spinner_style" parent="Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="background">@drawable/rect_rounded_image</item>
+        <item name="android:background">@drawable/rect_rounded_image</item>
+        <item name="android:popupBackground">#ffcccc</item>
+        <item name="android:divider">@color/black</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:dropDownSelector">@android:color/darker_gray</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">false</item>
+        <item name="android:scrollbarTrackVertical">@android:color/darker_gray</item>
+    </style>
+
+    <style name="EditTextStyle2" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">1dip</item>
+    </style>
+
+    <!--<style name="ProgressBarHukumTheme" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/hukumtheme_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/hukumtheme_progress_indeterminate_horizontal_holo_light
+        </item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>-->
+    <!-- <style name="toolbar_item_style">
+         <item name="android:theme">@style/toolbar_item_theme</item>
+         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+     </style>
+ -->
+
+    <!--<style name="toolbar_item_theme">
+        <item name="colorControlHighlight">@color/light_gray</item>
+    </style>-->
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="SelectableItemTheme">
+        <item name="android:colorControlHighlight">@color/ColorPrimary</item>
+    </style>
+
+    <style name="title_style_new">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="title_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="title_style_color">
+        <item name="android:textColor">@color/color_title</item>
+    </style>
+
+    <style name="subheading_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="delivery_instant_style">
+        <item name="android:textColor">@color/LightBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="content_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="content_style_big_horscope">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/color_title</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="myTabTextStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="my_custom_spinner" parent="@android:style/Widget.Spinner">
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:divider">@color/light_gray</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="Theme.App.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/ColorPrimary</item>
+        <item name="android:textColorSecondary">@color/ColorPrimary</item>
+        <item name="colorControlActivated">@color/ColorPrimary</item>
+        <item name="colorControlHighlight">@color/ColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:textSelectHandle">@drawable/ic_keyboard_arrow_up_black</item>
+        <item name="android:textSelectHandleLeft">@drawable/ic_keyboard_arrow_left_black</item>
+        <item name="android:textSelectHandleRight">@drawable/ic_keyboard_arrow_right_black</item>
+        <item name="android:textCursorDrawable">@drawable/custom_cursor_file</item>
+        <item name="android:textColorHighlight">@color/ColorPrimary</item>
+        <!--<item name="android:textColorHint">@color/ColorPrimary</item>-->
+        <item name="android:backgroundTint">@color/ColorPrimary</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="buttonTint">@color/colorPrimary_day_night</item>
+        <item name="text_color">@color/black</item>
+    </style>
+
+    <style name="MyCheckBoxGoldPlan" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/subs_gold_plan</item>
+        <item name="colorControlActivated">@color/subs_gold_plan</item>
+    </style>
+
+    <style name="MyCheckBoxSilverPlan" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/subs_sky_blue</item>
+        <item name="colorControlActivated">@color/subs_sky_blue</item>
+    </style>
+
+    <style name="MyCheckBoxPlatinumPlan" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/platinum_color</item>
+        <item name="colorControlActivated">@color/platinum_color</item>
+    </style>
+
+    <style name="MyDialogeButton">
+        <!-- Customize your theme here. -->
+        <item name="colorControlHighlight">@color/colorPrimary_day_night</item>
+        <item name="colorButtonNormal">@color/colorPrimary_day_night</item>
+        <item name="colorAccent">@color/colorPrimary_day_night</item>
+
+
+    </style>
+
+    <style name="buttonstyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimary_day_night</item>
+        <item name="colorButtonNormal">@color/colorPrimary_day_night</item>
+        <item name="colorAccent">@color/colorPrimary_day_night</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_marginTop">@dimen/topPaddingButton</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_marginBottom">@dimen/buttonmarginBottom</item>
+    </style>
+
+    <style name="cogni_buttonstyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlHighlight">@color/ColorPrimary</item>
+        <item name="colorButtonNormal">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- <style name="buttonstylesilverplan" parent="Theme.AppCompat.Light">
+         <item name="android:textColor">@color/white</item>
+         <item name="colorControlHighlight">@color/toolbar_color_basic_plan</item>
+         <item name="colorButtonNormal">@color/ColorPrimary</item>
+         <item name="colorAccent">@color/toolbar_color_basic_plan</item>
+         <item name="android:layout_marginTop">@dimen/standard_top_margin</item>
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_height">@dimen/button_height</item>
+         <item name="textAllCaps">false</item>
+         <item name="android:textSize">18dp</item>
+         <item name="android:layout_marginBottom">@dimen/buttonmarginBottom</item>
+     </style>-->
+
+    <!--<style name="buttonstylebasicplan" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlHighlight">@color/ColorPrimary</item>
+        <item name="colorButtonNormal">@color/toolbar_color_basic_plan</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="android:layout_marginTop">@dimen/standard_top_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_marginBottom">@dimen/buttonmarginBottom</item>
+    </style>-->
+
+    <style name="SelectableItemBackgroundMenus" parent="Widget.AppCompat.Toolbar">
+        <item name="colorControlHighlight">@color/dark_yellow</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="colorControlNormal">@color/color_title</item>
+    </style>
+
+    <style name="SelectableItemBackgroundMenusNotes" parent="Widget.AppCompat.Toolbar">
+        <item name="colorControlHighlight">@color/ColorPrimary</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="SelectableItemBackgroundMenus1" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlHighlight">@color/light_gray</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="colorControlNormal">@color/black</item>
+    </style>
+
+    <style name="Spinnerwithunderline" parent="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:theme">@style/ActionBarThemeOverlay</item>
+    </style>
+
+    <style name="ActionBarThemeOverlay" parent="">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlHighlight">@color/currentThemeColor</item>
+        <item name="colorAccent">@color/currentThemeColor</item>
+        <item name="background">@color/backgroundColorView</item>
+    </style>
+
+    <style name="laymatchingresulttextviewstyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textSize">@dimen/matchingScreenContentText</item>
+    </style>
+
+    <style name="Autocomplete" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:background">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/ColorPrimary</item>
+    </style>
+
+    <style name="selectedListRippleTest">
+        <item name="colorControlHighlight">@color/ColorPrimary</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+    <!--<style name="AppCompatAlertDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog.MinWidtht">
+        <item name="colorAccent">@color/ColorPrimaryDark</item>
+        &lt;!&ndash;title and message color&ndash;&gt;
+        <item name="android:textColorPrimary">@android:color/black</item>
+        &lt;!&ndash;dialog background&ndash;&gt;
+        <item name="android:windowBackground">@color/white</item>
+
+        <item name="android:buttonStyle">@style/alertDialogButtonStyle</item>
+    </style>
+    &lt;!&ndash;@Tejinder Singh  Give AlertDialog Button Error in hindi font
+    This style added for timer Button Because cannot able to set hindi font without it&ndash;&gt;
+    <style name="alertDialogButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/ColorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/ColorPrimary</item>
+        <item name="colorButtonNormal">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_marginTop">@dimen/topPaddingButton</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_marginBottom">@dimen/buttonmarginBottom</item>
+
+    </style>-->
+
+    <style name="AppCompatAlertDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary_day_night</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!--dialog background-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/bg_card_view_color</item>
+        <item name="buttonStyle">@style/alertDialogButtonStyle</item>
+
+    </style>
+
+
+    <style name="alertDialogButtonStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/colorPrimary_day_night</item>
+        <item name="colorControlHighlight">@color/colorPrimary_day_night</item>
+        <item name="colorButtonNormal">@color/colorPrimary_day_night</item>
+        <item name="colorAccent">@color/colorPrimary_day_night</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_marginTop">@dimen/topPaddingButton</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_marginBottom">@dimen/buttonmarginBottom</item>
+
+    </style>
+
+    <style name="CustomRatingBar" parent="Base.Widget.AppCompat.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/manual_ratingbar</item>
+        <item name="android:progressBackgroundTint">@color/black</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@color/black_87</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
+    <style name="MSV_ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingLeft">@dimen/search_icon_padding</item>
+        <item name="android:paddingRight">@dimen/search_icon_padding</item>
+    </style>
+
+    <style name="buttonstylecalender" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlHighlight">@color/search_layover_bg</item>
+        <item name="colorButtonNormal">@color/search_layover_bg</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_marginTop">@dimen/topPaddingButton</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_marginBottom">@dimen/buttonmarginBottom</item>
+    </style>
+
+    <style name="material_search_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--Theme.Holo.Dialog-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/color_title</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"></style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="colorControlNormal">@color/color_title</item>
+    </style>
+
+    <style name="MaterialSearchViewStyle">
+        <item name="searchBackground">@color/backgroundColor</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:hint">@string/hint_search</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="sliderHoloStyle">
+        <item name="android:track">@drawable/grey_bg</item>
+        <item name="range1">@drawable/grey_bg</item>
+        <item name="range2">@drawable/orange_bg</item>
+        <!--<item name="android:thumb">@drawable/multislider_scrubber_control_selector_holo_light</item>-->
+        <item name="android:thumb">@drawable/seek_bar_thumb_icon</item>
+        <item name="android:background">#0000</item>
+    </style>
+
+    <style name="transparentdialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <!--Varta Style-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimaryDark</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="OtpEdittext" parent="android:Widget.EditText">
+        <item name="android:layout_width">@dimen/dimen_50dp</item>
+        <item name="android:layout_height">@dimen/dimen_50dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_otp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/drawable_otp_box_bg</item>
+    </style>
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="content_textview" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/hint_text_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="singleLine">true</item>
+        <item name="alpha">9</item>
+    </style>
+
+    <style name="buttonBackground" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@drawable/bg_button_orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="toolbar_title" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="singleLine">true</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="subheadingtextview" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/no_change_white</item>
+        <item name="android:textColorPrimary">@color/no_change_white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:drawablePadding">12dp</item>
+    </style>
+
+    <!--<style name="myRatingBar" parent="@android:style/Widget.RatingBar.Small">
+        <item name="android:minHeight">14dip</item>
+        <item name="android:maxHeight">14dip</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>-->
+
+    <style name="myRatingBarLarge" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_large</item>
+        <item name="android:indeterminateDrawable">@drawable/ratingbar_large</item>
+        <item name="android:isIndicator">false</item>
+    </style>
+
+    <style name="myRatingBarSmall" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_smallest</item>
+        <item name="android:indeterminateDrawable">@drawable/ratingbar_smallest</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">10dip</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/primary_orange</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+    <!-- <style name="subheading_style">
+         <item name="android:textColor">@color/black</item>
+         <item name="android:textSize">20sp</item>
+         <item name="android:singleLine">false</item>
+     </style>
+
+     <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+         <item name="colorControlNormal">@color/colorPurple</item>
+         <item name="colorControlActivated">@color/colorPurple</item>
+     </style>
+
+     <style name="ActionBarThemeOverlay" parent="">
+         <item name="colorControlNormal">@android:color/darker_gray</item>
+         <item name="colorControlHighlight">@color/colorPurple</item>
+         <item name="colorAccent">@color/colorPurple</item>
+     </style>
+
+     <style name="Theme.App.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+         <item name="colorControlNormal">@color/colorPurple</item>
+         <item name="android:textColorSecondary">@color/colorPurple</item>
+         <item name="colorControlActivated">@color/colorPurple</item>
+         <item name="colorControlHighlight">@color/colorPurple</item>
+         <item name="android:textSize">16sp</item>
+         <item name="android:cursorVisible">true</item>
+         <item name="android:textSelectHandle">@drawable/ic_back_arrow</item>
+         <item name="android:textSelectHandleLeft">@drawable/ic_keyboard_arrow_left_black</item>
+         <item name="android:textSelectHandleRight">@drawable/ic_keyboard_arrow_right_black</item>
+         <item name="android:textCursorDrawable">@drawable/custom_cursor_file</item>
+         <item name="android:textColorHighlight">@color/colorPurple</item>
+         &lt;!&ndash;<item name="android:textColorHint">@color/ColorPrimary</item>&ndash;&gt;
+         <item name="android:backgroundTint">@color/colorPurple</item>
+     </style>
+
+     <style name="buttonstyle" parent="ThemeOverlay.AppCompat.Light">
+         <item name="android:textColor">@color/white</item>
+         <item name="textAllCaps">false</item>
+         <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+         &lt;!&ndash;<item name="background">@drawable/bg_button_blue</item>&ndash;&gt;
+         <item name="android:layout_width">@dimen/button_width</item>
+         <item name="android:layout_height">@dimen/button_height_normal</item>
+         <item name="android:textSize">@dimen/font_xlarge</item>
+     </style>
+
+     <style name="SelectableItemBackground">
+         <item name="android:background">?attr/selectableItemBackground</item>
+     </style>
+
+     <style name="content_style">
+         <item name="android:textColor">@color/black</item>
+         <item name="android:textSize">18sp</item>
+     </style>-->
+
+    <!--  <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+          <item name="android:background">?attr/selectableItemBackground</item>
+          <item name="android:textColor">@color/color_title</item>
+          <item name="android:textSize">20sp</item>
+      </style>-->
+
+    <!-- <style name="AppCompatAlertDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog">
+         <item name="colorAccent">@color/edit_text_color</item>
+         &lt;!&ndash;title and message color&ndash;&gt;
+         <item name="android:textColorPrimary">@android:color/black</item>
+         &lt;!&ndash;dialog background&ndash;&gt;
+         <item name="android:windowNoTitle">true</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:windowBackground">@android:color/white</item>
+         <item name="buttonStyle">@style/alertDialogButtonStyle</item>
+
+     </style>-->
+
+    <!-- <style name="alertDialogButtonStyle" parent="ThemeOverlay.AppCompat.Light">
+         <item name="android:textColor">@color/colorPurple</item>
+         <item name="colorControlHighlight">@color/light_purple</item>
+         <item name="colorButtonNormal">@color/colorPurple</item>
+         <item name="colorAccent">@color/light_purple</item>
+         <item name="textAllCaps">false</item>
+         <item name="android:layout_marginTop">@dimen/topPaddingButton</item>
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_height">@dimen/button_height</item>
+         <item name="android:textSize">16dp</item>
+         <item name="android:layout_marginBottom">@dimen/buttonmarginBottom</item>
+
+     </style>-->
+
+    <!--<style name="EditTextStyle2" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">1dip</item>
+    </style>-->
+
+    <style name="profile_txt" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+    <style name="buttonWhiteBackground" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@drawable/bg_button_white</item>
+        <item name="android:textSize">@dimen/tv_size_20</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="Theme.UserDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">97%</item>
+        <item name="android:windowMinWidthMinor">97%</item>
+    </style>
+
+    <style name="OtpEdittext_omf" parent="android:Widget.EditText">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/light_gray_btn</item>
+    </style>
+
+    <style name="buttonBackgroundTrueCaller" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@drawable/bg_button_truecaller</item>
+        <item name="android:textSize">@dimen/tv_size_18</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/tv_size_24</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/tv_size_24</item>
+    </style>
+    <style name="myRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_small</item>
+        <item name="android:indeterminateDrawable">@drawable/ratingbar_small</item>
+        <item name="android:minHeight">14dip</item>
+        <item name="android:maxHeight">@dimen/rating_bar_size</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="content_textview_live" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/tv_size_13</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="singleLine">true</item>
+        <item name="alpha">9</item>
+    </style>
+
+    <style name="buttonBackgroundLive" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@drawable/bg_button_orange_min</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="buttonBackgroundBorder" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@drawable/bg_button_orange_border</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="MyBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MYBottomSheetStyle</item>
+    </style>
+
+    <style name="MYBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="radio_button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">@dimen/dimen_20dp</item>
+        <item name="android:layout_marginTop">@dimen/dimen_10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="buttonTint">@color/orange_color</item>
+    </style>
+
+    <style name="DialogTransformAnimation" parent="@android:style/Theme.Panel">
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+    </style>
+    <style name="Theme.Astrosage.DatePickerDialogTheme" parent="Theme.Astrosage">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/gray</item>
+        <item name="android:windowBackground">@color/light_grey</item>
+        <item name="android:itemBackground">@color/backgroundColor</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="android:Widget.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+    <style name="Theme.Astrosage.ActivityDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:textColorSecondary">@color/gray</item>
+        <item name="android:windowBackground">@color/light_grey</item>
+        <item name="android:itemBackground">@color/backgroundColor</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+    <style name="Theme.Astrosage.ActivityDialog_trans" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:textColorSecondary">@color/gray</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:itemBackground">@android:color/transparent</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

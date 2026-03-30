@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvChooseOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_output"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_screen" />
+
+                <Spinner
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_screen" />
+
+                <Spinner
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvChartStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/chart_style"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupChartStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioNorth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingStart="16dp"
+                    android:text="@string/north"
+                    android:textColor="@color/black"
+                    android:theme="@style/MyCheckBox" />
+
+                <RadioButton
+                    android:id="@+id/radioSouth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:textColor="@color/black"
+                    android:paddingLeft="16dp"
+                    android:text="@string/south"
+                    android:theme="@style/MyCheckBox" />
+
+                <RadioButton
+                    android:id="@+id/radioEast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:textColor="@color/black"
+                    android:paddingLeft="16dp"
+                    android:text="@string/east"
+                    android:theme="@style/MyCheckBox" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvMonthType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_information_outline_grey600_24dp"
+                android:drawablePadding="5dp"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/month_type"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupMonthType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioAmanta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/amanta"
+                    android:textColor="@color/black"
+                    android:theme="@style/MyCheckBox" />
+
+                <RadioButton
+                    android:id="@+id/radioPurnimant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:textColor="@color/black"
+                    android:text="@string/purnimant"
+                    android:theme="@style/MyCheckBox" />
+
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/tvDarkMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:text="@string/dark_mode"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold" />
+                <RadioGroup
+                    android:id="@+id/rg_select_dark_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RadioButton
+                        android:id="@+id/rb_dark_mode_off"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minWidth="@dimen/min_height"
+                        android:minHeight="@dimen/min_height"
+                        android:paddingStart="16dp"
+                        android:text="@string/_off"
+                        android:textColor="@color/black"
+                        android:theme="@style/MyCheckBox"/>
+                    <RadioButton
+                        android:id="@+id/rb_dark_mode_on"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/min_height"
+                        android:minHeight="@dimen/min_height"
+                        android:textColor="@color/black"
+                        android:paddingStart="16dp"
+                        android:text="@string/on"
+                        android:theme="@style/MyCheckBox"/>
+                    <RadioButton
+                        android:id="@+id/rb_dark_mode_system_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/min_height"
+                        android:minHeight="@dimen/min_height"
+                        android:textColor="@color/black"
+                        android:paddingStart="16dp"
+                        android:text="@string/use_device_setting"
+                        android:theme="@style/MyCheckBox"/>
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLanguage"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:gravity="center_vertical"
+                        android:text="@string/language"
+                        android:textSize="@dimen/input_screen_text_size" />
+
+                    <Spinner
+                        android:id="@+id/ics_spinner_lang"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="0dp"
+
+                        android:layout_height="48dp"
+                        android:layout_weight="0.60"
+                        android:theme="@style/ActionBarThemeOverlay" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/tvAyanamsa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:gravity="center_vertical"
+                        android:text="@string/ayanamsa"
+                        android:textSize="@dimen/input_screen_text_size" />
+
+                    <Spinner
+                        android:id="@+id/ics_spinner_ayanOptions"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/custom_btn_height"
+
+                        android:layout_weight="0.60"
+                        android:theme="@style/ActionBarThemeOverlay" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkBoxUrNePl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:minWidth="@dimen/min_height"
+                android:minHeight="@dimen/min_height"
+                android:textColor="@color/black"
+                android:text="@string/dont_show_ur_np_pl"
+                android:theme="@style/MyCheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkBoxCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:minWidth="@dimen/min_height"
+                android:textColor="@color/black"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/use_custome_calendar"
+                android:theme="@style/MyCheckBox" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_call_recording"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disable_call_recording"
+                    android:textSize="@dimen/title_text_size" />
+                <TextView
+                    android:id="@+id/tv_call_recording_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="@string/do_you_want_to_permanently_disable_recording_nif_disable_you_will_not_able_to_enable_it_again"
+                    android:textSize="@dimen/dimen_12sp"/>
+
+                <RadioGroup
+                    android:id="@+id/diable_call_recording_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rb_disable_call_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingStart="16dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/black"
+                    android:theme="@style/MyCheckBox"/>
+                <RadioButton
+                    android:id="@+id/rb_disable_call_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:textColor="@color/black"
+                    android:paddingStart="16dp"
+                    android:text="@string/no"
+                    android:theme="@style/MyCheckBox"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    style="@style/buttonstyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:theme="@style/buttonstyle"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/buttonDefault"
+                    style="@style/buttonstyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/set_default_setting1"
+                    android:theme="@style/buttonstyle" />
+
+                <Button
+                    android:id="@+id/buttonSave"
+                    style="@style/buttonstyle"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:text="@string/save"
+                    android:theme="@style/buttonstyle" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/advLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+
+</LinearLayout>

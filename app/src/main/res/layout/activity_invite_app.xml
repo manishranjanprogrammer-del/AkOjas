@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorView"
+    tools:context=".ui.act.InviteAppActivity">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/ivTintColorDN" />
+
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/refer_friends_earn"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_size_20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+
+    <TextView
+        android:id="@+id/txtReferAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:paddingStart="15dp"
+        android:paddingTop="@dimen/dimen_20dp"
+        android:paddingBottom="@dimen/dimen_15dp"
+        android:text="@string/for_you_for_them"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/frImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+    <FrameLayout
+        android:id="@+id/frImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/dimen_20dp"
+        android:paddingEnd="@dimen/dimen_5dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintBottom_toBottomOf="@+id/txtReferAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtReferAmount"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeading">
+
+        <ImageView
+            android:id="@+id/ivTopImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="-50dp"
+            android:src="@drawable/friends_transfer_image" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:background="@drawable/light_gray_rect_less_rounded"
+        android:backgroundTint="@color/mainScreenBackground"
+        android:paddingHorizontal="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_15dp"
+        android:visibility="visible"
+        android:paddingBottom="@dimen/dimen_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtReferAmount">
+
+        <TextView
+            android:id="@+id/txtSubHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/how_it_works"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/dimen_5dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:background="@drawable/circle_border_chat_input_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSubHead">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_5dp"
+                app:tint="@color/ivTintColorDN"
+                android:src="@drawable/share_arrow_icon" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtSubHead1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/share_the_app_b_with_your_friends_b"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/frShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frShare"
+            app:layout_constraintTop_toTopOf="@+id/frShare" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/frShare"
+            app:layout_constraintStart_toStartOf="@+id/frShare"
+            app:layout_constraintTop_toBottomOf="@+id/frShare" />
+
+        <FrameLayout
+            android:id="@+id/frEarn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/circle_border_chat_input_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_5dp"
+                app:tint="@color/ivTintColorDN"
+                android:src="@drawable/money_icon" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtSubHead2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/get_after_your_friend_first_transaction"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/frEarn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frEarn"
+            app:layout_constraintTop_toTopOf="@+id/frEarn" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/frEarn"
+            app:layout_constraintStart_toStartOf="@+id/frEarn"
+            app:layout_constraintTop_toBottomOf="@+id/frEarn" />
+
+        <FrameLayout
+            android:id="@+id/frConsult"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/circle_border_chat_input_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_5dp"
+                app:tint="@color/ivTintColorDN"
+                android:src="@drawable/calling_icon_" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtSubHead3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/your_friend_will_also_get_after_their_first_paid_consultation"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/frConsult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frConsult"
+            app:layout_constraintTop_toTopOf="@+id/frConsult" />
+
+        <LinearLayout
+            android:id="@+id/llShareViaWhatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/bg_button_yellow_less_round"
+            android:gravity="center"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/frConsult">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgWhatsApp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/whatsapp" />
+
+                <TextView
+                    android:id="@+id/tv_shareviaWhatapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:text="@string/share_via_whatsapp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:drawableTint="@color/white"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llShareVialink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:background="@drawable/bg_button_yellow_less_round"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintTop_toBottomOf="@+id/llShareViaWhatsapp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/shareViaLink"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/share_rect_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:text="@string/share_via_app_link"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:drawableTint="@color/white"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clShareView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:background="@drawable/light_gray_rect_less_rounded"
+        android:backgroundTint="@color/backgroundColorView"
+        android:paddingHorizontal="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_15dp"
+        android:visibility="invisible"
+        android:paddingBottom="@dimen/dimen_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clMainView">
+
+        <ImageView
+            android:id="@+id/imageViewAi"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            app:tint="@color/colorPrimary_day_night"
+            android:src="@drawable/splash_icon_astrosage_ai_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_refer_a_friend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/congrats_you_recived_refer_amount"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toStartOf="@+id/element_icon"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAi" />
+        <TextView
+            android:id="@+id/txt_refer_a_friend_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/refer_amount_txt"
+            android:textColor="@color/colorPrimary_day_night"
+            android:textSize="36sp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/element_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_refer_a_friend" />
+
+        <ImageView
+            android:id="@+id/element_icon"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:src="@drawable/anouncement_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAi"
+            app:layout_constraintStart_toEndOf="@+id/txt_refer_a_friend"
+            tools:layout_editor_absoluteY="15dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

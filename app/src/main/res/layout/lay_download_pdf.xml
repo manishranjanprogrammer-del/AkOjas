@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="@dimen/activity_horizontal_margin">
+
+
+    <!--<TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_to_download_kundli"
+        style="@style/subheading_style"
+        android:alpha=".7"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/desc_download_kundli"
+        style="@style/subheading_style"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+        android:textSize="16dp"/>
+
+    <Button
+        android:id="@+id/btnDownloadPDF"
+        style="@style/buttonstyle"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        android:text="@string/download_pdf"
+        android:theme="@style/buttonstyle"
+        android:drawableLeft="@drawable/ic_file_download_white_24dp"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:drawableTint="@color/white"
+        android:layout_width="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/tvOrText"
+        style="@style/subheading_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/min_height"
+        android:minHeight="@dimen/min_height"
+        android:gravity="center"
+        android:text="@string/text_or"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnOrderPrintedKundli"
+        style="@style/buttonstyle"
+        android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        android:text="@string/text_order_printed_maha_kundli"
+        android:theme="@style/buttonstyle"
+        android:drawableLeft="@drawable/ic_shopping_cart_white1"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:drawableTint="@color/white"
+        android:layout_width="wrap_content"
+        android:padding="16dp"/>-->
+
+    <!-- Free PDF Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/pdf_page_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_50_pages"
+            android:textSize="@dimen/tv_size_22"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            />
+
+        <TextView
+            android:id="@+id/pdf_download_msg_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/janam_kundli_absolutely_free"
+            android:textSize="@dimen/tv_size_20"
+            android:textColor="@color/black"
+            android:alpha=".7"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <LinearLayout
+            android:id="@+id/btnDownloadPDF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_border_orange"
+            android:padding="@dimen/dimen_8dp"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginTop="30dp"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_download_pdf"
+                android:padding="@dimen/dimen_1dp"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/colorPrimary_day_night"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/download_pdf"
+                android:textAllCaps="false"
+                android:textSize="@dimen/tv_size_20"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/font_auto_lay_download_pdf_2"
+                android:textColor="@color/colorPrimary_day_night"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shadow_gray_outline" />
+
+    <!-- Brihat Kundli Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_250_coloured_pages"
+            android:textSize="@dimen/tv_size_22"
+            android:id="@+id/font_auto_lay_download_pdf_3"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_7dp"
+            android:text="@string/brihat_kundlli"
+            android:textSize="@dimen/tv_size_20"
+            android:textColor="@color/black"
+            android:alpha=".7"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Features -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_weekly_love" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/love"
+                    android:textSize="@dimen/dimen_18sp"
+                    android:alpha=".7"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_marriage_knot" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marriage_title"
+                    android:textSize="@dimen/dimen_18sp"
+                    android:alpha=".7"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_raj_yog" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rajyoga"
+                    android:textSize="@dimen/dimen_18sp"
+                    android:alpha=".7"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnOrderPrintedKundli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/order_now"
+            android:padding="@dimen/dimen_8dp"
+            android:textSize="@dimen/tv_size_20"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_border_orange"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

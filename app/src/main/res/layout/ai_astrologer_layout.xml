@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/upper_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border_gray"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="6dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/progressBarIV"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/load_more_btn"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.25">
+
+            <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+                android:id="@+id/ri_profile_img"
+                android:layout_width="88dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_profile_view" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/verified_two_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="120dp"
+                android:src="@drawable/verified_tick"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="3.5"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rlAstroName"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/astrologer_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxWidth="160dp"
+                        android:maxLines="1"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_18"
+                        android:text="Jasmeet"/>
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/verified_img"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@+id/astrologer_name_txt"
+                        android:layout_alignTop="@id/astrologer_name_txt"
+                        android:layout_alignBottom="@id/astrologer_name_txt"
+                        android:src="@drawable/verified_tick" />
+
+                    <!--  <ImageView
+                    android:id="@+id/online_offline_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/astrologer_name_txt"
+                    android:src="@drawable/green" />-->
+
+                    <!--   <ImageView
+                    android:id="@+id/bookmark_img"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_menu_more" />-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlRatingAndReview"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="right|center"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center|right">
+
+                        <ImageView
+                            android:id="@+id/rating_star"
+                            android:layout_width="15dp"
+                            android:layout_height="16dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginRight="2dp"
+                            android:src="@drawable/rating_star"
+                            android:layout_gravity="center"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/rating_txt"
+                            style="@style/content_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/rating_star"
+                            android:ellipsize="end"
+                            android:maxWidth="60dp"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="4.5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_size_15"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/rating_txt_total"
+                            style="@style/content_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxWidth="60dp"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="(220)"
+                            android:textColor="@color/hint_text_color"
+                            android:textSize="11sp"
+                            android:gravity="bottom"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlexpertiseline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="150dp">
+
+                    <TextView
+                        android:id="@+id/vedic_astrologer_txt"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:ellipsize="end"
+                        android:maxWidth="180dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:text="Vedic, Numerology Vedic, Numerology"
+                        android:textSize="@dimen/tv_size_13" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/comment"
+                        android:layout_width="13dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/comments" />
+
+                    <!--<TextView
+                        android:id="@+id/rating_txt_total"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/comment"
+                        android:ellipsize="end"
+                        android:maxWidth="60dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="220"
+                        android:textSize="@dimen/tv_size_12" />-->
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="150dp">
+
+                    <TextView
+                        android:id="@+id/language_txt"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:ellipsize="end"
+                        android:gravity="left"
+                        android:maxWidth="180dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:text="Hindi, English, Hindi, English,Hindi, English"
+                        android:textSize="@dimen/tv_size_13" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/rating_tag"
+                        android:layout_width="13dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/followers" />
+
+                    <TextView
+                        android:id="@+id/followersCountTV"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toEndOf="@+id/rating_tag"
+                        android:ellipsize="end"
+                        android:maxWidth="60dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="4.5"
+                        android:textSize="@dimen/tv_size_12" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/new_user"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:singleLine="true"
+                        android:text="FREE"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_15"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/ruppee_sign"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/new_user"
+                        android:text="@string/rs_sign"
+                        android:textSize="@dimen/tv_size_15"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/actual_question_price_txt"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/ruppee_sign"
+                        android:singleLine="true"
+                        android:text="100/min"
+                        android:textSize="@dimen/tv_size_15"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/question_price_txt"
+                        style="@style/content_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/actual_question_price_txt"
+                        android:text="1234"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_15"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tetViewExpertise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:text="Vedic, Numerology Vedic, Numerology"
+                    android:textSize="@dimen/tv_size_14"
+                    android:visibility="visible"
+                    android:layout_toLeftOf="@+id/chat_now_btn" />
+
+                <TextView
+                    android:id="@+id/call_now_btn"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:background="@drawable/bg_button_yellow"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:singleLine="true"
+                    android:text="@string/call"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_15"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tetViewExpertise"
+                    android:layout_toStartOf="@id/chat_now_btn"
+                    android:layout_marginRight="5dp"
+                    />
+                <TextView
+                    android:id="@+id/chat_now_btn"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:background="@drawable/bg_button_yellow"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:singleLine="true"
+                    android:text="@string/chat_now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_15"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tetViewExpertise"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="5dp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

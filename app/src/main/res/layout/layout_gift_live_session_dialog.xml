@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gift_layout"
+    android:backgroundTint="@color/black_one_half_transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_gravity="right"
+        android:contentDescription="Close"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:tint="@color/no_change_white"
+        android:src="@drawable/ic_cancel_black"
+        android:layout_marginRight="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dakshina"
+        android:textColor="@color/no_change_white"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gift_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnRecharge"
+            android:layout_width="98dip"
+            android:layout_height="@dimen/dimen_45dp"
+            android:background="@drawable/bg_button_orange"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:text="@string/title_recharge"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_14" />
+
+        <TextView
+            android:id="@+id/giftPriceTV"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_3dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/text_current_balance"
+            android:textColor="@color/colorPrimary_day_night"
+            android:textSize="@dimen/tv_size_13" />
+
+        <Button
+            android:id="@+id/btnSendGift"
+            android:layout_width="86dip"
+            android:layout_height="@dimen/dimen_45dp"
+            android:background="@drawable/bg_button_gray"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/btn_send"
+            android:textAllCaps="false"
+            android:textColor="@color/no_change_black"
+            android:textSize="@dimen/tv_size_14" />
+    </LinearLayout>
+</LinearLayout>

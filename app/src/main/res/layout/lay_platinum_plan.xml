@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/expiry_date_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_rounded_platinum"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvPlanExpiryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="PlatinumPlanFrag"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/Astrofeatureheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/upgrade_to_gold"
+                    android:textColor="#191919"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Astrofeaturesubheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Astrofeatureheading"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="2"
+                    android:paddingRight="60sp"
+                    android:text="@string/upgrade_to_gold_desc"
+                    android:textColor="#818181"
+                    android:textSize="12sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/plan_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Astrofeaturesubheading" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Bottom Layout remains anchored to the bottom -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phonePePaymentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/sectionColor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:visibility="visible">
+            <Spinner
+                android:id="@+id/spinnerApps"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:spinnerMode="dropdown"
+                android:layout_marginStart="@dimen/dimen_14dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible" />
+            <!-- Left: payment chooser (icon + label + arrow) -->
+            <LinearLayout
+                android:id="@+id/llPaymentChooser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/sectionColor"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:minHeight="40dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnStartSubsPayment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <!-- Hidden Spinner used to show choices -->
+
+
+                <ImageView
+                    android:id="@+id/ivSelectedAppIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="app icon"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/llSelectedAppName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtSelectedAppName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/pay_via"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSelectedAppName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivDropArrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="@dimen/dimen_5dp"
+                            android:contentDescription="open"
+                            android:src="@drawable/ic_arrow_down_24px"
+                            app:tint="@color/ivTintColorDN" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Right: Pay button -->
+            <Button
+                android:id="@+id/btnStartSubsPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_button_yellow"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_16"
+                android:layout_marginEnd="@dimen/dimen_24dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/llPaymentChooser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/llPaymentChooser"
+                app:layout_constraintTop_toTopOf="@+id/llPaymentChooser" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/buy_tv"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:background="@color/colorPrimary_day_night"
+            android:gravity="center"
+            android:paddingStart="5dip"
+            android:paddingEnd="5dip"
+            android:visibility="gone"
+            android:text="@string/buy_platinum_plan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_16"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:id="@+id/buy_disable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="#4C000000"/>
+
+    </FrameLayout>
+</LinearLayout>

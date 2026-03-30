@@ -1,0 +1,240 @@
+<sqlcountry>
+
+    <statement>
+        CREATE TABLE IF NOT EXISTS tblCountry (
+        id INTEGER PRIMARY KEY ,
+        countryName VARCHAR(70)
+        )
+    </statement>
+    <statement>INSERT INTO tblCountry VALUES(0,"Antigua Bar. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(1,"Afghanistan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(2,"Albania ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(3,"Algeria ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(4,"Andorra ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(5,"Angola ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(6,"Anguilla ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(7,"Argentina ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(8,"Armenia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(9,"Aruba ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(10,"Austria ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(11,"Australia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(12,"Azerbaijan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(13,"Azores ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(14,"Burkina Fasso ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(15,"Bosnia Herz. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(16,"Bahamas ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(17,"Bahrain ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(18,"Bangladesh ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(19,"Barbados ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(20,"Belarus ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(21,"Belgium ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(22,"Belize ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(23,"Benin ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(24,"Bermuda ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(25,"Bhutan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(26,"Bolivia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(27,"Botswana ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(28,"Brazil ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(29,"Brunei ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(30,"Bulgaria ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(31,"Burma ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(32,"Burundi ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(33,"Cen. Afr. Rep. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(34,"Canary Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(35,"Cape Verde ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(36,"Cambodia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(37,"Cameroon ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(38,"Canada ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(39,"Chad ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(40,"Channel Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(41,"Chile ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(42,"China ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(43,"Colombia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(44,"Comoros ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(45,"Congo ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(46,"Cook Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(47,"Costa Rica ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(48,"Croatia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(49,"Cuba ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(50,"Cayman Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(51,"Cyprus ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(52,"Czecho ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(53,"Dominican Rep. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(54,"Denmark ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(55,"Djibouti ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(56,"Dominica ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(57,"Eq. Guinea ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(58,"Ecuador ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(59,"Egypt ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(60,"El Salvador ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(61,"Estonia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(62,"Ethiopia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(63,"Faeroe Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(64,"Falkland Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(65,"Fiji ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(66,"Finland ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(67,"France ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(68,"Guinea-Bissau ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(69,"Greenland ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(70,"Gabon ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(71,"Gambia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(72,"Georgia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(73,"Germany ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(74,"Ghana ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(75,"Gibraltar ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(76,"Greece ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(77,"Grenada ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(78,"Guadeloupe ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(79,"Guam ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(80,"Guatemala ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(81,"Guinea ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(82,"Guyana ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(83,"Hong Kong ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(84,"Haiti ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(85,"Honduras ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(86,"Hungary ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(87,"Ivory Coast ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(88,"Isle of Man ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(89,"Iceland ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(90,"India ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(91,"Indonesia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(92,"Iran ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(93,"Iraq ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(94,"Ireland ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(95,"Israel ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(96,"Italy ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(97,"Jamaica ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(98,"Japan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(99,"Jordan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(100,"Kazakhstan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(101,"Kenya ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(102,"Kiribati ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(103,"Kuwait ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(104,"Laos ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(105,"Latvia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(106,"Libya ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(107,"Lebanon ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(108,"Lesotho ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(109,"Liberia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(110,"Liechtenstein ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(111,"Lithuania ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(112,"Luxembourg ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(113,"Macao ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(114,"Macedonia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(115,"Madagascar ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(116,"Madeira ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(117,"Malaysia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(118,"Maldives ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(119,"Mali ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(120,"Malta ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(121,"Marshall Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(122,"Martinique ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(123,"Mauritania ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(124,"Mauritius ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(125,"Mayotte ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(126,"Melila ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(127,"Mexico ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(128,"Moldova ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(129,"Monaco ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(130,"Montserrat ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(131,"Mongolia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(132,"Morocco ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(133,"Mozambique ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(134,"Malwi ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(135,"Myanmar ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(136,"North Korea ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(137,"North MarianasCh")</statement>
+    <statement>INSERT INTO tblCountry VALUES(138,"New Zealand ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(139,"Namibia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(140,"Nauru ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(141,"Nepal ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(142,"Netherlands Ant.")</statement>
+    <statement>INSERT INTO tblCountry VALUES(143,"Netherlands ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(144,"New Caledonia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(145,"Nicaragua ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(146,"Niger ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(147,"Nigeria ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(148,"Niue ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(149,"Norway ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(150,"Oman ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(151,"Pitcairn Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(152,"Pakistan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(153,"Panama ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(154,"Papua New Guinea")</statement>
+    <statement>INSERT INTO tblCountry VALUES(155,"Paraguay ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(156,"Peru ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(157,"Philippines ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(158,"Poland ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(159,"Polynesia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(160,"Portugal ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(161,"Puerto Rico ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(162,"Qatar ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(163,"Reunion ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(164,"Romania ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(165,"Rep. of Palau ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(166,"Russia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(167,"Rwanda ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(168,"Saint Lucia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(169,"San Marino ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(170,"South Africa ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(171,"Saudi Arabia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(172,"South Korea ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(173,"Sri Lanka ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(174,"Samoa ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(175,"Sao Tome E-Pri")</statement>
+    <statement>INSERT INTO tblCountry VALUES(176,"Senegal ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(177,"Seychelles ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(178,"Sierra Leone ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(179,"Singapore ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(180,"Slovenia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(181,"Slovak ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(182,"Solomon Is. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(183,"Somalia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(184,"Spain ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(185,"St. Helena ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(186,"St. Kitts-Nevis ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(187,"St. Pierre Miq")</statement>
+    <statement>INSERT INTO tblCountry VALUES(188,"St. Vin. Gren.")</statement>
+    <statement>INSERT INTO tblCountry VALUES(189,"Sudan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(190,"Suriname ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(191,"Swaziland ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(192,"Sweden ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(193,"Switzerland ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(194,"Syria ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(195,"Turks Caicos ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(196,"Trinidad Tobago")</statement>
+    <statement>INSERT INTO tblCountry VALUES(197,"Taiwan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(198,"Tajikistan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(199,"Tanzania ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(200,"Thailand ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(201,"Togo ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(202,"Tonga ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(203,"Tunisia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(204,"Turkey ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(205,"Turkmenistan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(206,"Tuvalu ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(207,"U.K. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(208,"U.A.E. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(209,"Uganda ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(210,"Ukraine ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(211,"Uruguay ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(212,"U.S.A. ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(213,"Uzbekistan ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(214,"Virgin Is. (UK) ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(215,"Virgin Is. (USA)")</statement>
+    <statement>INSERT INTO tblCountry VALUES(216,"Vatican City ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(217,"Vanuatu ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(218,"Venezuella ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(219,"Vietnam ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(220,"Wallis Futuna ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(221,"West Sahara ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(222,"WestSamoa ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(223,"Yemen North ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(224,"Yugoslavia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(225,"Zambia ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(226,"Zimbabwe ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(227,"Zaire ")</statement>
+    <statement>INSERT INTO tblCountry VALUES(228,"Scotland ")</statement>
+
+
+</sqlcountry>

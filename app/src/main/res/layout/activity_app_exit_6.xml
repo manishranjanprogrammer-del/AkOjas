@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorView"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/wallet_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/app_exit_font_size"
+        android:layout_margin="15dp"
+        android:text="@string/hear_about_astrosage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_yt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_yt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/app_exit_font_size"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:drawableLeft="@drawable/youtube"
+                        android:text="@string/youtube" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_twitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_twitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_twitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/twitter"
+                        android:textSize="@dimen/app_exit_font_size"
+                        android:padding="10dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/twitter" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_google"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/app_exit_font_size"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:drawableLeft="@drawable/google"
+                        android:text="@string/google" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_referred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_referred"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_referred"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/reffered_by_friend"
+                        android:textSize="@dimen/app_exit_font_size"
+                        android:padding="10dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/refer_by_friend" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_whatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_whatsapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/app_exit_font_size"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:drawableLeft="@drawable/whatsapp"
+                        android:text="@string/whatsapp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_fb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_fb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_fb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/app_exit_font_size"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:drawableLeft="@drawable/facebook"
+                        android:text="@string/facebook" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_insta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_insta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_insta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/instagram"
+                        android:textSize="@dimen/app_exit_font_size"
+                        android:padding="10dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/instagram" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/bg_card_exit_color"
+                android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+                android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/tv_size_16"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:drawableLeft="@drawable/others"
+                        android:text="@string/abuse_report_4" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_others"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_others_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/app_exit_font_size"
+            android:layout_weight="0.5"
+            android:drawablePadding="10dp"
+            android:text="@string/abuse_report_4" />
+
+        <EditText
+            android:id="@+id/et_others"
+            style="@style/profile_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_stroke_silver_bg"
+            android:ellipsize="end"
+            android:inputType="textCapSentences"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:minHeight="@dimen/margin_xXlarge"
+            android:paddingLeft="5dp"
+            android:textColorHint="@color/black" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:weightSum="1"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="7dp"
+            android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+            android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+            android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+            android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_border_primary_color_round"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/app_exit_font_size"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/cancel" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="7dp"
+            app:cardBackgroundColor="@color/colorPrimary_day_night"
+            android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp"
+            android:layout_marginLeft="@dimen/cardview_keyline_1_minus_8dp"
+            android:layout_marginRight="@dimen/cardview_keyline_1_minus_8dp"
+            android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp">
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/app_exit_font_size"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:text="@string/submit" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

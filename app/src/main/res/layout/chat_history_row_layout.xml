@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/backgroundColorView"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    tools:context=".varta.ui.activity.ChatHistoryListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+                android:id="@+id/ri_profile_img"
+                android:layout_width="@dimen/profile_image_size"
+                android:layout_height="@dimen/profile_image_size"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_profile_view" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/astrologer_name_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:singleLine="true"
+                    android:text="Harish"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_18"></TextView>
+
+                <TextView
+                    android:id="@+id/astrologer_price_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:paddingRight="3dp"
+                    android:text="@string/astrologer_rs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_18"></TextView>
+
+                <TextView
+                    android:id="@+id/refund_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="3dp"
+                    android:text="@string/refunded"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_18"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date_time_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harish"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"></TextView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rate_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+                    android:text="\@ rs 25/min "
+                    android:textSize="@dimen/tv_size_14" />
+
+                <TextView
+                    android:id="@+id/duration_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rate_tv"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+                    android:text="Duration: 3 minutes"
+                    android:textSize="@dimen/tv_size_14" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/status_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/chatstatus"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="@dimen/tv_size_17"></TextView>
+
+                <TextView
+                    android:id="@+id/chat_status_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="INCOMPLETE"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="@dimen/tv_size_17"></TextView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/margin_large">
+
+        <TextView
+            android:id="@+id/chat_now_btn_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button_yellow"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="@string/chat_view"
+            android:textSize="@dimen/tv_size_15" />
+
+        <!--
+        android:drawableLeft="@drawable/chat_icon"
+            android:drawablePadding="5dp"
+        -->
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:paddingEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/chat_again_btn_txt"
+            android:background="@drawable/bg_button_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="@string/chat_again"
+            android:textSize="@dimen/tv_size_15" />
+
+        <!--
+        android:drawableLeft="@drawable/call_icon"
+            android:drawablePadding="5dp"
+        -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_white_border_green"
+        android:clickable="true"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:drawableLeft="@drawable/ic_share"
+        android:drawableTint="@color/black"
+        android:focusable="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dimen_32dp"
+        android:paddingRight="@dimen/dimen_32dp"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:text="@string/share_chat"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/margin_large"
+        android:background="@color/separator_line"/>
+</LinearLayout>

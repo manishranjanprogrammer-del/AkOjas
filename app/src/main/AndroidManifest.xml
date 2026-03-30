@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ojassoft.astrosage"
+    android:installLocation="auto">
+
+    <uses-sdk tools:overrideLibrary="com.razorpay, com.truecaller.android.sdk" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false"/> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- ENABLED BY PUNIT ON 09-04-15 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- <uses-permission android:name="com.google.android.gms.permission.AD_ID" /> -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+<!--    uses in livekit depecdency -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" tools:node="remove" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <application
+        android:name=".ui.act.AstrosageKundliApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/my_backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/Theme.Astrosage"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.JobServices.BirthdayWishNotificationClickActivity" android:exported="false" android:theme="@style/Theme.Transparent" android:screenOrientation="portrait" />
+        <activity
+            android:name=".varta.ui.activity.MiniPaymentInformationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Astrosage.ActivityDialog_trans"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.PurchaseAiConsultationPlan"
+            android:exported="false" />
+        <activity
+            android:name=".ui.act.BrihatKundliActivity"
+            android:exported="false" />
+
+        <activity android:name=".varta.ui.activity.AIVoiceCallingActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|uiMode"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:supportsPictureInPicture="true"
+            android:taskAffinity="com.ojassoft.astrosage.varta.ui.activity.AIVoiceCallingActivity"
+            android:exported="false"
+            tools:targetApi="24"
+            android:theme="@style/Theme.Astrosage"/>
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/ad_services_config"
+            tools:replace="android:resource" />
+
+        <activity
+            android:name=".ui.act.TotalDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.act.PdfViewerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".varta.ui.activity.FirstTimeProfileDetailsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".varta.ui.activity.AIVoiceCallingActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".varta.ui.activity.AINotificationTransparentActivity"
+            android:launchMode="standard"
+            android:exported="true"/>
+
+        <activity
+            android:name=".ui.act.FlashOtpVerifyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Astrosage.ActivityDialog"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.FlashLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Astrosage.ActivityDialog"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.FreeChatNowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vartalive.activities.LiveActivityNew"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="com.ojassoft.astrosage.vartalive.activities.LiveActivityNew" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".vartalive.activities.VideoCallActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:taskAffinity="com.ojassoft.astrosage.vartalive.activities.VideoCallActivity"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".vartalive.activities.VoiceCallActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:taskAffinity="com.ojassoft.astrosage.vartalive.activities.VoiceCallActivity"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".varta.ui.activity.AgoraCallAcceptRejectActivity"
+            android:exported="true"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true" />
+        <activity
+            android:name=".varta.ui.activity.ChatAcceptRejectActivity"
+            android:exported="true"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true" />
+        <activity
+            android:name=".varta.ui.activity.ChatWindowActivity"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".varta.ui.activity.AIChatWindowActivity"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Astrosage"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".varta.ui.activity.SavedKundliListActivity"
+            android:theme="@style/Theme.Astrosage.ActivityDialog"
+            android:exported="false" />
+        <activity
+            android:name=".varta.ui.activity.GenerateTicketActivity"
+            android:exported="false" />
+        <activity android:name=".ui.act.PopularCityActivity" />
+
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="true" />
+        <!--
+<meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7494543079410386~8705678821" />
+        -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/icon" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <!--
+Disable Automatically Logged Events  value = false
+         for Enable value = true
+        -->
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="true" /> <!-- <meta-data -->
+        <!-- android:name="com.truecaller.android.sdk.PartnerKey" -->
+        <!-- android:value="@string/partnerKey" /> -->
+        <meta-data
+            android:name="com.truecaller.android.sdk.ClientId"
+            android:value="@string/clientID" />
+
+        <activity
+            android:name=".ui.act.OutputMasterActivity"
+            android:configChanges="density|locale|layoutDirection|fontScale|fontWeightAdjustment|screenSize|smallestScreenSize|keyboard|keyboardHidden|uiMode|colorMode|navigation"
+            android:logo="@drawable/menu_icon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ListingCreationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActPrintKundliCategory"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.act.YearInputBoxPopup" />
+        <activity
+            android:name=".ui.act.ActYouTubePlayer"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".ui.act.ActYouTubeVideoPlayer"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".ui.act.HomeInputScreen"
+            android:exported="true"
+            android:logo="@drawable/astrosage_logo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/kundli/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/hindi/kundli.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/tamil/jathagam.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/bengali/kusthithikuji.asp"
+                    android:scheme="http" />
+
+                <!-- added for https -->
+
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/kundli/"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/hindi/kundli.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/tamil/jathagam.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/bengali/kusthithikuji.asp"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ActPlaceSearch"
+            android:label="@string/search_place"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.customcontrols.MyNewCustomTimePicker"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.AstroPrefrenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.MychartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ui.act.ActCalculateKundli"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.MyEarningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.MyServicesAndProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActAboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActMonthView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActMontlyCalendar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActHinduCalender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActAstroShopHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.OrderedItemDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActFeedbackToAstroSage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.DhruvDashBoardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.PurchaseDhruvPlanActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.AffliateAgreementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.AffliateHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.DirectoryListingHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.DirectoryListingProfileImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".ui.act.JoinVartaProfileImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".ui.act.ThanksProductPurchaseScreen" />
+        <activity
+            android:name=".ui.act.ThanksProductPurchaseScreenNew"
+            android:theme="@style/Theme.Astrosage.ActivityDialog"/>
+        <activity
+            android:name=".ui.act.ActAstrosageTV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".varta.ui.activity.ProfileForChat"
+            android:theme="@style/Theme.Astrosage.ActivityDialog"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.YoutubePlaylist"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.matching.HomeMatchMakingInputScreen"
+            android:exported="true"
+            android:logo="@drawable/astrosage_logo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/freechart/matchmaking.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/free/kundlimatching.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/hindi/kundlimatching.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/tamil/porutham.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/bengali/kusthitmilano.asp"
+                    android:scheme="http" />
+
+                <!-- added for https -->
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/freechart/matchmaking.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/free/kundlimatching.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/hindi/kundlimatching.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/tamil/porutham.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/bengali/kusthitmilano.asp"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ActNotificationSetting"
+            android:screenOrientation="portrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+        <activity
+            android:name=".ui.act.ActWebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActCCAvenueServicePaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActPaymentWebView"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActPaymentStatus"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroPaymentOptions"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAskQuestion"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroServiceDescription"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <receiver
+            android:name=".ui.JobServices.BroadcastToResetJobSchedular"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.libojassoft.android.custom.services.AstroSageMagazineNotificationService" />
+        <service android:name="com.libojassoft.android.custom.services.AstroSageMagazineNotificationServiceForHindi" />
+
+        <activity
+            android:name=".ui.act.ActAstroSageMarriage"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:logo="@drawable/astrosage_logo"
+            android:parentActivityName=".ui.act.ActAppModule"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ojassoft.astrosage.ui.act.ActAppModule" />
+
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="marriage.astrosage.com"
+                    android:scheme="http" />
+                <data
+                    android:host="marriage.astrosage.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ActPorutham"
+            android:label="@string/app_name"
+            android:logo="@drawable/astrosage_logo"
+            android:parentActivityName=".ui.act.ActAppModule"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ojassoft.astrosage.ui.act.ActAppModule" />
+        </activity>
+        <activity
+            android:name=".ui.act.ActCalendar"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:logo="@drawable/astrosage_logo"
+            android:parentActivityName=".ui.act.ActAppModule"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ojassoft.astrosage.ui.act.ActAppModule" />
+
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="m.astrosage.com"
+                    android:pathPrefix="/calendar2013"
+                    android:scheme="http" />
+                <data
+                    android:host="m.astrosage.com"
+                    android:pathPrefix="/calendar2013"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ActAstroShop"
+            android:label="@string/app_name"
+            android:logo="@drawable/astrosage_logo"
+            android:parentActivityName=".ui.act.ActAppModule"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ojassoft.astrosage.ui.act.ActAppModule" />
+        </activity>
+        <activity
+            android:name=".ui.act.ActShowOjasSoftArticlesWithTabs"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:logo="@drawable/astrosage_logo"
+            android:parentActivityName=".ui.act.ActAppModule"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ojassoft.astrosage.ui.act.ActAppModule" />
+
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="horoscope.astrosage.com"
+                    android:scheme="http" />
+                <data
+                    android:host="horoscope.astrosage.com/hindi"
+                    android:scheme="http" />
+
+                <!-- added for https -->
+                <data
+                    android:host="horoscope.astrosage.com"
+                    android:scheme="https" />
+                <data
+                    android:host="horoscope.astrosage.com/hindi"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".notification.ActShowOjasSoftArticles"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:logo="@drawable/astrosage_logo"
+            android:parentActivityName=".ui.act.ActAppModule"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ojassoft.astrosage.ui.act.ActAppModule" />
+        </activity>
+        <!--
+<activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        -->
+        <activity
+            android:name=".ui.act.matching.OutputMatchingMasterActivity"
+            android:configChanges="density|locale|layoutDirection|fontScale|fontWeightAdjustment|screenSize|smallestScreenSize|keyboard|keyboardHidden|uiMode|colorMode|navigation"
+            android:label="@string/matching_result_title"
+            android:logo="@drawable/menu_icon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActAppModule"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:logo="@drawable/astrosage_logo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="buy.astrosage.com"
+                    android:scheme="http" />
+                <data
+                    android:host="buy.astrosage.com"
+                    android:scheme="https" />
+
+                <data android:scheme="https"
+                    android:host="buy.astrosage.com"
+                    android:pathPrefix="/service" />
+
+                <data android:scheme="https"
+                    android:host="buy.astrosage.com"
+                    android:pathPrefix="/service/astrosage-brihat-horoscope" />
+
+                <data android:scheme="http"
+                    android:host="buy.astrosage.com"
+                    android:pathPrefix="/service" />
+
+                <data android:scheme="http"
+                    android:host="buy.astrosage.com"
+                    android:pathPrefix="/service/astrosage-brihat-horoscope" />
+
+                <data
+                    android:host="astrosage.com"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:scheme="http" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:pathPrefix="/talk-to-astrologers"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:pathPrefix="/open-ai-astrologers"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:pathPrefix="/chat-with-astrologers"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:pathPrefix="/live"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:pathPrefix="/upcoming"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:pathPrefix="/astrologer"
+                    android:scheme="https" />
+                <data
+                    android:host="varta.astrosage.com"
+                    android:pathPrefix="/rechargenow"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/offer"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/offer"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="k.astrosage.com"
+                    android:scheme="http" />
+                <data
+                    android:host="k.astrosage.com"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/virtual/shareapp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/virtual/shareapp"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ActAstrologerDescription"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroServicePayment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActivityLoginAndSignin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.act.ActAppSplash"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name=".ui.act.ActWizardScreens"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.PurchasePlanHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActLogin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.act.ActDisclaimerAndPrivacyPolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.customcontrols.ActBookmarkAndHistory" />
+        <activity
+            android:name=".ui.act.horoscope.HoroscopeHomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/horoscope/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/rashifal/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/tamil/rasi-palan/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/bengali/rashifal/"
+                    android:scheme="http" />
+
+                <!-- added for https -->
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/horoscope/"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/rashifal/"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/tamil/rasi-palan/"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/bengali/rashifal/"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.horoscope.DetailedHoroscope"
+            android:configChanges="density|locale|layoutDirection|fontScale|fontWeightAdjustment|screenSize|smallestScreenSize|keyboard|keyboardHidden|uiMode|colorMode|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.ActAppExit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.AppExitActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".misc.DailyWeeklyMonthlyPredictionsService"
+            android:exported="false" />
+        <service
+            android:name=".misc.SaveUserChoiceInSdCardService"
+            android:exported="false" />
+        <service
+            android:name=".misc.SaveAstroLogerInfoService"
+            android:exported="false" />
+        <service
+            android:name=".misc.GetCityInBackground"
+            android:exported="false" />
+        <service
+            android:name=".custompushnotification.MyCloudRegistrationService"
+            android:exported="false" />
+        <service android:name=".utils.GetDefaultKundliDataService" />
+        <service
+            android:name=".misc.PurchaseVerificationService"
+            android:exported="false" />
+        <service android:name=".misc.ServiceToGetImageDtaFromServer" />
+        <service android:name=".misc.ServiceToGetPurchasePlanDetails" />
+
+        <activity
+            android:name=".ui.act.InputPanchangActivity"
+            android:configChanges="density|locale|layoutDirection|fontScale|fontWeightAdjustment|screenSize|smallestScreenSize|keyboard|keyboardHidden|uiMode|colorMode|navigation"
+            android:exported="true"
+            android:label="@string/title_activity_input_panchang"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="panchang.astrosage.com"
+                    android:pathPrefix="/panchang/aajkapanchang"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/panchang/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/chogadia.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/hora.asp"
+                    android:scheme="http" />
+                <data
+                    android:host="panchang.astrosage.com"
+                    android:pathPrefix="/muhurat/do-ghati-muhurat"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/rahukaal.asp"
+                    android:scheme="http" />
+
+                <!-- added for https -->
+                <data
+                    android:host="panchang.astrosage.com"
+                    android:pathPrefix="/panchang/aajkapanchang"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/panchang/"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/chogadia.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/hora.asp"
+                    android:scheme="https" />
+                <data
+                    android:host="panchang.astrosage.com"
+                    android:pathPrefix="/muhurat/do-ghati-muhurat"
+                    android:scheme="https" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/rahukaal.asp"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.SetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActUserPlanDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActYearlyVrat"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.ActIndianCalender"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.FestvalDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.uifestivaldetail.ActFestivalListView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.uifestivaldetail.ActFestivalNavratraView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.uifestivaldetail.ActFestivalStaticView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.AstroShopItemDescription"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.AstroShopShopingCartAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroshopCodDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroShopShippingDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroShopChequeDdDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActAstroold"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroShopCategories"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstrologer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAsKqquestionDescription"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAstroShopServices"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActServicePaymentStatus"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAboutAstrologer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActLearnAstrology"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/magazine/learn"
+                    android:scheme="http" />
+                <data
+                    android:host="www.astrosage.com"
+                    android:pathPrefix="/magazine/learn"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ActPlayVideo"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <service
+            android:name=".misc.AstroShopDataDownloadService"
+            android:exported="false" />
+        <service
+            android:name=".misc.AstrologerDownloadService"
+            android:exported="false" />
+        <service
+            android:name=".misc.AstroServiceDownloader"
+            android:exported="false" />
+        <service
+            android:name=".misc.AskAQueDataUpdateService"
+            android:exported="false" />
+        <service android:name=".misc.ServiceToGetUnConsumedProductFromGoogleAccount" />
+        <service
+            android:name=".misc.VerificationServiceForInAppBilling"
+            android:exported="false" />
+        <service
+            android:name=".misc.SendUserPurchaseReportForServiceInUnsuccess"
+            android:exported="false" />
+        <service
+            android:name=".misc.ServiceLearnAstrology"
+            android:exported="false" />
+
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard" />
+        <activity
+            android:name=".ui.act.BigHorscopeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.BrihatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.CogniAstroActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <service android:name=".misc.CheckNextYearPridictionDataService" />
+        <service android:name=".misc.SyncKundliService" />
+        <service android:name=".ui.fragments.astrochatfragment.savedata.SaveDataInternalStorage" />
+        <service android:name=".misc.VerificationServiceForInAppBillingChat" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_zfWj9iOryaE83d" />
+
+        <service
+            android:name=".fcmservice.OjasFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".misc.SubsAndUnsubsTopics"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.act.ActFullScreenSlider"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.InviteAppActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActNotificationLanding"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.TermsAndPrivacy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActAllAstrologers"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActOrderTracking"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.Notes"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ojassoft.astrosage"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service android:name=".misc.DownloadService" />
+        <service android:name=".misc.DownloadPdfService" />
+        <service android:name=".misc.GetTagManagerDataService" />
+
+        <activity
+            android:name=".ui.act.ActYearly"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.indnotes.NotesActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.indnotes.UserNotesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.act.indnotes.SearchedNotestActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.ActNotificationCenter"
+            android:configChanges="density|locale|layoutDirection|fontScale|fontWeightAdjustment|screenSize|smallestScreenSize|keyboard|keyboardHidden|uiMode|colorMode|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.NumerologyCalculatorInputActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.NumerologyCalculatorOutputActivity"
+            android:configChanges="density|locale|layoutDirection|fontScale|fontWeightAdjustment|screenSize|smallestScreenSize|keyboard|keyboardHidden|uiMode|colorMode|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.NameMatchingInputActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.NameMatchingOutputActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.SilverPlanSubscriptionFragmentDailog"/>
+        <activity
+            android:name=".ui.act.ActChangePassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActDhruvDashboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".ui.act.VartaReqJoinActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.NewAppointmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.ApmtBookingConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.MyAppointmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.DhruvPlanDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.TopupRechargeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.AstrologerListingDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.MantraChalisaHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.ChalisaListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.act.ChalisaDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.ActMantraVideoPlayer"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <service android:name=".ui.act.SilverPlanDialogService" /> <!-- Varta -->
+        <activity
+            android:name=".varta.ui.activity.WalletActivity"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".varta.ui.activity.ConsultantHistoryActivity"/>
+        <activity
+            android:name=".varta.ui.activity.PaymentInformationActivity" />
+        <activity
+            android:name=".varta.ui.activity.AstrologerDescriptionActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".varta.ui.activity.OtpVerifyActivity" />
+        <activity
+            android:name=".varta.ui.activity.ProfileActivity"/>
+        <activity
+            android:name=".varta.ui.activity.ActPlaceSearch" />
+
+        <service
+            android:name=".varta.service.CallStatusCheckService"
+            android:exported="false" />
+
+        <activity
+            android:name=".varta.ui.activity.DashBoardActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".varta.ui.activity.LoginSignUpActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".varta.ui.activity.NotificationCenterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".varta.ui.activity.SearchActivity"/>
+        <activity
+            android:name=".varta.ui.activity.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <service
+            android:name=".varta.service.GetUserAIChatCategoryDataService"
+            android:exported="false" />
+        <service
+            android:name=".varta.service.Loginservice"
+            android:exported="false" />
+        <service
+            android:name=".varta.service.PreFetchDataservice"
+            android:exported="false" />
+        <service
+            android:name=".varta.service.PreFetchLiveAstroDataservice"
+            android:exported="false" />
+        <service
+            android:name=".varta.service.PreFetchAstroDataservice"
+            android:exported="false" />
+        <service
+            android:name=".varta.service.SubscribeTopicsOnLoginService"
+            android:exported="false" />
+        <service android:name=".misc.ServiceToGetIsAIPassSubscriber" />
+
+        <activity
+            android:name=".varta.ui.activity.VartaWebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.DhruvAstrologerByCity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.DhruvAstrologerList" />
+        <activity
+            android:name=".varta.ui.activity.AllLiveAstrologerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".varta.ui.activity.FollowingAstrologerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".varta.ui.activity.ActCCAvenueServicePaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".varta.ui.activity.MyAccountActivity" />
+        <activity
+            android:name=".varta.twiliochat.chat.history.ChatHistoryNew"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".varta.ui.activity.WebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".varta.ui.MiniChatWindow"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".varta.service.AstroAcceptRejectService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+        <service
+            android:name=".varta.service.OnGoingChatService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+        <service
+            android:name=".varta.service.RunningChatService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+        <service
+            android:name=".varta.service.AgoraCallInitiateService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+        <service
+            android:name=".varta.service.AgoraCallOngoingService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+        <service
+            android:name=".varta.service.VoiceCallOngoingNotificationService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+
+        <receiver
+            android:name=".varta.receiver.ChatStatusReciever"
+            android:exported="false" />
+        <receiver
+            android:name=".varta.receiver.AgoraCallStatusReceiver"
+            android:exported="false" />
+
+        <service
+            android:name=".varta.service.PrefetchHistoryDataService"
+            android:exported="false" />
+        <service
+            android:name=".varta.service.AIRandomChatAstroService"
+            android:exported="false" />
+
+        <service android:name=".varta.service.AIVoiceCallingService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+
+        <activity
+            android:name=".varta.ui.activity.AINotificationChatActivity"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.act.HelpVideoPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.act.ActUpgradeAfterTenChartDialog"
+            android:theme="@style/Theme.Astrosage.ActivityDialog"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <receiver
+            android:name=".custompushnotification.CustomAIBroadcastReceiver"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.act.BrihatKundliDownload"
+            android:exported="true" />
+        <activity
+            android:name=".ui.BrihatPaymentInformationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.act.PurchaseRechargeOfferActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.act.PurchaseFreeTrialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.act.LimitExceedDhruvPurchaseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+    </application>
+
+</manifest>

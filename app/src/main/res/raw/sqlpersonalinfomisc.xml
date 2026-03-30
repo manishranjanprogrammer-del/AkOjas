@@ -1,0 +1,24 @@
+<sqlpersonalinfo>
+
+    <statement>
+        CREATE TABLE IF NOT EXISTS tblHoroPersonalInfoMisc (
+        id VARCHAR(30) ,
+        M_Column1 VARCHAR(20),
+        M_Column2 VARCHAR(20),
+        M_Column3 VARCHAR(20),
+        M_Column4 VARCHAR(20),
+        M_Column5 VARCHAR(20),
+        M_Column6 VARCHAR(20),
+        M_Column7 VARCHAR(20),
+        M_Column8 VARCHAR(20),
+        M_Column9 VARCHAR(20),
+        M_Column10 VARCHAR(20),
+        M_Column11 VARCHAR(20),
+        M_Column12 VARCHAR(20)
+
+        )
+    </statement>
+
+
+</sqlpersonalinfo>
+

@@ -1,0 +1,1357 @@
+{
+  "project_info": {
+    "project_number": "342833976067",
+    "firebase_url": "https://stoked-virtue-769.firebaseio.com",
+    "project_id": "stoked-virtue-769",
+    "storage_bucket": "stoked-virtue-769.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:5d154ad3b0edc53b",
+        "android_client_info": {
+          "package_name": "com.ojassoft.Horoscope2012"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i6o33m83cqg0ijo62l95he55i4a5dvsl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.Horoscope2012",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:77125709486f81e4",
+        "android_client_info": {
+          "package_name": "com.ojassoft.Horoscope2013"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-8enjr7j9qa5f9iq64682vbfh7b295t0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.Horoscope2013",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:6fbc6a362568101a",
+        "android_client_info": {
+          "package_name": "com.ojassoft.MyKundliMatchMaking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-b0rnu21b2uicthnomoo412rgd5iu9a16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.MyKundliMatchMaking",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:392189afe58cb6d1",
+        "android_client_info": {
+          "package_name": "com.ojassoft.aiastrologer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-9k6cnh93ebi2dpf9l3dqt9vsd4e27grf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.aiastrologer",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-ad9vcmhktclk0ter0bfjlbd2eh0eicjj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.aiastrologer",
+            "certificate_hash": "0e3291d427e50fece43fa0593a874347efda2fcb"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:c7e091e98a222cd3",
+        "android_client_info": {
+          "package_name": "com.ojassoft.astrology"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-ahev6k6jgbujdecpc7k9lm90citnt8mt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.astrology",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-ru9tpuiptna7hkebqa5p27hqhoutlkue.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.astrology",
+            "certificate_hash": "7eebbb501eaf41ca8f84433ab7d7dc0abbd4b2da"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7494543079410386~8705678821"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:25a32466f28de48e",
+        "android_client_info": {
+          "package_name": "com.ojassoft.astrosage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-pftfom460qrh2nfclas0f7jk8rekng94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.astrosage",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-rg6catb4u23effgtf0utp9ed67l5aa6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.astrosage",
+            "certificate_hash": "cf1636fcc457448761a131aa6ca80b70622ec588"
+          }
+        },
+        {
+          "client_id": "342833976067-10h119a4qj05en9qkr4dvtirhspmmhb3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.astrosage",
+            "certificate_hash": "0e3291d427e50fece43fa0593a874347efda2fcb"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7494543079410386~7089344821"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:893245f009072931",
+        "android_client_info": {
+          "package_name": "com.ojassoft.astrosagehora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:a85d3b479e587e37",
+        "android_client_info": {
+          "package_name": "com.ojassoft.astrosagetv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:9d333ac718fe18c6",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:543c35707430a571",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.bengali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:e700b4138492843f",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.gujarati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:63df422e5571a4b2",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.hindi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:2b577dd3afe17803",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.hindu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:e89e5219aaa2fb59",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.kannada"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:b049859ed2b2f7cc",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.malayalam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:4ce93f475c880ce3",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.marathi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:c6b0f70e13b93867",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.tamil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:0b127d027a4f4582",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.telugu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:81b1b29fb8c3c07c",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendar.urdu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:476eeea6eedc1f55",
+        "android_client_info": {
+          "package_name": "com.ojassoft.calendarbyastrosage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-fq7ucmjjc9u7sidhf764mtcug5h9gm8i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.calendarbyastrosage",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:fd0b2507c5acaebd",
+        "android_client_info": {
+          "package_name": "com.ojassoft.horoscope"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-egikmo07kdrvd1kd1528q9avvqe198ec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.horoscope",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:06f77f12553aa3e9",
+        "android_client_info": {
+          "package_name": "com.ojassoft.kundali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-ku8f5bhble3ui57vqdkfb135a2d0fqpf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.kundali",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:33e015e0999167af4c0f36",
+        "android_client_info": {
+          "package_name": "com.ojassoft.palmistry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:6a7f9db9a6991fe74c0f36",
+        "android_client_info": {
+          "package_name": "com.ojassoft.prashna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:a73acaf20963109b",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rahukalam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-8hui4g833r9imjb3enbeell94bjm36v7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.rahukalam",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:29b298143c40ac8b",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rashibhavishya.guj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-a7eesv63mgsvo2iprpbmtj4tg0ap6tma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojassoft.rashibhavishya.guj",
+            "certificate_hash": "22766373255565a76cfad9cc2790a8cbd4f58253"
+          }
+        },
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:47ec4abf08ed80554c0f36",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rashibhavishya.kan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:ff47092687f287914c0f36",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rashibhavishya.mar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:481a73394459448f",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rashifal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:d2b9ed44bbc72f49",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rashifal.ben"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:e0957ba072b60d364c0f36",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rashiphalam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:55f77eb3b35b16f44c0f36",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rasipalan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:95fb4d8acab3ab784c0f36",
+        "android_client_info": {
+          "package_name": "com.ojassoft.rasiphalalu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342833976067:android:ae42be1f7cee95e8",
+        "android_client_info": {
+          "package_name": "com.ojassoft.talkingcalendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342833976067-i5lb9s07fakt4tgl088b475va6i5q3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqFRfVoZLaBpXHfJX5tgUQ5p1ZzHPDK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342833976067-qghtld5986139a2ju0qd3b92bkqrq14r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342833976067-d1c13vn2ausj7f66c32ps1db3bau06hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ojassoft.astrosagekundli"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayoutLL"
+    android:layout_width="105dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="@dimen/dimen_5dp"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardBackgroundColor="@color/bg_card_view_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+            android:id="@+id/ri_profile_img"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_profile_view" />
+
+        <LinearLayout
+            android:id="@+id/ll_Live_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ri_profile_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-10dp"
+            android:background="@drawable/bg_button_orange_less_round"
+            android:backgroundTint="@color/colorPrimary_day_night"
+            android:orientation="horizontal"
+            android:paddingStart="2dp"
+            android:paddingTop="@dimen/dimen_1dp"
+            android:paddingEnd="@dimen/dimen_6dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:id="@+id/online_offline_img"
+                android:layout_width="@dimen/dimen_12dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="@string/text_live"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_verySmall" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/astroTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_Live_btn"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_14"
+            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/expertiseNameTV"
+                style="@style/content_textview_live"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tv_size_15"
+                android:textColor="@color/black"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

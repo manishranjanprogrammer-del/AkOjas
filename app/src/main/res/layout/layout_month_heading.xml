@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/custom_btn_height"
+        android:background="@drawable/rect_rounded_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:alpha=".9"
+            android:background="@drawable/ic_keyboard_arrow_left_black"
+            android:backgroundTint="@color/text_color_black"/>
+
+        <TextView
+            android:id="@+id/currentMonthTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/input_screen_text_size"
+            android:textColorHint="@color/hint_text_color"
+            android:textColor="@color/text_color_black"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:alpha=".9"
+            android:background="@drawable/ic_keyboard_arrow_right_black"
+            android:backgroundTint="@color/text_color_black"/>
+    </LinearLayout>
+</LinearLayout>

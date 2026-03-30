@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:icon="@drawable/nav_home_icon"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/bottom_nav_call"
+        android:icon="@drawable/nav_call_icons"
+        android:title="@string/call" />
+
+    <item
+        android:id="@+id/bottom_nav_live"
+        android:title="@string/live"
+        android:icon="@drawable/nav_live_icons"
+        android:titleCondensed="@string/livelong"/>
+    <item
+        android:id="@+id/bottom_nav_chat"
+        android:icon="@drawable/nav_chat_icons"
+        android:title="@string/chat_now" />
+    <item
+        android:id="@+id/bottom_nav_history"
+        android:icon="@drawable/nav_more_icons"
+        android:title="@string/history" />
+
+</menu>

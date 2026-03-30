@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlRechargePopUpAfterFreeChat"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_bottom_rounded_white"
+            android:backgroundTint="@color/bg_card_view_color"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dimen_20dp"
+            android:paddingBottom="25dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTitleFRPAFC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="85dp"
+                android:gravity="center"
+                android:text="@string/enjoyed_free_chat"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/tv_size_25" />
+
+            <TextView
+                android:id="@+id/tvSubheadingFRPAFC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:text="@string/get_devine_guidance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_22" />
+
+            <TextView
+                android:id="@+id/tvMessageFRPAFC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:text="@string/get_100_extra_on_next_recharge"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_22" />
+
+            <TextView
+                android:id="@+id/tvBtnFRPAFC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/orange_rect_with_round_corner"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dimen_15dp"
+                android:paddingVertical="@dimen/dimen_5dp"
+                android:text="@string/recharge_now_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_22" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivCloseFRPAFC"
+            android:layout_width="@dimen/dimen_16dp"
+            android:layout_height="@dimen/dimen_16dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dimen_60dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:src="@drawable/ic_close_live"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/ivFRPAFC"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/solid_white_circle"
+            android:backgroundTint="@color/bg_card_view_color"
+            android:padding="@dimen/dimen_8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ganesh"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

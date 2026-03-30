@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card_view_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="@dimen/min_height"
+            android:minHeight="@dimen/min_height"
+            android:text="@string/wizard_choose_language_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <RadioGroup
+                android:id="@+id/radioGroupLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp">
+
+                <RadioButton
+                    android:id="@+id/radioEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:checked="true"
+                    android:paddingLeft="16dp"
+                    android:text="@string/english"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox" />
+
+                <RadioButton
+                    android:id="@+id/radioHindi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/hindi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox" />
+
+                <RadioButton
+                    android:id="@+id/radioTamil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/tamil"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox" />
+
+                <RadioButton
+                    android:id="@+id/radiobangla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/bangali"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox" />
+
+                <RadioButton
+                    android:id="@+id/radioTelgu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/telugu"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/radioMarathi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/marathi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/radiokannad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/kannad"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/radiogujrati"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/gujarati"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox"
+                    android:visibility="visible" />
+                <RadioButton
+                    android:id="@+id/radiomalyalam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/min_height"
+                    android:minHeight="@dimen/min_height"
+                    android:paddingLeft="16dp"
+                    android:text="@string/malayalam"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text_size"
+                    android:theme="@style/MyCheckBox"
+                    android:visibility="visible" />
+            </RadioGroup>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/butChooseLanguageCancel"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary_day_night" />
+
+
+            <Button
+                android:id="@+id/butChooseLanguageOk"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary_day_night" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

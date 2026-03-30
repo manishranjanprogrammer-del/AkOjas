@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".varta.ui.activity.ChatAcceptRejectActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_20dp">
+
+    <TextView
+        android:id="@+id/txt_top_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/incoming_chat_request_from"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:id="@+id/astrosage_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/astrosage_app_icon"
+        android:text="@string/incoming_chat_request_from"
+        android:textAlignment="center"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/txt_astrosage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_top_head" />
+
+    <ImageView
+        android:id="@+id/txt_astrosage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:src="@drawable/astrosage_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/astrosage_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/astrosage_image"
+        app:layout_constraintTop_toTopOf="@+id/astrosage_image"
+        app:tint="@color/black" />
+
+    <com.ojassoft.astrosage.varta.utils.RippleBackground
+        android:id="@+id/rippleBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rb_color="#5EFF5722"
+        app:rb_duration="3000"
+        app:rb_radius="24dp"
+        app:rb_rippleAmount="6"
+        app:rb_scale="6">
+
+        <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+            android:id="@+id/centerImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/astrologerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centerImage"
+            android:layout_marginTop="80dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_22sp"
+            android:textStyle="bold" />
+    </com.ojassoft.astrosage.varta.utils.RippleBackground>
+
+    <RelativeLayout
+        android:id="@+id/btnAcceptChat"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_weight="1"
+        android:minWidth="200dp"
+        android:background="@drawable/bg_button_purple"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toTopOf="@+id/reject_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/call_now_img"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chat_logo" />
+
+        <TextView
+            android:id="@+id/txt_accept_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:layout_marginStart="30dip"
+            android:layout_marginEnd="30dip"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/accept_chat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_18" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/reject_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:text="@string/reject_chat"
+        android:textColor="@color/color_red"
+        android:textSize="@dimen/tv_size_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:foreground="?android:attr/selectableItemBackground"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

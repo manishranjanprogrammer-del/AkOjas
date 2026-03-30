@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="0dp"
+    android:background="@color/backgroundColor"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/topAdImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/orange_rect"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/lay_date_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/bg_card_view_color"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCurrenthora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:text="@string/current_hora"
+                    android:textSize="@dimen/heading_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/tvplanetHoraName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="1dp"
+                    android:text="Planetname"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/tvhoratime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:text="currenthoratime"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/tvplanetsHoramean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:text="PlanetMean"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:textColor="@color/text_color_black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDailyPanchang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/bg_card_view_color"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:paddingTop="16dp"
+                    android:text="Table"
+                    android:textSize="@dimen/heading_text_size"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:textColor="@color/text_color_black"/>
+
+                <LinearLayout
+                    android:id="@+id/headerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/tvplanet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:text="@string/hora_planet_name"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:textColor="@color/text_color_black"/>
+
+                    <TextView
+                        android:id="@+id/tventrytme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:text="@string/start_time"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:textColor="@color/text_color_black"/>
+
+                    <TextView
+                        android:id="@+id/tvexittme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:text="@string/end_times"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:textColor="@color/text_color_black"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_dividerColor" />
+
+                <com.ojassoft.astrosage.misc.ExpandableHeightListView
+                    android:id="@+id/rvListData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/light_dividerColor"
+                    android:dividerHeight="1dp"/>
+
+                <!--<include layout="@layout/base_card_view_for_hora" />-->
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <include
+            layout="@layout/custom_advertisement_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</ScrollView>

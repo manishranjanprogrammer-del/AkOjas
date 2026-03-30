@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tv_size_22"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:text="@string/dark_mode"/>
+
+    <RadioGroup
+        android:id="@+id/rg_dark_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_size_10"
+        android:layout_marginHorizontal="@dimen/dimen_20dp">
+        <RadioButton
+            android:id="@+id/rb_dark_mode_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_size_18"
+            android:textColor="@color/black"
+            android:theme="@style/MyCheckBox"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:text="@string/dark_mode"/>
+        <RadioButton
+            android:id="@+id/rb_dark_mode_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_size_18"
+            android:textColor="@color/black"
+            android:theme="@style/MyCheckBox"
+            android:text="light mode"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tv_size_16"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/dark_mode_can_change_from_set_preferences"/>
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:background="@drawable/bg_button_choose_kundli"
+        android:backgroundTint="@color/colorPrimary_day_night"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tv_size_16"
+        android:minHeight="@dimen/dimen_0dp"
+        android:paddingVertical="@dimen/tv_size_10"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:text="@string/ok"/>
+
+</LinearLayout>

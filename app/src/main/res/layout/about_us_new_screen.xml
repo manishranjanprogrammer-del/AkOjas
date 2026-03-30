@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <include
+        android:id="@+id/toolBar_InputKundli"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/shri_ganesh_ji_large" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:paddingRight="3dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_14"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":  "
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tvAppVersion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/lib_app_version_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_14"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:padding="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/shareApp"
+                        layout="@layout/aboutus_single_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_border" />
+
+                    <include
+                        android:id="@+id/likeUsOnFacebook"
+                        layout="@layout/aboutus_single_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--<View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_border" />
+
+                    <include
+                        android:id="@+id/followUsOnGooglePlus"
+                        layout="@layout/aboutus_single_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_border" />
+
+                    <include
+                        android:id="@+id/followUsOnTwitter"
+                        layout="@layout/aboutus_single_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_border" />
+
+                    <include
+                        android:id="@+id/followUsOnInstagram"
+                        layout="@layout/aboutus_single_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_border" />
+
+                    <include
+                        android:id="@+id/followUsOnLinkedIn"
+                        layout="@layout/aboutus_single_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:src="@drawable/splash_icon_astrosage_ai_logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:paddingTop="1dp"
+                android:paddingBottom="5dp"
+                android:text="Ojas Softech Pvt. Ltd."
+                android:textSize="@dimen/tv_size_24"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_black"/>
+
+            <LinearLayout
+                android:id="@+id/linLayoutPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_call_black_18dp"
+                    android:backgroundTint="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/firstNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="+91-9560267006"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_color_black"/>
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:text=", "-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="@color/text_color_black"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/secondNum"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:text="+91-120-4138503"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="@color/text_color_black"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_email_black_18dp"
+                    android:backgroundTint="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/composeEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="query@astrosage.com"
+                    android:textSize="@dimen/tv_size_14"
+                    android:textColor="@color/text_color_black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_public_black_18dp"
+                    android:backgroundTint="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/openWebPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="www.astrosage.com"
+                    android:textSize="@dimen/tv_size_14"
+                    android:textColor="@color/text_color_black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:gravity="center|bottom"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/textViewDisclaimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="gotoSelectedScreen"
+                    android:paddingBottom="5dp"
+                    android:text="@string/disclaimer_on_about"
+                    android:textSize="@dimen/tv_size_14"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/textViewPrivacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="gotoSelectedScreen"
+                    android:paddingBottom="5dp"
+                    android:text="@string/privacy_policy_on_aboutus"
+                    android:textSize="@dimen/tv_size_14"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/textViewTermsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="gotoSelectedScreen"
+                    android:paddingBottom="5dp"
+                    android:text="@string/terms_and_conditions"
+                    android:textSize="@dimen/tv_size_14"
+                    android:textColor="@color/text_color_black"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.5"
+                android:gravity="center_horizontal"
+                android:text="@string/copyright"
+                android:textSize="@dimen/tv_size_14"
+                android:textColor="@color/text_color_black"/>
+
+            <TextView
+                android:id="@+id/textViewSendReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:clickable="true"
+                android:onClick="goToSend"
+                android:paddingBottom="@dimen/margin_medium"
+                android:text="@string/send_report_on_aboutus"
+                android:textSize="@dimen/tv_size_14"
+                android:textColor="@color/text_color_black"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

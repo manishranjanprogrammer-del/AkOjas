@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_vertical_margin"
+    android:backgroundTint="@color/backgroundColorView"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:background="@color/backgroundColorView"
+        android:layout_marginBottom="@dimen/cardview_keyline_1_minus_8dp">
+
+        <!--<com.ojassoft.astrosage.ui.customcontrols.FlowTextView
+            android:id="@+id/ftvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp">
+
+            <com.ojassoft.astrosage.beans.CircularNetworkImageView
+                android:id="@+id/imgUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingRight="5dp"
+                android:src="@drawable/ic_user"/>
+
+            <TextView
+                android:id="@+id/tvContentBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+        </com.ojassoft.astrosage.ui.customcontrols.FlowTextView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left|center_vertical">
+
+            <com.ojassoft.astrosage.beans.CircularNetworkImageView
+                android:id="@+id/imgUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="top"
+                android:paddingRight="12dp"/>
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asdvahjd dafhd sfhs dfsdf sfhs dfds f"
+                android:textSize="@dimen/text_size"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvContentBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amit"
+            android:gravity="right"
+            android:textSize="@dimen/note_text_size"
+            android:layout_marginTop="@dimen/cardview_keyline_1_minus_8dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

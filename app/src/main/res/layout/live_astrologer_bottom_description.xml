@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="45dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/live_astrologer_desc_background"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/desc_cancel"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:src="@drawable/ic_cancel_black"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                app:tint="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/desc_astrologer_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="("
+                    android:textSize="@dimen/tv_size_14"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:id="@+id/online_offline_img"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/circle_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/text_online"
+                    android:textSize="@dimen/tv_size_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text=")"
+                    android:textSize="@dimen/tv_size_14"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:background="@color/light_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimen_6dp"
+                android:layout_marginRight="@dimen/dimen_6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_6dp"
+                        android:layout_marginRight="@dimen/dimen_6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:background="@drawable/live_astrologer_text_background_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dimen_6dp">
+
+                            <TextView
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:id="@+id/desc_expertise"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:gravity="left|center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_12"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                />
+
+                            <TextView
+                                android:layout_marginStart="@dimen/dimen_5dp"
+                                android:layout_marginBottom="@dimen/dimen_3dp"
+                                android:id="@+id/desc_experience"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center"
+                                android:gravity="start|center"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:textColor="@color/hint_text_color"
+                                android:textSize="@dimen/tv_size_12" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_6dp"
+                        android:layout_marginRight="@dimen/dimen_6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:background="@drawable/live_astrologer_text_background_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/dimen_6dp"
+                            >
+
+                            <TextView
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:layout_marginStart="@dimen/dimen_5dp"
+                                android:id="@+id/desc_price_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center"
+                                android:gravity="start|center"
+                                android:text="@string/text_price_detail"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_12"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center|start">
+
+                                <TextView
+                                    android:layout_marginStart="@dimen/dimen_5dp"
+                                    android:id="@+id/descPriceCross"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:gravity="start|center"
+                                    android:text=""
+                                    android:textSize="@dimen/tv_size_16"
+                                    android:layout_marginEnd="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/desc_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center"
+                                    android:gravity="left|center"
+                                    android:text=""
+                                    android:textSize="@dimen/tv_size_16" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="@drawable/live_astrologer_text_background_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_6dp"
+                        android:layout_marginRight="@dimen/dimen_6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left|center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:id="@+id/desc_wallet_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:gravity="left|center"
+                                android:text="@string/text_wallet_balance"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_12"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:id="@+id/descWalletBalanceTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:gravity="left|center"
+                                android:text="@string/insufficient_amount"
+                                android:textColor="@color/red"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/descWalletAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:layout_marginTop="3dp"
+                            android:gravity="left|center"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/tv_size_12"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/dimen_3dp"
+                            android:paddingRight="@dimen/dimen_3dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_6dp"
+                        android:layout_marginRight="@dimen/dimen_6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:background="@drawable/live_astrologer_text_background_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dimen_6dp">
+
+                            <TextView
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:id="@+id/desc_queue_position"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:gravity="left|center"
+                                android:text="Queue Position"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_12"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:id="@+id/desc_queue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:gravity="left|center"
+                                android:text="02"
+                                android:textSize="@dimen/tv_size_16" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_6dp"
+                        android:layout_marginRight="@dimen/dimen_6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:background="@drawable/live_astrologer_text_background_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dimen_6dp">
+
+                            <TextView
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:id="@+id/desc_waiting_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:gravity="left|center"
+                                android:text="Waiting Time"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/tv_size_12"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:id="@+id/desc_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:gravity="left|center"
+                                android:text="03:00"
+                                android:textSize="@dimen/tv_size_16" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_6dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:background="@drawable/live_astrologer_text_background_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen_6dp"
+                        android:weightSum="2">
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_desc_join_queue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_6dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginRight="@dimen/dimen_6dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlAudioCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/live_astrologer_text_background_white"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toStartOf="@+id/desc_join_audio_call"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|start"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginEnd="@dimen/dimen_10dp"
+                                    android:src="@drawable/audio_call_icon"
+                                    app:tint="@color/colorPrimary_day_night" />
+
+                                <TextView
+                                    android:id="@+id/tv_audio_call"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center"
+                                    android:gravity="left|center"
+                                    android:text="@string/audio_call"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/tv_size_12"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvPriceToCrossAudioCall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="3dp"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textSize="@dimen/tv_size_12" />
+
+                                <TextView
+                                    android:id="@+id/tvPriceToCallAudioCall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/hint_text_color"
+                                    android:textSize="@dimen/tv_size_12" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/audio_call_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:textColor="@color/hint_text_color"
+                                android:layout_marginRight="3dp"
+                                android:text="@string/audio_call_desc"
+                                android:textSize="@dimen/tv_size_12" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/desc_join_audio_call"
+                            style="@style/buttonBackgroundLive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/text_call_now"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/tv_size_17" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlVideoCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/live_astrologer_text_background_white"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toStartOf="@+id/desc_join_video_call"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|start"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginEnd="@dimen/dimen_10dp"
+                                    android:src="@drawable/video_call_icon"
+                                    app:tint="@color/colorPrimary_day_night"/>
+
+                                <TextView
+                                    android:id="@+id/tv_video_call"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center"
+                                    android:gravity="left|center"
+                                    android:text="@string/video_call"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/tv_size_12"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvPriceToCrossVideoCall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="3dp"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textSize="@dimen/tv_size_12" />
+
+                                <TextView
+                                    android:id="@+id/tvPriceToCallVideoCall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/hint_text_color"
+                                    android:textSize="@dimen/tv_size_12" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/video_call_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:textColor="@color/hint_text_color"
+                                android:layout_marginRight="3dp"
+                                android:text="@string/video_call_desc"
+                                android:textSize="@dimen/tv_size_12" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/desc_join_video_call"
+                            style="@style/buttonBackgroundLive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:text="@string/text_call_now"
+                            android:textAllCaps="false"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textSize="@dimen/tv_size_17"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlPrivateCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/live_astrologer_text_background_white"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toStartOf="@+id/desc_join_private_call"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|start"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginEnd="@dimen/dimen_10dp"
+                                    android:src="@drawable/private_call_icon"
+                                    app:tint="@color/colorPrimary_day_night"/>
+
+                                <TextView
+                                    android:id="@+id/tv_anonymous_call"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center"
+                                    android:gravity="left|center"
+                                    android:text="@string/private_call"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/tv_size_12"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvPriceToCrossAnonCall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="3dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/hint_text_color"
+                                    android:text="₹56/Min"
+                                    android:textSize="@dimen/tv_size_12" />
+
+                                <TextView
+                                    android:id="@+id/tvPriceToCallAnonCall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/hint_text_color"
+                                    android:singleLine="true"
+                                    android:text="56/Min"
+                                    android:textSize="@dimen/tv_size_12" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/private_call_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:textColor="@color/hint_text_color"
+                                android:layout_marginRight="3dp"
+                                android:text="@string/private_call_desc"
+                                android:textSize="@dimen/tv_size_12" />
+                        </LinearLayout>
+
+
+
+                        <Button
+                            android:id="@+id/desc_join_private_call"
+                            style="@style/buttonBackgroundLive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:text="@string/text_call_now"
+                            android:textAllCaps="false"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textSize="@dimen/tv_size_17"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:id="@+id/descRecharge"
+                style="@style/buttonBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="36dp"
+                android:text="@string/title_recharge"
+                android:textAllCaps="false"
+                android:textSize="@dimen/tv_size_17"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Please recharge to join queue"
+                android:textSize="@dimen/tv_size_10"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center">
+
+        <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/basic_solid_circle_orange" />
+
+        <com.ojassoft.astrosage.varta.utils.CircularNetworkImageView
+            android:id="@+id/profileImg"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_profile_view"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

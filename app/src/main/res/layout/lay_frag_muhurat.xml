@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/topAdImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/orange_rect"
+        android:visibility="gone" />
+
+    <include layout="@layout/layout_month_heading" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:paddingBottom="0dp"
+        android:clipToPadding="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/fragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/noteCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragmentContainer"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                app:cardBackgroundColor="@color/bg_card_view_color"
+                app:cardElevation="2dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/backgroundColor"
+                    android:padding="@dimen/margin_mlarge">
+
+                    <TextView
+                        android:id="@+id/lblNoteTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/note"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_large"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dip"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/noteTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:lineSpacingExtra="5dip"
+                            android:text="@string/text_muhurat_hint"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_small" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <include
+                layout="@layout/custom_advertisement_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/noteCV" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    portugues-->
+    <string name="app_name">AstroSage IA</string>
+    <string name="astrosage_name">AstroSage IA</string>
+    <string name="once_in_a_day">Uma vez por dia</string>
+    <string name="twice_in_a_day">Duas vezes por dia</string>
+    <string name="as_many_time_as_it_comes">Todas as vezes que acontecer</string>
+    <string name="title_never">Nunca</string>
+</resources>

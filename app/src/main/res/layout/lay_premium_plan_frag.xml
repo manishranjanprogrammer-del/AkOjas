@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buy_btn_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/expiry_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_rounded_platinum"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvPlanExpiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PlatinumPlanFrag"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/prem_plan_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/buy_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phonePePaymentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sectionColor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spinnerApps"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:paddingStart="14dp"
+                android:paddingTop="30dp"
+                android:spinnerMode="dropdown"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/llPaymentChooser"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!-- Left: payment chooser (icon + label + arrow) -->
+            <LinearLayout
+                android:id="@+id/llPaymentChooser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:background="@color/sectionColor"
+                android:clipToPadding="false"
+                android:gravity="center_vertical"
+                android:minHeight="40dp"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnStartSubsPayment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <!-- Hidden Spinner used to show choices -->
+
+
+                <ImageView
+                    android:id="@+id/ivSelectedAppIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="app icon" />
+
+                <LinearLayout
+                    android:id="@+id/llSelectedAppName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtSelectedAppName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/pay_via"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSelectedAppName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivDropArrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="@dimen/dimen_5dp"
+                            android:contentDescription="open"
+                            android:src="@drawable/ic_arrow_down_24px"
+                            app:tint="@color/ivTintColorDN" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Right: Pay button -->
+            <Button
+                android:id="@+id/btnStartSubsPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_24dp"
+                android:background="@drawable/bg_button_yellow"
+                android:backgroundTint="@color/colorPrimary_day_night"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/llPaymentChooser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/llPaymentChooser"
+                app:layout_constraintTop_toTopOf="@+id/llPaymentChooser" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/buy_tv"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:background="@color/colorPrimary_day_night"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="5dip"
+            android:paddingEnd="5dip"
+            android:text="@string/subscribe_for_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_16"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/buy_disable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4C000000"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

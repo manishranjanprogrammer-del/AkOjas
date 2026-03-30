@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/appbarAppModule"
+        layout="@layout/tool_bar_app_module"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!--   <LinearLayout
+           android:id="@+id/contentLayout"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+
+           android:orientation="vertical">-->
+
+    <!--    <FrameLayout
+            android:id="@+id/fragmentchange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:background="@color/light_gray">-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/astrologer_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/askquestionnow"
+        android:layout_below="@+id/appbarAppModule" />
+
+
+    <!-- </RelativeLayout>
+
+
+ </FrameLayout>-->
+    <!--</LinearLayout>-->
+
+    <Button
+        android:id="@+id/askquestionnow"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:backgroundTint="@color/colorPrimary_day_night" />
+</RelativeLayout>
+
