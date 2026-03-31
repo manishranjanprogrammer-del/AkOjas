@@ -83,13 +83,17 @@ import com.google.firebase.database.ValueEventListener;
 import com.ojassoft.astrosage.BuildConfig;
 import com.ojassoft.astrosage.networkcall.ApiList;
 import com.ojassoft.astrosage.networkcall.RetrofitClient;
+import com.ojassoft.astrosage.ui.act.ActAppModule;
 import com.ojassoft.astrosage.ui.act.AstrosageKundliApplication;
+import com.ojassoft.astrosage.varta.dialog.FeedbackDialog;
 import com.ojassoft.astrosage.varta.model.AstrologerDetailBean;
 import com.ojassoft.astrosage.varta.model.ConnectAgoraCallBean;
+import com.ojassoft.astrosage.varta.model.UserProfileData;
 import com.ojassoft.astrosage.varta.service.AgoraCallInitiateService;
 import com.ojassoft.astrosage.varta.service.AgoraCallOngoingService;
 import com.ojassoft.astrosage.varta.ui.activity.FollowingAstrologerActivity;
 import com.ojassoft.astrosage.varta.utils.CGlobalVariables;
+import com.ojassoft.astrosage.varta.utils.ChatUtils;
 import com.ojassoft.astrosage.varta.utils.CUtils;
 import com.ojassoft.astrosage.varta.utils.CircularNetworkImageView;
 import com.ojassoft.astrosage.varta.utils.CustomProgressDialog;
@@ -177,6 +181,40 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
     private BottomSheetDialog NetworkBottomSheetDialog;
     private boolean showPoorNetworkView = true;
     private View statusBarSpacer;
+    private View profileContainer;
+    private View pipInfoContainer;
+    private ImageView ivCallAgain;
+    private ImageView ivChatAgain;
+    private ImageView ivCancelPostCall;
+    private TextView tvCallAgain;
+    private TextView tvChatAgain;
+    private TextView tvCancelPostCall;
+    private TextView tvPipVideoCallAstroName;
+    private TextView tvPipVideoCallTimer;
+    private boolean isCallDisconnected;
+    private boolean isCallAgainInProgress;
+    private boolean isChatAgainInProgress;
+    private boolean isActivityDataInitialized;
+    private boolean isCurrentCallResourcesReleased;
+    private boolean hasConnectedCallSession;
+    private boolean isFeedbackRequestedForCallEnd;
+    private boolean isFeedbackCheckPending;
+    private boolean isFeedbackCheckScheduled;
+    private FeedbackDialog feedbackDialog;
+    private String lastEndRemark = "";
+    private static final long FEEDBACK_STATUS_REQUEST_DELAY_MS = 2000L;
+    private static final String EXTRA_SHOW_POST_CALL_UI = "extra_show_post_call_ui";
+    private final Handler callAgainHandler = new Handler();
+    private Runnable callAgainFinishRunnable;
+    private Runnable chatAgainFinishRunnable;
+    private final Handler feedbackHandler = new Handler();
+    private Runnable feedbackCheckRunnable;
+    private View backgroundOverlay;
+    private ImageView bgSparkleLarge;
+    private ImageView bgSparkleLeft;
+    private ImageView bgSparkleRight;
+    private ImageView bgSparkleBottomLeft;
+    private String timeRemaining;
     private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() {
         @Override
         public void onUserJoined(int uid, int elapsed) {
@@ -303,6 +341,7 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
             @Override
             public void run() {
                 isRemoteUserJoined = true;
+                hasConnectedCallSession = true;
                 errorLogs = errorLogs + "setupRemoteVideo()\n";
                 timeSetOnTimer(agoraCallDuration);
                 remoteUserOffline.setVisibility(View.GONE);
@@ -345,6 +384,10 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        setIntent(intent);
+        if (consumePostCallUiIntent(intent)) {
+            return;
+        }
         if (intent != null) {
             //Log.d("ChatWindowTest", "onNewIntent");
             boolean onNotificationClick = intent.getBooleanExtra("ongoing_notification", false);
@@ -355,6 +398,19 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
 
         }
 
+    }
+
+    /**
+     * Consumes the internal intent that reopens this activity to show the finished-call UI after PiP ends.
+     */
+    private boolean consumePostCallUiIntent(Intent intent) {
+        if (intent == null || !intent.getBooleanExtra(EXTRA_SHOW_POST_CALL_UI, false)) {
+            return false;
+        }
+        intent.removeExtra(EXTRA_SHOW_POST_CALL_UI);
+        updatePostCallState(lastEndRemark);
+        runPendingFeedbackCheckIfReady();
+        return true;
     }
     private void getDataFromIntent( Intent intent) {
         AstrosageKundliApplication.isBackFromCall = false;
@@ -398,6 +454,35 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         clMuteInfo = findViewById(R.id.cl_mute_info);
         muteImageIcon = findViewById(R.id.mute_image_icon);
         muteInfo = findViewById(R.id.text_mute_info);
+        
+        // Post-call UI elements
+        profileContainer = findViewById(R.id.profileContainer);
+        pipInfoContainer = findViewById(R.id.pipInfoContainer);
+        ivCallAgain = findViewById(R.id.call_again);
+        ivChatAgain = findViewById(R.id.iv_chat_icon);
+        ivCancelPostCall = findViewById(R.id.iv_cancel_call);
+        tvCallAgain = findViewById(R.id.tv_call_again);
+        tvChatAgain = findViewById(R.id.tv_chat);
+        tvCancelPostCall = findViewById(R.id.tv_cancel);
+        tvPipVideoCallAstroName = findViewById(R.id.tvPipVideoCallAstroName);
+        tvPipVideoCallTimer = findViewById(R.id.tvPipVideoCallTimer);
+        
+        // Background elements
+        backgroundOverlay = findViewById(R.id.backgroundOverlay);
+        bgSparkleLarge = findViewById(R.id.bgSparkleLarge);
+        bgSparkleLeft = findViewById(R.id.bgSparkleLeft);
+        bgSparkleRight = findViewById(R.id.bgSparkleRight);
+        bgSparkleBottomLeft = findViewById(R.id.bgSparkleBottomLeft);
+        
+        // Set fonts
+        FontUtils.changeFont(context, tvVideoCallAstroName, CGlobalVariables.FONTS_OPEN_SANS_BOLD);
+        FontUtils.changeFont(context, tvVideoCallDuration, CGlobalVariables.FONTS_OPEN_SANS_SEMIBOLD);
+        FontUtils.changeFont(context, tvPipVideoCallAstroName, CGlobalVariables.FONTS_OPEN_SANS_BOLD);
+        FontUtils.changeFont(context, tvPipVideoCallTimer, CGlobalVariables.FONTS_OPEN_SANS_SEMIBOLD);
+        FontUtils.changeFont(context, tvCallAgain, CGlobalVariables.FONTS_OPEN_SANS_REGULAR);
+        FontUtils.changeFont(context, tvChatAgain, CGlobalVariables.FONTS_OPEN_SANS_REGULAR);
+        FontUtils.changeFont(context, tvCancelPostCall, CGlobalVariables.FONTS_OPEN_SANS_REGULAR);
+        
         applySystemWindowInsets();
         checkPermission();
     }
@@ -467,7 +552,15 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         }
     }
     private void setUpActivityData() {
+        if (isActivityDataInitialized) {
+            return;
+        }
+        
         AstrosageKundliApplication.IS_AGORA_CALL_RUNNING = true;
+        isCallDisconnected = false;
+        isCurrentCallResourcesReleased = false;
+        hasConnectedCallSession = false;
+        showPostCallActions(false);
 
         /*
         Initiate the listeners
@@ -489,9 +582,11 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
             agoraCallAccepted();
         } else {
             isCallConnected = true;
+            hasConnectedCallSession = true;
             joinChannel();
         }
 
+        isActivityDataInitialized = true;
         getAudioStatus();
         getVideoStatus();
         getmFirebaseDatabase(agoraCallSId).child(CGlobalVariables.END_CHAT_FBD_KEY).setValue(false);
@@ -499,27 +594,25 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         sendCustomPushNotification(astrologerName, getResources().getString(R.string.title_ongoing_video_call));
         if (MIC_STATUS) {
             agoraEngine.muteLocalAudioStream(false);
-            ivVideoCallMic.setBackground(ContextCompat.getDrawable(context,R.drawable.bg_gray_circle));
             updateAudioStatusInFirebaseDB(CGlobalVariables.STATUS_ON_AUDIO);
         } else {
             agoraEngine.muteLocalAudioStream(true);
-            ivVideoCallMic.setBackground(ContextCompat.getDrawable(context,R.drawable.red_circle));
             updateAudioStatusInFirebaseDB(CGlobalVariables.STATUS_OFF_AUDIO);
         }
         if (VIDEO_STATUS) {
             agoraEngine.muteLocalVideoStream(false);
             agoraEngine.enableLocalVideo(true);
-            ivVideoCallVideo.setBackground(ContextCompat.getDrawable(context,R.drawable.bg_gray_circle));
             updateVideoStatusInFirebaseDB(CGlobalVariables.STATUS_ON_VIDEO);
         } else {
             agoraEngine.muteLocalVideoStream(true);
             agoraEngine.enableLocalVideo(false);
-            ivVideoCallVideo.setBackground(ContextCompat.getDrawable(context,R.drawable.red_circle));
             updateVideoStatusInFirebaseDB(CGlobalVariables.STATUS_OFF_VIDEO);
         }
 
         ivVideoCallMic.setActivated(MIC_STATUS);
         ivVideoCallVideo.setActivated(VIDEO_STATUS);
+        applyMicButtonState(MIC_STATUS);
+        applyVideoButtonState(VIDEO_STATUS);
         try {
             stopService(new Intent(this, AgoraCallInitiateService.class));
             if (CUtils.checkServiceRunning(AgoraCallOngoingService.class)) {
@@ -628,6 +721,9 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         ivVideoCallMic.setOnClickListener(this);
         ivVideoCallVideo.setOnClickListener(this);
         ivVideoCallEnd.setOnClickListener(this);
+        ivCallAgain.setOnClickListener(this);
+        ivChatAgain.setOnClickListener(this);
+        ivCancelPostCall.setOnClickListener(this);
     }
 
     private void initData() {
@@ -774,6 +870,15 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
             case R.id.ivVideoCallVideo:
                 onMuteVideoClicked(ivVideoCallVideo);
                 break;
+            case R.id.call_again:
+                startCallAgainFlow();
+                break;
+            case R.id.iv_chat_icon:
+                openChatAfterCall();
+                break;
+            case R.id.iv_cancel_call:
+                closePostCallScreen();
+                break;
             case R.id.ivVideoCallEnd:
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 LayoutInflater inflater = this.getLayoutInflater();
@@ -814,35 +919,47 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
             agoraEngine.muteLocalVideoStream(true);
             view.setActivated(false);
             agoraEngine.enableLocalVideo(false);
-            ivVideoCallVideo.setBackground(ContextCompat.getDrawable(context,R.drawable.red_circle));
             updateVideoStatusInFirebaseDB(CGlobalVariables.STATUS_OFF_VIDEO);
             VIDEO_STATUS = false;
         } else {
             agoraEngine.muteLocalVideoStream(false);
             view.setActivated(true);
             agoraEngine.enableLocalVideo(true);
-            ivVideoCallVideo.setBackground(ContextCompat.getDrawable(context,R.drawable.bg_gray_circle));
             updateVideoStatusInFirebaseDB(CGlobalVariables.STATUS_ON_VIDEO);
             VIDEO_STATUS = true;
-
         }
+        applyVideoButtonState(view.isActivated());
     }
 
     public void onMuteAudioClicked(View view) {
         if (view.isActivated()) {
             agoraEngine.muteLocalAudioStream(true);
             view.setActivated(false);
-            ivVideoCallMic.setBackground(ContextCompat.getDrawable(context,R.drawable.red_circle));
             updateAudioStatusInFirebaseDB(CGlobalVariables.STATUS_OFF_AUDIO);
             MIC_STATUS = false;
         } else {
             agoraEngine.muteLocalAudioStream(false);
             view.setActivated(true);
-            ivVideoCallMic.setBackground(ContextCompat.getDrawable(context,R.drawable.bg_gray_circle));
             updateAudioStatusInFirebaseDB(CGlobalVariables.STATUS_ON_AUDIO);
             MIC_STATUS = true;
-
         }
+        applyMicButtonState(view.isActivated());
+    }
+
+    /**
+     * Updates the mic button visual state to match whether the local mic is currently enabled.
+     */
+    private void applyMicButtonState(boolean isMicEnabled) {
+        ivVideoCallMic.setActivated(isMicEnabled);
+        ivVideoCallMic.setColorFilter(ContextCompat.getColor(this, R.color.no_change_white));
+    }
+
+    /**
+     * Updates the video button visual state to match whether the local video is currently enabled.
+     */
+    private void applyVideoButtonState(boolean isVideoEnabled) {
+        ivVideoCallVideo.setActivated(isVideoEnabled);
+        ivVideoCallVideo.setColorFilter(ContextCompat.getColor(this, R.color.no_change_white));
     }
 
     private void startTimer(long longTotalVerificationTime) {
@@ -853,13 +970,17 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
             @Override
             public void onTick(long millisUntilFinished) {
                 String text = String.format(java.util.Locale.US, "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millisUntilFinished) - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(millisUntilFinished)), TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)), TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
-                tvVideoCallDuration.setText(text);
+                String timerText = " : " + text;
+                tvVideoCallDuration.setText(timerText);
+                tvPipVideoCallTimer.setText(getResources().getString(R.string.time_remaining) + timerText);
+                timeRemaining = text;
                 CGlobalVariables.callTimerTime = millisUntilFinished;
             }
 
             @Override
             public void onFinish() {
                 isCallConnected = false;
+                CGlobalVariables.callTimerTime = 0;
                 CUtils.fcmAnalyticsEvents(CGlobalVariables.END_VIDEO_CALL_TIME_OVER, AstrosageKundliApplication.currentEventType, "");
                 videoCallCompleted(CGlobalVariables.TIME_OVER, false);
 
@@ -872,20 +993,19 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         CALL_STATUS = CGlobalVariables.VIDEO_CALL_COMPLETED;
         CUtils.changeFirebaseKeyStatus(agoraCallSId, "NA", true, remark);
         isCallConnected = false;
+        lastEndRemark = remark;
         AstrosageKundliApplication.IS_AGORA_CALL_RUNNING = false;
         CGlobalVariables.callTimerTime = 0;
        // Log.d("testVideoCallActivity", "Remark ==>>" + remark + "   And Url is ==>>" + CGlobalVariables.END_CALL_URL);
         //CUtils.cancelNotification(context);
         if (!CUtils.isConnectedWithInternet(context)) {
             CUtils.showSnackbar(_root, getResources().getString(R.string.no_internet), context);
+            processEndCall();
         } else {
             if (isShowProgress) {
                 showProgressBar();
             }
             Log.d("testCallComptedNoti","videoCallCompleted api called ");
-//            StringRequest stringRequest = new VolleyServiceHandler(Request.Method.POST, CGlobalVariables.END_CALL_URL, this, false, getCallCompleteParams(remark), END_AGORACALL_VALUE).getMyStringRequest();
-//            stringRequest.setShouldCache(true);
-//            queue.add(stringRequest);
             ApiList api = RetrofitClient.getInstance().create(ApiList.class);
             Call<ResponseBody> call = api.endInternetcall(getCallCompleteParams(remark));
             call.enqueue(new Callback<ResponseBody>() {
@@ -904,6 +1024,8 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
 
                     if(!status.equals("1")){ // end-chat-api fail
                         setEndChatOverValue(agoraCallSId);
+                    } else {
+                        queueFeedbackCheckAfterConfirmedEnd();
                     }
                     processEndCall();
                 }
@@ -914,6 +1036,7 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
                     if(isRequestForEndCall){
                         setEndChatOverValue(agoraCallSId);
                     }
+                    processEndCall();
                 }
             });
             isRequestForEndCall = true;
@@ -926,7 +1049,7 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         CGlobalVariables.CHAT_END_STATUS = CGlobalVariables.COMPLETED;
         headers.put(CGlobalVariables.APP_KEY, CUtils.getApplicationSignatureHashCode(context));
         headers.put(CGlobalVariables.STATUS, CGlobalVariables.COMPLETED);
-        headers.put(CGlobalVariables.CHAT_DURATION, /*"15"*/timeChangeInSecond(tvVideoCallDuration.getText().toString()));
+        headers.put(CGlobalVariables.CHAT_DURATION, /*"15"*/timeChangeInSecond(timeRemaining != null ? timeRemaining : "00:00:00"));
         headers.put(CGlobalVariables.CHANNEL_ID, agoraCallSId);
         headers.put(CGlobalVariables.ASTROLOGER_ID, astrologerId);
         headers.put(CGlobalVariables.PACKAGE_NAME, CUtils.getAppPackageName(this));
@@ -1097,11 +1220,112 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
             cancelOnDisconnectListner();
             CUtils.updateChatCallOfferType(VideoCallActivity.this, true, CGlobalVariables.CALL_CLICK);
             isCallConnected = false;
-            onBackPressed();
+            isCallDisconnected = true;
+            stopTimerAndListener();
+            updatePostCallState(lastEndRemark);
+            runPendingFeedbackCheckIfReady();
+            reopenPostCallScreenFromPipIfNeeded();
         }catch (Exception e){
             //
         }
+    }
 
+    /**
+     * Updates the screen after the current call has ended so retry actions stay visible.
+     */
+    private void updatePostCallState(String remark) {
+        remoteUserOffline.setVisibility(View.GONE);
+        clMuteInfo.setVisibility(View.GONE);
+        showPostCallActions(true);
+        showVoiceCallStyleBackground(true);
+        updatePostCallStatusText(remark);
+    }
+
+    /**
+     * Shows or hides the post-call actions that mirror the voice-call exit state.
+     */
+    private void showPostCallActions(boolean shouldShow) {
+        int postCallVisibility = shouldShow && !isInPictureInPictureMode ? View.VISIBLE : View.GONE;
+        int inCallVisibility = shouldShow ? View.GONE : View.VISIBLE;
+        int postCallTextVisibility = postCallVisibility;
+        boolean shouldShowChatAction = shouldShow && !isInPictureInPictureMode && isChatAvailableForRetry();
+
+        ivVideoCallEnd.setVisibility(inCallVisibility);
+        ivVideoCallSwitch.setVisibility(inCallVisibility);
+        ivVideoCallMic.setVisibility(inCallVisibility);
+        ivVideoCallVideo.setVisibility(inCallVisibility);
+
+        ivCallAgain.setVisibility(postCallVisibility);
+        ivChatAgain.setVisibility(shouldShowChatAction ? View.VISIBLE : View.GONE);
+        ivCancelPostCall.setVisibility(postCallVisibility);
+        tvCallAgain.setVisibility(postCallTextVisibility);
+        tvChatAgain.setVisibility(shouldShowChatAction ? View.VISIBLE : View.GONE);
+        tvCancelPostCall.setVisibility(postCallTextVisibility);
+        
+        profileContainer.setVisibility(shouldShow ? View.VISIBLE : View.GONE);
+        pipInfoContainer.setVisibility(View.GONE);
+    }
+
+    /**
+     * Shows or hides voice call style background with sparkles.
+     */
+    private void showVoiceCallStyleBackground(boolean shouldShow) {
+        if (shouldShow) {
+            backgroundOverlay.animate().alpha(1.0f).setDuration(300);
+            bgSparkleLarge.animate().alpha(0.16f).setDuration(300);
+            bgSparkleLeft.animate().alpha(0.3f).setDuration(300);
+            bgSparkleRight.animate().alpha(0.24f).setDuration(300);
+            bgSparkleBottomLeft.animate().alpha(0.18f).setDuration(300);
+        } else {
+            backgroundOverlay.setAlpha(0.0f);
+            bgSparkleLarge.setAlpha(0.0f);
+            bgSparkleLeft.setAlpha(0.0f);
+            bgSparkleRight.setAlpha(0.0f);
+            bgSparkleBottomLeft.setAlpha(0.0f);
+        }
+    }
+
+    /**
+     * Reopens the activity in fullscreen after a remote call end so the finished-call state is not trapped in PiP.
+     */
+    private void reopenPostCallScreenFromPipIfNeeded() {
+        if (!isInPictureInPictureMode || Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+            return;
+        }
+        try {
+            Intent intent = new Intent(this, VideoCallActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            intent.putExtra("ongoing_notification", true);
+            intent.putExtra(EXTRA_SHOW_POST_CALL_UI, true);
+            startActivity(intent);
+        } catch (Exception e) {
+            //
+        }
+    }
+
+    /**
+     * Maps the latest end reason to the status text shown above the post-call actions.
+     */
+    private void updatePostCallStatusText(String remark) {
+        String statusText;
+        if (TextUtils.isEmpty(remark)) {
+            statusText = getResources().getString(R.string.call_completed);
+            tvVideoCallDuration.setText(statusText);
+            tvPipVideoCallTimer.setText(statusText);
+            return;
+        }
+
+        if (remark.contains(CGlobalVariables.ASTROLOGER) || remark.contains(CGlobalVariables.ASTROLOGER_NOT_JOINED)) {
+            statusText = getResources().getString(R.string.call_ended_by_astrologer);
+        } else if (remark.contains(CGlobalVariables.TIME_OVER)) {
+            statusText = getResources().getString(R.string.call_completed);
+        } else if (remark.contains(CGlobalVariables.USER_ENDED)) {
+            statusText = getResources().getString(R.string.call_completed);
+        } else {
+            statusText = getResources().getString(R.string.call_failed_user);
+        }
+        tvVideoCallDuration.setText(statusText);
+        tvPipVideoCallTimer.setText(statusText);
     }
 
     @Override
@@ -1348,17 +1572,10 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
 
                 if (dataSnapshot != null) {
                     try {
-                        END_CALL_DATA = (boolean) dataSnapshot.getValue();
+                        END_CALL_DATA = getFirebaseBooleanValue(dataSnapshot);
                         errorLogs = errorLogs + "initEndCallListener()"+"END_CALL_DATA==>>"+END_CALL_DATA+"\n";
                         if (END_CALL_DATA) {
-                            if (countDownTimer != null) {
-                                countDownTimer.cancel();
-                            }
-                            isCallConnected = false;
-                            processEndCall();
-                                Toast.makeText(context, getResources().getString(R.string.call_ended_by_astrologer), Toast.LENGTH_SHORT).show();
-                            // CUtils.fcmAnalyticsEvents("status_time_over_chat_completed", AstrosageKundliApplication.currentEventType, "");
-
+                            handleRemoteEndCall(CGlobalVariables.ASTROLOGER);
                         }
 
                     } catch (Exception e) {
@@ -1375,6 +1592,37 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         readRef = getmFirebaseDatabase(agoraCallSId).child(CGlobalVariables.END_CHAT_OVER_FBD_KEY);
         readRef.addValueEventListener(endCallValueEventListener);
 
+    }
+
+    /**
+     * Normalizes Firebase values so remote-end flags work for both boolean and string payloads.
+     */
+    private boolean getFirebaseBooleanValue(@NonNull DataSnapshot dataSnapshot) {
+        Object value = dataSnapshot.getValue();
+        if (value instanceof Boolean) {
+            return (Boolean) value;
+        }
+        if (value instanceof String) {
+            return Boolean.parseBoolean(((String) value).trim());
+        }
+        return false;
+    }
+
+    /**
+     * Applies the astrologer-ended cleanup once.
+     */
+    private void handleRemoteEndCall(String remark) {
+        if (isCallDisconnected || isCurrentCallResourcesReleased) {
+            return;
+        }
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        isCallConnected = false;
+        AstrosageKundliApplication.IS_AGORA_CALL_RUNNING = false;
+        CGlobalVariables.callTimerTime = 0;
+        queueFeedbackCheckAfterConfirmedEnd();
+        processEndCall();
     }
 
     protected void updateAudioStatusInFirebaseDB(String status) {
@@ -1507,9 +1755,11 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         }
         this.isInPictureInPictureMode = isInPictureInPictureMode;
         if(isInPictureInPictureMode){
-            tvVideoCallDuration.setTextSize(10);
-            tvVideoCallAstroName.setTextSize(12);
-            tvVideoCallDurationText.setVisibility(View.GONE);
+            // PiP mode - hide most UI elements
+            profileContainer.setVisibility(View.GONE);
+            pipInfoContainer.setVisibility(isCallDisconnected ? View.GONE : View.VISIBLE);
+            tvPipVideoCallAstroName.setText(astrologerName);
+            showPostCallActions(false);
             ivVideoCallSwitch.setVisibility(View.GONE);
             ivVideoCallMic.setVisibility(View.GONE);
             ivVideoCallVideo.setVisibility(View.GONE);
@@ -1519,18 +1769,22 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
             setLocalVideoViewContainer(getResources().getDimension(R.dimen.canvas_local_width_pip),getResources().getDimension(R.dimen.canvas_local_height_pip));
             setupLocalVideo();
         }else {
-            tvVideoCallDuration.setTextSize(16);
-            tvVideoCallAstroName.setTextSize(18);
-            tvVideoCallDurationText.setVisibility(View.VISIBLE);
-            ivVideoCallSwitch.setVisibility(View.VISIBLE);
-            ivVideoCallMic.setVisibility(View.VISIBLE);
-            ivVideoCallVideo.setVisibility(View.VISIBLE);
-            ivVideoCallEnd.setVisibility(View.VISIBLE);
-            profileIcon.setVisibility(View.VISIBLE);
+            // Exit PiP mode - restore normal UI
+            profileContainer.setVisibility(isCallDisconnected ? View.VISIBLE : View.GONE);
+            pipInfoContainer.setVisibility(View.GONE);
+            if (!isCallDisconnected) {
+                ivVideoCallSwitch.setVisibility(View.VISIBLE);
+                ivVideoCallMic.setVisibility(View.VISIBLE);
+                ivVideoCallVideo.setVisibility(View.VISIBLE);
+                ivVideoCallEnd.setVisibility(View.VISIBLE);
+                profileIcon.setVisibility(View.VISIBLE);
+            } else {
+                showPostCallActions(true);
+            }
             _root.removeView(flVideoCallCanvasSelf);
             setLocalVideoViewContainer(getResources().getDimension(R.dimen.canvas_local_width),getResources().getDimension(R.dimen.canvas_local_height));
             setupLocalVideo();
-
+            runPendingFeedbackCheckIfReady();
         }
     }
 
@@ -1659,6 +1913,270 @@ public class VideoCallActivity extends AppCompatActivity implements VolleyRespon
         if (!pd.isShowing()) {
             pd.show();
         }
+    }
+
+    /**
+     * Re-initiates the same video call and closes this finished screen after the new wait service starts.
+     */
+    private void startCallAgainFlow() {
+        if (isCallAgainInProgress) {
+            return;
+        }
+        AstrologerDetailBean astrologerDetailBean = getActiveAstrologerForRetry();
+        UserProfileData userProfileData = CUtils.getUserSelectedProfileFromPreference(this);
+        if (astrologerDetailBean == null || userProfileData == null) {
+            Toast.makeText(this, getResources().getString(R.string.something_wrong_error), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        isCallAgainInProgress = true;
+        ivCallAgain.setEnabled(false);
+        AstrosageKundliApplication.selectedAstrologerDetailBean = astrologerDetailBean;
+        AstrosageKundliApplication.chatAgainAstrologerDetailBean = astrologerDetailBean;
+        ChatUtils chatUtils = ChatUtils.getInstance(this);
+        chatUtils.consultationType = CGlobalVariables.TYPE_VIDEO_CALL;
+        AstrosageKundliApplication.currentConsultType = "video_call";
+        chatUtils.startVideoCall(userProfileData);
+        waitForCallAgainServiceStart();
+    }
+
+    /**
+     * Opens chat with the same astrologer from the post-call screen.
+     */
+    private void openChatAfterCall() {
+        if (isChatAgainInProgress) {
+            return;
+        }
+        if (!isChatAvailableForRetry()) {
+            return;
+        }
+        AstrologerDetailBean astrologerDetailBean = getActiveAstrologerForRetry();
+        if (astrologerDetailBean == null) {
+            Toast.makeText(this, getResources().getString(R.string.something_wrong_error), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        isChatAgainInProgress = true;
+        ivChatAgain.setEnabled(false);
+        ChatUtils.getInstance(this).initChat(astrologerDetailBean);
+        waitForChatAgainServiceStart();
+    }
+
+    /**
+     * Closes the finished call screen and falls back to a stable screen when this activity is task root.
+     */
+    private void closePostCallScreen() {
+        if (isTaskRoot()) {
+            Intent intent = new Intent(this, ActAppModule.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+        }
+        finish();
+    }
+
+    /**
+     * Returns the astrologer that should be reused by Call Again and Chat actions.
+     */
+    private AstrologerDetailBean getActiveAstrologerForRetry() {
+        if (AstrosageKundliApplication.chatAgainAstrologerDetailBean != null) {
+            return AstrosageKundliApplication.chatAgainAstrologerDetailBean;
+        }
+        return AstrosageKundliApplication.selectedAstrologerDetailBean;
+    }
+
+    /**
+     * Returns whether the current astrologer can still accept a human chat retry from the post-call screen.
+     */
+    private boolean isChatAvailableForRetry() {
+        AstrologerDetailBean astrologerDetailBean = getActiveAstrologerForRetry();
+        return astrologerDetailBean != null && astrologerDetailBean.isAvailableForChatBool();
+    }
+
+    /**
+     * Marks feedback as pending only after one of the two confirmed end-call sources fires.
+     */
+    private void queueFeedbackCheckAfterConfirmedEnd() {
+        if (isFeedbackRequestedForCallEnd || isFeedbackCheckPending || !hasConnectedCallSession || TextUtils.isEmpty(astrologerId)) {
+            return;
+        }
+        isFeedbackCheckPending = true;
+        Log.d("VideoCallActivity", "Feedback check queued after confirmed call end.");
+    }
+
+    /**
+     * Executes the queued feedback-status request exactly once after the end-call UI is stable.
+     */
+    private void runPendingFeedbackCheckIfReady() {
+        if (!isFeedbackCheckPending || isInPictureInPictureMode || isFeedbackRequestedForCallEnd || isFeedbackCheckScheduled) {
+            return;
+        }
+        scheduleFeedbackStatusRequest();
+    }
+
+    /**
+     * Waits briefly before requesting feedback eligibility.
+     */
+    private void scheduleFeedbackStatusRequest() {
+        isFeedbackCheckScheduled = true;
+        Log.d("VideoCallActivity", "Scheduling feedback status request after " + FEEDBACK_STATUS_REQUEST_DELAY_MS + " ms.");
+        feedbackCheckRunnable = new Runnable() {
+            @Override
+            public void run() {
+                isFeedbackCheckScheduled = false;
+                feedbackCheckRunnable = null;
+                if (!isFeedbackCheckPending || isFeedbackRequestedForCallEnd || isInPictureInPictureMode) {
+                    Log.d("VideoCallActivity", "Skipping feedback status request.");
+                    return;
+                }
+                isFeedbackCheckPending = false;
+                isFeedbackRequestedForCallEnd = true;
+                Log.d("VideoCallActivity", "Requesting feedback status now.");
+                getAstrologerFeedbackStatus();
+            }
+        };
+        feedbackHandler.postDelayed(feedbackCheckRunnable, FEEDBACK_STATUS_REQUEST_DELAY_MS);
+    }
+
+    /**
+     * Fetches feedback eligibility.
+     */
+    private void getAstrologerFeedbackStatus() {
+        ApiList api = RetrofitClient.getInstance().create(ApiList.class);
+        Map<String, String> headers = getAstroFeedbackStatusParams(astrologerId);
+        Log.d("VideoCallActivity", "Headers: " + headers);
+        Call<ResponseBody> call = api.getAstrologerFeedbackStatus(headers);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                try {
+                    if (response.body() == null) {
+                        return;
+                    }
+                    String responseBody = response.body().string();
+                    Log.d("VideoCallActivity", "Response: " + responseBody);
+                    parseAstrologerFeedbackStatus(responseBody);
+                } catch (Exception e) {
+                    //
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                //
+            }
+        });
+    }
+
+    /**
+     * Builds the request payload for feedback status.
+     */
+    private Map<String, String> getAstroFeedbackStatusParams(String astroId) {
+        HashMap<String, String> headers = new HashMap<>();
+        headers.put(CGlobalVariables.APP_KEY, CUtils.getApplicationSignatureHashCode(context));
+        headers.put(CGlobalVariables.PHONE_NO, CUtils.getUserID(context));
+        headers.put(CGlobalVariables.COUNTRY_CODE, CUtils.getCountryCode(context));
+        headers.put(CGlobalVariables.ASTROLOGER_ID, astroId);
+        headers.put(CGlobalVariables.PACKAGE_NAME, CUtils.getAppPackageName(context));
+        headers.put(CGlobalVariables.APP_VERSION, BuildConfig.VERSION_NAME);
+        headers.put(CGlobalVariables.DEVICE_ID, CUtils.getMyAndroidId(context));
+        headers.put(CGlobalVariables.LANG, CUtils.getLanguageKey(LANGUAGE_CODE));
+        headers.put(CGlobalVariables.KEY_USER_ID, CUtils.getUserIdForBlock(context));
+        headers.put("languagecode", String.valueOf(LANGUAGE_CODE));
+        headers.put("name", CUtils.getUserFullName(context));
+        return headers;
+    }
+
+    /**
+     * Opens the feedback dialog when enabled.
+     */
+    private void parseAstrologerFeedbackStatus(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            String feedbackEnabledValue = jsonObject.optString("enablefeedbacks");
+            boolean isFeedbackEnabled = jsonObject.optBoolean("enablefeedbacks")
+                    || "1".equals(feedbackEnabledValue)
+                    || "true".equalsIgnoreCase(feedbackEnabledValue);
+            if (isFeedbackEnabled) {
+                showRatingDialogToUser();
+            }
+        } catch (Exception e) {
+            //
+        }
+    }
+
+    /**
+     * Shows rating dialog to user.
+     */
+    private void showRatingDialogToUser() {
+        if (feedbackDialog != null && feedbackDialog.isVisible()) {
+            return;
+        }
+        AstrologerDetailBean astrologerDetailBean = getActiveAstrologerForRetry();
+        if (astrologerDetailBean == null) {
+            return;
+        }
+        try {
+            feedbackDialog = new FeedbackDialog(CGlobalVariables.CON_TYPE_CALL, agoraCallSId, getSupportFragmentManager(), astrologerDetailBean);
+            feedbackDialog.show(getSupportFragmentManager(), "FeedbackDialog");
+        } catch (Exception e) {
+            //
+        }
+    }
+
+    /**
+     * Waits for Call Again service to start before closing.
+     */
+    private void waitForCallAgainServiceStart() {
+        callAgainFinishRunnable = new Runnable() {
+            @Override
+            public void run() {
+                callAgainFinishRunnable = null;
+                if (isFinishing() || isDestroyed()) {
+                    return;
+                }
+                finish();
+            }
+        };
+        callAgainHandler.postDelayed(callAgainFinishRunnable, 1500);
+    }
+
+    /**
+     * Waits for Chat service to start before closing.
+     */
+    private void waitForChatAgainServiceStart() {
+        chatAgainFinishRunnable = new Runnable() {
+            @Override
+            public void run() {
+                chatAgainFinishRunnable = null;
+                if (isFinishing() || isDestroyed()) {
+                    return;
+                }
+                finish();
+            }
+        };
+        callAgainHandler.postDelayed(chatAgainFinishRunnable, 1500);
+    }
+
+    /**
+     * Stops timer and all listeners.
+     */
+    private void stopTimerAndListener() {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        if (readRef != null && endCallValueEventListener != null) {
+            readRef.removeEventListener(endCallValueEventListener);
+        }
+        if (audioDBRef != null && audioEventListener != null) {
+            audioDBRef.removeEventListener(audioEventListener);
+        }
+        if (videoDBRef != null && videoEventListener != null) {
+            videoDBRef.removeEventListener(videoEventListener);
+        }
+        if (handler != null && runnable != null) {
+            handler.removeCallbacks(runnable);
+        }
+        unRegisterConnectivityStatusReceiver();
+        stopConnectivityTimer();
     }
 
 }
