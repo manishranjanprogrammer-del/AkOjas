@@ -30,4 +30,7 @@ build
 .svn
 
 # Misc
-captures
+captures-e 
+# Environment files
+*.env
+*.env.*
